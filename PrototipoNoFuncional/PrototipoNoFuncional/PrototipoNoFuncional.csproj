@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E194925A-9E62-45C9-872C-9911A2DF5800}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PrototipoNoFuncional</RootNamespace>
+    <AssemblyName>PrototipoNoFuncional</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAscensos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAscensos.Designer.cs">
+      <DependentUpon>frmAscensos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapacitaciones.Designer.cs">
+      <DependentUpon>frmCapacitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContratos.Designer.cs">
+      <DependentUpon>frmContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartamentos.Designer.cs">
+      <DependentUpon>frmDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContratacion.Designer.cs">
+      <DependentUpon>frmContratacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDespidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDespidos.Designer.cs">
+      <DependentUpon>frmDespidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFaltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFaltas.Designer.cs">
+      <DependentUpon>frmFaltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPercepcionesFiscales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPercepcionesFiscales.Designer.cs">
+      <DependentUpon>frmPercepcionesFiscales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPuesto.Designer.cs">
+      <DependentUpon>frmPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReclutamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReclutamiento.Designer.cs">
+      <DependentUpon>frmReclutamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_HRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_HRM.Designer.cs">
+      <DependentUpon>MDI_HRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAscensos.resx">
+      <DependentUpon>frmAscensos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapacitaciones.resx">
+      <DependentUpon>frmCapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContratos.resx">
+      <DependentUpon>frmContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartamentos.resx">
+      <DependentUpon>frmDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContratacion.resx">
+      <DependentUpon>frmContratacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDespidos.resx">
+      <DependentUpon>frmDespidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFaltas.resx">
+      <DependentUpon>frmFaltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPercepcionesFiscales.resx">
+      <DependentUpon>frmPercepcionesFiscales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPuesto.resx">
+      <DependentUpon>frmPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReclutamiento.resx">
+      <DependentUpon>frmReclutamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_HRM.resx">
+      <DependentUpon>MDI_HRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
