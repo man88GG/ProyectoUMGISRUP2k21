@@ -1,0 +1,6 @@
+D:\Escritorio\Fork - HRM - Jose\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\SeguridadNavegador\Navegador\DLL\Consultas_Inteligentes-master\ConsultasInteligentes\CapaModelo\bin\Debug\CapaModelo.dll
+D:\Escritorio\Fork - HRM - Jose\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\SeguridadNavegador\Navegador\DLL\Consultas_Inteligentes-master\ConsultasInteligentes\CapaModelo\bin\Debug\CapaModelo.pdb
+D:\Escritorio\Fork - HRM - Jose\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\SeguridadNavegador\Navegador\DLL\Consultas_Inteligentes-master\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
+D:\Escritorio\Fork - HRM - Jose\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\SeguridadNavegador\Navegador\DLL\Consultas_Inteligentes-master\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+D:\Escritorio\Fork - HRM - Jose\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\SeguridadNavegador\Navegador\DLL\Consultas_Inteligentes-master\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.dll
+D:\Escritorio\Fork - HRM - Jose\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\SeguridadNavegador\Navegador\DLL\Consultas_Inteligentes-master\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.pdb
