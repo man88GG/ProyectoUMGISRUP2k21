@@ -154,10 +154,13 @@ C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaCo
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaModeloNavegador.pdb
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaModelo.pdb
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csprojAssemblyReference.cache
-C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Mantenimientos.Form1.resources
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.MDI.frmMDI.resources
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.GenerateResource.cache
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CoreCompileInputs.cache
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.pdb
+C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Mantenimientos.DatosPersonales.resources
+C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Properties.Resources.resources
+C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaModeloHRM.dll
+C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaModeloHRM.pdb
