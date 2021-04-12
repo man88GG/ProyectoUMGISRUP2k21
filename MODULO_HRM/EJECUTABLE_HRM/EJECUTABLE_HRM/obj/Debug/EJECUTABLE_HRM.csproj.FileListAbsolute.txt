@@ -65,3 +65,7 @@ C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\E
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CopyComplete
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.exe
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.pdb
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.dll
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.pdb
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloHRM.dll
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloHRM.pdb
