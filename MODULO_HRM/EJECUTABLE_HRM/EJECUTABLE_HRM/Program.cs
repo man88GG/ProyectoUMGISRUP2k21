@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using CapaVistaHRM.MDI;
 using CapaVistaHRM.Sergio.Mantenimientos;
 
+
 namespace EJECUTABLE_HRM
 {
     static class Program
@@ -18,7 +19,7 @@ namespace EJECUTABLE_HRM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVistaHRM.Sergio.Mantenimientos.frmCurso("JLOPEZ"));
+            Application.Run(new CapaVistaHRM.Manuel.Mantenimientos.DatosPersonales());
         }
     }
 }
