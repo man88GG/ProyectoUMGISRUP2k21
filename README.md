@@ -1,2 +1,0 @@
-# ProyectoUMGISRUP2k21
-Proyecto UMG IS RUP 2021
