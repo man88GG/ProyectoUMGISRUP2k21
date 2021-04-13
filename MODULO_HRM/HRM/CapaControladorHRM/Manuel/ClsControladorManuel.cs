@@ -1,23 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
-using System.Text;
-using System.Threading.Tasks;
-=======
 using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using CapaModeloHRM.Manuel;
 using System.Data.Odbc;
->>>>>>> 232ba086b4ed96b54dd92a00f46dfcb4abe8f30a
 
 namespace CapaControladorHRM.Manuel
 {
     public class ClsControladorManuel
     {
-<<<<<<< HEAD
-=======
         ClsSentenciasManuel sn = new ClsSentenciasManuel();
 
         //Paso de datos comboPuesto
@@ -46,6 +39,7 @@ namespace CapaControladorHRM.Manuel
             DataTable Items = sn.funcCmbHorario();
             return Items;
         }
+
 
         //consulta de busqueda por Id 
         public OdbcDataReader funcBuscarRecluta(string IdRecluta)
@@ -105,6 +99,5 @@ namespace CapaControladorHRM.Manuel
 
 
 
->>>>>>> 232ba086b4ed96b54dd92a00f46dfcb4abe8f30a
     }
 }

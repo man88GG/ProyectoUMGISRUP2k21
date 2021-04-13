@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-<<<<<<< HEAD
-=======
 using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
->>>>>>> 232ba086b4ed96b54dd92a00f46dfcb4abe8f30a
 
 namespace CapaModeloHRM.Manuel
 {
    public class ClsSentenciasManuel
     {
-<<<<<<< HEAD
-=======
 
         ClsConexion Con = new ClsConexion();
 
@@ -177,6 +172,7 @@ namespace CapaModeloHRM.Manuel
             }
         }
 
+
         //consulta para buscar y obtener el valor Id de los combobox
         public OdbcDataReader funcBusquedaCombosRec(string IdRecluta)
         {
@@ -292,6 +288,5 @@ namespace CapaModeloHRM.Manuel
 
 
 
->>>>>>> 232ba086b4ed96b54dd92a00f46dfcb4abe8f30a
     }
 }

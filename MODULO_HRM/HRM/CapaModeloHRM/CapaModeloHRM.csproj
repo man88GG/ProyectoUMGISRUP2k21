@@ -33,10 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-<<<<<<< HEAD
-=======
     <Reference Include="System.Windows.Forms" />
->>>>>>> 232ba086b4ed96b54dd92a00f46dfcb4abe8f30a
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
