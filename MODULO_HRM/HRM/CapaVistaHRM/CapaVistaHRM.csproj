@@ -64,11 +64,59 @@
     <Compile Include="Emilio\Procesos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jose\Mantenimientos\Form1.cs">
+    <Compile Include="Jose\Mantenimientos\frmContratos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Jose\Mantenimientos\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Jose\Mantenimientos\frmContratos.Designer.cs">
+      <DependentUpon>frmContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmDeduccionesFiscales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmDeduccionesFiscales.Designer.cs">
+      <DependentUpon>frmDeduccionesFiscales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmDificultad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmDificultad.Designer.cs">
+      <DependentUpon>frmDificultad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmFormacionAcademica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmFormacionAcademica.Designer.cs">
+      <DependentUpon>frmFormacionAcademica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmLicenciaDeConducir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmLicenciaDeConducir.Designer.cs">
+      <DependentUpon>frmLicenciaDeConducir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmPercepcionesFiscales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmPercepcionesFiscales.Designer.cs">
+      <DependentUpon>frmPercepcionesFiscales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmTipoEntrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmTipoEntrevista.Designer.cs">
+      <DependentUpon>frmTipoEntrevista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmTipoHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmTipoHorario.Designer.cs">
+      <DependentUpon>frmTipoHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmTipoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Mantenimientos\frmTipoMoneda.Designer.cs">
+      <DependentUpon>frmTipoMoneda.cs</DependentUpon>
     </Compile>
     <Compile Include="Jose\Procesos\Form1.cs">
       <SubType>Form</SubType>
@@ -81,6 +129,12 @@
     </Compile>
     <Compile Include="Manuel\Mantenimientos\DatosPersonales.Designer.cs">
       <DependentUpon>DatosPersonales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuel\Mantenimientos\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuel\Mantenimientos\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manuel\Procesos\Form1.cs">
       <SubType>Form</SubType>
@@ -95,6 +149,12 @@
       <DependentUpon>frmMDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sergio\Mantenimientos\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sergio\Mantenimientos\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sergio\Mantenimientos\frmCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +175,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmContratos.resx">
+      <DependentUpon>frmContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmDeduccionesFiscales.resx">
+      <DependentUpon>frmDeduccionesFiscales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmDificultad.resx">
+      <DependentUpon>frmDificultad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmFormacionAcademica.resx">
+      <DependentUpon>frmFormacionAcademica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmLicenciaDeConducir.resx">
+      <DependentUpon>frmLicenciaDeConducir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmPercepcionesFiscales.resx">
+      <DependentUpon>frmPercepcionesFiscales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmTipoEntrevista.resx">
+      <DependentUpon>frmTipoEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmTipoHorario.resx">
+      <DependentUpon>frmTipoHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Mantenimientos\frmTipoMoneda.resx">
+      <DependentUpon>frmTipoMoneda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Mantenimientos\DatosPersonales.resx">
       <DependentUpon>DatosPersonales.cs</DependentUpon>
     </EmbeddedResource>

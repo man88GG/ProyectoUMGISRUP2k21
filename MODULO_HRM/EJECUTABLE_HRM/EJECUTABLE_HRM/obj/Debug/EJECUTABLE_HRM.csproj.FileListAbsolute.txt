@@ -10,62 +10,119 @@ D:\Escritorio\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.pd
 D:\Escritorio\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CopyComplete
 D:\Escritorio\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.exe
 D:\Escritorio\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.exe.config
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.exe
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaNavegador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaSeguridad.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaReporteador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVista.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorNavegador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorSeguridad.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloSeguridad.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloReporteador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorReporteador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControlador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloNavegador.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\AxShockwaveFlashObjects.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModelo.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\stdole.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaNavegador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaSeguridad.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaReporteador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVista.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorNavegador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorSeguridad.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloSeguridad.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloReporteador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorReporteador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControlador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloNavegador.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModelo.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csprojAssemblyReference.cache
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.Properties.Resources.resources
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.GenerateResource.cache
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CoreCompileInputs.cache
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CopyComplete
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.exe
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.pdb
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloHRM.dll
-C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloHRM.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.exe.config
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.exe
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaNavegador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaSeguridad.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaReporteador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVista.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorNavegador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorSeguridad.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloSeguridad.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloReporteador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorReporteador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControlador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloNavegador.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.Shared.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\AxShockwaveFlashObjects.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModelo.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\ShockwaveFlashObjects.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\stdole.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaNavegador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaSeguridad.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaReporteador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVista.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorNavegador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorSeguridad.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloSeguridad.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloReporteador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorReporteador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControlador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloNavegador.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModelo.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csprojAssemblyReference.cache
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.Properties.Resources.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.GenerateResource.cache
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CoreCompileInputs.cache
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CopyComplete
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.exe
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.dll
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.exe.config
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.exe
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\EJECUTABLE_HRM.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaNavegador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaSeguridad.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaReporteador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVista.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorNavegador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorSeguridad.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloSeguridad.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloHRM.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloReporteador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorReporteador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControlador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloNavegador.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.Shared.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\AxShockwaveFlashObjects.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModelo.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\ShockwaveFlashObjects.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\stdole.dll
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaHRM.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaNavegador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaSeguridad.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorHRM.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVistaReporteador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaVista.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorNavegador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorSeguridad.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloSeguridad.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloHRM.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloReporteador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControladorReporteador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaControlador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModeloNavegador.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\bin\Debug\CapaModelo.pdb
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csprojAssemblyReference.cache
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.Properties.Resources.resources
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.GenerateResource.cache
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CoreCompileInputs.cache
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.csproj.CopyComplete
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.exe
+D:\Escritorio\Copia 2.0\MODULO_HRM\EJECUTABLE_HRM\EJECUTABLE_HRM\obj\Debug\EJECUTABLE_HRM.pdb

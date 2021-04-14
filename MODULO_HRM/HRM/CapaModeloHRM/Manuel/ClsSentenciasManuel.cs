@@ -172,6 +172,7 @@ namespace CapaModeloHRM.Manuel
             }
         }
 
+
         //consulta para buscar y obtener el valor Id de los combobox
         public OdbcDataReader funcBusquedaCombosRec(string IdRecluta)
         {

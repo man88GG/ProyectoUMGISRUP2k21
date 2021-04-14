@@ -622,8 +622,10 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.tbcModificarEmpleado);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MaximizeBox = false;
             this.Name = "DatosPersonales";
-            this.Text = "frm_Actualización de Datos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Mantenimiento Actualización de Datos";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tbcModificarEmpleado.ResumeLayout(false);
             this.tbpDatosGenerales.ResumeLayout(false);
