@@ -97,7 +97,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             // 
             // tbpDatosGenerales
             // 
-            this.tbpDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpDatosGenerales.BackColor = System.Drawing.Color.Purple;
             this.tbpDatosGenerales.Controls.Add(this.pnlPuesto);
             this.tbpDatosGenerales.Controls.Add(this.pnlDatosGenerales);
             this.tbpDatosGenerales.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,7 +118,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.pnlPuesto.Controls.Add(this.cmbPuesto);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Enabled = false;
-            this.pnlPuesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlPuesto.ForeColor = System.Drawing.Color.White;
             this.pnlPuesto.Location = new System.Drawing.Point(688, 26);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.pnlPuesto.Name = "pnlPuesto";
@@ -206,7 +206,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerApellido);
             this.pnlDatosGenerales.Enabled = false;
-            this.pnlDatosGenerales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlDatosGenerales.ForeColor = System.Drawing.Color.White;
             this.pnlDatosGenerales.Location = new System.Drawing.Point(10, 26);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
@@ -341,7 +341,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             // 
             // tbpDatosPersonales
             // 
-            this.tbpDatosPersonales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpDatosPersonales.BackColor = System.Drawing.Color.Purple;
             this.tbpDatosPersonales.Controls.Add(this.lblSexo);
             this.tbpDatosPersonales.Controls.Add(this.txtGenero);
             this.tbpDatosPersonales.Controls.Add(this.dtpFechaNacimiento);
@@ -611,7 +611,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(1106, 689);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnBuscar);
@@ -621,7 +621,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.Controls.Add(this.lblIngreseIdEmpleado);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.tbcModificarEmpleado);
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ForeColor = System.Drawing.Color.White;
             this.MaximizeBox = false;
             this.Name = "DatosPersonales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

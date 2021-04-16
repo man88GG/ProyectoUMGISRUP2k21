@@ -29,7 +29,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navegador1 = new CapaVistaNavegador.Navegador();
             this.rdInactivo = new System.Windows.Forms.RadioButton();
             this.rdActivo = new System.Windows.Forms.RadioButton();
@@ -49,7 +48,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
             this.navegador1.Location = new System.Drawing.Point(13, 13);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1412, 129);
             this.navegador1.TabIndex = 0;
@@ -59,6 +58,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.rdInactivo.AutoSize = true;
             this.rdInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdInactivo.ForeColor = System.Drawing.Color.White;
             this.rdInactivo.Location = new System.Drawing.Point(814, 288);
             this.rdInactivo.Name = "rdInactivo";
             this.rdInactivo.Size = new System.Drawing.Size(92, 24);
@@ -72,6 +72,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.rdActivo.AutoSize = true;
             this.rdActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdActivo.ForeColor = System.Drawing.Color.White;
             this.rdActivo.Location = new System.Drawing.Point(702, 288);
             this.rdActivo.Name = "rdActivo";
             this.rdActivo.Size = new System.Drawing.Size(80, 24);
@@ -85,7 +86,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(568, 288);
+            this.lblEstado.ForeColor = System.Drawing.Color.White;
+            this.lblEstado.Location = new System.Drawing.Point(568, 275);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(62, 20);
             this.lblEstado.TabIndex = 20;
@@ -95,6 +97,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(568, 151);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(104, 20);
@@ -105,6 +108,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(15, 191);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(73, 20);
@@ -115,6 +119,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.White;
             this.lblCodigo.Location = new System.Drawing.Point(15, 148);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(67, 20);
@@ -126,15 +131,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDatos.Location = new System.Drawing.Point(161, 337);
+            this.dgvDatos.Location = new System.Drawing.Point(161, 318);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersWidth = 51;
@@ -160,7 +157,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescripcion.Size = new System.Drawing.Size(608, 123);
+            this.txtDescripcion.Size = new System.Drawing.Size(478, 123);
             this.txtDescripcion.TabIndex = 14;
             this.txtDescripcion.Tag = "descripcion";
             this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
@@ -172,7 +169,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtNombre.Size = new System.Drawing.Size(380, 126);
+            this.txtNombre.Size = new System.Drawing.Size(380, 85);
             this.txtNombre.TabIndex = 13;
             this.txtNombre.Tag = "tipoContrato";
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
@@ -190,7 +187,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1430, 539);
+            this.BackColor = System.Drawing.Color.Purple;
+            this.ClientSize = new System.Drawing.Size(1430, 503);
             this.Controls.Add(this.rdInactivo);
             this.Controls.Add(this.rdActivo);
             this.Controls.Add(this.lblEstado);
@@ -203,6 +201,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.Name = "frmContratos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

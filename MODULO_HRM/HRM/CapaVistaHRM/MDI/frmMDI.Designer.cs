@@ -29,23 +29,27 @@ namespace CapaVistaHRM.MDI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacionPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.percepcionesFisclaesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deduccionesFiscalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeHorariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeEntrevistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeDificultadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formacionAcademicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capacitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dificultadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informacionPersonalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.puestosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeContratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeLicenciaDeConducirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formacionAcademicaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeHorariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeEntrevistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faltasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDePercepcionesYDeduccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeMonedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +66,9 @@ namespace CapaVistaHRM.MDI
             this.asignacionDePermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.tipoDeLicienciaDeConducirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +86,7 @@ namespace CapaVistaHRM.MDI
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1022, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1267, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,112 +108,135 @@ namespace CapaVistaHRM.MDI
             // catalogoToolStripMenuItem
             // 
             this.catalogoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.puestosToolStripMenuItem,
-            this.cursosToolStripMenuItem,
-            this.departamentosToolStripMenuItem,
-            this.faltasToolStripMenuItem,
-            this.contratosToolStripMenuItem,
-            this.informacionPersonalToolStripMenuItem,
-            this.percepcionesFisclaesToolStripMenuItem,
-            this.deduccionesFiscalesToolStripMenuItem,
-            this.tipoDeHorariosToolStripMenuItem,
-            this.tiposDeEntrevistasToolStripMenuItem,
-            this.tipoDeMonedaToolStripMenuItem,
-            this.tipoDeDificultadToolStripMenuItem,
-            this.formacionAcademicaToolStripMenuItem,
-            this.tipoDeLicienciaDeConducirToolStripMenuItem});
+            this.capacitacionesToolStripMenuItem,
+            this.personalToolStripMenuItem,
+            this.nominaToolStripMenuItem});
             this.catalogoToolStripMenuItem.Name = "catalogoToolStripMenuItem";
             this.catalogoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.catalogoToolStripMenuItem.Text = "Catalogo";
             // 
-            // puestosToolStripMenuItem
+            // capacitacionesToolStripMenuItem
             // 
-            this.puestosToolStripMenuItem.Name = "puestosToolStripMenuItem";
-            this.puestosToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.puestosToolStripMenuItem.Text = "Puestos";
-            this.puestosToolStripMenuItem.Click += new System.EventHandler(this.puestosToolStripMenuItem_Click);
+            this.capacitacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cursosToolStripMenuItem1,
+            this.dificultadToolStripMenuItem,
+            this.departamentosToolStripMenuItem1});
+            this.capacitacionesToolStripMenuItem.Name = "capacitacionesToolStripMenuItem";
+            this.capacitacionesToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.capacitacionesToolStripMenuItem.Text = "Capacitaciones";
             // 
-            // cursosToolStripMenuItem
+            // cursosToolStripMenuItem1
             // 
-            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.cursosToolStripMenuItem.Text = "Cursos";
-            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
+            this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
+            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
+            this.cursosToolStripMenuItem1.Text = "Cursos";
+            this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
             // 
-            // departamentosToolStripMenuItem
+            // dificultadToolStripMenuItem
             // 
-            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.departamentosToolStripMenuItem.Text = "Departamentos";
+            this.dificultadToolStripMenuItem.Name = "dificultadToolStripMenuItem";
+            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.dificultadToolStripMenuItem.Text = "Dificultad";
+            this.dificultadToolStripMenuItem.Click += new System.EventHandler(this.dificultadToolStripMenuItem_Click);
             // 
-            // faltasToolStripMenuItem
+            // departamentosToolStripMenuItem1
             // 
-            this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
-            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.faltasToolStripMenuItem.Text = "Faltas";
+            this.departamentosToolStripMenuItem1.Name = "departamentosToolStripMenuItem1";
+            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
+            this.departamentosToolStripMenuItem1.Text = "Departamentos";
             // 
-            // contratosToolStripMenuItem
+            // personalToolStripMenuItem
             // 
-            this.contratosToolStripMenuItem.Name = "contratosToolStripMenuItem";
-            this.contratosToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.contratosToolStripMenuItem.Text = "Tipos de Contratos";
-            this.contratosToolStripMenuItem.Click += new System.EventHandler(this.contratosToolStripMenuItem_Click);
+            this.personalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informacionPersonalToolStripMenuItem1,
+            this.puestosToolStripMenuItem1,
+            this.tiposDeContratosToolStripMenuItem,
+            this.tiposDeLicenciaDeConducirToolStripMenuItem,
+            this.formacionAcademicaToolStripMenuItem1,
+            this.tiposDeHorariosToolStripMenuItem,
+            this.tipoDeEntrevistasToolStripMenuItem});
+            this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.personalToolStripMenuItem.Text = "Personal";
             // 
-            // informacionPersonalToolStripMenuItem
+            // informacionPersonalToolStripMenuItem1
             // 
-            this.informacionPersonalToolStripMenuItem.Name = "informacionPersonalToolStripMenuItem";
-            this.informacionPersonalToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.informacionPersonalToolStripMenuItem.Text = "Informacion Personal";
-            this.informacionPersonalToolStripMenuItem.Click += new System.EventHandler(this.informacionPersonalToolStripMenuItem_Click);
+            this.informacionPersonalToolStripMenuItem1.Name = "informacionPersonalToolStripMenuItem1";
+            this.informacionPersonalToolStripMenuItem1.Size = new System.Drawing.Size(331, 26);
+            this.informacionPersonalToolStripMenuItem1.Text = "Informacion Personal";
+            this.informacionPersonalToolStripMenuItem1.Click += new System.EventHandler(this.informacionPersonalToolStripMenuItem1_Click);
             // 
-            // percepcionesFisclaesToolStripMenuItem
+            // puestosToolStripMenuItem1
             // 
-            this.percepcionesFisclaesToolStripMenuItem.Name = "percepcionesFisclaesToolStripMenuItem";
-            this.percepcionesFisclaesToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.percepcionesFisclaesToolStripMenuItem.Text = "Percepciones Fiscales";
-            this.percepcionesFisclaesToolStripMenuItem.Click += new System.EventHandler(this.percepcionesFisclaesToolStripMenuItem_Click);
+            this.puestosToolStripMenuItem1.Name = "puestosToolStripMenuItem1";
+            this.puestosToolStripMenuItem1.Size = new System.Drawing.Size(331, 26);
+            this.puestosToolStripMenuItem1.Text = "Tipos de Puestos";
+            this.puestosToolStripMenuItem1.Click += new System.EventHandler(this.puestosToolStripMenuItem1_Click);
             // 
-            // deduccionesFiscalesToolStripMenuItem
+            // tiposDeContratosToolStripMenuItem
             // 
-            this.deduccionesFiscalesToolStripMenuItem.Name = "deduccionesFiscalesToolStripMenuItem";
-            this.deduccionesFiscalesToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.deduccionesFiscalesToolStripMenuItem.Text = "Deducciones Fiscales";
-            this.deduccionesFiscalesToolStripMenuItem.Click += new System.EventHandler(this.deduccionesFiscalesToolStripMenuItem_Click);
+            this.tiposDeContratosToolStripMenuItem.Name = "tiposDeContratosToolStripMenuItem";
+            this.tiposDeContratosToolStripMenuItem.Size = new System.Drawing.Size(331, 26);
+            this.tiposDeContratosToolStripMenuItem.Text = "Tipos de Contratos";
+            this.tiposDeContratosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeContratosToolStripMenuItem_Click);
             // 
-            // tipoDeHorariosToolStripMenuItem
+            // tiposDeLicenciaDeConducirToolStripMenuItem
             // 
-            this.tipoDeHorariosToolStripMenuItem.Name = "tipoDeHorariosToolStripMenuItem";
-            this.tipoDeHorariosToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.tipoDeHorariosToolStripMenuItem.Text = "Tipo de Horarios";
-            this.tipoDeHorariosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeHorariosToolStripMenuItem_Click);
+            this.tiposDeLicenciaDeConducirToolStripMenuItem.Name = "tiposDeLicenciaDeConducirToolStripMenuItem";
+            this.tiposDeLicenciaDeConducirToolStripMenuItem.Size = new System.Drawing.Size(331, 26);
+            this.tiposDeLicenciaDeConducirToolStripMenuItem.Text = "Tipos de Licencia de Conducir";
+            this.tiposDeLicenciaDeConducirToolStripMenuItem.Click += new System.EventHandler(this.tiposDeLicenciaDeConducirToolStripMenuItem_Click);
             // 
-            // tiposDeEntrevistasToolStripMenuItem
+            // formacionAcademicaToolStripMenuItem1
             // 
-            this.tiposDeEntrevistasToolStripMenuItem.Name = "tiposDeEntrevistasToolStripMenuItem";
-            this.tiposDeEntrevistasToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.tiposDeEntrevistasToolStripMenuItem.Text = "Tipos de entrevistas";
-            this.tiposDeEntrevistasToolStripMenuItem.Click += new System.EventHandler(this.tiposDeEntrevistasToolStripMenuItem_Click);
+            this.formacionAcademicaToolStripMenuItem1.Name = "formacionAcademicaToolStripMenuItem1";
+            this.formacionAcademicaToolStripMenuItem1.Size = new System.Drawing.Size(331, 26);
+            this.formacionAcademicaToolStripMenuItem1.Text = "Formacion Academica";
+            this.formacionAcademicaToolStripMenuItem1.Click += new System.EventHandler(this.formacionAcademicaToolStripMenuItem1_Click);
             // 
-            // tipoDeMonedaToolStripMenuItem
+            // tiposDeHorariosToolStripMenuItem
             // 
-            this.tipoDeMonedaToolStripMenuItem.Name = "tipoDeMonedaToolStripMenuItem";
-            this.tipoDeMonedaToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.tipoDeMonedaToolStripMenuItem.Text = "Tipo de Moneda";
-            this.tipoDeMonedaToolStripMenuItem.Click += new System.EventHandler(this.tipoDeMonedaToolStripMenuItem_Click);
+            this.tiposDeHorariosToolStripMenuItem.Name = "tiposDeHorariosToolStripMenuItem";
+            this.tiposDeHorariosToolStripMenuItem.Size = new System.Drawing.Size(331, 26);
+            this.tiposDeHorariosToolStripMenuItem.Text = "Tipos de Horarios";
+            this.tiposDeHorariosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeHorariosToolStripMenuItem_Click);
             // 
-            // tipoDeDificultadToolStripMenuItem
+            // tipoDeEntrevistasToolStripMenuItem
             // 
-            this.tipoDeDificultadToolStripMenuItem.Name = "tipoDeDificultadToolStripMenuItem";
-            this.tipoDeDificultadToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.tipoDeDificultadToolStripMenuItem.Text = "Tipo de Dificultad";
-            this.tipoDeDificultadToolStripMenuItem.Click += new System.EventHandler(this.tipoDeDificultadToolStripMenuItem_Click);
+            this.tipoDeEntrevistasToolStripMenuItem.Name = "tipoDeEntrevistasToolStripMenuItem";
+            this.tipoDeEntrevistasToolStripMenuItem.Size = new System.Drawing.Size(331, 26);
+            this.tipoDeEntrevistasToolStripMenuItem.Text = "Tipo de Entrevistas";
+            this.tipoDeEntrevistasToolStripMenuItem.Click += new System.EventHandler(this.tipoDeEntrevistasToolStripMenuItem_Click);
             // 
-            // formacionAcademicaToolStripMenuItem
+            // nominaToolStripMenuItem
             // 
-            this.formacionAcademicaToolStripMenuItem.Name = "formacionAcademicaToolStripMenuItem";
-            this.formacionAcademicaToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.formacionAcademicaToolStripMenuItem.Text = "Formacion Academica";
-            this.formacionAcademicaToolStripMenuItem.Click += new System.EventHandler(this.formacionAcademicaToolStripMenuItem_Click);
+            this.nominaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.faltasToolStripMenuItem1,
+            this.tiposDePercepcionesYDeduccionesToolStripMenuItem,
+            this.tiposDeMonedasToolStripMenuItem});
+            this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.nominaToolStripMenuItem.Text = "Nomina";
+            // 
+            // faltasToolStripMenuItem1
+            // 
+            this.faltasToolStripMenuItem1.Name = "faltasToolStripMenuItem1";
+            this.faltasToolStripMenuItem1.Size = new System.Drawing.Size(396, 26);
+            this.faltasToolStripMenuItem1.Text = "Faltas";
+            // 
+            // tiposDePercepcionesYDeduccionesToolStripMenuItem
+            // 
+            this.tiposDePercepcionesYDeduccionesToolStripMenuItem.Name = "tiposDePercepcionesYDeduccionesToolStripMenuItem";
+            this.tiposDePercepcionesYDeduccionesToolStripMenuItem.Size = new System.Drawing.Size(396, 26);
+            this.tiposDePercepcionesYDeduccionesToolStripMenuItem.Text = "Tipos de Percepciones y Deducciones ";
+            this.tiposDePercepcionesYDeduccionesToolStripMenuItem.Click += new System.EventHandler(this.tiposDePercepcionesYDeduccionesToolStripMenuItem_Click);
+            // 
+            // tiposDeMonedasToolStripMenuItem
+            // 
+            this.tiposDeMonedasToolStripMenuItem.Name = "tiposDeMonedasToolStripMenuItem";
+            this.tiposDeMonedasToolStripMenuItem.Size = new System.Drawing.Size(396, 26);
+            this.tiposDeMonedasToolStripMenuItem.Text = "Tipos de Monedas";
+            this.tiposDeMonedasToolStripMenuItem.Click += new System.EventHandler(this.tiposDeMonedasToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -330,18 +359,37 @@ namespace CapaVistaHRM.MDI
             this.txtUsuario.Size = new System.Drawing.Size(159, 27);
             this.txtUsuario.TabIndex = 2;
             // 
-            // tipoDeLicienciaDeConducirToolStripMenuItem
+            // lblHora
             // 
-            this.tipoDeLicienciaDeConducirToolStripMenuItem.Name = "tipoDeLicienciaDeConducirToolStripMenuItem";
-            this.tipoDeLicienciaDeConducirToolStripMenuItem.Size = new System.Drawing.Size(320, 26);
-            this.tipoDeLicienciaDeConducirToolStripMenuItem.Text = "Tipo de liciencia de conducir";
-            this.tipoDeLicienciaDeConducirToolStripMenuItem.Click += new System.EventHandler(this.tipoDeLicienciaDeConducirToolStripMenuItem_Click);
+            this.lblHora.AutoSize = true;
+            this.lblHora.Location = new System.Drawing.Point(766, 3);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(47, 20);
+            this.lblHora.TabIndex = 4;
+            this.lblHora.Text = "Hora";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(923, 3);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(56, 20);
+            this.lblFecha.TabIndex = 5;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 562);
+            this.BackgroundImage = global::CapaVistaHRM.Properties.Resources.HR1;
+            this.ClientSize = new System.Drawing.Size(1267, 562);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -349,7 +397,7 @@ namespace CapaVistaHRM.MDI
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMDI";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmMDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -367,19 +415,6 @@ namespace CapaVistaHRM.MDI
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem puestosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem faltasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contratosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informacionPersonalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem percepcionesFisclaesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deduccionesFiscalesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeHorariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tiposDeEntrevistasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeMonedaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeDificultadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem formacionAcademicaToolStripMenuItem;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
@@ -393,6 +428,24 @@ namespace CapaVistaHRM.MDI
         private System.Windows.Forms.ToolStripMenuItem asignacionDeAplicacionesAPerfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bitacoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignacionDePermisosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeLicienciaDeConducirToolStripMenuItem;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem capacitacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dificultadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informacionPersonalToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem puestosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeContratosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeLicenciaDeConducirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formacionAcademicaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeHorariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem faltasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tiposDePercepcionesYDeduccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeMonedasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeEntrevistasToolStripMenuItem;
     }
 }

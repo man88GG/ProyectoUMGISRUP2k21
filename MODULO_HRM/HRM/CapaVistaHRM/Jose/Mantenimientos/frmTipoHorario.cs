@@ -104,5 +104,10 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         {
             validar.ValidadCantidad(e, txtDescripcion, 248);
         }
+
+        private void frmTipoHorario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
