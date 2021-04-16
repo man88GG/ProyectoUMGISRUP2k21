@@ -43,26 +43,13 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             }
         }
 
-        private void txtEstado_TextChanged(object sender, EventArgs e)
-        {
-            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
-            if (txtEstado.Text == "")
-            {
-                rdActivo.Checked = false;
-                rdInactivo.Checked = false;
-            }
-            if (txtEstado.Text == "1")
-            {
-                rdActivo.Checked = true;
-            }
-        }
 
         private void navegador1_Load(object sender, EventArgs e)
         {
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             navegador1.aplicacion = 317;
-            navegador1.tbl = "tipopercepcion";
+            navegador1.tbl = "tipopercepciondeduccion";
             navegador1.campoEstado = "estado";
             navegador1.MDIformulario = FormularioPadre;
             foreach (Control C in this.Controls)
@@ -171,6 +158,57 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         {
             validar.funcSoloNumerosDecimales(e);
             validar.ValidadCantidad(e, txtCantidad, 9);
+        }
+
+        private void txtEstado_TextChanged_1(object sender, EventArgs e)
+        {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
+            if (txtEstado.Text == "")
+            {
+                rdActivo.Checked = false;
+                rdInactivo.Checked = false;
+            }
+            if (txtEstado.Text == "1")
+            {
+                rdActivo.Checked = true;
+            }
+        }
+
+        private void rdPositivo_CheckedChanged(object sender, EventArgs e)
+        {
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  1
+
+            if (rdPositivo.Checked == true)
+            {
+                txtSigno.Text = "+";
+            }
+        }
+
+        private void rdNegativo_CheckedChanged(object sender, EventArgs e)
+        {
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  0
+            if (rdNegativo.Checked == true)
+            {
+                txtSigno.Text = "-";
+            }
+        }
+
+        private void txtSigno_TextChanged(object sender, EventArgs e)
+        {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
+            if (txtSigno.Text == "")
+            {
+                rdPositivo.Checked = false;
+                rdNegativo.Checked = false;
+            }
+            if (txtSigno.Text == "+")
+            {
+                rdPositivo.Checked = true;
+            }
+            if (txtSigno.Text == "-")
+            {
+                rdNegativo.Checked = true;
+            }
         }
     }
 }

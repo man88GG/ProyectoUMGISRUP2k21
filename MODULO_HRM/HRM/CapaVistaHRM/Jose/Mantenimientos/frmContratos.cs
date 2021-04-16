@@ -14,6 +14,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
     public partial class frmContratos : Form
     {
         ClsValidaciones validacion = new ClsValidaciones();
+
         string UsuarioAplicacion;
         static Form FormularioPadre;
         public frmContratos(string usuario, Form formularioPadre)

@@ -30,7 +30,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         private void InitializeComponent()
         {
             this.navegador1 = new CapaVistaNavegador.Navegador();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblCantidadMonto = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblFormula = new System.Windows.Forms.Label();
@@ -50,10 +49,17 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.rdFormula = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtSigno = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.lblSigno = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rdNegativo = new System.Windows.Forms.RadioButton();
+            this.rdPositivo = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // navegador1
@@ -66,21 +72,11 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.navegador1.TabIndex = 0;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(675, 313);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(110, 27);
-            this.txtEstado.TabIndex = 44;
-            this.txtEstado.Tag = "estado";
-            this.txtEstado.Visible = false;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
-            // 
             // lblCantidadMonto
             // 
             this.lblCantidadMonto.AutoSize = true;
             this.lblCantidadMonto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadMonto.ForeColor = System.Drawing.Color.White;
             this.lblCantidadMonto.Location = new System.Drawing.Point(582, 194);
             this.lblCantidadMonto.Name = "lblCantidadMonto";
             this.lblCantidadMonto.Size = new System.Drawing.Size(52, 20);
@@ -102,6 +98,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblFormula.AutoSize = true;
             this.lblFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormula.ForeColor = System.Drawing.Color.White;
             this.lblFormula.Location = new System.Drawing.Point(582, 147);
             this.lblFormula.Name = "lblFormula";
             this.lblFormula.Size = new System.Drawing.Size(74, 20);
@@ -112,9 +109,9 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.groupBox1.Controls.Add(this.rdInactivo);
             this.groupBox1.Controls.Add(this.rdActivo);
-            this.groupBox1.Location = new System.Drawing.Point(675, 225);
+            this.groupBox1.Location = new System.Drawing.Point(675, 278);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 82);
+            this.groupBox1.Size = new System.Drawing.Size(284, 60);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             // 
@@ -122,7 +119,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.rdInactivo.AutoSize = true;
             this.rdInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdInactivo.Location = new System.Drawing.Point(125, 33);
+            this.rdInactivo.ForeColor = System.Drawing.Color.White;
+            this.rdInactivo.Location = new System.Drawing.Point(125, 21);
             this.rdInactivo.Name = "rdInactivo";
             this.rdInactivo.Size = new System.Drawing.Size(92, 24);
             this.rdInactivo.TabIndex = 22;
@@ -135,7 +133,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.rdActivo.AutoSize = true;
             this.rdActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdActivo.Location = new System.Drawing.Point(18, 33);
+            this.rdActivo.ForeColor = System.Drawing.Color.White;
+            this.rdActivo.Location = new System.Drawing.Point(18, 21);
             this.rdActivo.Name = "rdActivo";
             this.rdActivo.Size = new System.Drawing.Size(80, 24);
             this.rdActivo.TabIndex = 21;
@@ -148,7 +147,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(582, 241);
+            this.lblEstado.ForeColor = System.Drawing.Color.White;
+            this.lblEstado.Location = new System.Drawing.Point(582, 294);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(62, 20);
             this.lblEstado.TabIndex = 37;
@@ -158,6 +158,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
             this.lblDescripcion.Location = new System.Drawing.Point(19, 225);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(104, 20);
@@ -168,6 +169,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(19, 186);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(73, 20);
@@ -178,6 +180,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.White;
             this.lblCodigo.Location = new System.Drawing.Point(19, 143);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(67, 20);
@@ -202,7 +205,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFormula.Location = new System.Drawing.Point(675, 140);
             this.txtFormula.Name = "txtFormula";
-            this.txtFormula.Size = new System.Drawing.Size(544, 27);
+            this.txtFormula.Size = new System.Drawing.Size(284, 27);
             this.txtFormula.TabIndex = 32;
             this.txtFormula.Tag = "formula";
             this.txtFormula.TextChanged += new System.EventHandler(this.txtFormula_TextChanged);
@@ -227,7 +230,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(380, 27);
             this.txtNombre.TabIndex = 30;
-            this.txtNombre.Tag = "tipoPercepcion";
+            this.txtNombre.Tag = "tipoPercepcionDeduccion";
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -238,13 +241,14 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(115, 27);
             this.txtCodigo.TabIndex = 29;
-            this.txtCodigo.Tag = "idTipoPercepcion";
+            this.txtCodigo.Tag = "idTipoPercepcionDeduccion";
             // 
             // rdValor
             // 
             this.rdValor.AutoSize = true;
             this.rdValor.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdValor.Location = new System.Drawing.Point(6, 21);
+            this.rdValor.ForeColor = System.Drawing.Color.White;
+            this.rdValor.Location = new System.Drawing.Point(9, 15);
             this.rdValor.Name = "rdValor";
             this.rdValor.Size = new System.Drawing.Size(101, 24);
             this.rdValor.TabIndex = 45;
@@ -257,6 +261,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.rdFormula.AutoSize = true;
             this.rdFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdFormula.ForeColor = System.Drawing.Color.White;
             this.rdFormula.Location = new System.Drawing.Point(6, 21);
             this.rdFormula.Name = "rdFormula";
             this.rdFormula.Size = new System.Drawing.Size(123, 24);
@@ -269,29 +274,104 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdValor);
-            this.groupBox2.Location = new System.Drawing.Point(989, 252);
+            this.groupBox2.Location = new System.Drawing.Point(971, 181);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(230, 55);
+            this.groupBox2.Size = new System.Drawing.Size(147, 47);
             this.groupBox2.TabIndex = 47;
             this.groupBox2.TabStop = false;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rdFormula);
-            this.groupBox3.Location = new System.Drawing.Point(989, 186);
+            this.groupBox3.Location = new System.Drawing.Point(971, 130);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(230, 55);
+            this.groupBox3.Size = new System.Drawing.Size(147, 55);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
+            // 
+            // txtSigno
+            // 
+            this.txtSigno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSigno.Location = new System.Drawing.Point(980, 278);
+            this.txtSigno.Name = "txtSigno";
+            this.txtSigno.Size = new System.Drawing.Size(147, 27);
+            this.txtSigno.TabIndex = 49;
+            this.txtSigno.Tag = "signo";
+            this.txtSigno.Visible = false;
+            this.txtSigno.TextChanged += new System.EventHandler(this.txtSigno_TextChanged);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(980, 311);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(147, 27);
+            this.txtEstado.TabIndex = 50;
+            this.txtEstado.Tag = "estado";
+            this.txtEstado.Visible = false;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged_1);
+            // 
+            // lblSigno
+            // 
+            this.lblSigno.AutoSize = true;
+            this.lblSigno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSigno.ForeColor = System.Drawing.Color.White;
+            this.lblSigno.Location = new System.Drawing.Point(582, 238);
+            this.lblSigno.Name = "lblSigno";
+            this.lblSigno.Size = new System.Drawing.Size(53, 20);
+            this.lblSigno.TabIndex = 51;
+            this.lblSigno.Text = "Signo";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rdNegativo);
+            this.groupBox4.Controls.Add(this.rdPositivo);
+            this.groupBox4.Location = new System.Drawing.Point(675, 225);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(284, 47);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            // 
+            // rdNegativo
+            // 
+            this.rdNegativo.AutoSize = true;
+            this.rdNegativo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNegativo.ForeColor = System.Drawing.Color.White;
+            this.rdNegativo.Location = new System.Drawing.Point(125, 13);
+            this.rdNegativo.Name = "rdNegativo";
+            this.rdNegativo.Size = new System.Drawing.Size(100, 24);
+            this.rdNegativo.TabIndex = 22;
+            this.rdNegativo.TabStop = true;
+            this.rdNegativo.Text = "Negativo";
+            this.rdNegativo.UseVisualStyleBackColor = true;
+            this.rdNegativo.CheckedChanged += new System.EventHandler(this.rdNegativo_CheckedChanged);
+            // 
+            // rdPositivo
+            // 
+            this.rdPositivo.AutoSize = true;
+            this.rdPositivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdPositivo.ForeColor = System.Drawing.Color.White;
+            this.rdPositivo.Location = new System.Drawing.Point(18, 13);
+            this.rdPositivo.Name = "rdPositivo";
+            this.rdPositivo.Size = new System.Drawing.Size(92, 24);
+            this.rdPositivo.TabIndex = 21;
+            this.rdPositivo.TabStop = true;
+            this.rdPositivo.Text = "Positivo";
+            this.rdPositivo.UseVisualStyleBackColor = true;
+            this.rdPositivo.CheckedChanged += new System.EventHandler(this.rdPositivo_CheckedChanged);
             // 
             // frmPercepcionesFiscales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(1429, 556);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.lblSigno);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtSigno);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblCantidadMonto);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblFormula);
@@ -306,6 +386,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.Name = "frmPercepcionesFiscales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -317,6 +398,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +408,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         #endregion
 
         private CapaVistaNavegador.Navegador navegador1;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblCantidadMonto;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblFormula;
@@ -345,5 +427,11 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         private System.Windows.Forms.RadioButton rdFormula;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtSigno;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Label lblSigno;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton rdNegativo;
+        private System.Windows.Forms.RadioButton rdPositivo;
     }
 }
