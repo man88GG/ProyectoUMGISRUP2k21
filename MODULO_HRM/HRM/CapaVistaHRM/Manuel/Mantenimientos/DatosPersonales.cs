@@ -42,7 +42,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "AyudaMantenimientosMan/AyudaMantenimientoMan.chm", "pg_0002.html");
+            Help.ShowHelp(this, "AyudaMantenimientosMan/AyudaMantenimientoMan.chm", "DatosPersonales.html");
         }
 
         int Estado = 1;
