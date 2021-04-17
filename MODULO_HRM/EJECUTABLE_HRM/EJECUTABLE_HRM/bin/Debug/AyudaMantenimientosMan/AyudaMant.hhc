@@ -12,13 +12,11 @@
 		<param name="Name" value="DatosPersonales">
 		<param name="ImageNumber" value="1">
 		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Datos_Personales(Busqueda)">
-		<param name="Local" value="pg_0002.htm">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Datos_Personales(Modificar)">
-		<param name="Local" value="pg_0003.htm">
-		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="AyudaDatosPersonales">
+			<param name="Local" value="DatosPersonales.html">
+			</OBJECT>
+	</UL>
 </UL>
 </BODY></HTML>
