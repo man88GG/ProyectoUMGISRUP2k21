@@ -386,7 +386,7 @@ namespace CapaVistaHRM.MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CapaVistaHRM.Properties.Resources.HR1;
+          //  this.BackgroundImage = global::CapaVistaHRM.Properties.Resources.HR1;
             this.ClientSize = new System.Drawing.Size(1267, 562);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);

@@ -106,7 +106,6 @@ D:\Documentos\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\
 D:\Documentos\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
 D:\Documentos\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.dll
 D:\Documentos\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.pdb
-<<<<<<< HEAD
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.dll
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.pdb
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaControladorHRM.dll
@@ -227,7 +226,6 @@ C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVi
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.dll
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.pdb
-=======
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.dll
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.pdb
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaControladorHRM.dll
@@ -364,4 +362,11 @@ D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCurso.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmPuesto.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Properties.Resources.resources
->>>>>>> 02760b8b72c9635b8fadfe7cdc85250343620cad
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmContratos.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmDificultad.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmFormacionAcademica.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmLicenciaDeConducir.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmPercepcionesFiscales.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoEntrevista.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoHorario.resources
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoMoneda.resources
