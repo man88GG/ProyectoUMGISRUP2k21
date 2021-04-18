@@ -70,7 +70,7 @@ namespace CapaVistaHRM.Emilio.Mantenimientos
         {
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
-            navegador1.aplicacion = 310;
+            navegador1.aplicacion = 308;
             navegador1.tbl = "departamentoempresa";
             navegador1.campoEstado = "estado";
             navegador1.MDIformulario = FormularioPadre;
@@ -99,8 +99,8 @@ namespace CapaVistaHRM.Emilio.Mantenimientos
             navegador1.DatosActualizar = dataGridView1;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "AyudaJose/AyudaMantenimientosJose.chm";
-            navegador1.ruta = "Ayuda-Formulario-Contratos.html";
+            navegador1.ayudaRuta = "";
+            navegador1.ruta = "";
 
         }
     }
