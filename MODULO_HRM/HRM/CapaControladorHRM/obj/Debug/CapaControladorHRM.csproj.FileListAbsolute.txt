@@ -25,3 +25,12 @@ C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControla
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.dll
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.pdb
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaControladorHRM.dll
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaControladorHRM.pdb
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.dll
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.pdb
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csprojAssemblyReference.cache
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CoreCompileInputs.cache
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.dll
+C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.pdb

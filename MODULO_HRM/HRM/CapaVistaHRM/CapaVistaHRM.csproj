@@ -52,11 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Emilio\Mantenimientos\Form1.cs">
+    <Compile Include="Emilio\Mantenimientos\faltas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Emilio\Mantenimientos\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Emilio\Mantenimientos\faltas.Designer.cs">
+      <DependentUpon>faltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emilio\Mantenimientos\frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emilio\Mantenimientos\frmDepartamento.Designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Emilio\Procesos\Form1.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Emilio\Mantenimientos\faltas.resx">
+      <DependentUpon>faltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emilio\Mantenimientos\frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Mantenimientos\DatosPersonales.resx">
       <DependentUpon>DatosPersonales.cs</DependentUpon>
     </EmbeddedResource>
