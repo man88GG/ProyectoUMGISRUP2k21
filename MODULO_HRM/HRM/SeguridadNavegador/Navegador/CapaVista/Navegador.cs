@@ -465,7 +465,7 @@ namespace CapaVistaNavegador
                 DialogResult dialogResult = MessageBox.Show("¿Esta Seguro que desea salir de la aplicacion?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                 if (dialogResult == DialogResult.OK)
                 {
-                    Bitacora.insert("Salir de la aplicacion", aplicacion);
+                    Bitacora.insert("Salir de la aplicacion", aplicacion);               
                     formulario.Dispose();
                 }
             }else

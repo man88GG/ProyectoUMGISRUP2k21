@@ -40,6 +40,7 @@ namespace CapaControladorHRM.Manuel
             return Items;
         }
 
+
         //consulta de busqueda por Id 
         public OdbcDataReader funcBuscarRecluta(string IdRecluta)
         {

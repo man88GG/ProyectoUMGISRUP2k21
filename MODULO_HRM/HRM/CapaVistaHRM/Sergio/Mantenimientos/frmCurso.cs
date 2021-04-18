@@ -13,13 +13,13 @@ namespace CapaVistaHRM.Sergio.Mantenimientos
     public partial class frmCurso : Form
     {
         string UsuarioAplicacion;
-        //static Form FormularioPadre;
-        public frmCurso(string usuario)
+        static Form FormularioPadre;
+        public frmCurso(string usuario, Form formularioPadre)
         {
             InitializeComponent();
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
-            //FormularioPadre = formularioPadre;
+            FormularioPadre = formularioPadre;
         }
 
         private void navegador1_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace CapaVistaHRM.Sergio.Mantenimientos
             navegador1.aplicacion = 306;
             navegador1.tbl = "curso";
             navegador1.campoEstado = "estado";
-            //navegador1.MDIformulario = FormularioPadre;
+            navegador1.MDIformulario = FormularioPadre;
             foreach (Control C in this.Controls)
             {
                 if ((C.Tag != null) && (!C.Tag.ToString().Equals("")))
