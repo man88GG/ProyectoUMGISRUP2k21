@@ -13,6 +13,7 @@ using CapaVistaSeguridad;
 using CapaVistaHRM.Jose.Mantenimientos;
 using CapaVistaHRM.Manuel.Mantenimientos;
 using CapaVistaHRM.Sergio.Mantenimientos;
+using CapaVistaHRM.Emilio.Mantenimientos;
 
 namespace CapaVistaHRM.MDI
 {
@@ -21,15 +22,6 @@ namespace CapaVistaHRM.MDI
     {
         clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
         clsVistaBitacora bit = new clsVistaBitacora();
-
-        frmCambioContraseña cambioContraseña;
-        frmMantenimientoUsuario MantenimientoUsuario;
-        frmAplicativo Aplicativo;
-        frmAsignacionDeAplicaciones AsignacionDeAplicaciones;
-        frmModulo Modulo;
-        frmMantenimientoPerfil MantenimientoPerfil;
-        frmAsignarAplicacionesAPerfil AsignarAplicacionesAPerfil;
-        frmModificarPermisos ModificarPermisos;
 
         public frmMDI()
         {
@@ -539,6 +531,56 @@ namespace CapaVistaHRM.MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Trato de ingresar al mantenimiento de Tipo de Licencia de conducir", 318);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void departamentosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("307", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al mantenimiento de Tipo de Departamento de la empresa", 307);
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmDepartamento);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new frmDepartamento(txtUsuario.Text, this);
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al mantenimiento de Departamento de la empresa", 307);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void faltasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("308", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al mantenimiento de Tipo de Departamento de la empresa", 308);
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is faltas);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new faltas(txtUsuario.Text, this);
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al mantenimiento de Departamento de la empresa", 308);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
