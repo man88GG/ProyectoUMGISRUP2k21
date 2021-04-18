@@ -361,7 +361,6 @@ D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Mantenimientos.DatosPersonales.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCurso.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmPuesto.resources
-D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Properties.Resources.resources
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmContratos.resources
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmDificultad.resources
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmFormacionAcademica.resources
@@ -370,3 +369,5 @@ C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVi
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoEntrevista.resources
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoHorario.resources
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoMoneda.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.faltas.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.frmDepartamento.resources
