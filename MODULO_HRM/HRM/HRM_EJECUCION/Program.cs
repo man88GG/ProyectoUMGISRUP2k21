@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaVistaHRM.MDI;
 
-namespace EJECUTABLE_HRM
+namespace HRM_EJECUCION
 {
     static class Program
     {
