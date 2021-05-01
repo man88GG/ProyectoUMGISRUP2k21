@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("EJECUTABLE_HRM")]
+[assembly: AssemblyTitle("HRM_EJECUCION")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EJECUTABLE_HRM")]
+[assembly: AssemblyProduct("HRM_EJECUCION")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("8b545fea-197b-49e8-a9b0-73c7037bf967")]
+[assembly: Guid("288956c6-d903-482e-9f99-2fe68ecfcd9d")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
