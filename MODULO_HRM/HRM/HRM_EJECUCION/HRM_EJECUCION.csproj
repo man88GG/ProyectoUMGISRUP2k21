@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B545FEA-197B-49E8-A9B0-73C7037BF967}</ProjectGuid>
+    <ProjectGuid>{288956C6-D903-482E-9F99-2FE68ECFCD9D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EJECUTABLE_HRM</RootNamespace>
-    <AssemblyName>EJECUTABLE_HRM</AssemblyName>
+    <RootNamespace>HRM_EJECUCION</RootNamespace>
+    <AssemblyName>HRM_EJECUCION</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CapaVistaHRM">
-      <HintPath>..\..\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.dll</HintPath>
+      <HintPath>..\CapaVistaHRM\bin\Debug\CapaVistaHRM.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
