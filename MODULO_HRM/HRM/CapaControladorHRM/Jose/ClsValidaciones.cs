@@ -33,7 +33,7 @@ namespace CapaControladorHRM.Jose
                     MessageBox.Show("Ingrese solo letras", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("validacion de letras fallo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -120,7 +120,7 @@ namespace CapaControladorHRM.Jose
                     MessageBox.Show("Ingrese solo Numeros Enteros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("validacion de numeros Enteros Fallo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
