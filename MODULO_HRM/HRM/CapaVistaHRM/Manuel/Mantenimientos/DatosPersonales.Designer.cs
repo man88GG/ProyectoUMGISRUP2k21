@@ -221,6 +221,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(173, 27);
             this.txtTelefono.TabIndex = 28;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblTelefono
             // 
@@ -262,6 +263,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtNumeroIgss.Name = "txtNumeroIgss";
             this.txtNumeroIgss.Size = new System.Drawing.Size(227, 27);
             this.txtNumeroIgss.TabIndex = 23;
+            this.txtNumeroIgss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblDpi
             // 
@@ -284,6 +286,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtDpi.Name = "txtDpi";
             this.txtDpi.Size = new System.Drawing.Size(227, 27);
             this.txtDpi.TabIndex = 12;
+            this.txtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtPrimerApellido
             // 
@@ -293,6 +296,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(324, 27);
             this.txtPrimerApellido.TabIndex = 7;
+            this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lblNumeroIgss
             // 
@@ -314,6 +318,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(324, 27);
             this.txtPrimerNombre.TabIndex = 5;
+            this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lblPrimerNombre
             // 
@@ -433,6 +438,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtCuentaBanc.Name = "txtCuentaBanc";
             this.txtCuentaBanc.Size = new System.Drawing.Size(377, 27);
             this.txtCuentaBanc.TabIndex = 38;
+            this.txtCuentaBanc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblCuentaBanc
             // 
@@ -517,6 +523,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(191, 27);
             this.txtId.TabIndex = 26;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblIngreseIdEmpleado
             // 

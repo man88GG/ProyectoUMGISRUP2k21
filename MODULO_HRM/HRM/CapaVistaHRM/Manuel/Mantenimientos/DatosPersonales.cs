@@ -45,6 +45,16 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             Help.ShowHelp(this, "AyudaMantenimientosMan/AyudaMantenimientoMan.chm", "DatosPersonales.html");
         }
 
+        private void funcLetra(object sender, KeyPressEventArgs e)
+        {
+            clsValidacion.funcLetras(e);
+        }
+
+        private void funcNumero(object sender, KeyPressEventArgs e)
+        {
+            clsValidacion.funcNumeros(e);
+        }
+
         int Estado = 1;
 
         string TipoEntidad;
