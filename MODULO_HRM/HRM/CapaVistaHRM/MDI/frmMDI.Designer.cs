@@ -69,6 +69,8 @@ namespace CapaVistaHRM.MDI
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.nominaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,21 +130,21 @@ namespace CapaVistaHRM.MDI
             // cursosToolStripMenuItem1
             // 
             this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
-            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
             this.cursosToolStripMenuItem1.Text = "Cursos";
             this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
             // 
             // dificultadToolStripMenuItem
             // 
             this.dificultadToolStripMenuItem.Name = "dificultadToolStripMenuItem";
-            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.dificultadToolStripMenuItem.Text = "Dificultad";
             this.dificultadToolStripMenuItem.Click += new System.EventHandler(this.dificultadToolStripMenuItem_Click);
             // 
             // departamentosToolStripMenuItem1
             // 
             this.departamentosToolStripMenuItem1.Name = "departamentosToolStripMenuItem1";
-            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
             this.departamentosToolStripMenuItem1.Text = "Departamentos";
             this.departamentosToolStripMenuItem1.Click += new System.EventHandler(this.departamentosToolStripMenuItem1_Click);
             // 
@@ -242,6 +244,8 @@ namespace CapaVistaHRM.MDI
             // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nominaToolStripMenuItem1});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.procesosToolStripMenuItem.Text = "Procesos";
@@ -384,6 +388,21 @@ namespace CapaVistaHRM.MDI
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // nominaToolStripMenuItem1
+            // 
+            this.nominaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generarNominaToolStripMenuItem});
+            this.nominaToolStripMenuItem1.Name = "nominaToolStripMenuItem1";
+            this.nominaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.nominaToolStripMenuItem1.Text = "Nomina";
+            // 
+            // generarNominaToolStripMenuItem
+            // 
+            this.generarNominaToolStripMenuItem.Name = "generarNominaToolStripMenuItem";
+            this.generarNominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.generarNominaToolStripMenuItem.Text = "Generar Nomina";
+            this.generarNominaToolStripMenuItem.Click += new System.EventHandler(this.generarNominaToolStripMenuItem_Click);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -448,5 +467,7 @@ namespace CapaVistaHRM.MDI
         private System.Windows.Forms.ToolStripMenuItem tiposDePercepcionesYDeduccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeMonedasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeEntrevistasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generarNominaToolStripMenuItem;
     }
 }

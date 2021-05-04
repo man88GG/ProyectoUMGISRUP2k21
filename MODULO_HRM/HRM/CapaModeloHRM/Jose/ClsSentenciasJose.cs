@@ -24,7 +24,7 @@ namespace CapaModeloHRM.Jose
                     Codigo = Reader.GetInt32(0);
                 }
             }
-            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError al obtener codigo automatico, revise los parametros " + NombreTabla + " y " + Campo + " \n -\n -"); }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError al obtener codigo automatico, revise los parametros " + NombreTabla + " y " + Campo + " "+Ex+" "+" \n -\n -"); }
             return Codigo + 1;
         }
 

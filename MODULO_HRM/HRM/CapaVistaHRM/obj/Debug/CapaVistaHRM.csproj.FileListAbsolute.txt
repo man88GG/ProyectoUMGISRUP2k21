@@ -513,3 +513,6 @@ D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\Ca
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.dll
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.pdb
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Procesos.frmGenerarNomina.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmEntrevista.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmIngresoReclutas.resources
