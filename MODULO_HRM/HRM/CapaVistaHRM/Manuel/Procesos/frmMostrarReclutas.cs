@@ -15,27 +15,28 @@ namespace CapaVistaHRM.Manuel.Procesos
 {
     public partial class frmMostrarReclutas : Form
     {
-        public frmMostrarReclutas()
+        public frmMostrarReclutas(int EstadoR)
         {
             InitializeComponent();
-            funcMostrarTabla();
+            funcMostrarTabla(EstadoR);
         }
 
 
         //estado de posible candidato
 
-        int Estado = 0;
-        int NoEntrevistado = 0;
-        int NoRecomendado = 0;
+        //int Estado = 0;
+        //int NoEntrevistado = 0;
+        //int NoRecomendado = 0;
+        int prueba;
         ClsControladorManuel Cont_R = new ClsControladorManuel();
-        public void funcMostrarTabla()
+        public void funcMostrarTabla(int EstadoR)
         {
 
             
-            DataTable dt = Cont_R.funcTablaBancoTalento(Estado, NoEntrevistado, NoRecomendado);
+            DataTable dt = Cont_R.funcTablaBancoTalento(EstadoR, EstadoR, EstadoR);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
-
+            prueba = EstadoR;
 
         }
 
@@ -192,7 +193,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtIdEmpleado_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtIdRecluta.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoId(Estado, NoEntrevistado, NoRecomendado, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoId(prueba, prueba, prueba, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
@@ -201,7 +202,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerNombre_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerNombre.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(Estado, NoEntrevistado, NoRecomendado, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(prueba, prueba, prueba, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
@@ -210,7 +211,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerApellido_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerApellido.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(Estado, NoEntrevistado, NoRecomendado, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(prueba, prueba, prueba, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -218,7 +219,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPuesto_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPuesto.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(Estado, NoEntrevistado, NoRecomendado, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(prueba, prueba, prueba, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -226,7 +227,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtDepartamento_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtDepartamento.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(Estado, NoEntrevistado, NoRecomendado, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(prueba, prueba, prueba, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -234,7 +235,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtProfesion_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtProfesion.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(Estado, NoEntrevistado, NoRecomendado, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(prueba, prueba, prueba, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -253,7 +254,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             //Se llama a la funcion funcBloqueoTxt
             funcBloqueoTxt();
             //Se llama a la funcion funcMostrarTabla
-            funcMostrarTabla();
+            funcMostrarTabla(prueba);
         }
 
       

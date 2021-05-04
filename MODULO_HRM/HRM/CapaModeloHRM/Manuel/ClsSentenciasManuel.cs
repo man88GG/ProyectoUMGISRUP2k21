@@ -150,6 +150,35 @@ namespace CapaModeloHRM.Manuel
             }
         }//fin 
 
+        //Muestra datos en combo Horario
+        public DataTable funcItemsEvaluacion()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                string CargaPuestos = "SELECT * FROM TIPOEVALUACION";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
+
+
         //Muestra datos en combo Formacion Academica
         public DataTable funcItemsNivelEstudio()
         {
@@ -744,6 +773,31 @@ namespace CapaModeloHRM.Manuel
 
 
         }
+
+        //Consulta para buscar un recluta Evaluado
+        public OdbcDataReader funcBuscarReclutaEvaluado(string IdRecluta)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, E.PUNTEO, E.RESULTADOENTREVISTA, E.COMENTARIOS FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, ENTREVISTA AS E, TIPOENTREVISTA AS TP WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND E.IDTIPOENTREVISTA = TP.IDTIPOENTREVISTA AND E.IDENTREVISTA = RE.IDENTREVISTA AND RE.IDRECLUTA = '" + IdRecluta + "'";
+
+
+                OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.conexion());
+                OdbcDataReader Lector = Query_BusquedaReclu.ExecuteReader();
+                return Lector;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
 
 
 

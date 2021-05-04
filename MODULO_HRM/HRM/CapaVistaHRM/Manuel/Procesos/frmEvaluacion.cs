@@ -14,33 +14,33 @@ using System.Net;
 
 namespace CapaVistaHRM.Manuel.Procesos
 {
-    public partial class frmEntrevista : Form
+    public partial class frmEvaluacion : Form
     {
 
         ClsControladorManuel Cont_R = new ClsControladorManuel();
 
-        public frmEntrevista()
+        public frmEvaluacion()
         {
             InitializeComponent();
-            funcLlenarTipoEntrevista();
+            funcLlenarTipoEvaluacion();
             cmbTipoEntrevista.DropDownStyle = ComboBoxStyle.DropDownList;
-            EstadoNoEntrevistados = 0;
+            EstadoNoEntrevistados = 1;
         }
 
         //Declaración de variables Entidad Reclutamiento
         string IdRecluta,Comentarios,OpcionRecluta;
-        int Resultado,TipoEntrevista,Punteo,EstadoNoEntrevistados;
+        int Resultado,TipoEntrevista,Punteo, EstadoNoEntrevistados;
 
         
 
-
+      
         //Se agrega el codigo a la variable resultado de reprobado
         private void rbtnReprobado_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnReprobado.Checked == true)
             {
                 //estado de no escogido
-                Resultado = 4;
+                Resultado = 3;
                 pnlOpciones.Enabled = false;
                 rbtnPrimeraOp.Checked = false;
                 rbtnSegOpcion.Checked = false;
@@ -56,11 +56,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         }
 
         //funcion para llenar el combo
-        public void funcLlenarTipoEntrevista()
+        public void funcLlenarTipoEvaluacion()
         {
-            DataTable Datos = Cont_R.funcItemsEntrevista();
+            DataTable Datos = Cont_R.funcItemsEvaluacion();
             cmbTipoEntrevista.DataSource = Datos;
-            cmbTipoEntrevista.DisplayMember = "TIPOENTREVISTA";
+            cmbTipoEntrevista.DisplayMember = "TIPOEVALUACION";
             cmbTipoEntrevista.ResetText();
         }
 
@@ -73,10 +73,9 @@ namespace CapaVistaHRM.Manuel.Procesos
             {
                 //se desbloquean los componentes en los que se puede agregar/cambiar información
                 IdRecluta = txtIdBancoTalento.Text;
-                gbxDatosEntrevista.Enabled = true;
-                
+                gbxDatosEvaluacion.Enabled = true;
                 //Inicio para Busqueda
-                OdbcDataReader Lector = Cont_R.funcBuscarRecluta(txtIdBancoTalento.Text);
+                OdbcDataReader Lector = Cont_R.funcBuscarReclutaEvaluado(txtIdBancoTalento.Text);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())
@@ -86,11 +85,14 @@ namespace CapaVistaHRM.Manuel.Procesos
 
                         txtPrimerNombre.Text = Lector.GetString(0);
                         txtPrimerApellido.Text = Lector.GetString(1);
-                        cmbPuestoTrabajo.Text = Lector.GetString(10);
-                        cmbHorario.Text = Lector.GetString(11);
-                        cmbDepartamentoTrabajo.Text = Lector.GetString(12);
-                        
+                        cmbPuestoTrabajo.Text = Lector.GetString(2);
+                        cmbHorario.Text = Lector.GetString(3);
+                        cmbDepartamentoTrabajo.Text = Lector.GetString(4);
+                        txtPunteoEntrevista.Text = Lector.GetString(5);
+                        txtResultadoEntrevista.Text = Lector.GetString(6);
+                        rtbxComentariosEntrevista.Text = Lector.GetString(7);
 
+      
                     }
                 }
                 else
@@ -126,12 +128,23 @@ namespace CapaVistaHRM.Manuel.Procesos
             MostrarReclu.ShowDialog();
         }
 
+        private void rbtnAprobado2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnAprobado.Checked == true)
+            {
+                pnlOpciones.Enabled = true;
+            }
+
+
+        }
+
+
         private void rbtnPrimeraOp_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnPrimeraOp.Checked == true)
             {
-                //prioridad máxima luego de recomendados, estado de ya evaluado
-                Resultado = 1;
+                //prioridad máxima luego de recomendados
+                Resultado = 2;
                 OpcionRecluta = "Primera Opcion";
             }
         }
@@ -140,8 +153,8 @@ namespace CapaVistaHRM.Manuel.Procesos
         {
             if (rbtnSegOpcion.Checked == true)
             {
-                //segunda prioridad, estado de ya evaluado
-                Resultado = 1;
+                //segunda prioridad
+                Resultado = 4;
                 OpcionRecluta = "Segunda Opcion";
             }
         }
@@ -157,13 +170,13 @@ namespace CapaVistaHRM.Manuel.Procesos
                 else
                 {
                     //segunda verificación de datos de cajas de texto vacias
-                    if (rtxtComentarios.Text == "") { MessageBox.Show("ADVERTENCIA: No ha ingresado sus Comentarios sobre el Recluta Entrevistado", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                    if (rtxtComentarios.Text == "") { MessageBox.Show("ADVERTENCIA: No ha ingresado sus Comentarios sobre el Recluta Evaluado", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                     else
                     {
                         if (rbtnAprobado.Checked==true &&(rbtnPrimeraOp.Checked==false && rbtnSegOpcion.Checked==false )) { MessageBox.Show("ADVERTENCIA: No ha seleccionado un Tipo de Opción", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                         else { 
                         //Mensaje de Pregunta
-                            if (MessageBox.Show("¿Desea agregar un nuevo Resultado de Entrevista ?", "Entrevista", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+                            if (MessageBox.Show("¿Desea agregar un nuevo Resultado de Evaluacion ?", "Evaluacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
                             else
                             {
 
@@ -173,11 +186,10 @@ namespace CapaVistaHRM.Manuel.Procesos
                                 Punteo = Convert.ToInt32(txtPunteo.Text);
                                 TipoEntrevista = cmbTipoEntrevista.SelectedIndex + 1;
                                 Comentarios = rtxtComentarios.Text;
-
-
+                              
                                 //envío de datos hacia capa Controlador
                                 Cont_R.funcInsertarEntrevista(IdRecluta, TipoEntrevista,Punteo, Resultado, Comentarios, OpcionRecluta);
-                                MessageBox.Show("Se ha ingresado la Entrevista con Éxito", "FORMULARIO ENTREVISTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Se ha ingresado la Evaluacion con Éxito", "FORMULARIO EVALUACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 funcLimpieza();
                                 funcBloqueo();
@@ -202,6 +214,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             txtPrimerApellido.Text = "";
             cmbDepartamentoTrabajo.Text = "";
             cmbPuestoTrabajo.Text = "";
+            cmbHorario.Text = "";
             cmbTipoEntrevista.Text = "";
             txtPunteo.Text = "";
             rbtnAprobado.Checked = false;
@@ -209,14 +222,17 @@ namespace CapaVistaHRM.Manuel.Procesos
             rtxtComentarios.Text = "";
             rbtnPrimeraOp.Checked = false;
             rbtnSegOpcion.Checked = false;
-            cmbHorario.Text = "";
+            txtPunteoEntrevista.Text = "";
+            txtResultadoEntrevista.Text = "";
+            rtbxComentariosEntrevista.Text = "";
+
 
         }
         //Función de Bloqueo
         private void funcBloqueo()
         {
-            gbxDatosEntrevista.Enabled = false;
-           
+            gbxDatosEvaluacion.Enabled = false;
+            
         }
 
 
