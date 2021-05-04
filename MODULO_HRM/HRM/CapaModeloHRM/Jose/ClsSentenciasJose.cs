@@ -24,7 +24,7 @@ namespace CapaModeloHRM.Jose
                     Codigo = Reader.GetInt32(0);
                 }
             }
-            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError al obtener codigo automatico, revise los parametros "+NombreTabla+" y "+Campo+" \n -\n -"); }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError al obtener codigo automatico, revise los parametros " + NombreTabla + " y " + Campo + " \n -\n -"); }
             return Codigo + 1;
         }
 
@@ -57,7 +57,7 @@ namespace CapaModeloHRM.Jose
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Puede que los parametros seas erroneos, verifique los parametro enviados "+consulta+" --- " + ex);
+                Console.WriteLine("Puede que los parametros seas erroneos, verifique los parametro enviados " + consulta + " --- " + ex);
                 return null;
             }
         }
@@ -90,7 +90,7 @@ namespace CapaModeloHRM.Jose
                         sql += " " + items + ", ";
                         consulta += " " + items + ", ";
                     }
-                    catch (Exception )
+                    catch (Exception)
                     {
                         try
                         {
@@ -99,7 +99,7 @@ namespace CapaModeloHRM.Jose
                             sql += " " + items + ", ";
                             consulta += " " + items + ", ";
                         }
-                        catch (Exception )
+                        catch (Exception)
                         {
                             try
                             {
@@ -108,7 +108,7 @@ namespace CapaModeloHRM.Jose
                                 sql += " '" + items + "', ";
                                 consulta += " " + items + ", ";
                             }
-                            catch (Exception )
+                            catch (Exception)
                             {
                                 //string
                                 sql += " '" + items + "', ";
@@ -198,7 +198,7 @@ namespace CapaModeloHRM.Jose
             }
             sqlInicio += " WHERE " + campos.ElementAt(0) + " = " + datos.ElementAt(0) + "; ";
             consulta += " WHERE " + campos.ElementAt(0) + " = " + datos.ElementAt(0) + "; ";
-         
+
             try
             {
                 OdbcCommand comm = new OdbcCommand(sqlInicio, Con.conexion());
@@ -216,7 +216,7 @@ namespace CapaModeloHRM.Jose
         public bool procEliminar(string tabla, string campo, string idTabla, string id)
         {
             string sql = "UPDATE " + tabla + " SET " + campo + "= 0 WHERE " + idTabla + "= " + id + " ";
-       
+
             try
             {
                 OdbcCommand command = new OdbcCommand(sql, Con.conexion());
@@ -269,7 +269,7 @@ namespace CapaModeloHRM.Jose
         {
             string[] Campos = new string[100];
             int I = 0;
-            string Sql = "SELECT *  FROM " + Tabla + " WHERE estado = 1 and idTipoPercepcionDeduccion = "+Campo+" ;";
+            string Sql = "SELECT *  FROM " + Tabla + " WHERE estado = 1 and idTipoPercepcionDeduccion = " + Campo + " ;";
             try
             {
                 OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());

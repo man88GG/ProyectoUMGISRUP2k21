@@ -9,9 +9,11 @@ using CapaModeloHRM.Jose;
 
 namespace CapaControladorHRM.Jose
 {
+    
     public class ClsControladorJose
     {
         ClsSentenciasJose Sn = new ClsSentenciasJose();
+
         public int funcCodigoMaximo(string Tabla, string Campo)
         {
             int CodigoNuevo = Sn.funcObtenerCodigo(Tabla, Campo);
@@ -58,10 +60,11 @@ namespace CapaControladorHRM.Jose
 
         public bool procDatosInsertar(string tabla, List<string> lista)
         {
-            if(Sn.procInsertarDatos(tabla, lista))
+            if (Sn.procInsertarDatos(tabla, lista))
             {
                 return true;
-            }else
+            }
+            else
             {
                 return false;
             }
@@ -76,9 +79,9 @@ namespace CapaControladorHRM.Jose
             {
                 return false;
             }
-           
+
         }
-        public bool funcEliminar(string tabla, string campo, string idTabla, string id )
+        public bool funcEliminar(string tabla, string campo, string idTabla, string id)
         {
 
             if (Sn.procEliminar(tabla, campo, idTabla, id))
@@ -102,6 +105,5 @@ namespace CapaControladorHRM.Jose
             var dt1 = Sn.obtenerDosParametros(tabla, campo1, campo2);
             return dt1;
         }
-
     }
 }
