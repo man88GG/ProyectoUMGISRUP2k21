@@ -1,7 +1,7 @@
 ﻿
     namespace CapaVistaHRM.Manuel.Procesos
 {
-    partial class frmEntrevista
+    partial class frmEvaluacion
     {
         /// <summary>
         /// Required designer variable.
@@ -47,57 +47,52 @@
             this.txtPrimerNombre = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
-            this.tbpDatosEntrevista = new System.Windows.Forms.TabPage();
-            this.gbxDatosEntrevista = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
-            this.pnlOpciones = new System.Windows.Forms.Panel();
-            this.rbtnSegOpcion = new System.Windows.Forms.RadioButton();
-            this.rbtnPrimeraOp = new System.Windows.Forms.RadioButton();
-=======
+            this.tbpDatosEvaluacion = new System.Windows.Forms.TabPage();
+            this.gbxDatosEvaluacion = new System.Windows.Forms.GroupBox();
             this.txtPunteo = new System.Windows.Forms.TextBox();
-            this.lblPunteoEntrevista = new System.Windows.Forms.Label();
+            this.lblPunteoEvaluacion = new System.Windows.Forms.Label();
             this.pnlOpciones = new System.Windows.Forms.Panel();
             this.rbtnSegOpcion = new System.Windows.Forms.RadioButton();
             this.rbtnPrimeraOp = new System.Windows.Forms.RadioButton();
             this.rbtnReprobado = new System.Windows.Forms.RadioButton();
             this.rbtnAprobado = new System.Windows.Forms.RadioButton();
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
-            this.btnIngresoEntrevista = new System.Windows.Forms.Button();
+            this.btnIngresoEvaluacion = new System.Windows.Forms.Button();
             this.rtxtComentarios = new System.Windows.Forms.RichTextBox();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
-            this.lblResultadoEntrevista = new System.Windows.Forms.Label();
-            this.lblTipoEntrevista = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.rbtnAprobado = new System.Windows.Forms.RadioButton();
-            this.rbtnReprobado = new System.Windows.Forms.RadioButton();
+            this.lblResultadoEvaluacion = new System.Windows.Forms.Label();
+            this.lblTipoEvaluacion = new System.Windows.Forms.Label();
             this.lblPunteoEntrevista = new System.Windows.Forms.Label();
-            this.txtPunteo = new System.Windows.Forms.TextBox();
-=======
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
+            this.lblResultadoEntrevista = new System.Windows.Forms.Label();
+            this.txtPunteoEntrevista = new System.Windows.Forms.TextBox();
+            this.txtResultadoEntrevista = new System.Windows.Forms.TextBox();
+            this.rtbxComentariosEntrevista = new System.Windows.Forms.RichTextBox();
+            this.lblComentariosEntrevista = new System.Windows.Forms.Label();
             this.tbcEntrevista.SuspendLayout();
             this.tbpDatosRecluta.SuspendLayout();
             this.pnlPuesto.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
-            this.tbpDatosEntrevista.SuspendLayout();
-            this.gbxDatosEntrevista.SuspendLayout();
+            this.tbpDatosEvaluacion.SuspendLayout();
+            this.gbxDatosEvaluacion.SuspendLayout();
             this.pnlOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcEntrevista
             // 
             this.tbcEntrevista.Controls.Add(this.tbpDatosRecluta);
-            this.tbcEntrevista.Controls.Add(this.tbpDatosEntrevista);
+            this.tbcEntrevista.Controls.Add(this.tbpDatosEvaluacion);
             this.tbcEntrevista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcEntrevista.Location = new System.Drawing.Point(0, 0);
             this.tbcEntrevista.Name = "tbcEntrevista";
             this.tbcEntrevista.SelectedIndex = 0;
-            this.tbcEntrevista.Size = new System.Drawing.Size(829, 459);
+            this.tbcEntrevista.Size = new System.Drawing.Size(811, 655);
             this.tbcEntrevista.TabIndex = 0;
             // 
             // tbpDatosRecluta
             // 
             this.tbpDatosRecluta.BackColor = System.Drawing.Color.Purple;
+            this.tbpDatosRecluta.Controls.Add(this.lblComentariosEntrevista);
+            this.tbpDatosRecluta.Controls.Add(this.rtbxComentariosEntrevista);
             this.tbpDatosRecluta.Controls.Add(this.btnReclutas);
             this.tbpDatosRecluta.Controls.Add(this.lblIngreseIdRecluta);
             this.tbpDatosRecluta.Controls.Add(this.txtIdBancoTalento);
@@ -107,19 +102,19 @@
             this.tbpDatosRecluta.Location = new System.Drawing.Point(4, 29);
             this.tbpDatosRecluta.Name = "tbpDatosRecluta";
             this.tbpDatosRecluta.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDatosRecluta.Size = new System.Drawing.Size(821, 426);
+            this.tbpDatosRecluta.Size = new System.Drawing.Size(803, 622);
             this.tbpDatosRecluta.TabIndex = 0;
             this.tbpDatosRecluta.Text = "Datos Recluta";
             // 
             // btnReclutas
             // 
             this.btnReclutas.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReclutas.Location = new System.Drawing.Point(28, 334);
+            this.btnReclutas.Location = new System.Drawing.Point(19, 539);
             this.btnReclutas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReclutas.Name = "btnReclutas";
             this.btnReclutas.Size = new System.Drawing.Size(184, 76);
             this.btnReclutas.TabIndex = 35;
-            this.btnReclutas.Text = "Ver Lista Reclutas No Entrevistados";
+            this.btnReclutas.Text = "Ver Lista Reclutas No Evaluados";
             this.btnReclutas.UseVisualStyleBackColor = true;
             this.btnReclutas.Click += new System.EventHandler(this.btnReclutas_Click);
             // 
@@ -127,7 +122,7 @@
             // 
             this.lblIngreseIdRecluta.AutoSize = true;
             this.lblIngreseIdRecluta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIngreseIdRecluta.Location = new System.Drawing.Point(75, 62);
+            this.lblIngreseIdRecluta.Location = new System.Drawing.Point(118, 28);
             this.lblIngreseIdRecluta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngreseIdRecluta.Name = "lblIngreseIdRecluta";
             this.lblIngreseIdRecluta.Size = new System.Drawing.Size(200, 20);
@@ -137,7 +132,7 @@
             // txtIdBancoTalento
             // 
             this.txtIdBancoTalento.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIdBancoTalento.Location = new System.Drawing.Point(319, 59);
+            this.txtIdBancoTalento.Location = new System.Drawing.Point(362, 25);
             this.txtIdBancoTalento.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdBancoTalento.Name = "txtIdBancoTalento";
             this.txtIdBancoTalento.Size = new System.Drawing.Size(184, 27);
@@ -147,7 +142,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(536, 53);
+            this.btnBuscar.Location = new System.Drawing.Point(579, 19);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(119, 38);
@@ -165,11 +160,8 @@
             this.pnlPuesto.Controls.Add(this.cmbPuestoTrabajo);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Enabled = false;
-<<<<<<< HEAD
-=======
             this.pnlPuesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
-            this.pnlPuesto.Location = new System.Drawing.Point(519, 150);
+            this.pnlPuesto.Location = new System.Drawing.Point(516, 70);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlPuesto.Name = "pnlPuesto";
             this.pnlPuesto.Size = new System.Drawing.Size(264, 219);
@@ -246,19 +238,20 @@
             // 
             // pnlDatosGenerales
             // 
+            this.pnlDatosGenerales.Controls.Add(this.txtResultadoEntrevista);
+            this.pnlDatosGenerales.Controls.Add(this.txtPunteoEntrevista);
+            this.pnlDatosGenerales.Controls.Add(this.lblResultadoEntrevista);
+            this.pnlDatosGenerales.Controls.Add(this.lblPunteoEntrevista);
             this.pnlDatosGenerales.Controls.Add(this.txtPrimerApellido);
             this.pnlDatosGenerales.Controls.Add(this.txtPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.lblNombres);
             this.pnlDatosGenerales.Controls.Add(this.lblApellidos);
             this.pnlDatosGenerales.Enabled = false;
-<<<<<<< HEAD
-=======
             this.pnlDatosGenerales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
-            this.pnlDatosGenerales.Location = new System.Drawing.Point(28, 150);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(28, 70);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
-            this.pnlDatosGenerales.Size = new System.Drawing.Size(441, 123);
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(456, 220);
             this.pnlDatosGenerales.TabIndex = 31;
             // 
             // txtPrimerApellido
@@ -268,7 +261,7 @@
             this.txtPrimerApellido.Location = new System.Drawing.Point(197, 75);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(229, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(237, 27);
             this.txtPrimerApellido.TabIndex = 7;
             // 
             // txtPrimerNombre
@@ -278,7 +271,7 @@
             this.txtPrimerNombre.Location = new System.Drawing.Point(197, 22);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(229, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(237, 27);
             this.txtPrimerNombre.TabIndex = 5;
             // 
             // lblNombres
@@ -305,67 +298,64 @@
             this.lblApellidos.TabIndex = 3;
             this.lblApellidos.Text = "Apellidos";
             // 
-            // tbpDatosEntrevista
+            // tbpDatosEvaluacion
             // 
-            this.tbpDatosEntrevista.BackColor = System.Drawing.Color.Purple;
-            this.tbpDatosEntrevista.Controls.Add(this.gbxDatosEntrevista);
-            this.tbpDatosEntrevista.Location = new System.Drawing.Point(4, 29);
-            this.tbpDatosEntrevista.Name = "tbpDatosEntrevista";
-            this.tbpDatosEntrevista.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDatosEntrevista.Size = new System.Drawing.Size(821, 426);
-            this.tbpDatosEntrevista.TabIndex = 1;
-            this.tbpDatosEntrevista.Text = "Datos Entrevista";
+            this.tbpDatosEvaluacion.BackColor = System.Drawing.Color.Purple;
+            this.tbpDatosEvaluacion.Controls.Add(this.gbxDatosEvaluacion);
+            this.tbpDatosEvaluacion.Location = new System.Drawing.Point(4, 29);
+            this.tbpDatosEvaluacion.Name = "tbpDatosEvaluacion";
+            this.tbpDatosEvaluacion.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpDatosEvaluacion.Size = new System.Drawing.Size(803, 622);
+            this.tbpDatosEvaluacion.TabIndex = 1;
+            this.tbpDatosEvaluacion.Text = "Datos Evaluacion";
             // 
-            // gbxDatosEntrevista
+            // gbxDatosEvaluacion
             // 
-            this.gbxDatosEntrevista.BackColor = System.Drawing.Color.Purple;
-            this.gbxDatosEntrevista.Controls.Add(this.txtPunteo);
-            this.gbxDatosEntrevista.Controls.Add(this.lblPunteoEntrevista);
-            this.gbxDatosEntrevista.Controls.Add(this.pnlOpciones);
-            this.gbxDatosEntrevista.Controls.Add(this.rbtnReprobado);
-            this.gbxDatosEntrevista.Controls.Add(this.rbtnAprobado);
-            this.gbxDatosEntrevista.Controls.Add(this.btnIngresoEntrevista);
-            this.gbxDatosEntrevista.Controls.Add(this.rtxtComentarios);
-            this.gbxDatosEntrevista.Controls.Add(this.lblComentarios);
-            this.gbxDatosEntrevista.Controls.Add(this.cmbTipoEntrevista);
-            this.gbxDatosEntrevista.Controls.Add(this.lblResultadoEntrevista);
-            this.gbxDatosEntrevista.Controls.Add(this.lblTipoEntrevista);
-            this.gbxDatosEntrevista.Enabled = false;
-            this.gbxDatosEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbxDatosEntrevista.Location = new System.Drawing.Point(8, 23);
-            this.gbxDatosEntrevista.Name = "gbxDatosEntrevista";
-            this.gbxDatosEntrevista.Size = new System.Drawing.Size(809, 398);
-            this.gbxDatosEntrevista.TabIndex = 10;
-            this.gbxDatosEntrevista.TabStop = false;
-            this.gbxDatosEntrevista.Text = "Datos de Entrevista";
+            this.gbxDatosEvaluacion.BackColor = System.Drawing.Color.Purple;
+            this.gbxDatosEvaluacion.Controls.Add(this.txtPunteo);
+            this.gbxDatosEvaluacion.Controls.Add(this.lblPunteoEvaluacion);
+            this.gbxDatosEvaluacion.Controls.Add(this.pnlOpciones);
+            this.gbxDatosEvaluacion.Controls.Add(this.rbtnReprobado);
+            this.gbxDatosEvaluacion.Controls.Add(this.rbtnAprobado);
+            this.gbxDatosEvaluacion.Controls.Add(this.btnIngresoEvaluacion);
+            this.gbxDatosEvaluacion.Controls.Add(this.rtxtComentarios);
+            this.gbxDatosEvaluacion.Controls.Add(this.lblComentarios);
+            this.gbxDatosEvaluacion.Controls.Add(this.cmbTipoEntrevista);
+            this.gbxDatosEvaluacion.Controls.Add(this.lblResultadoEvaluacion);
+            this.gbxDatosEvaluacion.Controls.Add(this.lblTipoEvaluacion);
+            this.gbxDatosEvaluacion.Enabled = false;
+            this.gbxDatosEvaluacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbxDatosEvaluacion.Location = new System.Drawing.Point(8, 23);
+            this.gbxDatosEvaluacion.Name = "gbxDatosEvaluacion";
+            this.gbxDatosEvaluacion.Size = new System.Drawing.Size(792, 596);
+            this.gbxDatosEvaluacion.TabIndex = 10;
+            this.gbxDatosEvaluacion.TabStop = false;
+            this.gbxDatosEvaluacion.Text = "Datos de Evaluacion";
             // 
-<<<<<<< HEAD
-=======
             // txtPunteo
             // 
             this.txtPunteo.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPunteo.Location = new System.Drawing.Point(207, 72);
+            this.txtPunteo.Location = new System.Drawing.Point(227, 76);
             this.txtPunteo.Name = "txtPunteo";
             this.txtPunteo.Size = new System.Drawing.Size(128, 27);
             this.txtPunteo.TabIndex = 15;
             // 
-            // lblPunteoEntrevista
+            // lblPunteoEvaluacion
             // 
-            this.lblPunteoEntrevista.AutoSize = true;
-            this.lblPunteoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPunteoEntrevista.Location = new System.Drawing.Point(6, 79);
-            this.lblPunteoEntrevista.Name = "lblPunteoEntrevista";
-            this.lblPunteoEntrevista.Size = new System.Drawing.Size(189, 20);
-            this.lblPunteoEntrevista.TabIndex = 14;
-            this.lblPunteoEntrevista.Text = "Punteo de la Entrevista";
+            this.lblPunteoEvaluacion.AutoSize = true;
+            this.lblPunteoEvaluacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPunteoEvaluacion.Location = new System.Drawing.Point(6, 79);
+            this.lblPunteoEvaluacion.Name = "lblPunteoEvaluacion";
+            this.lblPunteoEvaluacion.Size = new System.Drawing.Size(197, 20);
+            this.lblPunteoEvaluacion.TabIndex = 14;
+            this.lblPunteoEvaluacion.Text = "Punteo de la Evaluacion";
             // 
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             // pnlOpciones
             // 
             this.pnlOpciones.Controls.Add(this.rbtnSegOpcion);
             this.pnlOpciones.Controls.Add(this.rbtnPrimeraOp);
             this.pnlOpciones.Enabled = false;
-            this.pnlOpciones.Location = new System.Drawing.Point(546, 125);
+            this.pnlOpciones.Location = new System.Drawing.Point(522, 121);
             this.pnlOpciones.Name = "pnlOpciones";
             this.pnlOpciones.Size = new System.Drawing.Size(259, 80);
             this.pnlOpciones.TabIndex = 13;
@@ -396,13 +386,11 @@
             this.rbtnPrimeraOp.UseVisualStyleBackColor = true;
             this.rbtnPrimeraOp.CheckedChanged += new System.EventHandler(this.rbtnPrimeraOp_CheckedChanged);
             // 
-<<<<<<< HEAD
-=======
             // rbtnReprobado
             // 
             this.rbtnReprobado.AutoSize = true;
             this.rbtnReprobado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnReprobado.Location = new System.Drawing.Point(394, 119);
+            this.rbtnReprobado.Location = new System.Drawing.Point(388, 133);
             this.rbtnReprobado.Name = "rbtnReprobado";
             this.rbtnReprobado.Size = new System.Drawing.Size(116, 24);
             this.rbtnReprobado.TabIndex = 10;
@@ -415,7 +403,7 @@
             // 
             this.rbtnAprobado.AutoSize = true;
             this.rbtnAprobado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnAprobado.Location = new System.Drawing.Point(250, 121);
+            this.rbtnAprobado.Location = new System.Drawing.Point(258, 133);
             this.rbtnAprobado.Name = "rbtnAprobado";
             this.rbtnAprobado.Size = new System.Drawing.Size(108, 24);
             this.rbtnAprobado.TabIndex = 9;
@@ -424,24 +412,23 @@
             this.rbtnAprobado.UseVisualStyleBackColor = true;
             this.rbtnAprobado.CheckedChanged += new System.EventHandler(this.rbtnAprobado_CheckedChanged);
             // 
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
-            // btnIngresoEntrevista
+            // btnIngresoEvaluacion
             // 
-            this.btnIngresoEntrevista.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIngresoEntrevista.Location = new System.Drawing.Point(634, 16);
-            this.btnIngresoEntrevista.Name = "btnIngresoEntrevista";
-            this.btnIngresoEntrevista.Size = new System.Drawing.Size(171, 57);
-            this.btnIngresoEntrevista.TabIndex = 8;
-            this.btnIngresoEntrevista.Text = "Ingresar Entrevista";
-            this.btnIngresoEntrevista.UseVisualStyleBackColor = true;
-            this.btnIngresoEntrevista.Click += new System.EventHandler(this.btnIngresoEntrevista_Click);
+            this.btnIngresoEvaluacion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnIngresoEvaluacion.Location = new System.Drawing.Point(591, 26);
+            this.btnIngresoEvaluacion.Name = "btnIngresoEvaluacion";
+            this.btnIngresoEvaluacion.Size = new System.Drawing.Size(171, 57);
+            this.btnIngresoEvaluacion.TabIndex = 8;
+            this.btnIngresoEvaluacion.Text = "Ingresar Evaluación";
+            this.btnIngresoEvaluacion.UseVisualStyleBackColor = true;
+            this.btnIngresoEvaluacion.Click += new System.EventHandler(this.btnIngresoEntrevista_Click);
             // 
             // rtxtComentarios
             // 
             this.rtxtComentarios.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rtxtComentarios.Location = new System.Drawing.Point(12, 210);
+            this.rtxtComentarios.Location = new System.Drawing.Point(12, 228);
             this.rtxtComentarios.Name = "rtxtComentarios";
-            this.rtxtComentarios.Size = new System.Drawing.Size(793, 183);
+            this.rtxtComentarios.Size = new System.Drawing.Size(769, 362);
             this.rtxtComentarios.TabIndex = 2;
             this.rtxtComentarios.Text = "";
             // 
@@ -449,101 +436,117 @@
             // 
             this.lblComentarios.AutoSize = true;
             this.lblComentarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblComentarios.Location = new System.Drawing.Point(8, 176);
+            this.lblComentarios.Location = new System.Drawing.Point(8, 195);
             this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(250, 20);
+            this.lblComentarios.Size = new System.Drawing.Size(224, 20);
             this.lblComentarios.TabIndex = 3;
-            this.lblComentarios.Text = "Comentarios del Entrevistador";
+            this.lblComentarios.Text = "Comentarios del Evaluador";
             // 
             // cmbTipoEntrevista
             // 
             this.cmbTipoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbTipoEntrevista.FormattingEnabled = true;
-            this.cmbTipoEntrevista.Location = new System.Drawing.Point(207, 26);
+            this.cmbTipoEntrevista.Location = new System.Drawing.Point(227, 26);
             this.cmbTipoEntrevista.Name = "cmbTipoEntrevista";
             this.cmbTipoEntrevista.Size = new System.Drawing.Size(149, 28);
             this.cmbTipoEntrevista.TabIndex = 7;
             // 
-            // lblResultadoEntrevista
+            // lblResultadoEvaluacion
             // 
-            this.lblResultadoEntrevista.AutoSize = true;
-            this.lblResultadoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblResultadoEntrevista.Location = new System.Drawing.Point(8, 123);
-            this.lblResultadoEntrevista.Name = "lblResultadoEntrevista";
-            this.lblResultadoEntrevista.Size = new System.Drawing.Size(211, 20);
-            this.lblResultadoEntrevista.TabIndex = 4;
-            this.lblResultadoEntrevista.Text = "Resultado de la Entrevista";
+            this.lblResultadoEvaluacion.AutoSize = true;
+            this.lblResultadoEvaluacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblResultadoEvaluacion.Location = new System.Drawing.Point(8, 137);
+            this.lblResultadoEvaluacion.Name = "lblResultadoEvaluacion";
+            this.lblResultadoEvaluacion.Size = new System.Drawing.Size(219, 20);
+            this.lblResultadoEvaluacion.TabIndex = 4;
+            this.lblResultadoEvaluacion.Text = "Resultado de la Evaluacion";
             // 
-            // lblTipoEntrevista
+            // lblTipoEvaluacion
             // 
-            this.lblTipoEntrevista.AutoSize = true;
-            this.lblTipoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTipoEntrevista.Location = new System.Drawing.Point(6, 34);
-            this.lblTipoEntrevista.Name = "lblTipoEntrevista";
-            this.lblTipoEntrevista.Size = new System.Drawing.Size(127, 20);
-            this.lblTipoEntrevista.TabIndex = 6;
-            this.lblTipoEntrevista.Text = "Tipo Entrevista";
-            // 
-<<<<<<< HEAD
-            // rbtnAprobado
-            // 
-            this.rbtnAprobado.AutoSize = true;
-            this.rbtnAprobado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnAprobado.Location = new System.Drawing.Point(250, 121);
-            this.rbtnAprobado.Name = "rbtnAprobado";
-            this.rbtnAprobado.Size = new System.Drawing.Size(108, 24);
-            this.rbtnAprobado.TabIndex = 9;
-            this.rbtnAprobado.TabStop = true;
-            this.rbtnAprobado.Text = "Aprobado";
-            this.rbtnAprobado.UseVisualStyleBackColor = true;
-            this.rbtnAprobado.CheckedChanged += new System.EventHandler(this.rbtnAprobado_CheckedChanged);
-            // 
-            // rbtnReprobado
-            // 
-            this.rbtnReprobado.AutoSize = true;
-            this.rbtnReprobado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnReprobado.Location = new System.Drawing.Point(394, 119);
-            this.rbtnReprobado.Name = "rbtnReprobado";
-            this.rbtnReprobado.Size = new System.Drawing.Size(116, 24);
-            this.rbtnReprobado.TabIndex = 10;
-            this.rbtnReprobado.TabStop = true;
-            this.rbtnReprobado.Text = "Reprobado";
-            this.rbtnReprobado.UseVisualStyleBackColor = true;
-            this.rbtnReprobado.CheckedChanged += new System.EventHandler(this.rbtnReprobado_CheckedChanged);
+            this.lblTipoEvaluacion.AutoSize = true;
+            this.lblTipoEvaluacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTipoEvaluacion.Location = new System.Drawing.Point(6, 34);
+            this.lblTipoEvaluacion.Name = "lblTipoEvaluacion";
+            this.lblTipoEvaluacion.Size = new System.Drawing.Size(135, 20);
+            this.lblTipoEvaluacion.TabIndex = 6;
+            this.lblTipoEvaluacion.Text = "Tipo Evaluacion";
             // 
             // lblPunteoEntrevista
             // 
             this.lblPunteoEntrevista.AutoSize = true;
+            this.lblPunteoEntrevista.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPunteoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPunteoEntrevista.Location = new System.Drawing.Point(6, 79);
+            this.lblPunteoEntrevista.Location = new System.Drawing.Point(16, 129);
+            this.lblPunteoEntrevista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPunteoEntrevista.Name = "lblPunteoEntrevista";
-            this.lblPunteoEntrevista.Size = new System.Drawing.Size(189, 20);
-            this.lblPunteoEntrevista.TabIndex = 14;
-            this.lblPunteoEntrevista.Text = "Punteo de la Entrevista";
+            this.lblPunteoEntrevista.Size = new System.Drawing.Size(147, 20);
+            this.lblPunteoEntrevista.TabIndex = 36;
+            this.lblPunteoEntrevista.Text = "Punteo Entrevista";
             // 
-            // txtPunteo
+            // lblResultadoEntrevista
             // 
-            this.txtPunteo.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPunteo.Location = new System.Drawing.Point(207, 72);
-            this.txtPunteo.Name = "txtPunteo";
-            this.txtPunteo.Size = new System.Drawing.Size(128, 27);
-            this.txtPunteo.TabIndex = 15;
+            this.lblResultadoEntrevista.AutoSize = true;
+            this.lblResultadoEntrevista.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblResultadoEntrevista.Location = new System.Drawing.Point(16, 174);
+            this.lblResultadoEntrevista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResultadoEntrevista.Name = "lblResultadoEntrevista";
+            this.lblResultadoEntrevista.Size = new System.Drawing.Size(169, 20);
+            this.lblResultadoEntrevista.TabIndex = 37;
+            this.lblResultadoEntrevista.Text = "Resultado Entrevista";
             // 
-=======
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
-            // frmEntrevista
+            // txtPunteoEntrevista
+            // 
+            this.txtPunteoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtPunteoEntrevista.Enabled = false;
+            this.txtPunteoEntrevista.Location = new System.Drawing.Point(197, 126);
+            this.txtPunteoEntrevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtPunteoEntrevista.Name = "txtPunteoEntrevista";
+            this.txtPunteoEntrevista.Size = new System.Drawing.Size(237, 27);
+            this.txtPunteoEntrevista.TabIndex = 36;
+            // 
+            // txtResultadoEntrevista
+            // 
+            this.txtResultadoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtResultadoEntrevista.Enabled = false;
+            this.txtResultadoEntrevista.Location = new System.Drawing.Point(197, 174);
+            this.txtResultadoEntrevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtResultadoEntrevista.Name = "txtResultadoEntrevista";
+            this.txtResultadoEntrevista.Size = new System.Drawing.Size(237, 27);
+            this.txtResultadoEntrevista.TabIndex = 36;
+            // 
+            // rtbxComentariosEntrevista
+            // 
+            this.rtbxComentariosEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rtbxComentariosEntrevista.Location = new System.Drawing.Point(19, 342);
+            this.rtbxComentariosEntrevista.Name = "rtbxComentariosEntrevista";
+            this.rtbxComentariosEntrevista.Size = new System.Drawing.Size(761, 183);
+            this.rtbxComentariosEntrevista.TabIndex = 36;
+            this.rtbxComentariosEntrevista.Text = "";
+            // 
+            // lblComentariosEntrevista
+            // 
+            this.lblComentariosEntrevista.AutoSize = true;
+            this.lblComentariosEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblComentariosEntrevista.Location = new System.Drawing.Point(24, 310);
+            this.lblComentariosEntrevista.Name = "lblComentariosEntrevista";
+            this.lblComentariosEntrevista.Size = new System.Drawing.Size(250, 20);
+            this.lblComentariosEntrevista.TabIndex = 37;
+            this.lblComentariosEntrevista.Text = "Comentarios del Entrevistador";
+            // 
+            // frmEvaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(829, 459);
+            this.ClientSize = new System.Drawing.Size(811, 655);
             this.Controls.Add(this.tbcEntrevista);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmEntrevista";
+            this.Name = "frmEvaluacion";
             this.Text = "Entrevista";
             this.Load += new System.EventHandler(this.frmEntrevista_Load);
             this.tbcEntrevista.ResumeLayout(false);
@@ -553,9 +556,9 @@
             this.pnlPuesto.PerformLayout();
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();
-            this.tbpDatosEntrevista.ResumeLayout(false);
-            this.gbxDatosEntrevista.ResumeLayout(false);
-            this.gbxDatosEntrevista.PerformLayout();
+            this.tbpDatosEvaluacion.ResumeLayout(false);
+            this.gbxDatosEvaluacion.ResumeLayout(false);
+            this.gbxDatosEvaluacion.PerformLayout();
             this.pnlOpciones.ResumeLayout(false);
             this.pnlOpciones.PerformLayout();
             this.ResumeLayout(false);
@@ -566,13 +569,12 @@
 
         private System.Windows.Forms.TabControl tbcEntrevista;
         private System.Windows.Forms.TabPage tbpDatosRecluta;
-        private System.Windows.Forms.TabPage tbpDatosEntrevista;
-        private System.Windows.Forms.GroupBox gbxDatosEntrevista;
+        private System.Windows.Forms.GroupBox gbxDatosEvaluacion;
         private System.Windows.Forms.RichTextBox rtxtComentarios;
         private System.Windows.Forms.Label lblComentarios;
         private System.Windows.Forms.ComboBox cmbTipoEntrevista;
-        private System.Windows.Forms.Label lblResultadoEntrevista;
-        private System.Windows.Forms.Label lblTipoEntrevista;
+        private System.Windows.Forms.Label lblResultadoEvaluacion;
+        private System.Windows.Forms.Label lblTipoEvaluacion;
         private System.Windows.Forms.Label lblIngreseIdRecluta;
         private System.Windows.Forms.TextBox txtIdBancoTalento;
         private System.Windows.Forms.Button btnBuscar;
@@ -585,26 +587,24 @@
         private System.Windows.Forms.TextBox txtPrimerNombre;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Label lblApellidos;
-        private System.Windows.Forms.Button btnIngresoEntrevista;
+        private System.Windows.Forms.Button btnIngresoEvaluacion;
         private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
         private System.Windows.Forms.Button btnReclutas;
-<<<<<<< HEAD
-        private System.Windows.Forms.Panel pnlOpciones;
-        private System.Windows.Forms.RadioButton rbtnSegOpcion;
-        private System.Windows.Forms.RadioButton rbtnPrimeraOp;
-=======
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.ComboBox cmbHorario;
         private System.Windows.Forms.TextBox txtPunteo;
-        private System.Windows.Forms.Label lblPunteoEntrevista;
+        private System.Windows.Forms.Label lblPunteoEvaluacion;
         private System.Windows.Forms.RadioButton rbtnReprobado;
         private System.Windows.Forms.RadioButton rbtnAprobado;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Panel pnlOpciones;
         private System.Windows.Forms.RadioButton rbtnSegOpcion;
         private System.Windows.Forms.RadioButton rbtnPrimeraOp;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
+        private System.Windows.Forms.TabPage tbpDatosEvaluacion;
+        private System.Windows.Forms.Label lblComentariosEntrevista;
+        private System.Windows.Forms.RichTextBox rtbxComentariosEntrevista;
+        private System.Windows.Forms.TextBox txtResultadoEntrevista;
+        private System.Windows.Forms.TextBox txtPunteoEntrevista;
+        private System.Windows.Forms.Label lblResultadoEntrevista;
+        private System.Windows.Forms.Label lblPunteoEntrevista;
     }
 }

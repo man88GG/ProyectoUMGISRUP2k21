@@ -47,6 +47,17 @@ namespace CapaControladorHRM.Manuel
             return Items;
         }
 
+<<<<<<< HEAD
+=======
+        //Paso de datos Tipo Entrevista
+        public DataTable funcItemsEvaluacion()
+        {
+            DataTable Items = sn.funcItemsEvaluacion();
+            return Items;
+        }
+
+
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
         //Paso de datos Formacion Academica
         public DataTable funcItemsNivelEstudio()
         {
@@ -139,6 +150,7 @@ namespace CapaControladorHRM.Manuel
             dt.Fill(table);
             return table;
         }
+<<<<<<< HEAD
 
         //Paso de datos para consulta mostrar en la entidad reclutamiento por Id
         public DataTable funcTablaBancoTalentoId(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
@@ -192,6 +204,61 @@ namespace CapaControladorHRM.Manuel
 
         //MOSTRAR DATOS DE EMPLEADO
 
+=======
+
+        //Paso de datos para consulta mostrar en la entidad reclutamiento por Id
+        public DataTable funcTablaBancoTalentoId(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            OdbcDataAdapter dt = sn.funcTablaBancoTalentoId(PrOpcion, SgOpcion, Recomendados, Parametro);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        //Paso de datos para consulta mostrar en la entidad reclutamiento por Primer Nombre
+        public DataTable funcTablaBancoTalentoNombre(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            OdbcDataAdapter dt = sn.funcTablaBancoTalentoNombre(PrOpcion, SgOpcion, Recomendados, Parametro);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        //Paso de datos para consulta mostrar en la entidad reclutamiento por Primer Apellido
+        public DataTable funcTablaBancoTalentoApellido(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            OdbcDataAdapter dt = sn.funcTablaBancoTalentoApellido(PrOpcion, SgOpcion, Recomendados, Parametro);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        //Paso de datos para consulta mostrar en la entidad reclutamiento por Puesto
+        public DataTable funcTablaBancoTalentoPuesto(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            OdbcDataAdapter dt = sn.funcTablaBancoTalentoPuesto(PrOpcion, SgOpcion, Recomendados, Parametro);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+        //Paso de datos para consulta mostrar en la entidad reclutamiento por Departamento
+        public DataTable funcTablaBancoTalentoDepartamento(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            OdbcDataAdapter dt = sn.funcTablaBancoTalentoDepartamento(PrOpcion, SgOpcion, Recomendados, Parametro);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        //Paso de datos para consulta mostrar en la entidad reclutamiento por Profesion
+        public DataTable funcTablaBancoTalentoHorario(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            OdbcDataAdapter dt = sn.funcTablaBancoTalentoHorario(PrOpcion, SgOpcion, Recomendados, Parametro);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        //MOSTRAR DATOS DE EMPLEADO
+
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
         //Paso de datos para consulta mostrar en la entidad empleado
         public DataTable funcTablaEmpleado(int Estado)
         {
@@ -242,6 +309,12 @@ namespace CapaControladorHRM.Manuel
             return table;
         }
 
+        //consulta de busqueda por Id 
+        public OdbcDataReader funcBuscarReclutaEvaluado(string IdRecluta)
+        {
+            OdbcDataReader Lector = sn.funcBuscarReclutaEvaluado(IdRecluta);
+            return Lector;
+        }
 
 
     }

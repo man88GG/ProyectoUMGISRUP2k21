@@ -15,15 +15,23 @@ namespace CapaVistaHRM.Manuel.Procesos
 {
     public partial class frmMostrarReclutas : Form
     {
+<<<<<<< HEAD
         public frmMostrarReclutas()
         {
             InitializeComponent();
             funcMostrarTabla();
+=======
+        public frmMostrarReclutas(int EstadoR)
+        {
+            InitializeComponent();
+            funcMostrarTabla(EstadoR);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
         }
 
 
         //estado de posible candidato
 
+<<<<<<< HEAD
         int Estado = 0;
         int NoEntrevistado = 0;
         int NoRecomendado = 0;
@@ -36,6 +44,21 @@ namespace CapaVistaHRM.Manuel.Procesos
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
+=======
+        //int Estado = 0;
+        //int NoEntrevistado = 0;
+        //int NoRecomendado = 0;
+        int prueba;
+        ClsControladorManuel Cont_R = new ClsControladorManuel();
+        public void funcMostrarTabla(int EstadoR)
+        {
+
+            
+            DataTable dt = Cont_R.funcTablaBancoTalento(EstadoR, EstadoR, EstadoR);
+            dgvMostrarReclutas.DataSource = dt;
+            funcNombresEncabezados();
+            prueba = EstadoR;
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
 
         }
 
@@ -192,7 +215,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtIdEmpleado_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtIdRecluta.Text;
+<<<<<<< HEAD
             DataTable dt = Cont_R.funcTablaBancoTalentoId(Estado, NoEntrevistado, NoRecomendado, Parametro);
+=======
+            DataTable dt = Cont_R.funcTablaBancoTalentoId(prueba, prueba, prueba, Parametro);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
@@ -201,7 +228,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerNombre_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerNombre.Text;
+<<<<<<< HEAD
             DataTable dt = Cont_R.funcTablaBancoTalentoNombre(Estado, NoEntrevistado, NoRecomendado, Parametro);
+=======
+            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(prueba, prueba, prueba, Parametro);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
@@ -210,7 +241,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerApellido_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerApellido.Text;
+<<<<<<< HEAD
             DataTable dt = Cont_R.funcTablaBancoTalentoApellido(Estado, NoEntrevistado, NoRecomendado, Parametro);
+=======
+            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(prueba, prueba, prueba, Parametro);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -218,7 +253,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPuesto_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPuesto.Text;
+<<<<<<< HEAD
             DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(Estado, NoEntrevistado, NoRecomendado, Parametro);
+=======
+            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(prueba, prueba, prueba, Parametro);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -226,7 +265,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtDepartamento_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtDepartamento.Text;
+<<<<<<< HEAD
             DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(Estado, NoEntrevistado, NoRecomendado, Parametro);
+=======
+            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(prueba, prueba, prueba, Parametro);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -234,7 +277,11 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtProfesion_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtProfesion.Text;
+<<<<<<< HEAD
             DataTable dt = Cont_R.funcTablaBancoTalentoHorario(Estado, NoEntrevistado, NoRecomendado, Parametro);
+=======
+            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(prueba, prueba, prueba, Parametro);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -253,7 +300,11 @@ namespace CapaVistaHRM.Manuel.Procesos
             //Se llama a la funcion funcBloqueoTxt
             funcBloqueoTxt();
             //Se llama a la funcion funcMostrarTabla
+<<<<<<< HEAD
             funcMostrarTabla();
+=======
+            funcMostrarTabla(prueba);
+>>>>>>> 8679c524d2039044202f555e7b5085c359020019
         }
 
       
