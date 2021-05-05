@@ -31,6 +31,8 @@
         {
             this.tbcEntrevista = new System.Windows.Forms.TabControl();
             this.tbpDatosRecluta = new System.Windows.Forms.TabPage();
+            this.lblComentariosEntrevista = new System.Windows.Forms.Label();
+            this.rtbxComentariosEntrevista = new System.Windows.Forms.RichTextBox();
             this.btnReclutas = new System.Windows.Forms.Button();
             this.lblIngreseIdRecluta = new System.Windows.Forms.Label();
             this.txtIdBancoTalento = new System.Windows.Forms.TextBox();
@@ -43,6 +45,10 @@
             this.cmbPuestoTrabajo = new System.Windows.Forms.ComboBox();
             this.lblDepartamentoTrabajo = new System.Windows.Forms.Label();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
+            this.txtResultadoEntrevista = new System.Windows.Forms.TextBox();
+            this.txtPunteoEntrevista = new System.Windows.Forms.TextBox();
+            this.lblResultadoEntrevista = new System.Windows.Forms.Label();
+            this.lblPunteoEntrevista = new System.Windows.Forms.Label();
             this.txtPrimerApellido = new System.Windows.Forms.TextBox();
             this.txtPrimerNombre = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
@@ -62,12 +68,6 @@
             this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
             this.lblResultadoEvaluacion = new System.Windows.Forms.Label();
             this.lblTipoEvaluacion = new System.Windows.Forms.Label();
-            this.lblPunteoEntrevista = new System.Windows.Forms.Label();
-            this.lblResultadoEntrevista = new System.Windows.Forms.Label();
-            this.txtPunteoEntrevista = new System.Windows.Forms.TextBox();
-            this.txtResultadoEntrevista = new System.Windows.Forms.TextBox();
-            this.rtbxComentariosEntrevista = new System.Windows.Forms.RichTextBox();
-            this.lblComentariosEntrevista = new System.Windows.Forms.Label();
             this.tbcEntrevista.SuspendLayout();
             this.tbpDatosRecluta.SuspendLayout();
             this.pnlPuesto.SuspendLayout();
@@ -105,6 +105,25 @@
             this.tbpDatosRecluta.Size = new System.Drawing.Size(803, 622);
             this.tbpDatosRecluta.TabIndex = 0;
             this.tbpDatosRecluta.Text = "Datos Recluta";
+            // 
+            // lblComentariosEntrevista
+            // 
+            this.lblComentariosEntrevista.AutoSize = true;
+            this.lblComentariosEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblComentariosEntrevista.Location = new System.Drawing.Point(24, 310);
+            this.lblComentariosEntrevista.Name = "lblComentariosEntrevista";
+            this.lblComentariosEntrevista.Size = new System.Drawing.Size(250, 20);
+            this.lblComentariosEntrevista.TabIndex = 37;
+            this.lblComentariosEntrevista.Text = "Comentarios del Entrevistador";
+            // 
+            // rtbxComentariosEntrevista
+            // 
+            this.rtbxComentariosEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.rtbxComentariosEntrevista.Location = new System.Drawing.Point(19, 342);
+            this.rtbxComentariosEntrevista.Name = "rtbxComentariosEntrevista";
+            this.rtbxComentariosEntrevista.Size = new System.Drawing.Size(761, 183);
+            this.rtbxComentariosEntrevista.TabIndex = 36;
+            this.rtbxComentariosEntrevista.Text = "";
             // 
             // btnReclutas
             // 
@@ -254,6 +273,50 @@
             this.pnlDatosGenerales.Size = new System.Drawing.Size(456, 220);
             this.pnlDatosGenerales.TabIndex = 31;
             // 
+            // txtResultadoEntrevista
+            // 
+            this.txtResultadoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtResultadoEntrevista.Enabled = false;
+            this.txtResultadoEntrevista.Location = new System.Drawing.Point(197, 174);
+            this.txtResultadoEntrevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtResultadoEntrevista.Name = "txtResultadoEntrevista";
+            this.txtResultadoEntrevista.Size = new System.Drawing.Size(237, 27);
+            this.txtResultadoEntrevista.TabIndex = 36;
+            // 
+            // txtPunteoEntrevista
+            // 
+            this.txtPunteoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtPunteoEntrevista.Enabled = false;
+            this.txtPunteoEntrevista.Location = new System.Drawing.Point(197, 126);
+            this.txtPunteoEntrevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtPunteoEntrevista.Name = "txtPunteoEntrevista";
+            this.txtPunteoEntrevista.Size = new System.Drawing.Size(237, 27);
+            this.txtPunteoEntrevista.TabIndex = 36;
+            // 
+            // lblResultadoEntrevista
+            // 
+            this.lblResultadoEntrevista.AutoSize = true;
+            this.lblResultadoEntrevista.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblResultadoEntrevista.Location = new System.Drawing.Point(16, 174);
+            this.lblResultadoEntrevista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResultadoEntrevista.Name = "lblResultadoEntrevista";
+            this.lblResultadoEntrevista.Size = new System.Drawing.Size(169, 20);
+            this.lblResultadoEntrevista.TabIndex = 37;
+            this.lblResultadoEntrevista.Text = "Resultado Entrevista";
+            // 
+            // lblPunteoEntrevista
+            // 
+            this.lblPunteoEntrevista.AutoSize = true;
+            this.lblPunteoEntrevista.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPunteoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPunteoEntrevista.Location = new System.Drawing.Point(16, 129);
+            this.lblPunteoEntrevista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPunteoEntrevista.Name = "lblPunteoEntrevista";
+            this.lblPunteoEntrevista.Size = new System.Drawing.Size(147, 20);
+            this.lblPunteoEntrevista.TabIndex = 36;
+            this.lblPunteoEntrevista.Text = "Punteo Entrevista";
+            // 
             // txtPrimerApellido
             // 
             this.txtPrimerApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -339,6 +402,7 @@
             this.txtPunteo.Name = "txtPunteo";
             this.txtPunteo.Size = new System.Drawing.Size(128, 27);
             this.txtPunteo.TabIndex = 15;
+            this.txtPunteo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblPunteoEvaluacion
             // 
@@ -470,69 +534,6 @@
             this.lblTipoEvaluacion.Size = new System.Drawing.Size(135, 20);
             this.lblTipoEvaluacion.TabIndex = 6;
             this.lblTipoEvaluacion.Text = "Tipo Evaluacion";
-            // 
-            // lblPunteoEntrevista
-            // 
-            this.lblPunteoEntrevista.AutoSize = true;
-            this.lblPunteoEntrevista.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPunteoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPunteoEntrevista.Location = new System.Drawing.Point(16, 129);
-            this.lblPunteoEntrevista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPunteoEntrevista.Name = "lblPunteoEntrevista";
-            this.lblPunteoEntrevista.Size = new System.Drawing.Size(147, 20);
-            this.lblPunteoEntrevista.TabIndex = 36;
-            this.lblPunteoEntrevista.Text = "Punteo Entrevista";
-            // 
-            // lblResultadoEntrevista
-            // 
-            this.lblResultadoEntrevista.AutoSize = true;
-            this.lblResultadoEntrevista.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultadoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblResultadoEntrevista.Location = new System.Drawing.Point(16, 174);
-            this.lblResultadoEntrevista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblResultadoEntrevista.Name = "lblResultadoEntrevista";
-            this.lblResultadoEntrevista.Size = new System.Drawing.Size(169, 20);
-            this.lblResultadoEntrevista.TabIndex = 37;
-            this.lblResultadoEntrevista.Text = "Resultado Entrevista";
-            // 
-            // txtPunteoEntrevista
-            // 
-            this.txtPunteoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPunteoEntrevista.Enabled = false;
-            this.txtPunteoEntrevista.Location = new System.Drawing.Point(197, 126);
-            this.txtPunteoEntrevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtPunteoEntrevista.Name = "txtPunteoEntrevista";
-            this.txtPunteoEntrevista.Size = new System.Drawing.Size(237, 27);
-            this.txtPunteoEntrevista.TabIndex = 36;
-            // 
-            // txtResultadoEntrevista
-            // 
-            this.txtResultadoEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtResultadoEntrevista.Enabled = false;
-            this.txtResultadoEntrevista.Location = new System.Drawing.Point(197, 174);
-            this.txtResultadoEntrevista.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtResultadoEntrevista.Name = "txtResultadoEntrevista";
-            this.txtResultadoEntrevista.Size = new System.Drawing.Size(237, 27);
-            this.txtResultadoEntrevista.TabIndex = 36;
-            // 
-            // rtbxComentariosEntrevista
-            // 
-            this.rtbxComentariosEntrevista.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.rtbxComentariosEntrevista.Location = new System.Drawing.Point(19, 342);
-            this.rtbxComentariosEntrevista.Name = "rtbxComentariosEntrevista";
-            this.rtbxComentariosEntrevista.Size = new System.Drawing.Size(761, 183);
-            this.rtbxComentariosEntrevista.TabIndex = 36;
-            this.rtbxComentariosEntrevista.Text = "";
-            // 
-            // lblComentariosEntrevista
-            // 
-            this.lblComentariosEntrevista.AutoSize = true;
-            this.lblComentariosEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblComentariosEntrevista.Location = new System.Drawing.Point(24, 310);
-            this.lblComentariosEntrevista.Name = "lblComentariosEntrevista";
-            this.lblComentariosEntrevista.Size = new System.Drawing.Size(250, 20);
-            this.lblComentariosEntrevista.TabIndex = 37;
-            this.lblComentariosEntrevista.Text = "Comentarios del Entrevistador";
             // 
             // frmEvaluacion
             // 

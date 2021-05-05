@@ -24,7 +24,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             InitializeComponent();
             funcLlenarTipoEvaluacion();
             cmbTipoEntrevista.DropDownStyle = ComboBoxStyle.DropDownList;
-            EstadoNoEntrevistados = 1;
+            EstadoNoEntrevistados = 2;
         }
 
         //Declaración de variables Entidad Reclutamiento
@@ -188,7 +188,7 @@ namespace CapaVistaHRM.Manuel.Procesos
                                 Comentarios = rtxtComentarios.Text;
                               
                                 //envío de datos hacia capa Controlador
-                                Cont_R.funcInsertarEntrevista(IdRecluta, TipoEntrevista,Punteo, Resultado, Comentarios, OpcionRecluta);
+                                Cont_R.funcInsertarEvaluacion(IdRecluta, TipoEntrevista,Punteo, Resultado, Comentarios, OpcionRecluta);
                                 MessageBox.Show("Se ha ingresado la Evaluacion con Éxito", "FORMULARIO EVALUACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 funcLimpieza();

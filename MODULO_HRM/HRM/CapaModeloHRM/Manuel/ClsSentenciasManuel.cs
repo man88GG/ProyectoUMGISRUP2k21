@@ -18,6 +18,7 @@ namespace CapaModeloHRM.Manuel
         //Muestra datos en combo Puesto
         public DataTable funcCmbHPuesto()
         {
+
             DataTable Datos = new DataTable();
             try
             {
@@ -798,7 +799,45 @@ namespace CapaModeloHRM.Manuel
             }
         }
 
+        //Consulta para ingresar una Evaluacion
+        public void funcInsertarEvaluacion(string IdRecluta, int TipoEvaluacion, int Punteo, int Resultado,
+                string Comentarios, string OpcionRecluta)
+        {
+            try
+            {
+                
+                int IdEvaluacion;
+                string CorrelativoReclu = "SELECT IFNULL(MAX(IDEVALUACIÓN),0) +1 FROM EVALUACION ";
+                OdbcCommand QueryIdReclu = new OdbcCommand(CorrelativoReclu, Con.conexion());
+                IdEvaluacion = Convert.ToInt32(QueryIdReclu.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = QueryIdReclu.ExecuteReader();
 
+
+                //Sentencia para insertar datos a entidad Reclutamiento
+                string SentenciaRecluta = "INSERT INTO EVALUACION  (IDEVALUACION, IDRECLUTA, IDTIPOEVALUACION, PUNTEOEVALUACION, " +
+                    "RESULTADOEVALUACION, COMENTARIOS) VALUES " + "('" + IdEvaluacion + "','" + IdRecluta + "','" + TipoEvaluacion + "','" + Punteo + "','" + OpcionRecluta + "','"
+                    + Comentarios + "')";
+
+                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO='" + Resultado + "' WHERE IDRECLUTA='" + IdRecluta + "'";
+
+
+                OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.conexion());
+                Query_IngresoRec.ExecuteNonQuery();
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
     }

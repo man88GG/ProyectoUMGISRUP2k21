@@ -14,6 +14,8 @@ using CapaVistaHRM.Jose.Mantenimientos;
 using CapaVistaHRM.Manuel.Mantenimientos;
 using CapaVistaHRM.Sergio.Mantenimientos;
 using CapaVistaHRM.Emilio.Mantenimientos;
+using CapaVistaHRM.Jose.Procesos;
+using CapaVistaHRM.Manuel.Procesos;
 
 namespace CapaVistaHRM.MDI
 {
@@ -581,6 +583,124 @@ namespace CapaVistaHRM.MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Trato de ingresar al mantenimiento de Departamento de la empresa", 308);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void generarNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmGenerarNomina);
+            if (frmFormulario != null)
+            {
+                frmFormulario.BringToFront();
+                return;
+            }
+
+            frmFormulario = new frmGenerarNomina();
+            frmFormulario.MdiParent = this;
+            frmFormulario.Show();
+        }
+
+        private void tipoDeEvaluaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("309", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al mantenimiento de Tipo de Datos Personales", 309);
+
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmTipoEvaluacion);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new frmTipoEvaluacion(txtUsuario.Text, this);
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al mantenimiento de Tipo de Datos Personales", 309);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void ingresarReclutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("309", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al proceso de Ingreso Recluta", 309);
+
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmIngresoReclutas);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new frmIngresoReclutas();
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al proceso de Ingreso Recluta", 309);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void entrevistaReclutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("309", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al proceso de Entrevista", 309);
+
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmEntrevista);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new frmEntrevista();
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al proceso Entrevista", 309);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void evaluaciónReclutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("309", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al proceso de Evaluación", 309);
+
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmEvaluacion);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new frmEvaluacion();
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al proceso Evaluación", 309);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }

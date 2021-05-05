@@ -51,6 +51,8 @@ namespace CapaVistaHRM.MDI
             this.tiposDePercepcionesYDeduccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeMonedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nominaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +71,11 @@ namespace CapaVistaHRM.MDI
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tipoDeEvaluaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reclutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarReclutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entrevistaReclutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluaciónReclutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,21 +135,21 @@ namespace CapaVistaHRM.MDI
             // cursosToolStripMenuItem1
             // 
             this.cursosToolStripMenuItem1.Name = "cursosToolStripMenuItem1";
-            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.cursosToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
             this.cursosToolStripMenuItem1.Text = "Cursos";
             this.cursosToolStripMenuItem1.Click += new System.EventHandler(this.cursosToolStripMenuItem1_Click);
             // 
             // dificultadToolStripMenuItem
             // 
             this.dificultadToolStripMenuItem.Name = "dificultadToolStripMenuItem";
-            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dificultadToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.dificultadToolStripMenuItem.Text = "Dificultad";
             this.dificultadToolStripMenuItem.Click += new System.EventHandler(this.dificultadToolStripMenuItem_Click);
             // 
             // departamentosToolStripMenuItem1
             // 
             this.departamentosToolStripMenuItem1.Name = "departamentosToolStripMenuItem1";
-            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
             this.departamentosToolStripMenuItem1.Text = "Departamentos";
             this.departamentosToolStripMenuItem1.Click += new System.EventHandler(this.departamentosToolStripMenuItem1_Click);
             // 
@@ -155,7 +162,8 @@ namespace CapaVistaHRM.MDI
             this.tiposDeLicenciaDeConducirToolStripMenuItem,
             this.formacionAcademicaToolStripMenuItem1,
             this.tiposDeHorariosToolStripMenuItem,
-            this.tipoDeEntrevistasToolStripMenuItem});
+            this.tipoDeEntrevistasToolStripMenuItem,
+            this.tipoDeEvaluaciónToolStripMenuItem});
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
             this.personalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.personalToolStripMenuItem.Text = "Personal";
@@ -242,9 +250,27 @@ namespace CapaVistaHRM.MDI
             // 
             // procesosToolStripMenuItem
             // 
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nominaToolStripMenuItem1,
+            this.reclutasToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.procesosToolStripMenuItem.Text = "Procesos";
+            // 
+            // nominaToolStripMenuItem1
+            // 
+            this.nominaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generarNominaToolStripMenuItem});
+            this.nominaToolStripMenuItem1.Name = "nominaToolStripMenuItem1";
+            this.nominaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.nominaToolStripMenuItem1.Text = "Nomina";
+            // 
+            // generarNominaToolStripMenuItem
+            // 
+            this.generarNominaToolStripMenuItem.Name = "generarNominaToolStripMenuItem";
+            this.generarNominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.generarNominaToolStripMenuItem.Text = "Generar Nomina";
+            this.generarNominaToolStripMenuItem.Click += new System.EventHandler(this.generarNominaToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
@@ -384,6 +410,44 @@ namespace CapaVistaHRM.MDI
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tipoDeEvaluaciónToolStripMenuItem
+            // 
+            this.tipoDeEvaluaciónToolStripMenuItem.Name = "tipoDeEvaluaciónToolStripMenuItem";
+            this.tipoDeEvaluaciónToolStripMenuItem.Size = new System.Drawing.Size(331, 26);
+            this.tipoDeEvaluaciónToolStripMenuItem.Text = "Tipo de Evaluación";
+            this.tipoDeEvaluaciónToolStripMenuItem.Click += new System.EventHandler(this.tipoDeEvaluaciónToolStripMenuItem_Click);
+            // 
+            // reclutasToolStripMenuItem
+            // 
+            this.reclutasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarReclutaToolStripMenuItem,
+            this.entrevistaReclutaToolStripMenuItem,
+            this.evaluaciónReclutaToolStripMenuItem});
+            this.reclutasToolStripMenuItem.Name = "reclutasToolStripMenuItem";
+            this.reclutasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reclutasToolStripMenuItem.Text = "Reclutamiento";
+            // 
+            // ingresarReclutaToolStripMenuItem
+            // 
+            this.ingresarReclutaToolStripMenuItem.Name = "ingresarReclutaToolStripMenuItem";
+            this.ingresarReclutaToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.ingresarReclutaToolStripMenuItem.Text = "Ingresar Recluta";
+            this.ingresarReclutaToolStripMenuItem.Click += new System.EventHandler(this.ingresarReclutaToolStripMenuItem_Click);
+            // 
+            // entrevistaReclutaToolStripMenuItem
+            // 
+            this.entrevistaReclutaToolStripMenuItem.Name = "entrevistaReclutaToolStripMenuItem";
+            this.entrevistaReclutaToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.entrevistaReclutaToolStripMenuItem.Text = "Entrevista Recluta";
+            this.entrevistaReclutaToolStripMenuItem.Click += new System.EventHandler(this.entrevistaReclutaToolStripMenuItem_Click);
+            // 
+            // evaluaciónReclutaToolStripMenuItem
+            // 
+            this.evaluaciónReclutaToolStripMenuItem.Name = "evaluaciónReclutaToolStripMenuItem";
+            this.evaluaciónReclutaToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.evaluaciónReclutaToolStripMenuItem.Text = "Evaluación Recluta";
+            this.evaluaciónReclutaToolStripMenuItem.Click += new System.EventHandler(this.evaluaciónReclutaToolStripMenuItem_Click);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -448,5 +512,12 @@ namespace CapaVistaHRM.MDI
         private System.Windows.Forms.ToolStripMenuItem tiposDePercepcionesYDeduccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeMonedasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeEntrevistasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generarNominaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeEvaluaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reclutasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresarReclutaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entrevistaReclutaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluaciónReclutaToolStripMenuItem;
     }
 }

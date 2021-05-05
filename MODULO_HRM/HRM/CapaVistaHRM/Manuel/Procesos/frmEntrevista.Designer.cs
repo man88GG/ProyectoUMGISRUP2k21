@@ -327,6 +327,7 @@
             this.txtPunteo.Name = "txtPunteo";
             this.txtPunteo.Size = new System.Drawing.Size(128, 27);
             this.txtPunteo.TabIndex = 15;
+            this.txtPunteo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblPunteoEntrevista
             // 

@@ -11,6 +11,7 @@ namespace CapaControladorHRM.Manuel
 {
     public class ClsControladorManuel
     {
+
         ClsSentenciasManuel sn = new ClsSentenciasManuel();
 
         //Paso de datos comboPuesto
@@ -255,6 +256,16 @@ namespace CapaControladorHRM.Manuel
         {
             OdbcDataReader Lector = sn.funcBuscarReclutaEvaluado(IdRecluta);
             return Lector;
+        }
+
+
+        //Paso de datos para consulta modificar en la entidad Empleado
+        public void funcInsertarEvaluacion(string IdRecluta, int TipoEvaluacion, int Punteo, int Resultado,
+                string Comentarios, string OpcionRecluta)
+        {
+
+            sn.funcInsertarEvaluacion(IdRecluta, TipoEvaluacion, Punteo, Resultado, Comentarios, OpcionRecluta);
+
         }
 
 
