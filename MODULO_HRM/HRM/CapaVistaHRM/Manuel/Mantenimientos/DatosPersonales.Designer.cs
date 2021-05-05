@@ -549,7 +549,6 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.btnEmpleados.TabIndex = 34;
             this.btnEmpleados.Text = "Ver Lista Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
-            this.btnEmpleados.Visible = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnModificar

@@ -71,7 +71,6 @@
             this.lblNombres = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.tbcIngresoRecluta = new System.Windows.Forms.TabControl();
-            this.btnReclutas = new System.Windows.Forms.Button();
             this.tbpDatosPersonales.SuspendLayout();
             this.gbxSexo.SuspendLayout();
             this.gbxFormacionAcademica.SuspendLayout();
@@ -85,7 +84,7 @@
             // btnIngreso
             // 
             this.btnIngreso.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.Location = new System.Drawing.Point(876, 545);
+            this.btnIngreso.Location = new System.Drawing.Point(759, 486);
             this.btnIngreso.Margin = new System.Windows.Forms.Padding(5);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(287, 76);
@@ -108,7 +107,7 @@
             this.tbpDatosPersonales.Location = new System.Drawing.Point(4, 29);
             this.tbpDatosPersonales.Margin = new System.Windows.Forms.Padding(5);
             this.tbpDatosPersonales.Name = "tbpDatosPersonales";
-            this.tbpDatosPersonales.Size = new System.Drawing.Size(1159, 496);
+            this.tbpDatosPersonales.Size = new System.Drawing.Size(1057, 443);
             this.tbpDatosPersonales.TabIndex = 3;
             this.tbpDatosPersonales.Text = "Datos Personales";
             // 
@@ -179,7 +178,7 @@
             // 
             this.cmbTipoLicencia.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbTipoLicencia.FormattingEnabled = true;
-            this.cmbTipoLicencia.Location = new System.Drawing.Point(276, 211);
+            this.cmbTipoLicencia.Location = new System.Drawing.Point(244, 211);
             this.cmbTipoLicencia.Margin = new System.Windows.Forms.Padding(5);
             this.cmbTipoLicencia.Name = "cmbTipoLicencia";
             this.cmbTipoLicencia.Size = new System.Drawing.Size(212, 28);
@@ -203,11 +202,11 @@
             this.gbxFormacionAcademica.Controls.Add(this.lblProfesion);
             this.gbxFormacionAcademica.Controls.Add(this.lblNivelEstudios);
             this.gbxFormacionAcademica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbxFormacionAcademica.Location = new System.Drawing.Point(559, 124);
+            this.gbxFormacionAcademica.Location = new System.Drawing.Point(489, 103);
             this.gbxFormacionAcademica.Margin = new System.Windows.Forms.Padding(5);
             this.gbxFormacionAcademica.Name = "gbxFormacionAcademica";
             this.gbxFormacionAcademica.Padding = new System.Windows.Forms.Padding(5);
-            this.gbxFormacionAcademica.Size = new System.Drawing.Size(571, 196);
+            this.gbxFormacionAcademica.Size = new System.Drawing.Size(563, 196);
             this.gbxFormacionAcademica.TabIndex = 21;
             this.gbxFormacionAcademica.TabStop = false;
             this.gbxFormacionAcademica.Text = "Formación Académica";
@@ -218,7 +217,7 @@
             this.txtProfesion.Location = new System.Drawing.Point(208, 135);
             this.txtProfesion.Margin = new System.Windows.Forms.Padding(5);
             this.txtProfesion.Name = "txtProfesion";
-            this.txtProfesion.Size = new System.Drawing.Size(336, 27);
+            this.txtProfesion.Size = new System.Drawing.Size(345, 27);
             this.txtProfesion.TabIndex = 13;
             this.txtProfesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -229,7 +228,7 @@
             this.cmbNivelEstudios.Location = new System.Drawing.Point(208, 66);
             this.cmbNivelEstudios.Margin = new System.Windows.Forms.Padding(5);
             this.cmbNivelEstudios.Name = "cmbNivelEstudios";
-            this.cmbNivelEstudios.Size = new System.Drawing.Size(336, 28);
+            this.cmbNivelEstudios.Size = new System.Drawing.Size(345, 28);
             this.cmbNivelEstudios.TabIndex = 7;
             // 
             // lblProfesion
@@ -273,7 +272,7 @@
             "Soltero",
             "Casado",
             "Divorciado"});
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(276, 156);
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(244, 156);
             this.cmbEstadoCivil.Margin = new System.Windows.Forms.Padding(5);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(212, 28);
@@ -289,7 +288,7 @@
             this.tbpDatosGenerales.Margin = new System.Windows.Forms.Padding(5);
             this.tbpDatosGenerales.Name = "tbpDatosGenerales";
             this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(5);
-            this.tbpDatosGenerales.Size = new System.Drawing.Size(1159, 496);
+            this.tbpDatosGenerales.Size = new System.Drawing.Size(1057, 443);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
             // 
@@ -298,7 +297,7 @@
             this.gbxRecomendacion.Controls.Add(this.rbtnNo);
             this.gbxRecomendacion.Controls.Add(this.rbtnSi);
             this.gbxRecomendacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbxRecomendacion.Location = new System.Drawing.Point(807, 360);
+            this.gbxRecomendacion.Location = new System.Drawing.Point(669, 332);
             this.gbxRecomendacion.Name = "gbxRecomendacion";
             this.gbxRecomendacion.Size = new System.Drawing.Size(331, 94);
             this.gbxRecomendacion.TabIndex = 22;
@@ -343,7 +342,7 @@
             this.pnlPuesto.Controls.Add(this.cmbPuesto);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Controls.Add(this.cmbDepartamentoTrabajo);
-            this.pnlPuesto.Location = new System.Drawing.Point(807, 31);
+            this.pnlPuesto.Location = new System.Drawing.Point(669, 10);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPuesto.Name = "pnlPuesto";
             this.pnlPuesto.Size = new System.Drawing.Size(331, 303);
@@ -431,17 +430,17 @@
             this.pnlDatosGenerales.Controls.Add(this.txtPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.lblNombres);
             this.pnlDatosGenerales.Controls.Add(this.lblApellidos);
-            this.pnlDatosGenerales.Location = new System.Drawing.Point(31, 31);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(10, 10);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(5);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
-            this.pnlDatosGenerales.Size = new System.Drawing.Size(741, 452);
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(620, 416);
             this.pnlDatosGenerales.TabIndex = 15;
             // 
             // lblFechaRecluta
             // 
             this.lblFechaRecluta.AutoSize = true;
             this.lblFechaRecluta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFechaRecluta.Location = new System.Drawing.Point(27, 348);
+            this.lblFechaRecluta.Location = new System.Drawing.Point(27, 322);
             this.lblFechaRecluta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFechaRecluta.Name = "lblFechaRecluta";
             this.lblFechaRecluta.Size = new System.Drawing.Size(197, 20);
@@ -450,7 +449,7 @@
             // 
             // dtpFechaRecluta
             // 
-            this.dtpFechaRecluta.Location = new System.Drawing.Point(31, 405);
+            this.dtpFechaRecluta.Location = new System.Drawing.Point(31, 358);
             this.dtpFechaRecluta.Margin = new System.Windows.Forms.Padding(5);
             this.dtpFechaRecluta.Name = "dtpFechaRecluta";
             this.dtpFechaRecluta.Size = new System.Drawing.Size(358, 27);
@@ -459,11 +458,12 @@
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtTelefono.Location = new System.Drawing.Point(368, 130);
+            this.txtTelefono.Location = new System.Drawing.Point(237, 130);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(227, 27);
+            this.txtTelefono.Size = new System.Drawing.Size(262, 27);
             this.txtTelefono.TabIndex = 27;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblCorreoElectronico
             // 
@@ -479,10 +479,10 @@
             // txtCorreoElectronico
             // 
             this.txtCorreoElectronico.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(368, 177);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(237, 177);
             this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(5);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(323, 27);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(358, 27);
             this.txtCorreoElectronico.TabIndex = 25;
             // 
             // lblTelefono
@@ -499,10 +499,10 @@
             // txtNumeroIgss
             // 
             this.txtNumeroIgss.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNumeroIgss.Location = new System.Drawing.Point(368, 273);
+            this.txtNumeroIgss.Location = new System.Drawing.Point(237, 273);
             this.txtNumeroIgss.Margin = new System.Windows.Forms.Padding(5);
             this.txtNumeroIgss.Name = "txtNumeroIgss";
-            this.txtNumeroIgss.Size = new System.Drawing.Size(227, 27);
+            this.txtNumeroIgss.Size = new System.Drawing.Size(262, 27);
             this.txtNumeroIgss.TabIndex = 6;
             this.txtNumeroIgss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -521,20 +521,20 @@
             // txtDpi
             // 
             this.txtDpi.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtDpi.Location = new System.Drawing.Point(368, 224);
+            this.txtDpi.Location = new System.Drawing.Point(237, 224);
             this.txtDpi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDpi.Name = "txtDpi";
-            this.txtDpi.Size = new System.Drawing.Size(227, 27);
+            this.txtDpi.Size = new System.Drawing.Size(262, 27);
             this.txtDpi.TabIndex = 5;
             this.txtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtPrimerApellido
             // 
             this.txtPrimerApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPrimerApellido.Location = new System.Drawing.Point(368, 79);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(237, 79);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(323, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(358, 27);
             this.txtPrimerApellido.TabIndex = 3;
             this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -553,10 +553,10 @@
             // txtPrimerNombre
             // 
             this.txtPrimerNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPrimerNombre.Location = new System.Drawing.Point(368, 28);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(237, 28);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(323, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(358, 27);
             this.txtPrimerNombre.TabIndex = 1;
             this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -594,28 +594,15 @@
             this.tbcIngresoRecluta.Margin = new System.Windows.Forms.Padding(5);
             this.tbcIngresoRecluta.Name = "tbcIngresoRecluta";
             this.tbcIngresoRecluta.SelectedIndex = 0;
-            this.tbcIngresoRecluta.Size = new System.Drawing.Size(1167, 529);
+            this.tbcIngresoRecluta.Size = new System.Drawing.Size(1065, 476);
             this.tbcIngresoRecluta.TabIndex = 13;
-            // 
-            // btnReclutas
-            // 
-            this.btnReclutas.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReclutas.Location = new System.Drawing.Point(0, 536);
-            this.btnReclutas.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnReclutas.Name = "btnReclutas";
-            this.btnReclutas.Size = new System.Drawing.Size(245, 94);
-            this.btnReclutas.TabIndex = 36;
-            this.btnReclutas.Text = "Ver Lista Reclutas No Entrevistados";
-            this.btnReclutas.UseVisualStyleBackColor = true;
-            this.btnReclutas.Click += new System.EventHandler(this.btnReclutas_Click);
             // 
             // frmIngresoReclutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1167, 630);
-            this.Controls.Add(this.btnReclutas);
+            this.ClientSize = new System.Drawing.Size(1065, 571);
             this.Controls.Add(this.tbcIngresoRecluta);
             this.Controls.Add(this.btnIngreso);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -673,7 +660,6 @@
         private System.Windows.Forms.TabControl tbcIngresoRecluta;
         private System.Windows.Forms.ComboBox cmbTipoLicencia;
         private System.Windows.Forms.Label lblTipoLicencia;
-        private System.Windows.Forms.Button btnReclutas;
         private System.Windows.Forms.ComboBox cmbHorario;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.TextBox txtTelefono;
