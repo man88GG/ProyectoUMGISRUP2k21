@@ -116,7 +116,6 @@ C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_E
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.csproj.CopyComplete
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.exe
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.pdb
-<<<<<<< HEAD
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\bin\Debug\HRM_EJECUCION.exe.config
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\bin\Debug\HRM_EJECUCION.exe
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\bin\Debug\HRM_EJECUCION.pdb
@@ -176,7 +175,6 @@ D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\H
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.csproj.CopyComplete
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.exe
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.pdb
-=======
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\bin\Debug\HRM_EJECUCION.exe.config
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\bin\Debug\HRM_EJECUCION.exe
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\bin\Debug\HRM_EJECUCION.pdb
@@ -236,4 +234,3 @@ C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\obj\Deb
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.csproj.CopyComplete
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.exe
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\HRM_EJECUCION\obj\Debug\HRM_EJECUCION.pdb
->>>>>>> 8679c524d2039044202f555e7b5085c359020019

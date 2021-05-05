@@ -26,13 +26,8 @@ namespace CapaVistaHRM.Manuel.Procesos
 
         //estado de banco talento
 
-<<<<<<< HEAD
         int Candidatos = 1;
         int SegundaOpcion = 2;
-=======
-        int Candidatos = 2;
-        int SegundaOpcion = 4;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
         int Recomendados = 5;
         ClsControladorManuel Cont_R = new ClsControladorManuel();
         public void funcMostrarTabla()

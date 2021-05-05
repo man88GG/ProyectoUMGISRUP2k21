@@ -442,7 +442,6 @@ C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaMo
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmEntrevista.resources
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmIngresoReclutas.resources
-<<<<<<< HEAD
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.dll
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.pdb
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaControladorHRM.dll
@@ -517,7 +516,6 @@ D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\Ca
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Procesos.frmGenerarNomina.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmEntrevista.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmIngresoReclutas.resources
-=======
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaVistaHRM.pdb
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaControladorHRM.dll
@@ -590,4 +588,3 @@ C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\obj\Debu
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.pdb
->>>>>>> 8679c524d2039044202f555e7b5085c359020019

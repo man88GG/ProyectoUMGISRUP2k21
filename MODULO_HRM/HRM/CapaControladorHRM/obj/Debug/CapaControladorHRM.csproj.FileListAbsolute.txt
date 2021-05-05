@@ -61,7 +61,6 @@ C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.pdb
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
-<<<<<<< HEAD
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csprojAssemblyReference.cache
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CoreCompileInputs.cache
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.dll
@@ -71,7 +70,6 @@ D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\bin\De
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.dll
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.pdb
 D:\Escritorio\ProyectoUMGISRUP2k21-main\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
-=======
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csprojAssemblyReference.cache
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CoreCompileInputs.cache
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.dll
@@ -81,4 +79,3 @@ C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\bi
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.pdb
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
->>>>>>> 8679c524d2039044202f555e7b5085c359020019

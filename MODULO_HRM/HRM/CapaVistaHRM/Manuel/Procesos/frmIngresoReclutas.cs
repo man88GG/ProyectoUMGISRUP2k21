@@ -35,24 +35,15 @@ namespace CapaVistaHRM.Manuel.Procesos
             cmbPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDepartamentoTrabajo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbHorario.DropDownStyle = ComboBoxStyle.DropDownList;
-<<<<<<< HEAD
 
-=======
-            EstadoNoEntrevistados = 0;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
 
             funcItemsLicencia();
             funcItemsNivelEstudio();
         }
 
         //Declaración de variables Entidad Reclutamiento
-<<<<<<< HEAD
         string PrimerNom, PrimerAp, FechaNac, Email, NombreProf, EstadoCivil,Dpi, FechaReclu;
         int NivelEstudio, Genero, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta,Horario;
-=======
-        string PrimerNom, PrimerAp, FechaNac, Email, NombreProf, EstadoCivil,Dpi, FechaReclu,EstadoCivil2;
-        int NivelEstudio, Genero, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta,Horario, EstadoNoEntrevistados;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
 
         private void rbtnNo_CheckedChanged(object sender, EventArgs e)
         {
@@ -75,11 +66,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void btnReclutas_Click(object sender, EventArgs e)
         {
             //Se llama al formulario que contiene todos una tabla de todos los empleados
-<<<<<<< HEAD
             frmMostrarReclutas MostrarReclu = new frmMostrarReclutas();
-=======
-            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas(EstadoNoEntrevistados);
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             MostrarReclu.ShowDialog();
         }
 
@@ -189,29 +176,6 @@ namespace CapaVistaHRM.Manuel.Procesos
                             FechaNac = dtpFechaNacimiento.Value.Date.ToShortDateString();
 
                             EstadoCivil = cmbEstadoCivil.SelectedItem.ToString();
-<<<<<<< HEAD
-=======
-
-
-                            if (EstadoCivil == "Soltero")
-                            {
-
-                                EstadoCivil2 = "1";
-
-                            }
-                            else if (EstadoCivil == "Casado")
-                            {
-
-                                EstadoCivil2 = "2";
-
-                            }
-                            else if (EstadoCivil == "Divorciado")
-                            {
-                                EstadoCivil2 = "3";
-                            }
-
-
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
                             Email = txtCorreoElectronico.Text;
                             Telefono = Convert.ToInt32(txtTelefono.Text);
                             NumIgss = Convert.ToInt32(txtNumeroIgss.Text);
@@ -226,11 +190,7 @@ namespace CapaVistaHRM.Manuel.Procesos
                             //envío de datos hacia capa Controlador
 
                             Cont_R.funcInsertarRecluta(PrimerNom, PrimerAp, Dpi, NombreProf, FechaNac, Genero,
-<<<<<<< HEAD
                                        EstadoCivil, Email, Telefono, NumIgss, FechaReclu, TipoLicencia, Puesto, Horario, Departamento, NivelEstudio, EstadoRecluta);
-=======
-                                       EstadoCivil2, Email, Telefono, NumIgss, FechaReclu, TipoLicencia, Puesto, Horario, Departamento, NivelEstudio, EstadoRecluta);
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
                             MessageBox.Show("Se ha ingresado al Banco de Talento con Éxito", "FORMULARIO RECLUTAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             funcLimpieza();

@@ -49,32 +49,19 @@
             this.lblApellidos = new System.Windows.Forms.Label();
             this.tbpDatosEntrevista = new System.Windows.Forms.TabPage();
             this.gbxDatosEntrevista = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
             this.pnlOpciones = new System.Windows.Forms.Panel();
             this.rbtnSegOpcion = new System.Windows.Forms.RadioButton();
             this.rbtnPrimeraOp = new System.Windows.Forms.RadioButton();
-=======
-            this.txtPunteo = new System.Windows.Forms.TextBox();
-            this.lblPunteoEntrevista = new System.Windows.Forms.Label();
-            this.pnlOpciones = new System.Windows.Forms.Panel();
-            this.rbtnSegOpcion = new System.Windows.Forms.RadioButton();
-            this.rbtnPrimeraOp = new System.Windows.Forms.RadioButton();
-            this.rbtnReprobado = new System.Windows.Forms.RadioButton();
-            this.rbtnAprobado = new System.Windows.Forms.RadioButton();
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             this.btnIngresoEntrevista = new System.Windows.Forms.Button();
             this.rtxtComentarios = new System.Windows.Forms.RichTextBox();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
             this.lblResultadoEntrevista = new System.Windows.Forms.Label();
             this.lblTipoEntrevista = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.rbtnAprobado = new System.Windows.Forms.RadioButton();
             this.rbtnReprobado = new System.Windows.Forms.RadioButton();
             this.lblPunteoEntrevista = new System.Windows.Forms.Label();
             this.txtPunteo = new System.Windows.Forms.TextBox();
-=======
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             this.tbcEntrevista.SuspendLayout();
             this.tbpDatosRecluta.SuspendLayout();
             this.pnlPuesto.SuspendLayout();
@@ -165,10 +152,6 @@
             this.pnlPuesto.Controls.Add(this.cmbPuestoTrabajo);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Enabled = false;
-<<<<<<< HEAD
-=======
-            this.pnlPuesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             this.pnlPuesto.Location = new System.Drawing.Point(519, 150);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlPuesto.Name = "pnlPuesto";
@@ -251,10 +234,6 @@
             this.pnlDatosGenerales.Controls.Add(this.lblNombres);
             this.pnlDatosGenerales.Controls.Add(this.lblApellidos);
             this.pnlDatosGenerales.Enabled = false;
-<<<<<<< HEAD
-=======
-            this.pnlDatosGenerales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             this.pnlDatosGenerales.Location = new System.Drawing.Point(28, 150);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
@@ -339,27 +318,6 @@
             this.gbxDatosEntrevista.TabStop = false;
             this.gbxDatosEntrevista.Text = "Datos de Entrevista";
             // 
-<<<<<<< HEAD
-=======
-            // txtPunteo
-            // 
-            this.txtPunteo.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPunteo.Location = new System.Drawing.Point(207, 72);
-            this.txtPunteo.Name = "txtPunteo";
-            this.txtPunteo.Size = new System.Drawing.Size(128, 27);
-            this.txtPunteo.TabIndex = 15;
-            // 
-            // lblPunteoEntrevista
-            // 
-            this.lblPunteoEntrevista.AutoSize = true;
-            this.lblPunteoEntrevista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPunteoEntrevista.Location = new System.Drawing.Point(6, 79);
-            this.lblPunteoEntrevista.Name = "lblPunteoEntrevista";
-            this.lblPunteoEntrevista.Size = new System.Drawing.Size(189, 20);
-            this.lblPunteoEntrevista.TabIndex = 14;
-            this.lblPunteoEntrevista.Text = "Punteo de la Entrevista";
-            // 
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             // pnlOpciones
             // 
             this.pnlOpciones.Controls.Add(this.rbtnSegOpcion);
@@ -396,35 +354,6 @@
             this.rbtnPrimeraOp.UseVisualStyleBackColor = true;
             this.rbtnPrimeraOp.CheckedChanged += new System.EventHandler(this.rbtnPrimeraOp_CheckedChanged);
             // 
-<<<<<<< HEAD
-=======
-            // rbtnReprobado
-            // 
-            this.rbtnReprobado.AutoSize = true;
-            this.rbtnReprobado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnReprobado.Location = new System.Drawing.Point(394, 119);
-            this.rbtnReprobado.Name = "rbtnReprobado";
-            this.rbtnReprobado.Size = new System.Drawing.Size(116, 24);
-            this.rbtnReprobado.TabIndex = 10;
-            this.rbtnReprobado.TabStop = true;
-            this.rbtnReprobado.Text = "Reprobado";
-            this.rbtnReprobado.UseVisualStyleBackColor = true;
-            this.rbtnReprobado.CheckedChanged += new System.EventHandler(this.rbtnReprobado_CheckedChanged);
-            // 
-            // rbtnAprobado
-            // 
-            this.rbtnAprobado.AutoSize = true;
-            this.rbtnAprobado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnAprobado.Location = new System.Drawing.Point(250, 121);
-            this.rbtnAprobado.Name = "rbtnAprobado";
-            this.rbtnAprobado.Size = new System.Drawing.Size(108, 24);
-            this.rbtnAprobado.TabIndex = 9;
-            this.rbtnAprobado.TabStop = true;
-            this.rbtnAprobado.Text = "Aprobado";
-            this.rbtnAprobado.UseVisualStyleBackColor = true;
-            this.rbtnAprobado.CheckedChanged += new System.EventHandler(this.rbtnAprobado_CheckedChanged);
-            // 
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             // btnIngresoEntrevista
             // 
             this.btnIngresoEntrevista.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -484,7 +413,6 @@
             this.lblTipoEntrevista.TabIndex = 6;
             this.lblTipoEntrevista.Text = "Tipo Entrevista";
             // 
-<<<<<<< HEAD
             // rbtnAprobado
             // 
             this.rbtnAprobado.AutoSize = true;
@@ -529,8 +457,6 @@
             this.txtPunteo.Size = new System.Drawing.Size(128, 27);
             this.txtPunteo.TabIndex = 15;
             // 
-=======
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
             // frmEntrevista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -588,23 +514,14 @@
         private System.Windows.Forms.Button btnIngresoEntrevista;
         private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
         private System.Windows.Forms.Button btnReclutas;
-<<<<<<< HEAD
         private System.Windows.Forms.Panel pnlOpciones;
         private System.Windows.Forms.RadioButton rbtnSegOpcion;
         private System.Windows.Forms.RadioButton rbtnPrimeraOp;
-=======
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.ComboBox cmbHorario;
         private System.Windows.Forms.TextBox txtPunteo;
         private System.Windows.Forms.Label lblPunteoEntrevista;
         private System.Windows.Forms.RadioButton rbtnReprobado;
         private System.Windows.Forms.RadioButton rbtnAprobado;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.Panel pnlOpciones;
-        private System.Windows.Forms.RadioButton rbtnSegOpcion;
-        private System.Windows.Forms.RadioButton rbtnPrimeraOp;
->>>>>>> 8679c524d2039044202f555e7b5085c359020019
     }
 }
