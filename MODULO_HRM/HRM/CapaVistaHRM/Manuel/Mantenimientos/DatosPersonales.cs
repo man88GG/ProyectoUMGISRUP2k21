@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.Odbc;
 using CapaControladorHRM.Manuel;
 using System.Net;
+using CapaVistaHRM.Manuel.Procesos;
 
 namespace CapaVistaHRM.Manuel.Mantenimientos
 {
@@ -86,7 +87,9 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.ShowDialog();
         }
 
         //metodo para llenar el combo departamento

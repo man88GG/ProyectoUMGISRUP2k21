@@ -137,14 +137,23 @@
     <Compile Include="Manuel\Mantenimientos\DatosPersonales.Designer.cs">
       <DependentUpon>DatosPersonales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manuel\Procesos\frmEntrevista.cs">
+    <Compile Include="Manuel\Mantenimientos\frmTipoEvaluacion.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuel\Mantenimientos\frmTipoEvaluacion.designer.cs">
+      <DependentUpon>frmTipoEvaluacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Manuel\Procesos\frmEntrevista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manuel\Procesos\frmEntrevista.Designer.cs">
+    <Compile Include="Manuel\Procesos\frmEntrevista.designer.cs">
       <DependentUpon>frmEntrevista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuel\Procesos\frmEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuel\Procesos\frmEvaluacion.designer.cs">
+      <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Manuel\Procesos\frmIngresoReclutas.cs">
       <SubType>Form</SubType>
@@ -233,8 +242,14 @@
     <EmbeddedResource Include="Manuel\Mantenimientos\DatosPersonales.resx">
       <DependentUpon>DatosPersonales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Mantenimientos\frmTipoEvaluacion.resx">
+      <DependentUpon>frmTipoEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Procesos\frmEntrevista.resx">
       <DependentUpon>frmEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Procesos\frmEvaluacion.resx">
+      <DependentUpon>frmEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Procesos\frmIngresoReclutas.resx">
       <DependentUpon>frmIngresoReclutas.cs</DependentUpon>

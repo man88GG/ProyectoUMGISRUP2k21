@@ -11,6 +11,7 @@ namespace CapaControladorHRM.Manuel
 {
     public class ClsControladorManuel
     {
+
         ClsSentenciasManuel sn = new ClsSentenciasManuel();
 
         //Paso de datos comboPuesto
@@ -46,6 +47,14 @@ namespace CapaControladorHRM.Manuel
             DataTable Items = sn.funcItemsEntrevista();
             return Items;
         }
+
+        //Paso de datos Tipo Entrevista
+        public DataTable funcItemsEvaluacion()
+        {
+            DataTable Items = sn.funcItemsEvaluacion();
+            return Items;
+        }
+
 
         //Paso de datos Formacion Academica
         public DataTable funcItemsNivelEstudio()
@@ -242,6 +251,22 @@ namespace CapaControladorHRM.Manuel
             return table;
         }
 
+        //consulta de busqueda por Id 
+        public OdbcDataReader funcBuscarReclutaEvaluado(string IdRecluta)
+        {
+            OdbcDataReader Lector = sn.funcBuscarReclutaEvaluado(IdRecluta);
+            return Lector;
+        }
+
+
+        //Paso de datos para consulta modificar en la entidad Empleado
+        public void funcInsertarEvaluacion(string IdRecluta, int TipoEvaluacion, int Punteo, int Resultado,
+                string Comentarios, string OpcionRecluta)
+        {
+
+            sn.funcInsertarEvaluacion(IdRecluta, TipoEvaluacion, Punteo, Resultado, Comentarios, OpcionRecluta);
+
+        }
 
 
     }
