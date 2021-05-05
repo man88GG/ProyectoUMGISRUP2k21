@@ -47,14 +47,6 @@ namespace CapaControladorHRM.Manuel
             return Items;
         }
 
-        //Paso de datos Tipo Entrevista
-        public DataTable funcItemsEvaluacion()
-        {
-            DataTable Items = sn.funcItemsEvaluacion();
-            return Items;
-        }
-
-
         //Paso de datos Formacion Academica
         public DataTable funcItemsNivelEstudio()
         {
@@ -250,12 +242,6 @@ namespace CapaControladorHRM.Manuel
             return table;
         }
 
-        //consulta de busqueda por Id 
-        public OdbcDataReader funcBuscarReclutaEvaluado(string IdRecluta)
-        {
-            OdbcDataReader Lector = sn.funcBuscarReclutaEvaluado(IdRecluta);
-            return Lector;
-        }
 
 
     }

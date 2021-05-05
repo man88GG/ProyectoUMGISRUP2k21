@@ -29,9 +29,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         /// </summary>
         private void InitializeComponent()
         {
-            this.navegador1 = new CapaVistaNavegador.Navegador();
             this.lblCantidadMonto = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblFormula = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdInactivo = new System.Windows.Forms.RadioButton();
@@ -41,7 +39,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.txtFormula = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -49,57 +46,62 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.rdFormula = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtSigno = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblSigno = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rdNegativo = new System.Windows.Forms.RadioButton();
             this.rdPositivo = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rdValorFormulaNo = new System.Windows.Forms.RadioButton();
+            this.rdValorFormulaSi = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.rdOperacionNo = new System.Windows.Forms.RadioButton();
+            this.rdOperacionSi = new System.Windows.Forms.RadioButton();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.rdTipoNo = new System.Windows.Forms.RadioButton();
+            this.rdTipoSi = new System.Windows.Forms.RadioButton();
+            this.cmbOperacion = new System.Windows.Forms.ComboBox();
+            this.txtValorFormula = new System.Windows.Forms.TextBox();
+            this.lblValorFormula = new System.Windows.Forms.Label();
+            this.lblOperacion = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.btnRestaurarValoresFormula = new System.Windows.Forms.Button();
+            this.lblPercepcionDeduccion = new System.Windows.Forms.Label();
+            this.btnAgregarFormula = new System.Windows.Forms.Button();
+            this.cmbPercepcionDeduccion1 = new System.Windows.Forms.ComboBox();
+            this.navegador1 = new CapaVistaNavegador.Navegador();
+            this.txtFormula = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtSigno = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // navegador1
-            // 
-            this.navegador1.BackColor = System.Drawing.Color.Transparent;
-            this.navegador1.Location = new System.Drawing.Point(13, 8);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1412, 129);
-            this.navegador1.TabIndex = 0;
-            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // lblCantidadMonto
             // 
             this.lblCantidadMonto.AutoSize = true;
             this.lblCantidadMonto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadMonto.ForeColor = System.Drawing.Color.White;
-            this.lblCantidadMonto.Location = new System.Drawing.Point(582, 194);
+            this.lblCantidadMonto.Location = new System.Drawing.Point(570, 141);
             this.lblCantidadMonto.Name = "lblCantidadMonto";
             this.lblCantidadMonto.Size = new System.Drawing.Size(52, 20);
             this.lblCantidadMonto.TabIndex = 43;
             this.lblCantidadMonto.Text = "Valor";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(675, 187);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(284, 27);
-            this.txtCantidad.TabIndex = 38;
-            this.txtCantidad.Tag = "valor";
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
-            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // lblFormula
             // 
             this.lblFormula.AutoSize = true;
             this.lblFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormula.ForeColor = System.Drawing.Color.White;
-            this.lblFormula.Location = new System.Drawing.Point(582, 147);
+            this.lblFormula.Location = new System.Drawing.Point(776, 597);
             this.lblFormula.Name = "lblFormula";
             this.lblFormula.Size = new System.Drawing.Size(74, 20);
             this.lblFormula.TabIndex = 42;
@@ -109,7 +111,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.groupBox1.Controls.Add(this.rdInactivo);
             this.groupBox1.Controls.Add(this.rdActivo);
-            this.groupBox1.Location = new System.Drawing.Point(675, 278);
+            this.groupBox1.Location = new System.Drawing.Point(663, 225);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(284, 60);
             this.groupBox1.TabIndex = 39;
@@ -148,7 +150,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(582, 294);
+            this.lblEstado.Location = new System.Drawing.Point(570, 241);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(62, 20);
             this.lblEstado.TabIndex = 37;
@@ -192,24 +194,13 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(165, 357);
+            this.dgvDatos.Location = new System.Drawing.Point(13, 385);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.RowTemplate.Height = 24;
-            this.dgvDatos.Size = new System.Drawing.Size(953, 176);
+            this.dgvDatos.Size = new System.Drawing.Size(712, 259);
             this.dgvDatos.TabIndex = 33;
-            // 
-            // txtFormula
-            // 
-            this.txtFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFormula.Location = new System.Drawing.Point(675, 140);
-            this.txtFormula.Name = "txtFormula";
-            this.txtFormula.Size = new System.Drawing.Size(284, 27);
-            this.txtFormula.TabIndex = 32;
-            this.txtFormula.Tag = "formula";
-            this.txtFormula.TextChanged += new System.EventHandler(this.txtFormula_TextChanged);
-            this.txtFormula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFormula_KeyPress);
             // 
             // txtDescripcion
             // 
@@ -274,7 +265,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdValor);
-            this.groupBox2.Location = new System.Drawing.Point(971, 181);
+            this.groupBox2.Location = new System.Drawing.Point(963, 185);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(147, 47);
             this.groupBox2.TabIndex = 47;
@@ -283,40 +274,18 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rdFormula);
-            this.groupBox3.Location = new System.Drawing.Point(971, 130);
+            this.groupBox3.Location = new System.Drawing.Point(963, 134);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(147, 55);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
-            // 
-            // txtSigno
-            // 
-            this.txtSigno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSigno.Location = new System.Drawing.Point(980, 278);
-            this.txtSigno.Name = "txtSigno";
-            this.txtSigno.Size = new System.Drawing.Size(147, 27);
-            this.txtSigno.TabIndex = 49;
-            this.txtSigno.Tag = "signo";
-            this.txtSigno.Visible = false;
-            this.txtSigno.TextChanged += new System.EventHandler(this.txtSigno_TextChanged);
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(980, 311);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(147, 27);
-            this.txtEstado.TabIndex = 50;
-            this.txtEstado.Tag = "estado";
-            this.txtEstado.Visible = false;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged_1);
             // 
             // lblSigno
             // 
             this.lblSigno.AutoSize = true;
             this.lblSigno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSigno.ForeColor = System.Drawing.Color.White;
-            this.lblSigno.Location = new System.Drawing.Point(582, 238);
+            this.lblSigno.Location = new System.Drawing.Point(570, 185);
             this.lblSigno.Name = "lblSigno";
             this.lblSigno.Size = new System.Drawing.Size(53, 20);
             this.lblSigno.TabIndex = 51;
@@ -326,7 +295,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.groupBox4.Controls.Add(this.rdNegativo);
             this.groupBox4.Controls.Add(this.rdPositivo);
-            this.groupBox4.Location = new System.Drawing.Point(675, 225);
+            this.groupBox4.Location = new System.Drawing.Point(663, 172);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(284, 47);
             this.groupBox4.TabIndex = 40;
@@ -360,32 +329,296 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.rdPositivo.UseVisualStyleBackColor = true;
             this.rdPositivo.CheckedChanged += new System.EventHandler(this.rdPositivo_CheckedChanged);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rdValorFormulaNo);
+            this.groupBox5.Controls.Add(this.rdValorFormulaSi);
+            this.groupBox5.Location = new System.Drawing.Point(352, 141);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(138, 41);
+            this.groupBox5.TabIndex = 86;
+            this.groupBox5.TabStop = false;
+            // 
+            // rdValorFormulaNo
+            // 
+            this.rdValorFormulaNo.AutoSize = true;
+            this.rdValorFormulaNo.ForeColor = System.Drawing.Color.White;
+            this.rdValorFormulaNo.Location = new System.Drawing.Point(69, 11);
+            this.rdValorFormulaNo.Name = "rdValorFormulaNo";
+            this.rdValorFormulaNo.Size = new System.Drawing.Size(47, 21);
+            this.rdValorFormulaNo.TabIndex = 70;
+            this.rdValorFormulaNo.TabStop = true;
+            this.rdValorFormulaNo.Text = "No";
+            this.rdValorFormulaNo.UseVisualStyleBackColor = true;
+            // 
+            // rdValorFormulaSi
+            // 
+            this.rdValorFormulaSi.AutoSize = true;
+            this.rdValorFormulaSi.ForeColor = System.Drawing.Color.White;
+            this.rdValorFormulaSi.Location = new System.Drawing.Point(6, 11);
+            this.rdValorFormulaSi.Name = "rdValorFormulaSi";
+            this.rdValorFormulaSi.Size = new System.Drawing.Size(41, 21);
+            this.rdValorFormulaSi.TabIndex = 69;
+            this.rdValorFormulaSi.TabStop = true;
+            this.rdValorFormulaSi.Text = "Si";
+            this.rdValorFormulaSi.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.rdOperacionNo);
+            this.groupBox6.Controls.Add(this.rdOperacionSi);
+            this.groupBox6.Location = new System.Drawing.Point(352, 94);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(138, 41);
+            this.groupBox6.TabIndex = 85;
+            this.groupBox6.TabStop = false;
+            // 
+            // rdOperacionNo
+            // 
+            this.rdOperacionNo.AutoSize = true;
+            this.rdOperacionNo.ForeColor = System.Drawing.Color.White;
+            this.rdOperacionNo.Location = new System.Drawing.Point(69, 12);
+            this.rdOperacionNo.Name = "rdOperacionNo";
+            this.rdOperacionNo.Size = new System.Drawing.Size(47, 21);
+            this.rdOperacionNo.TabIndex = 69;
+            this.rdOperacionNo.TabStop = true;
+            this.rdOperacionNo.Text = "No";
+            this.rdOperacionNo.UseVisualStyleBackColor = true;
+            // 
+            // rdOperacionSi
+            // 
+            this.rdOperacionSi.AutoSize = true;
+            this.rdOperacionSi.ForeColor = System.Drawing.Color.White;
+            this.rdOperacionSi.Location = new System.Drawing.Point(6, 11);
+            this.rdOperacionSi.Name = "rdOperacionSi";
+            this.rdOperacionSi.Size = new System.Drawing.Size(41, 21);
+            this.rdOperacionSi.TabIndex = 68;
+            this.rdOperacionSi.TabStop = true;
+            this.rdOperacionSi.Text = "Si";
+            this.rdOperacionSi.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.rdTipoNo);
+            this.groupBox7.Controls.Add(this.rdTipoSi);
+            this.groupBox7.Location = new System.Drawing.Point(352, 46);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(138, 41);
+            this.groupBox7.TabIndex = 84;
+            this.groupBox7.TabStop = false;
+            // 
+            // rdTipoNo
+            // 
+            this.rdTipoNo.AutoSize = true;
+            this.rdTipoNo.ForeColor = System.Drawing.Color.White;
+            this.rdTipoNo.Location = new System.Drawing.Point(69, 13);
+            this.rdTipoNo.Name = "rdTipoNo";
+            this.rdTipoNo.Size = new System.Drawing.Size(47, 21);
+            this.rdTipoNo.TabIndex = 68;
+            this.rdTipoNo.TabStop = true;
+            this.rdTipoNo.Text = "No";
+            this.rdTipoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdTipoSi
+            // 
+            this.rdTipoSi.AutoSize = true;
+            this.rdTipoSi.ForeColor = System.Drawing.Color.White;
+            this.rdTipoSi.Location = new System.Drawing.Point(6, 13);
+            this.rdTipoSi.Name = "rdTipoSi";
+            this.rdTipoSi.Size = new System.Drawing.Size(41, 21);
+            this.rdTipoSi.TabIndex = 67;
+            this.rdTipoSi.TabStop = true;
+            this.rdTipoSi.Text = "Si";
+            this.rdTipoSi.UseVisualStyleBackColor = true;
+            // 
+            // cmbOperacion
+            // 
+            this.cmbOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOperacion.FormattingEnabled = true;
+            this.cmbOperacion.Location = new System.Drawing.Point(135, 101);
+            this.cmbOperacion.Name = "cmbOperacion";
+            this.cmbOperacion.Size = new System.Drawing.Size(204, 24);
+            this.cmbOperacion.TabIndex = 83;
+            // 
+            // txtValorFormula
+            // 
+            this.txtValorFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorFormula.Location = new System.Drawing.Point(135, 144);
+            this.txtValorFormula.Name = "txtValorFormula";
+            this.txtValorFormula.Size = new System.Drawing.Size(204, 27);
+            this.txtValorFormula.TabIndex = 82;
+            this.txtValorFormula.Tag = "tipoPercepcionDeduccion";
+            // 
+            // lblValorFormula
+            // 
+            this.lblValorFormula.AutoSize = true;
+            this.lblValorFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorFormula.ForeColor = System.Drawing.Color.White;
+            this.lblValorFormula.Location = new System.Drawing.Point(32, 151);
+            this.lblValorFormula.Name = "lblValorFormula";
+            this.lblValorFormula.Size = new System.Drawing.Size(52, 20);
+            this.lblValorFormula.TabIndex = 81;
+            this.lblValorFormula.Text = "Valor";
+            // 
+            // lblOperacion
+            // 
+            this.lblOperacion.AutoSize = true;
+            this.lblOperacion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperacion.ForeColor = System.Drawing.Color.White;
+            this.lblOperacion.Location = new System.Drawing.Point(32, 106);
+            this.lblOperacion.Name = "lblOperacion";
+            this.lblOperacion.Size = new System.Drawing.Size(93, 20);
+            this.lblOperacion.TabIndex = 80;
+            this.lblOperacion.Text = "Operacion";
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.ForeColor = System.Drawing.Color.White;
+            this.lblTipo.Location = new System.Drawing.Point(31, 61);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(44, 20);
+            this.lblTipo.TabIndex = 79;
+            this.lblTipo.Text = "Tipo";
+            // 
+            // btnRestaurarValoresFormula
+            // 
+            this.btnRestaurarValoresFormula.Location = new System.Drawing.Point(505, 111);
+            this.btnRestaurarValoresFormula.Name = "btnRestaurarValoresFormula";
+            this.btnRestaurarValoresFormula.Size = new System.Drawing.Size(177, 52);
+            this.btnRestaurarValoresFormula.TabIndex = 77;
+            this.btnRestaurarValoresFormula.Text = "Borrar Formula";
+            this.btnRestaurarValoresFormula.UseVisualStyleBackColor = true;
+            this.btnRestaurarValoresFormula.Click += new System.EventHandler(this.btnRestaurarValoresFormula_Click);
+            // 
+            // lblPercepcionDeduccion
+            // 
+            this.lblPercepcionDeduccion.AutoSize = true;
+            this.lblPercepcionDeduccion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPercepcionDeduccion.ForeColor = System.Drawing.Color.White;
+            this.lblPercepcionDeduccion.Location = new System.Drawing.Point(171, 18);
+            this.lblPercepcionDeduccion.Name = "lblPercepcionDeduccion";
+            this.lblPercepcionDeduccion.Size = new System.Drawing.Size(392, 20);
+            this.lblPercepcionDeduccion.TabIndex = 75;
+            this.lblPercepcionDeduccion.Text = "Generacion De Formula Percepcion / Deduccion";
+            // 
+            // btnAgregarFormula
+            // 
+            this.btnAgregarFormula.Location = new System.Drawing.Point(505, 53);
+            this.btnAgregarFormula.Name = "btnAgregarFormula";
+            this.btnAgregarFormula.Size = new System.Drawing.Size(177, 52);
+            this.btnAgregarFormula.TabIndex = 74;
+            this.btnAgregarFormula.Text = "Agregar Valores";
+            this.btnAgregarFormula.UseVisualStyleBackColor = true;
+            this.btnAgregarFormula.Click += new System.EventHandler(this.btnAgregarFormula_Click);
+            // 
+            // cmbPercepcionDeduccion1
+            // 
+            this.cmbPercepcionDeduccion1.FormattingEnabled = true;
+            this.cmbPercepcionDeduccion1.Location = new System.Drawing.Point(135, 53);
+            this.cmbPercepcionDeduccion1.Name = "cmbPercepcionDeduccion1";
+            this.cmbPercepcionDeduccion1.Size = new System.Drawing.Size(204, 24);
+            this.cmbPercepcionDeduccion1.TabIndex = 76;
+            // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.Color.Transparent;
+            this.navegador1.Location = new System.Drawing.Point(23, 8);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(1419, 129);
+            this.navegador1.TabIndex = 88;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load_1);
+            // 
+            // txtFormula
+            // 
+            this.txtFormula.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFormula.Location = new System.Drawing.Point(880, 594);
+            this.txtFormula.Name = "txtFormula";
+            this.txtFormula.ReadOnly = true;
+            this.txtFormula.Size = new System.Drawing.Size(547, 27);
+            this.txtFormula.TabIndex = 89;
+            this.txtFormula.Tag = "formula";
+            this.txtFormula.TextChanged += new System.EventHandler(this.txtFormula_TextChanged_1);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(663, 134);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(284, 27);
+            this.txtCantidad.TabIndex = 90;
+            this.txtCantidad.Tag = "valor";
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            // 
+            // txtSigno
+            // 
+            this.txtSigno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSigno.Location = new System.Drawing.Point(663, 291);
+            this.txtSigno.Name = "txtSigno";
+            this.txtSigno.Size = new System.Drawing.Size(98, 27);
+            this.txtSigno.TabIndex = 91;
+            this.txtSigno.Tag = "signo";
+            this.txtSigno.TextChanged += new System.EventHandler(this.txtSigno_TextChanged);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(663, 324);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(98, 27);
+            this.txtEstado.TabIndex = 92;
+            this.txtEstado.Tag = "estado";
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblPercepcionDeduccion);
+            this.groupBox8.Controls.Add(this.groupBox5);
+            this.groupBox8.Controls.Add(this.groupBox6);
+            this.groupBox8.Controls.Add(this.groupBox7);
+            this.groupBox8.Controls.Add(this.cmbPercepcionDeduccion1);
+            this.groupBox8.Controls.Add(this.cmbOperacion);
+            this.groupBox8.Controls.Add(this.btnAgregarFormula);
+            this.groupBox8.Controls.Add(this.txtValorFormula);
+            this.groupBox8.Controls.Add(this.btnRestaurarValoresFormula);
+            this.groupBox8.Controls.Add(this.lblValorFormula);
+            this.groupBox8.Controls.Add(this.lblTipo);
+            this.groupBox8.Controls.Add(this.lblOperacion);
+            this.groupBox8.Location = new System.Drawing.Point(745, 385);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(697, 197);
+            this.groupBox8.TabIndex = 87;
+            this.groupBox8.TabStop = false;
+            // 
             // frmPercepcionesFiscales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1429, 556);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.lblSigno);
+            this.ClientSize = new System.Drawing.Size(1500, 656);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtSigno);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.lblFormula);
+            this.Controls.Add(this.txtFormula);
+            this.Controls.Add(this.navegador1);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.lblSigno);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblCantidadMonto);
-            this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.lblFormula);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.dgvDatos);
-            this.Controls.Add(this.txtFormula);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.navegador1);
             this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.Name = "frmPercepcionesFiscales";
@@ -400,16 +633,21 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private CapaVistaNavegador.Navegador navegador1;
         private System.Windows.Forms.Label lblCantidadMonto;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblFormula;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdInactivo;
@@ -419,7 +657,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.TextBox txtFormula;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
@@ -427,11 +664,33 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         private System.Windows.Forms.RadioButton rdFormula;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSigno;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton rdNegativo;
         private System.Windows.Forms.RadioButton rdPositivo;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton rdValorFormulaNo;
+        private System.Windows.Forms.RadioButton rdValorFormulaSi;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton rdOperacionNo;
+        private System.Windows.Forms.RadioButton rdOperacionSi;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton rdTipoNo;
+        private System.Windows.Forms.RadioButton rdTipoSi;
+        private System.Windows.Forms.ComboBox cmbOperacion;
+        private System.Windows.Forms.TextBox txtValorFormula;
+        private System.Windows.Forms.Label lblValorFormula;
+        private System.Windows.Forms.Label lblOperacion;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Button btnRestaurarValoresFormula;
+        private System.Windows.Forms.Label lblPercepcionDeduccion;
+        private System.Windows.Forms.Button btnAgregarFormula;
+        private System.Windows.Forms.ComboBox cmbPercepcionDeduccion1;
+        private CapaVistaNavegador.Navegador navegador1;
+        private System.Windows.Forms.TextBox txtFormula;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtSigno;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.GroupBox groupBox8;
     }
 }

@@ -24,23 +24,22 @@ namespace CapaVistaHRM.Manuel.Procesos
             InitializeComponent();
             funcLlenarTipoEntrevista();
             cmbTipoEntrevista.DropDownStyle = ComboBoxStyle.DropDownList;
-            EstadoNoEntrevistados = 0;
         }
 
         //Declaración de variables Entidad Reclutamiento
         string IdRecluta,Comentarios,OpcionRecluta;
-        int Resultado,TipoEntrevista,Punteo,EstadoNoEntrevistados;
+        int Resultado,TipoEntrevista,Punteo;
 
         
 
-
+      
         //Se agrega el codigo a la variable resultado de reprobado
         private void rbtnReprobado_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnReprobado.Checked == true)
             {
                 //estado de no escogido
-                Resultado = 4;
+                Resultado = 3;
                 pnlOpciones.Enabled = false;
                 rbtnPrimeraOp.Checked = false;
                 rbtnSegOpcion.Checked = false;
@@ -74,7 +73,7 @@ namespace CapaVistaHRM.Manuel.Procesos
                 //se desbloquean los componentes en los que se puede agregar/cambiar información
                 IdRecluta = txtIdBancoTalento.Text;
                 gbxDatosEntrevista.Enabled = true;
-                
+
                 //Inicio para Busqueda
                 OdbcDataReader Lector = Cont_R.funcBuscarRecluta(txtIdBancoTalento.Text);
                 if (Lector.HasRows == true)
@@ -122,7 +121,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void btnReclutas_Click(object sender, EventArgs e)
         {
             //Se llama al formulario que contiene todos una tabla de todos los empleados
-            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas(EstadoNoEntrevistados);
+            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas();
             MostrarReclu.ShowDialog();
         }
 
@@ -130,9 +129,8 @@ namespace CapaVistaHRM.Manuel.Procesos
         {
             if (rbtnPrimeraOp.Checked == true)
             {
-                //prioridad máxima luego de recomendados, estado de ya evaluado
+                //prioridad máxima luego de recomendados
                 Resultado = 1;
-                OpcionRecluta = "Primera Opcion";
             }
         }
 
@@ -140,9 +138,8 @@ namespace CapaVistaHRM.Manuel.Procesos
         {
             if (rbtnSegOpcion.Checked == true)
             {
-                //segunda prioridad, estado de ya evaluado
-                Resultado = 1;
-                OpcionRecluta = "Segunda Opcion";
+                //segunda prioridad
+                Resultado = 2;
             }
         }
 
@@ -175,6 +172,14 @@ namespace CapaVistaHRM.Manuel.Procesos
                                 Comentarios = rtxtComentarios.Text;
 
 
+                                //Datos para entidad Entrevista
+                                if (Resultado == 1){
+                                    OpcionRecluta = "Primera Opcion";
+                                }else
+                                   if(Resultado == 2){
+                                    OpcionRecluta = "Segunda Opcion";
+                                }
+                                
                                 //envío de datos hacia capa Controlador
                                 Cont_R.funcInsertarEntrevista(IdRecluta, TipoEntrevista,Punteo, Resultado, Comentarios, OpcionRecluta);
                                 MessageBox.Show("Se ha ingresado la Entrevista con Éxito", "FORMULARIO ENTREVISTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -209,14 +214,13 @@ namespace CapaVistaHRM.Manuel.Procesos
             rtxtComentarios.Text = "";
             rbtnPrimeraOp.Checked = false;
             rbtnSegOpcion.Checked = false;
-            cmbHorario.Text = "";
+
 
         }
         //Función de Bloqueo
         private void funcBloqueo()
         {
             gbxDatosEntrevista.Enabled = false;
-           
         }
 
 
