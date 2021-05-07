@@ -371,3 +371,17 @@ C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVi
 C:\Users\Emilio27\Desktop\fork Emilio\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoMoneda.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.faltas.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.frmDepartamento.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.faltas.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.frmDepartamento.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmContratos.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmDificultad.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmFormacionAcademica.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmLicenciaDeConducir.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmPercepcionesFiscales.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoEntrevista.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoHorario.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Mantenimientos.frmTipoMoneda.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.fds.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCompetencias.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCapacitadorExterno.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Procesos.frmPeticionCapacitacion.resources
