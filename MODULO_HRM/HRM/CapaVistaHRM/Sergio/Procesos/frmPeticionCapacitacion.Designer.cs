@@ -60,6 +60,8 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtRangoInicio = new System.Windows.Forms.TextBox();
+            this.txtRangoFinal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeticiones)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +137,7 @@
             this.rdCursosGenerales.AutoSize = true;
             this.rdCursosGenerales.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdCursosGenerales.ForeColor = System.Drawing.Color.Black;
-            this.rdCursosGenerales.Location = new System.Drawing.Point(256, 434);
+            this.rdCursosGenerales.Location = new System.Drawing.Point(176, 434);
             this.rdCursosGenerales.Name = "rdCursosGenerales";
             this.rdCursosGenerales.Size = new System.Drawing.Size(139, 21);
             this.rdCursosGenerales.TabIndex = 20;
@@ -223,17 +225,18 @@
             "Seleccione",
             "Empleado",
             "Rango de Empleado",
-            "Departamento",
-            "Petición"});
+            "Departamento"});
             this.cmbOpciones.Location = new System.Drawing.Point(187, 282);
             this.cmbOpciones.Name = "cmbOpciones";
-            this.cmbOpciones.Size = new System.Drawing.Size(208, 21);
+            this.cmbOpciones.Size = new System.Drawing.Size(183, 21);
             this.cmbOpciones.TabIndex = 27;
             this.cmbOpciones.SelectedIndexChanged += new System.EventHandler(this.cmbOpciones_SelectedIndexChanged);
             // 
             // cmbEmpleado
             // 
             this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Items.AddRange(new object[] {
+            "Seleccione..."});
             this.cmbEmpleado.Location = new System.Drawing.Point(26, 325);
             this.cmbEmpleado.Name = "cmbEmpleado";
             this.cmbEmpleado.Size = new System.Drawing.Size(260, 21);
@@ -264,7 +267,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(184, 381);
+            this.label6.Location = new System.Drawing.Point(140, 386);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 31;
@@ -275,7 +278,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(23, 403);
+            this.label7.Location = new System.Drawing.Point(23, 414);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 17);
             this.label7.TabIndex = 32;
@@ -284,7 +287,7 @@
             // cmbCompetencias
             // 
             this.cmbCompetencias.FormattingEnabled = true;
-            this.cmbCompetencias.Location = new System.Drawing.Point(26, 474);
+            this.cmbCompetencias.Location = new System.Drawing.Point(26, 461);
             this.cmbCompetencias.Name = "cmbCompetencias";
             this.cmbCompetencias.Size = new System.Drawing.Size(247, 21);
             this.cmbCompetencias.TabIndex = 33;
@@ -293,7 +296,7 @@
             // 
             // txtCompetencia
             // 
-            this.txtCompetencia.Location = new System.Drawing.Point(280, 474);
+            this.txtCompetencia.Location = new System.Drawing.Point(280, 461);
             this.txtCompetencia.Name = "txtCompetencia";
             this.txtCompetencia.Size = new System.Drawing.Size(48, 20);
             this.txtCompetencia.TabIndex = 34;
@@ -331,7 +334,7 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(26, 513);
+            this.cmbCourse.Location = new System.Drawing.Point(26, 488);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(247, 21);
             this.cmbCourse.TabIndex = 37;
@@ -340,7 +343,7 @@
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(280, 514);
+            this.txtCourse.Location = new System.Drawing.Point(280, 484);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(48, 20);
             this.txtCourse.TabIndex = 38;
@@ -377,11 +380,27 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // txtRangoInicio
+            // 
+            this.txtRangoInicio.Location = new System.Drawing.Point(70, 361);
+            this.txtRangoInicio.Name = "txtRangoInicio";
+            this.txtRangoInicio.Size = new System.Drawing.Size(100, 20);
+            this.txtRangoInicio.TabIndex = 42;
+            // 
+            // txtRangoFinal
+            // 
+            this.txtRangoFinal.Location = new System.Drawing.Point(176, 361);
+            this.txtRangoFinal.Name = "txtRangoFinal";
+            this.txtRangoFinal.Size = new System.Drawing.Size(100, 20);
+            this.txtRangoFinal.TabIndex = 43;
+            // 
             // frmPeticionCapacitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 683);
+            this.Controls.Add(this.txtRangoFinal);
+            this.Controls.Add(this.txtRangoInicio);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtEstado);
@@ -452,5 +471,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.TextBox txtRangoInicio;
+        private System.Windows.Forms.TextBox txtRangoFinal;
     }
 }

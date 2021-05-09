@@ -108,10 +108,18 @@ namespace CapaModeloHRM.Sergio
             return dataTable;
         }
 
-        public OdbcDataAdapter llenarTblDepartametos(string tabla)// metodo  que obtinene el contenio de una tabla
+        public OdbcDataAdapter llenarTblDepartametos(string tabla, string department)// metodo  que obtinene el contenio de una tabla
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
-            string sql = "SELECT * FROM " + tabla + " WHERE estado = 1 ;";
+            string sql = "SELECT E.idEmpleado FROM EMPLEADO E, RECLUTAMIENTO R, DEPARTAMENTOEMPRESA D WHERE E.idRecluta = R.idRecluta AND R.idDepatamentoEmpresa = D.idDepartamentoEmpresa and R.idDepatamentoEmpresa = "+department+" and E.estado = 1 ;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, Con.conexion());
+            return dataTable;
+        }
+
+        public OdbcDataAdapter llenarTblRango(string tabla, string inicio, string fin)// metodo  que obtinene el contenio de una tabla
+        {
+            //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "SELECT E.idEmpleado FROM EMPLEADO E, RECLUTAMIENTO R, DEPARTAMENTOEMPRESA D WHERE  E.idRecluta = R.idRecluta AND R.idDepatamentoEmpresa = D.idDepartamentoEmpresa and E.estado=1 and E.idEmpleado between "+inicio+" and "+fin+";";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, Con.conexion());
             return dataTable;
         }

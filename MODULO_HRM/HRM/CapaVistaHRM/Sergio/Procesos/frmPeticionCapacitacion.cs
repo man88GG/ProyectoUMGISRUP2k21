@@ -300,9 +300,45 @@ namespace CapaVistaHRM.Sergio.Procesos
                 }
             }else if (cmbOpciones.SelectedIndex==3)
             {
+                string code = txtCodigo.Text.ToString();
+                string title = txtTitulo.Text.ToString();
+                string description = txtDescripcion.Text.ToString();
+                string department = txtEmpleado.Text.ToString();
+                string courses = txtCourse.Text.ToString();
+                string state = txtEstado.Text.ToString();
+
                 string tabla = "PETICIONCAPACITACION";
-                DataTable dt = cn.llenarTbl(tabla);
-                dgvPeticiones.DataSource = dt;
+                DataTable dt = cn.llenarTblDepartamentos(tabla,department);
+                var dtDepartamento = dt;
+                foreach(DataRow drow in dtDepartamento.Rows){
+                    dataGridView1.Rows.Add(code, title, description, drow[0], courses, state);
+                    code = (int.Parse(code)+1).ToString();
+                }
+                limpiarCampos();
+                txtCodigo.Text = code;
+                //dgvPeticiones.DataSource =dt;
+
+            }else if (cmbOpciones.SelectedIndex ==2)
+            {
+                string code = txtCodigo.Text.ToString();
+                string title = txtTitulo.Text.ToString();
+                string description = txtDescripcion.Text.ToString();
+                string employee = txtEmpleado.Text.ToString();
+                string courses = txtCourse.Text.ToString();
+                string state = txtEstado.Text.ToString();
+
+                string start = txtRangoInicio.Text.ToString();
+                string end = txtRangoFinal.Text.ToString();
+
+                string tabla = "PETICIONCAPACITACION";
+                DataTable dt = cn.llenarTblRangos(tabla,start,end);
+                var dtDepartamento = dt;
+                foreach(DataRow drow in dtDepartamento.Rows){
+                    dataGridView1.Rows.Add(code, title, description, drow[0], courses, state);
+                    code = (int.Parse(code)+1).ToString();
+                }
+                limpiarCampos();
+                txtCodigo.Text = code;
             }
 
             
@@ -345,6 +381,9 @@ namespace CapaVistaHRM.Sergio.Procesos
                 llenarComboBox("departamentoempresa", "nombreDepartamento", cmbEmpleado); //tabla, campo, combo|||| TABLAS(RECLUTAMIENTO, EMPLEADO),CAMPOS (R.nombre,R.apellido,R.idRecluta)
                 cmbEmpleado.SelectedIndex = 0;
 
+            }else if (cmbOpciones.SelectedIndex==2)
+            {
+
             }
         }
 
@@ -370,10 +409,11 @@ namespace CapaVistaHRM.Sergio.Procesos
             {
                 cmbCompetencias.Visible = false;
                 cmbCourse.Visible = true;
+                string courseId = txtCompetencia.Text.ToString();
                 cmbCourse.Items.Clear();
-                cmbCourse.Items.Add("Seleccione..."); 
-                cmbCompetencias.SelectedIndex = 0;
-                llenarComboBox("curso", "nombreCurso", cmbCourse);
+                cmbCourse.Items.Add("Seleccione...");
+                llenarComboBoxCourse("curso", "idCurso", "nombreCurso", cmbCourse, courseId);
+                cmbCourse.SelectedIndex = 0;
             }
         }
     }
