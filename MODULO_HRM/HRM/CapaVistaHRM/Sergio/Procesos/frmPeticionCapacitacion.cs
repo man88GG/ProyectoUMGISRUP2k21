@@ -383,7 +383,9 @@ namespace CapaVistaHRM.Sergio.Procesos
 
             }else if (cmbOpciones.SelectedIndex==2)
             {
-
+                txtRangoInicio.Visible = true;
+                txtRangoFinal.Visible = true;
+                cmbEmpleado.Visible = false;
             }
         }
 
@@ -415,6 +417,11 @@ namespace CapaVistaHRM.Sergio.Procesos
                 llenarComboBoxCourse("curso", "idCurso", "nombreCurso", cmbCourse, courseId);
                 cmbCourse.SelectedIndex = 0;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvPeticiones.Rows.Remove(dgvPeticiones.CurrentRow);
         }
     }
 }
