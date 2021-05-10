@@ -18,6 +18,7 @@ namespace HRM_EJECUCION
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMDI());
+          //  Application.Run(new CapaVistaHRM.Manuel.Procesos.frmEvaluacion());
         }
     }
 }

@@ -9,14 +9,16 @@ using System.Windows.Forms;
 
 namespace CapaModeloHRM.Manuel
 {
-   public class ClsSentenciasManuel
+    public class ClsSentenciasManuel
     {
 
         ClsConexion Con = new ClsConexion();
 
+
         //Muestra datos en combo Puesto
         public DataTable funcCmbHPuesto()
         {
+
             DataTable Datos = new DataTable();
             try
             {
@@ -122,6 +124,90 @@ namespace CapaModeloHRM.Manuel
             }
         }//fin 
 
+        //Muestra datos en combo Horario
+        public DataTable funcItemsEntrevista()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                string CargaPuestos = "SELECT * FROM TIPOENTREVISTA";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
+        //Muestra datos en combo Horario
+        public DataTable funcItemsEvaluacion()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                string CargaPuestos = "SELECT * FROM TIPOEVALUACION";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
+
+
+        //Muestra datos en combo Formacion Academica
+        public DataTable funcItemsNivelEstudio()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                string CargaPuestos = "SELECT * FROM FORMACIONACADEMICA";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
+
 
         //Consulta para buscar un recluta por el Id
         public OdbcDataReader funcBuscarRecluta(string IdRecluta)
@@ -130,7 +216,7 @@ namespace CapaModeloHRM.Manuel
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
                 string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND RE.IDRECLUTA = '" + IdRecluta + "'";
-                                    
+
 
                 OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.conexion());
                 OdbcDataReader Lector = Query_BusquedaReclu.ExecuteReader();
@@ -154,7 +240,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-               string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, E.CUENTABANCARIA, E.IDRECLUTA FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, EMPLEADO AS E WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND E.IDRECLUTA = RE.IDRECLUTA AND E.IDEMPLEADO = '" + IdEmpleado + "' AND E.ESTADO = '" + Estado + "'";
+                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, E.CUENTABANCARIA, E.IDRECLUTA FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, EMPLEADO AS E WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND E.IDRECLUTA = RE.IDRECLUTA AND E.IDEMPLEADO = '" + IdEmpleado + "' AND E.ESTADO = '" + Estado + "'";
 
 
                 OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.conexion());
@@ -237,7 +323,7 @@ namespace CapaModeloHRM.Manuel
                     "', 	ESTADOCIVIL='" + EstadoCivil2 + "', IDLICENCIA='" + TipoLicencia + "' WHERE IDRECLUTA= '" + IdRecluta + "'";
 
 
-                string sentencia2 = "UPDATE EMPLEADO SET CUENTABANCARIA ='" + CuentaBanc +  "' WHERE IDEMPLEADO='" + IdEmpleado + "'";
+                string sentencia2 = "UPDATE EMPLEADO SET CUENTABANCARIA ='" + CuentaBanc + "' WHERE IDEMPLEADO='" + IdEmpleado + "'";
                 OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
                 OdbcCommand Query_Validacion2 = new OdbcCommand(sentencia2, Con.conexion());
                 Query_Validacion1.ExecuteNonQuery();
@@ -269,9 +355,9 @@ namespace CapaModeloHRM.Manuel
 
 
                 OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
-                
+
                 Query_Validacion1.ExecuteNonQuery();
-                
+
             }
             catch (Exception ex)
             {
@@ -285,7 +371,473 @@ namespace CapaModeloHRM.Manuel
 
 
 
+        //Consulta para ingresar una Entrevista
+        public void funcInsertarEntrevista(string IdRecluta, int TipoEntrevista, int Punteo, int Resultado,
+                string Comentarios, string OpcionRecluta)
+        {
+            try
+            {
 
+                int IdEntrevista;
+                string CorrelativoReclu = "SELECT IFNULL(MAX(IDENTREVISTA),0) +1 FROM ENTREVISTA";
+                OdbcCommand QueryIdReclu = new OdbcCommand(CorrelativoReclu, Con.conexion());
+                IdEntrevista = Convert.ToInt32(QueryIdReclu.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = QueryIdReclu.ExecuteReader();
+
+
+                //Sentencia para insertar datos a entidad Reclutamiento
+                string SentenciaRecluta = "INSERT INTO ENTREVISTA (IDENTREVISTA, IDTIPOENTREVISTA, PUNTEO, " +
+                    "RESULTADOENTREVISTA, COMENTARIOS) VALUES " + "('" + IdEntrevista + "','" + TipoEntrevista + "','" + Punteo + "','" + OpcionRecluta + "','"
+                    + Comentarios + "')";
+
+                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO='" + Resultado + "', IDENTREVISTA='" + IdEntrevista + "' WHERE IDRECLUTA='" + IdRecluta + "'";
+
+
+                OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.conexion());
+                Query_IngresoRec.ExecuteNonQuery();
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        //Consulta para ingresar datos en la entidad reclutamiento
+        public void funcInsertarRecluta(string PrimerNom, string PrimerAp, string Dpi, string NombreProf, string FechaNac,
+            int Genero, string EstadoCivil, string Email, int Telefono, int NumIgss, string FechaReclu, int TipoLicencia,
+            int Puesto, int Horario, int Departamento, int NivelEstudio, int EstadoRecluta)
+        {
+            try
+            {
+                int IdRecluta;
+                string CorrelativoReclu = "SELECT IFNULL(MAX(IDRECLUTA),0) +1 FROM RECLUTAMIENTO";
+
+                OdbcCommand QueryIdReclu = new OdbcCommand(CorrelativoReclu, Con.conexion());
+                IdRecluta = Convert.ToInt32(QueryIdReclu.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = QueryIdReclu.ExecuteReader();
+
+
+                //Sentencia para insertar datos a entidad Reclutamiento
+                string SentenciaRecluta = "INSERT INTO RECLUTAMIENTO (IDRECLUTA, NOMBRE, APELLIDO, " +
+                    "DPI, PROFESIONACTUAL, FECHANACIMIENTO, GENERO, ESTADOCIVIL," +
+                    "CORREO, TELEFONO, NUMEROIGSS,FECHARECLUTAMIENTO, IDLICENCIA," +
+                    "IDPUESTO, IDHORARIO,IDDEPATAMENTOEMPRESA,IDFORMACIONACADEMICA," +
+                    "ESTADO) VALUES " + "('" + IdRecluta + "','" + PrimerNom + "','" + PrimerAp + "','" + Dpi + "','"
+                    + NombreProf + "','" + FechaNac + "','" + Genero + "','" + EstadoCivil + "','" + Email + "','" + Telefono + "','" + NumIgss + "','"
+                    + FechaReclu + "','" + TipoLicencia + "','" + Puesto + "','" + Horario + "','" + Departamento + "','" + NivelEstudio + "','" + EstadoRecluta + "')";
+
+
+                OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.conexion());
+                Query_IngresoRec.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //SENTENCIAS PARA MOSTRAR DATOS BANCO TALENTO Y RECLUTAS
+        //consulta para mostrar datos de la entidad reclutamiento
+
+        public OdbcDataAdapter funcTablaBancoTalento(int PrOpcion, int SgOpcion, int Recomendados)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Id
+        public OdbcDataAdapter funcTablaBancoTalentoId(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.IDRECLUTA LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por primer nombre
+        public OdbcDataAdapter funcTablaBancoTalentoNombre(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.NOMBRE LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por primer apellido
+        public OdbcDataAdapter funcTablaBancoTalentoApellido(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.APELLIDO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Puesto
+        public OdbcDataAdapter funcTablaBancoTalentoPuesto(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND P.NOMBREPUESTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Departamento
+        public OdbcDataAdapter funcTablaBancoTalentoDepartamento(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND DE.NOMBREDEPARTAMENTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Profesion
+        public OdbcDataAdapter funcTablaBancoTalentoHorario(int PrOpcion, int SgOpcion, int Recomendados, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND H.TIPOHORARIO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //MOSTRAR DATOS DE EMPLEADO
+
+        //consulta para mostrar datos de la entidad empleado
+        public OdbcDataAdapter funcTablaEmpleado(int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.IDEMPLEADO,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO, H.TIPOHORARIO, R.CORREO, R.TELEFONO, R.NUMEROIGSS, LC.TIPOLICENCIA, E.CUENTABANCARIA FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND E.ESTADO = '" + Estado + "'";
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Empleado por Id
+        public OdbcDataAdapter funcFiltradoIdEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.IDEMPLEADO,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO, H.TIPOHORARIO, R.CORREO, R.TELEFONO, R.NUMEROIGSS, LC.TIPOLICENCIA, E.CUENTABANCARIA FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND E.ESTADO = '" + Estado + "' AND E.IDEMPLEADO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+
+        //consulta para mostrar datos de la entidad Empleado por Primer Nombre
+        public OdbcDataAdapter funcFiltradoNombreEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.IDEMPLEADO,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO, H.TIPOHORARIO, R.CORREO, R.TELEFONO, R.NUMEROIGSS, LC.TIPOLICENCIA, E.CUENTABANCARIA FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND E.ESTADO = '" + Estado + "' AND R.NOMBRE LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+        //consulta para mostrar datos de la entidad Empleado por Primer Apellido
+        public OdbcDataAdapter funcFiltradoApellidoEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.IDEMPLEADO,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO, H.TIPOHORARIO, R.CORREO, R.TELEFONO, R.NUMEROIGSS, LC.TIPOLICENCIA, E.CUENTABANCARIA FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND E.ESTADO = '" + Estado + "' AND R.APELLIDO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+        //consulta para mostrar datos de la entidad Empleado por Puesto
+        public OdbcDataAdapter funcFiltradoPuestoEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.IDEMPLEADO,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO, H.TIPOHORARIO, R.CORREO, R.TELEFONO, R.NUMEROIGSS, LC.TIPOLICENCIA, E.CUENTABANCARIA FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND E.ESTADO = '" + Estado + "' AND P.NOMBREPUESTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+
+
+
+        //consulta para mostrar datos de la entidad Empleado por Departamento
+        public OdbcDataAdapter funcFiltradoDepartamentoEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.IDEMPLEADO,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO, H.TIPOHORARIO, R.CORREO, R.TELEFONO, R.NUMEROIGSS, LC.TIPOLICENCIA, E.CUENTABANCARIA FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND E.ESTADO = '" + Estado + "' AND DE.NOMBREDEPARTAMENTOEMPRESA LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+
+        //Consulta para buscar un recluta Evaluado
+        public OdbcDataReader funcBuscarReclutaEvaluado(string IdRecluta)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, E.PUNTEO, E.RESULTADOENTREVISTA, E.COMENTARIOS FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, ENTREVISTA AS E, TIPOENTREVISTA AS TP WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND E.IDTIPOENTREVISTA = TP.IDTIPOENTREVISTA AND E.IDENTREVISTA = RE.IDENTREVISTA AND RE.IDRECLUTA = '" + IdRecluta + "'";
+
+
+                OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.conexion());
+                OdbcDataReader Lector = Query_BusquedaReclu.ExecuteReader();
+                return Lector;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //Consulta para ingresar una Evaluacion
+        public void funcInsertarEvaluacion(string IdRecluta, int TipoEvaluacion, int Punteo, int Resultado,
+                string Comentarios, string OpcionRecluta)
+        {
+            try
+            {
+                
+                int IdEvaluacion;
+                string CorrelativoReclu = "SELECT IFNULL(MAX(IDEVALUACIÓN),0) +1 FROM EVALUACION ";
+                OdbcCommand QueryIdReclu = new OdbcCommand(CorrelativoReclu, Con.conexion());
+                IdEvaluacion = Convert.ToInt32(QueryIdReclu.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = QueryIdReclu.ExecuteReader();
+
+
+                //Sentencia para insertar datos a entidad Reclutamiento
+                string SentenciaRecluta = "INSERT INTO EVALUACION  (IDEVALUACION, IDRECLUTA, IDTIPOEVALUACION, PUNTEOEVALUACION, " +
+                    "RESULTADOEVALUACION, COMENTARIOS) VALUES " + "('" + IdEvaluacion + "','" + IdRecluta + "','" + TipoEvaluacion + "','" + Punteo + "','" + OpcionRecluta + "','"
+                    + Comentarios + "')";
+
+                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO='" + Resultado + "' WHERE IDRECLUTA='" + IdRecluta + "'";
+
+
+                OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.conexion());
+                Query_IngresoRec.ExecuteNonQuery();
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
     }
