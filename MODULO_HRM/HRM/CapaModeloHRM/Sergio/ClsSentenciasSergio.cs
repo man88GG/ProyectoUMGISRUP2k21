@@ -163,27 +163,41 @@ namespace CapaModeloHRM.Sergio
         }
 
         ///// Ascensos
-        public string[] funcObtenerDatosAscenso(string Tabla, string Campo, string CourseId)
+        public string[] funcObtenerDatosAscenso(string Tabla, string Campo, string CourseId, string empleado)
         {
             string[] Campos = new string[100];
             int I = 0;
-            string Sql = "SELECT E.idEmpleado, R.nombre, R.apellido, P.nombrePuesto, D.nombreDepartamento FROM Empleado E, reclutamiento R, puesto P, departamentoempresa D WHERE E.idRecluta = R.idRecluta and R.idPuesto = P.idPuesto and R.idDepatamentoEmpresa = D.idDepartamentoEmpresa and E.idEmpleado = 1; ; ";
+            string Sql = "SELECT E.idEmpleado, R.idRecluta, R.nombre, R.apellido, P.nombrePuesto, D.nombreDepartamento FROM Empleado E, reclutamiento R, puesto P, departamentoempresa D WHERE E.idRecluta = R.idRecluta and R.idPuesto = P.idPuesto and R.idDepatamentoEmpresa = D.idDepartamentoEmpresa and E.idEmpleado = "+int.Parse(empleado)+";";
             try
             {
                 OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
                 OdbcDataReader Reader = Command.ExecuteReader();
                 while (Reader.Read())
                 {
-                    Campos[I] = Reader.GetValue(1).ToString() + "-" + Reader.GetValue(2).ToString() + "-" + Reader.GetValue(3).ToString() + "-" + Reader.GetValue(4).ToString();
+                    Campos[I] = Reader.GetValue(1).ToString() + "-" + Reader.GetValue(2).ToString() + "-" + Reader.GetValue(3).ToString() + "-" + Reader.GetValue(4).ToString() + "-" + Reader.GetValue(5).ToString();
                 }
             }
             catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla + "\n -" + Campo); }
             return Campos;
         }
-       
-        ////////////// ascensos
-        
 
+        ////////////// ascensos
+
+        public void procInsertarAscensos(string recluta, string puesto, string departamento)
+        {
+            
+            try
+            {
+                string insertarProducto = "UPDATE reclutamiento SET idPuesto = "+int.Parse(puesto)+", idDepatamentoEmpresa="+int.Parse(departamento)+" WHERE idRecluta = "+int.Parse(recluta)+";";
+                OdbcCommand comm3 = new OdbcCommand(insertarProducto, Con.conexion());
+                comm3.ExecuteNonQuery();
+            }
+            catch (Exception ex3)
+            {
+                Console.WriteLine(ex3.Message.ToString() + "error ingresando datos");
+            }
+
+        }
 
 
         ////////////////////
