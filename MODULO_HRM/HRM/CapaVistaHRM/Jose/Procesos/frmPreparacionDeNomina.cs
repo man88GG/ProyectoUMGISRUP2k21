@@ -15,9 +15,11 @@ namespace CapaVistaHRM.Jose.Procesos
     public partial class frmPreparacionDeNomina : Form
     {
         ClsControladorJose Cn = new ClsControladorJose();
-        public frmPreparacionDeNomina()
+        Form MDI;
+        public frmPreparacionDeNomina(Form FormularioMDI)
         {
             InitializeComponent();
+            MDI = FormularioMDI;
             llenarCombos();
         }
 
@@ -158,10 +160,10 @@ namespace CapaVistaHRM.Jose.Procesos
                     codigo = Convert.ToString(item.Cells["Column1"].Value);         
                     PercepcionesDeducciones.Add(codigo);
                 }
-                frmGenerarNomina fr = new frmGenerarNomina(PercepcionesDeducciones);
+                frmGenerarNomina fr = new frmGenerarNomina(PercepcionesDeducciones,MDI);
+                fr.MdiParent = MDI;
                 fr.Show();
-                //this.Close();
-              //  PercepcionesDeducciones.Clear();
+                this.Close();
             }
 
 

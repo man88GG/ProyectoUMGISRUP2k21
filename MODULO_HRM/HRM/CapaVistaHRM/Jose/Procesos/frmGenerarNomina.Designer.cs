@@ -53,6 +53,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).BeginInit();
             this.SuspendLayout();
             // 
@@ -309,11 +310,24 @@ namespace CapaVistaHRM.Jose.Procesos
             this.btnAyuda.TabIndex = 34;
             this.btnAyuda.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(627, 227);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 60);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Preparacion de Nomina";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmGenerarNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 635);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.dgvNomina);
@@ -334,7 +348,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "frmGenerarNomina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGenerarNomina";
@@ -370,5 +384,6 @@ namespace CapaVistaHRM.Jose.Procesos
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Button button1;
     }
 }
