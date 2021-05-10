@@ -40,3 +40,8 @@ C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaModeloHRM\obj\Deb
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaModeloHRM\obj\Debug\CapaModeloHRM.csproj.CoreCompileInputs.cache
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaModeloHRM\obj\Debug\CapaModeloHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaModeloHRM\obj\Debug\CapaModeloHRM.pdb
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaModeloHRM\bin\Debug\CapaModeloHRM.dll
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaModeloHRM\bin\Debug\CapaModeloHRM.pdb
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaModeloHRM\obj\Debug\CapaModeloHRM.csproj.CoreCompileInputs.cache
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaModeloHRM\obj\Debug\CapaModeloHRM.dll
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaModeloHRM\obj\Debug\CapaModeloHRM.pdb
