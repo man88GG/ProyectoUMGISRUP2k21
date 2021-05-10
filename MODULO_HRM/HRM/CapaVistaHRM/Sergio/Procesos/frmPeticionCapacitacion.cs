@@ -20,6 +20,7 @@ namespace CapaVistaHRM.Sergio.Procesos
             InitializeComponent();
             actualizardatagriew();
             CodigoMaximo("peticioncapacitacion", "idPeticionCapacitacion", txtCodigo);
+            cmbOpciones.SelectedIndex = 0;
         }
 
         public void CodigoMaximo(string tabla, string campo, TextBox txt)
@@ -116,6 +117,40 @@ namespace CapaVistaHRM.Sergio.Procesos
 
             }
             var dt2 = cn.enviarComboCourse(tabla, campo1,campo2);
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in dt2.Rows)
+            {
+
+                coleccion.Add(Convert.ToString(row[campo1]) + " - " + Convert.ToString(row[campo2]));
+                coleccion.Add(Convert.ToString(row[campo2]) + " - " + Convert.ToString(row[campo1]));
+            }
+            ComboBox.AutoCompleteCustomSource = coleccion;
+            ComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ComboBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+
+        
+
+
+
+
+
+        void llenarComboBoxCourseAll(string tabla, string campo1, string campo2, ComboBox ComboBox, string CourseId)
+        {
+            string[] items = cn.funcItemsCourseAll(tabla, campo1, CourseId);
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i] != null)
+                {
+                    if (items[i] != "")
+                    {
+                        ComboBox.Items.Add(items[i]);
+                    }
+                }
+
+            }
+            var dt2 = cn.enviarComboCourse(tabla, campo1, campo2);
             AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
             foreach (DataRow row in dt2.Rows)
             {
@@ -274,72 +309,84 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (cmbOpciones.SelectedIndex == 1)
+            if (txtTitulo.Text=="" || txtDescripcion.Text==""||txtEmpleado.Text==""||txtCourse.Text==""||txtEstado.Text=="")
             {
-                string code = txtCodigo.Text.ToString();
-                string title = txtTitulo.Text.ToString();
-                string description = txtDescripcion.Text.ToString();
-                string employee = txtEmpleado.Text.ToString();
-                string courses = txtCourse.Text.ToString();
-                string state = txtEstado.Text.ToString();
-
-                if (dataGridView1.Rows.Count == 0)
-                {
-                    
-                    dataGridView1.Rows.Add(code, title, description, employee, courses, state);
-                    limpiarCampos();
-                    txtCodigo.Text = (int.Parse(txtCodigo.Text) + 1).ToString();
-                }
-                else
-                {
-
-                    dataGridView1.Rows.Add(code, title, description, employee, courses, state);
-                    limpiarCampos();
-                    txtCodigo.Text = (int.Parse(txtCodigo.Text) + 1).ToString();
-                    
-                }
-            }else if (cmbOpciones.SelectedIndex==3)
-            {
-                string code = txtCodigo.Text.ToString();
-                string title = txtTitulo.Text.ToString();
-                string description = txtDescripcion.Text.ToString();
-                string department = txtEmpleado.Text.ToString();
-                string courses = txtCourse.Text.ToString();
-                string state = txtEstado.Text.ToString();
-
-                string tabla = "PETICIONCAPACITACION";
-                DataTable dt = cn.llenarTblDepartamentos(tabla,department);
-                var dtDepartamento = dt;
-                foreach(DataRow drow in dtDepartamento.Rows){
-                    dataGridView1.Rows.Add(code, title, description, drow[0], courses, state);
-                    code = (int.Parse(code)+1).ToString();
-                }
-                limpiarCampos();
-                txtCodigo.Text = code;
-                //dgvPeticiones.DataSource =dt;
-
-            }else if (cmbOpciones.SelectedIndex ==2)
-            {
-                string code = txtCodigo.Text.ToString();
-                string title = txtTitulo.Text.ToString();
-                string description = txtDescripcion.Text.ToString();
-                string employee = txtEmpleado.Text.ToString();
-                string courses = txtCourse.Text.ToString();
-                string state = txtEstado.Text.ToString();
-
-                string start = txtRangoInicio.Text.ToString();
-                string end = txtRangoFinal.Text.ToString();
-
-                string tabla = "PETICIONCAPACITACION";
-                DataTable dt = cn.llenarTblRangos(tabla,start,end);
-                var dtDepartamento = dt;
-                foreach(DataRow drow in dtDepartamento.Rows){
-                    dataGridView1.Rows.Add(code, title, description, drow[0], courses, state);
-                    code = (int.Parse(code)+1).ToString();
-                }
-                limpiarCampos();
-                txtCodigo.Text = code;
+                MessageBox.Show("Llene todos los campos para poder ingresar elementos");
             }
+            else
+            {
+                if (cmbOpciones.SelectedIndex == 1)
+                {
+                    string code = txtCodigo.Text.ToString();
+                    string title = txtTitulo.Text.ToString();
+                    string description = txtDescripcion.Text.ToString();
+                    string employee = txtEmpleado.Text.ToString();
+                    string courses = txtCourse.Text.ToString();
+                    string state = txtEstado.Text.ToString();
+
+                    if (dataGridView1.Rows.Count == 0)
+                    {
+
+                        dataGridView1.Rows.Add(code, title, description, employee, courses, state);
+                        limpiarCampos();
+                        txtCodigo.Text = (int.Parse(txtCodigo.Text) + 1).ToString();
+                    }
+                    else
+                    {
+
+                        dataGridView1.Rows.Add(code, title, description, employee, courses, state);
+                        limpiarCampos();
+                        txtCodigo.Text = (int.Parse(txtCodigo.Text) + 1).ToString();
+
+                    }
+                }
+                else if (cmbOpciones.SelectedIndex == 3)
+                {
+                    string code = txtCodigo.Text.ToString();
+                    string title = txtTitulo.Text.ToString();
+                    string description = txtDescripcion.Text.ToString();
+                    string department = txtEmpleado.Text.ToString();
+                    string courses = txtCourse.Text.ToString();
+                    string state = txtEstado.Text.ToString();
+
+                    string tabla = "PETICIONCAPACITACION";
+                    DataTable dt = cn.llenarTblDepartamentos(tabla, department);
+                    var dtDepartamento = dt;
+                    foreach (DataRow drow in dtDepartamento.Rows)
+                    {
+                        dataGridView1.Rows.Add(code, title, description, drow[0], courses, state);
+                        code = (int.Parse(code) + 1).ToString();
+                    }
+                    limpiarCampos();
+                    txtCodigo.Text = code;
+                    //dgvPeticiones.DataSource =dt;
+
+                }
+                else if (cmbOpciones.SelectedIndex == 2)
+                {
+                    string code = txtCodigo.Text.ToString();
+                    string title = txtTitulo.Text.ToString();
+                    string description = txtDescripcion.Text.ToString();
+                    string employee = txtEmpleado.Text.ToString();
+                    string courses = txtCourse.Text.ToString();
+                    string state = txtEstado.Text.ToString();
+
+                    string start = txtRangoInicio.Text.ToString();
+                    string end = txtRangoFinal.Text.ToString();
+
+                    string tabla = "PETICIONCAPACITACION";
+                    DataTable dt = cn.llenarTblRangos(tabla, start, end);
+                    var dtDepartamento = dt;
+                    foreach (DataRow drow in dtDepartamento.Rows)
+                    {
+                        dataGridView1.Rows.Add(code, title, description, drow[0], courses, state);
+                        code = (int.Parse(code) + 1).ToString();
+                    }
+                    limpiarCampos();
+                    txtCodigo.Text = code;
+                }
+            }
+            
 
             
 
@@ -355,7 +402,12 @@ namespace CapaVistaHRM.Sergio.Procesos
             cmbCourse.SelectedIndex = 0;
             rdActivo.Checked = false;
             rdInactivo.Checked = false;
-            }
+            txtRangoFinal.Text="";
+            txtRangoInicio.Text = "";
+            cmbCompetencias.Visible = false;
+            cmbCourse.Visible = false;
+            
+        }
 
         private void txtCourse_TextChanged(object sender, EventArgs e)
         {
@@ -367,6 +419,10 @@ namespace CapaVistaHRM.Sergio.Procesos
             
             if (cmbOpciones.SelectedIndex == 1)
             {
+                txtRangoInicio.Text = "";
+                txtRangoFinal.Text = "";
+                txtRangoInicio.Visible = false;
+                txtRangoFinal.Visible = false;
                 cmbEmpleado.Visible = true;
                 cmbEmpleado.Items.Clear();
                 cmbEmpleado.Items.Add("Seleccione...");
@@ -375,6 +431,10 @@ namespace CapaVistaHRM.Sergio.Procesos
 
             }else if (cmbOpciones.SelectedIndex == 3)
             {
+                txtRangoInicio.Text = "";
+                txtRangoFinal.Text = "";
+                txtRangoInicio.Visible = false;
+                txtRangoFinal.Visible = false;
                 cmbEmpleado.Visible = true;
                 cmbEmpleado.Items.Clear();
                 cmbEmpleado.Items.Add("Seleccione...");
@@ -409,19 +469,34 @@ namespace CapaVistaHRM.Sergio.Procesos
         {
             if (rdCursosGenerales.Checked == true)
             {
+               
                 cmbCompetencias.Visible = false;
                 cmbCourse.Visible = true;
                 string courseId = txtCompetencia.Text.ToString();
                 cmbCourse.Items.Clear();
                 cmbCourse.Items.Add("Seleccione...");
-                llenarComboBoxCourse("curso", "idCurso", "nombreCurso", cmbCourse, courseId);
+                llenarComboBoxCourseAll("curso", "idCurso", "nombreCurso", cmbCourse, courseId);
                 cmbCourse.SelectedIndex = 0;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvPeticiones.Rows.Remove(dgvPeticiones.CurrentRow);
+            try
+            {
+                if (dataGridView1.Rows.Count == 0)
+                {
+
+                }
+                else
+                {
+                    dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                }
+
+            }
+            catch (Exception Exc) { }
+
+
         }
     }
 }

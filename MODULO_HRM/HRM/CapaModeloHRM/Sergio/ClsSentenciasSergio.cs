@@ -52,6 +52,25 @@ namespace CapaModeloHRM.Sergio
             return Campos;
         }
 
+        public string[] funcLlenarCmbCourseAll(string Tabla, string Campo, string CourseId)
+        {
+            string[] Campos = new string[100];
+            int I = 0;
+            string Sql = "SELECT * FROM " + Tabla + " WHERE  estado = 1 ;";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[I] = Reader.GetValue(0).ToString() + " - " + Reader.GetValue(1).ToString();
+                    I++;
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla + "\n -" + Campo); }
+            return Campos;
+        }
+
         //PRUEBA DE ESTO
         public string[] funcLlenarCmbComplejo(string Tabla1, string Tabla2, string Campo1, string Campo2, string Campo3)
         {
@@ -91,6 +110,8 @@ namespace CapaModeloHRM.Sergio
             adaptador.Fill(dt);
             return dt;
         }
+
+
         public DataTable obtenerCombo2(string tabla1, string tabla2, string campo1, string campo2, string campo3)
         {
             string sql = "SELECT R."+campo1+", R."+campo2+", R."+campo3+" FROM "+tabla1+ " R, "+tabla2+ " E WHERE E."+campo1+" = R."+campo1+" and E.estado=1;";
@@ -141,8 +162,27 @@ namespace CapaModeloHRM.Sergio
             return Codigo + 1;
         }
 
-
-
+        ///// Ascensos
+        public string[] funcObtenerDatosAscenso(string Tabla, string Campo, string CourseId)
+        {
+            string[] Campos = new string[100];
+            int I = 0;
+            string Sql = "SELECT E.idEmpleado, R.nombre, R.apellido, P.nombrePuesto, D.nombreDepartamento FROM Empleado E, reclutamiento R, puesto P, departamentoempresa D WHERE E.idRecluta = R.idRecluta and R.idPuesto = P.idPuesto and R.idDepatamentoEmpresa = D.idDepartamentoEmpresa and E.idEmpleado = 1; ; ";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[I] = Reader.GetValue(1).ToString() + "-" + Reader.GetValue(2).ToString() + "-" + Reader.GetValue(3).ToString() + "-" + Reader.GetValue(4).ToString();
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla + "\n -" + Campo); }
+            return Campos;
+        }
+       
+        ////////////// ascensos
+        
 
 
 
