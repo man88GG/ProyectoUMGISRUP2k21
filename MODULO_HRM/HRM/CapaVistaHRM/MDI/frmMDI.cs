@@ -135,7 +135,7 @@ namespace CapaVistaHRM.MDI
                 frmFormulario.MdiParent = this;
                 frmFormulario.Show();
 
-           
+
             }
             else
             {
@@ -200,10 +200,10 @@ namespace CapaVistaHRM.MDI
 
         private void asignacionDeAplicacionesAPerfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             if (seguridad.PermisosAcceso("5", txtUsuario.Text) == 1)
-           {
-               bit.user(txtUsuario.Text);
-               bit.insert("Ingreso a la apliacion de mantenimiento de perfil apliaciones a perfil", 5);
+            if (seguridad.PermisosAcceso("5", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso a la apliacion de mantenimiento de perfil apliaciones a perfil", 5);
 
                 Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmAsignarAplicacionesAPerfil);
                 if (frmFormulario != null)
@@ -216,21 +216,21 @@ namespace CapaVistaHRM.MDI
                 frmFormulario.MdiParent = this;
                 frmFormulario.Show();
 
-           }
-           else
-           {
-               bit.user(txtUsuario.Text);
-               bit.insert("Trato de ingresar a la aplicacione de mantenimiento de perfil apliaciones a perfil", 5);
-               MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
-           }
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar a la aplicacione de mantenimiento de perfil apliaciones a perfil", 5);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
 
         private void asignacionDePermisosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             if (seguridad.PermisosAcceso("10", txtUsuario.Text) == 1)
-           {
-               bit.user(txtUsuario.Text);
-               bit.insert("Ingreso a la aplicacion de Asignacion de permisos", 10);
+            if (seguridad.PermisosAcceso("10", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso a la aplicacion de Asignacion de permisos", 10);
 
                 Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmModificarPermisos);
                 if (frmFormulario != null)
@@ -242,13 +242,13 @@ namespace CapaVistaHRM.MDI
                 frmFormulario = new frmModificarPermisos();
                 frmFormulario.MdiParent = this;
                 frmFormulario.Show();
-           }
-           else
-           {
-               bit.user(txtUsuario.Text);
-               bit.insert("Trato de ingresar a la aplicacion de Asignacion de permisos", 10);
-               MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
-           }
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar a la aplicacion de Asignacion de permisos", 10);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -706,20 +706,7 @@ namespace CapaVistaHRM.MDI
             }
         }
 
-<<<<<<< HEAD
-        private void nominaIndividualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmNominaIndividual);
-            if (frmFormulario != null)
-            {
-                frmFormulario.BringToFront();
-                return;
-            }
 
-            frmFormulario = new frmNominaIndividual();
-            frmFormulario.MdiParent = this;
-            frmFormulario.Show();
-=======
         private void competenciasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (seguridad.PermisosAcceso("306", txtUsuario.Text) == 1)
@@ -767,7 +754,7 @@ namespace CapaVistaHRM.MDI
                 bit.user(txtUsuario.Text);
                 bit.insert("Trato de ingresar al mantenimiento de Tipo de Cursos", 306);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
-            }   
+            }
         }
 
         private void peticiónDeCapacitaciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -793,7 +780,22 @@ namespace CapaVistaHRM.MDI
                 bit.insert("Trato de ingresar al mantenimiento de Tipo de Cursos", 306);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
->>>>>>> 1bf96f1891987266fdd34466195544b3d715ae3a
+        }
+
+        private void nominaIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {     
+                    Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmNominaIndividual);
+                    if (frmFormulario != null)
+                    {
+                        frmFormulario.BringToFront();
+                        return;
+                    }
+
+                    frmFormulario = new frmNominaIndividual();
+                    frmFormulario.MdiParent = this;
+                    frmFormulario.Show();
         }
     }
 }
+
+
