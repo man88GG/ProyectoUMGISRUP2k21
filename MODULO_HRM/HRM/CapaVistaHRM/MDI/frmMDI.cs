@@ -589,14 +589,14 @@ namespace CapaVistaHRM.MDI
 
         private void generarNominaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmGenerarNomina);
+            Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmPreparacionDeNomina);
             if (frmFormulario != null)
             {
                 frmFormulario.BringToFront();
                 return;
             }
 
-            frmFormulario = new frmGenerarNomina();
+            frmFormulario = new frmPreparacionDeNomina();
             frmFormulario.MdiParent = this;
             frmFormulario.Show();
         }
@@ -703,6 +703,20 @@ namespace CapaVistaHRM.MDI
                 bit.insert("Trato de ingresar al proceso Evaluación", 309);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
+        }
+
+        private void nominaIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmNominaIndividual);
+            if (frmFormulario != null)
+            {
+                frmFormulario.BringToFront();
+                return;
+            }
+
+            frmFormulario = new frmNominaIndividual();
+            frmFormulario.MdiParent = this;
+            frmFormulario.Show();
         }
     }
 }

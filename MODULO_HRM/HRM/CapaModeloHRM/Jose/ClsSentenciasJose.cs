@@ -19,7 +19,7 @@ namespace CapaModeloHRM.Jose
             {
                 OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
                 OdbcDataReader Reader = Command.ExecuteReader();
-                if (Reader.Read())
+                while (Reader.Read())
                 {
                     Codigo = Reader.GetInt32(0);
                 }
@@ -27,6 +27,8 @@ namespace CapaModeloHRM.Jose
             catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError al obtener codigo automatico, revise los parametros " + NombreTabla + " y " + Campo + " "+Ex+" "+" \n -\n -"); }
             return Codigo + 1;
         }
+
+       
 
         public string[] funcLlenarCmb(string Tabla, string Campo)
         {
@@ -236,7 +238,7 @@ namespace CapaModeloHRM.Jose
             string[] Campos = new string[300];
             string[] auto = new string[300];
             int i = 0;
-            string sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " where estado = 1 ;";
+            string sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " where estado = 1 and tipo = 1;";
 
             try
             {
@@ -257,7 +259,7 @@ namespace CapaModeloHRM.Jose
 
         public DataTable obtenerDosParametros(string tabla, string campo1, string campo2)
         {
-            string sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " where estado = 1  ;";
+            string sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " where estado = 1  and tipo = 1 ;";
             OdbcCommand command = new OdbcCommand(sql, Con.conexion());
             OdbcDataAdapter adaptador = new OdbcDataAdapter(command);
             DataTable dt = new DataTable();
@@ -268,7 +270,6 @@ namespace CapaModeloHRM.Jose
         public string[] modificarPercepcion(string Tabla, int Campo)
         {
             string[] Campos = new string[100];
-            int I = 0;
             string Sql = "SELECT *  FROM " + Tabla + " WHERE estado = 1 and idTipoPercepcionDeduccion = " + Campo + " ;";
             try
             {
@@ -287,6 +288,136 @@ namespace CapaModeloHRM.Jose
             }
             catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla + "\n -" + Campo); }
             return Campos;
+        }
+
+        public string[] obtenerEmpleadoSalario()
+        {
+            string[] Campos = new string[300];
+            int PosP = 0;
+            string Sql = "SELECT E.idEmpleado,R.nombre,R.apellido,P.salario from empleado E, puesto P , reclutamiento R where E.idEmpleado = R.idRecluta and R.idPuesto =P.idPuesto; ";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                  Campos[PosP] = Reader.GetValue(0).ToString() + "-" +Reader.GetValue(1).ToString()+ "-"+ Reader.GetValue(2).ToString() + "-" + Reader.GetValue(3).ToString();
+                  PosP++;
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Sql + "\n -" ); }
+            return Campos;
+        }
+
+        public string[] obtenerPercepcionDeduccion(string codigo)
+        {
+            string[] Campos = new string[300];
+            int Codigo = Int32.Parse(codigo);
+            int PosP = 0;
+            string Sql = "SELECT T.idTipoPercepcionDeduccion ,T.tipoPercepcionDeduccion,T.valor , T.formula FROM tipopercepciondeduccion T where T.idTipoPercepcionDeduccion = "+Codigo+""; ;
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[PosP] = Reader.GetValue(0).ToString() + "-"+ Reader.GetValue(1).ToString() + "-" + Reader.GetValue(2).ToString()+"-" + Reader.GetValue(3).ToString();
+                    PosP++;
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Sql + "\n -"); }
+            return Campos;
+        }
+        //percepciones Induviduales
+        public string[] llenarCmbDosParametrosIndividuales(string tabla, string campo1, string campo2,int Consulta)
+        {
+
+            string[] Campos = new string[300];
+            string[] auto = new string[300];
+            string sql = "";
+            int i = 0;
+            if(Consulta == 0)
+            {
+                sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " where estado = 1 and tipo = 2;";
+            }
+            else if(Consulta == 1)
+            {
+                sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " ";
+            }else if(Consulta == 2)
+            {
+                sql = "SELECT R." + campo1 + ",R.apellido,P." + campo2+ " FROM " + tabla+" P,reclutamiento R where P.estado = 1 and P.idRecluta = R.idRecluta;";
+            }
+
+            try
+            {          
+                    OdbcCommand command = new OdbcCommand(sql, Con.conexion());
+                    OdbcDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Campos[i] = reader.GetValue(0).ToString() + "-" + reader.GetValue(1).ToString();
+                        i++;
+                    }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + tabla + "\n -" + campo1); }
+            return Campos;
+        }
+
+        /// Modelo 2 //
+
+        public DataTable obtenerDosParametrosIndividual(string tabla, string campo1, string campo2,int Consulta)
+        {
+            string sql = "";
+            if (Consulta == 0)
+            {
+                sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " where estado = 1 and tipo = 2;";
+            }
+            else if (Consulta == 1)
+            {
+                sql = "SELECT " + campo1 + "," + campo2 + " FROM " + tabla + " ";
+            }
+
+            OdbcCommand command = new OdbcCommand(sql, Con.conexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(command);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                return dt;
+        }
+
+        //percepciones Induviduales
+        public string[] llenarComboEmpleado(string tabla, string campo1, string campo2,string campo3)
+        {
+
+            string[] Campos = new string[300];
+            string[] auto = new string[300];
+            string sql ;
+            int i = 0;
+            sql = "SELECT R." + campo1 + ",R." + campo2 + ",P." + campo3 + " FROM " + tabla + " P,reclutamiento R where P.estado = 1 and P.idRecluta = R.idRecluta;";
+
+            try
+            {
+                OdbcCommand command = new OdbcCommand(sql, Con.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Campos[i] = reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + "-" + reader.GetValue(2).ToString();
+                    i++;
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + tabla + "\n -" + campo1); }
+            return Campos;
+        }
+
+        /// Modelo 2 //
+
+        public DataTable obtenerEmpleado(string tabla, string campo1, string campo2, string campo3)
+        {
+            string sql ;
+            sql = "SELECT R." + campo1 + ",R." + campo2 + ",P." + campo3 + " FROM " + tabla + " P,reclutamiento R where P.estado = 1 and P.idRecluta = R.idRecluta;";
+            OdbcCommand command = new OdbcCommand(sql, Con.conexion());
+            OdbcDataAdapter adaptador = new OdbcDataAdapter(command);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            return dt;
         }
     }
 }
