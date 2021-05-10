@@ -186,6 +186,18 @@
       <DependentUpon>frmMDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sergio\Mantenimientos\frmCapacitadorExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sergio\Mantenimientos\frmCapacitadorExterno.Designer.cs">
+      <DependentUpon>frmCapacitadorExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sergio\Mantenimientos\frmCompetencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sergio\Mantenimientos\frmCompetencias.Designer.cs">
+      <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sergio\Mantenimientos\frmCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,12 @@
     </Compile>
     <Compile Include="Sergio\Procesos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sergio\Procesos\frmPeticionCapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sergio\Procesos\frmPeticionCapacitacion.designer.cs">
+      <DependentUpon>frmPeticionCapacitacion.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -262,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sergio\Mantenimientos\frmPuesto.resx">
       <DependentUpon>frmPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sergio\Procesos\frmPeticionCapacitacion.resx">
+      <DependentUpon>frmPeticionCapacitacion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

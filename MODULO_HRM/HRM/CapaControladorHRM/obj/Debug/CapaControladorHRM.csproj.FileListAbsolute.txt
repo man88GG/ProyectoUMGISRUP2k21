@@ -79,3 +79,12 @@ C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\bi
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.dll
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.pdb
 C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csprojAssemblyReference.cache
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CoreCompileInputs.cache
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.dll
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.pdb
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaControladorHRM.dll
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaControladorHRM.pdb
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.dll
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\bin\Debug\CapaModeloHRM.pdb
+D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaControladorHRM\obj\Debug\CapaControladorHRM.csproj.CopyComplete
