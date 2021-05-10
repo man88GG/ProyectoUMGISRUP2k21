@@ -13,6 +13,7 @@ namespace CapaModeloHRM.Sergio
     {
         ClsConexion Con = new ClsConexion();
 
+
         public string[] funcLlenarCmb(string Tabla, string Campo)
         {
             string[] Campos = new string[100];

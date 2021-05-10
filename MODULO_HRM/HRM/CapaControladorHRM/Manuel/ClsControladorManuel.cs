@@ -14,6 +14,7 @@ namespace CapaControladorHRM.Manuel
 
         ClsSentenciasManuel sn = new ClsSentenciasManuel();
 
+
         //Paso de datos comboPuesto
         public DataTable funcItemsPuesto()
         {

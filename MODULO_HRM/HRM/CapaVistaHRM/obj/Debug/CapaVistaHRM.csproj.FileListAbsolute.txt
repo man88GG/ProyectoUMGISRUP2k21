@@ -591,6 +591,10 @@ C:\Users\opfug\ProyectoUMGISRUP2k21 - copia\MODULO_HRM\HRM\CapaVistaHRM\obj\Debu
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Procesos.frmGenerarNomina.resources
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Mantenimientos.frmTipoEvaluacion.resources
 C:\Users\opfug\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmEvaluacion.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Mantenimientos.frmTipoEvaluacion.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmEvaluacion.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Procesos.frmPreparacionDeNomina.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Jose.Procesos.frmNominaIndividual.resources
 D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csprojAssemblyReference.cache
 D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.faltas.resources
 D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Emilio.Mantenimientos.frmDepartamento.resources
@@ -666,3 +670,4 @@ D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\D
 D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaModeloNavegador.pdb
 D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\bin\Debug\CapaModelo.pdb
 D:\Desktop\nuevoClonacion\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.csproj.CopyComplete
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Procesos.frmPeticionCapacitacion.resources

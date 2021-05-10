@@ -119,17 +119,23 @@
     <Compile Include="Jose\Mantenimientos\frmTipoMoneda.Designer.cs">
       <DependentUpon>frmTipoMoneda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jose\Procesos\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Jose\Procesos\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Jose\Procesos\frmGenerarNomina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Jose\Procesos\frmGenerarNomina.Designer.cs">
       <DependentUpon>frmGenerarNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Procesos\frmNominaIndividual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Procesos\frmNominaIndividual.Designer.cs">
+      <DependentUpon>frmNominaIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Procesos\frmPreparacionDeNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Procesos\frmPreparacionDeNomina.Designer.cs">
+      <DependentUpon>frmPreparacionDeNomina.cs</DependentUpon>
     </Compile>
     <Compile Include="Manuel\Mantenimientos\DatosPersonales.cs">
       <SubType>Form</SubType>
@@ -256,6 +262,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Jose\Procesos\frmGenerarNomina.resx">
       <DependentUpon>frmGenerarNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Procesos\frmNominaIndividual.resx">
+      <DependentUpon>frmNominaIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Procesos\frmPreparacionDeNomina.resx">
+      <DependentUpon>frmPreparacionDeNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Mantenimientos\DatosPersonales.resx">
       <DependentUpon>DatosPersonales.cs</DependentUpon>

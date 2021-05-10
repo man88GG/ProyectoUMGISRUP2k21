@@ -13,6 +13,7 @@ namespace CapaControladorHRM.Sergio
     {
         ClsSentenciasSergio Sn = new ClsSentenciasSergio();
 
+
         public string[] funcItems(string Tabla, string Campo)
         {
             string[] Items = Sn.funcLlenarCmb(Tabla, Campo);
