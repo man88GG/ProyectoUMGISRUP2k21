@@ -121,6 +121,15 @@ namespace CapaVistaHRM.Jose.Procesos
         {
             separarCombo(cmbPercepciones, txtCodigoPercepciones);
         }
+        void Limpiar()
+        {
+            cmbEmpleado.SelectedIndex = 0;
+            cmbPercepciones.SelectedIndex = 0;
+            txtCodigoPercepciones.Text = "";
+            txtCodigoEmpleado.Text = "";
+            txtValor.Text = "";
+            txtCantidad.Text = "";
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -133,11 +142,12 @@ namespace CapaVistaHRM.Jose.Procesos
                 bool validar = true;
                 DataGridViewRow fila = new DataGridViewRow();
                 fila.CreateCells(dgvNominaIndividual);
-                string CodigoPercepcion , CodigoEmpleado;
+                string CodigoPercepcion , CodigoEmpleado,CodigoNomina;
                 foreach (DataGridViewRow item in dgvNominaIndividual.Rows)
                 {
+                    CodigoNomina = Convert.ToString(item.Cells["Column1"].Value); 
                     CodigoEmpleado = Convert.ToString(item.Cells["Column2"].Value);
-                    CodigoPercepcion = Convert.ToString(item.Cells["Column4"].Value);      
+                    CodigoPercepcion = Convert.ToString(item.Cells["Column4"].Value);     
                     if (CodigoPercepcion == txtCodigoPercepciones.Text && CodigoEmpleado == txtCodigoEmpleado.Text)
                     {
                         MessageBox.Show("No se puede agregar la misma Percepcion / Deduccion 2 veces.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -146,18 +156,91 @@ namespace CapaVistaHRM.Jose.Procesos
                 }
                 if (validar)
                 {
-                    fila.Cells[0].Value = txtCodigoNomina.Text;
-                    fila.Cells[1].Value = txtCodigoEmpleado.Text;
-                    fila.Cells[2].Value = cmbEmpleado.SelectedItem.ToString();
-                    fila.Cells[3].Value = txtCodigoPercepciones.Text;
-                    fila.Cells[4].Value = cmbPercepciones.SelectedItem.ToString();
-                    fila.Cells[5].Value = txtValor.Text;
-                    dgvNominaIndividual.Rows.Add(fila);
-                    cmbEmpleado.SelectedIndex = 0;
-                    cmbPercepciones.SelectedIndex = 0;
-                    txtCodigoPercepciones.Text = "";
-                    txtCodigoEmpleado.Text = "";
+                    float Total;
+                    if(txtCantidad.Text.Length == 0)
+                    {
+                        fila.Cells[0].Value = txtCodigoNomina.Text;
+                        fila.Cells[1].Value = txtCodigoEmpleado.Text;
+                        fila.Cells[2].Value = cmbEmpleado.SelectedItem.ToString();
+                        fila.Cells[3].Value = txtCodigoPercepciones.Text;
+                        fila.Cells[4].Value = cmbPercepciones.SelectedItem.ToString();
+                        fila.Cells[5].Value = txtValor.Text;
+                        dgvNominaIndividual.Rows.Add(fila);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        Total = (Int32.Parse(txtCantidad.Text) * Int32.Parse(txtValor.Text));
+                        fila.Cells[0].Value = txtCodigoNomina.Text;
+                        fila.Cells[1].Value = txtCodigoEmpleado.Text;
+                        fila.Cells[2].Value = cmbEmpleado.SelectedItem.ToString();
+                        fila.Cells[3].Value = txtCodigoPercepciones.Text;
+                        fila.Cells[4].Value = cmbPercepciones.SelectedItem.ToString();
+                        fila.Cells[5].Value = Total;
+                        dgvNominaIndividual.Rows.Add(fila);
+                        Limpiar();
+                    }
+                    
                 }
+            }
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            int contador = 0;
+            foreach (DataGridViewRow item in dgvNominaIndividual.Rows)
+            {
+                contador++;
+            }
+            if (contador > 0)
+            {
+                dgvNominaIndividual.Rows.Remove(dgvNominaIndividual.CurrentRow);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            int Contador = 0,VerificacionIngreso = 0;
+            List<string> DatosGrid = new List<string>();
+            foreach (DataGridViewRow item in dgvNominaIndividual.Rows)
+            {
+                Contador++;
+            }
+            if (Contador == 0)
+            {
+                MessageBox.Show("Debe agregar un registro en a la tabla.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+             
+                string CodigoEmpleado, CodigoNomina, CodigoPercepcion, Valor;
+                foreach (DataGridViewRow item in dgvNominaIndividual.Rows)
+                {
+                    DatosGrid.Clear();
+                    CodigoNomina = Convert.ToString(item.Cells["Column1"].Value);
+                    CodigoEmpleado = Convert.ToString(item.Cells["Column2"].Value);
+                    CodigoPercepcion = Convert.ToString(item.Cells["Column4"].Value);
+                    Valor = Convert.ToString(item.Cells["Column6"].Value); ;
+                    DatosGrid.Add(CodigoNomina);
+                    DatosGrid.Add(CodigoEmpleado);
+                    DatosGrid.Add(CodigoPercepcion);
+                    DatosGrid.Add(Valor);
+                   if(Cn.procDatosInsertar("detallenomina", DatosGrid))
+                    {
+                        VerificacionIngreso++;
+                    }
+                }
+                if(VerificacionIngreso>0)
+                {
+                    MessageBox.Show("Los Datos han sido Guardados Exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    dgvNominaIndividual.Rows.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Upss, ha ocurrido un error, consulta con un experto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
         }
     }

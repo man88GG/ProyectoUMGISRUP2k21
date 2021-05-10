@@ -94,6 +94,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // 
             // dgvNominaIndividual
             // 
+            this.dgvNominaIndividual.AllowUserToAddRows = false;
             this.dgvNominaIndividual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvNominaIndividual.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvNominaIndividual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -181,6 +182,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.btnQuitar.TabIndex = 12;
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnGuardar
             // 
@@ -190,6 +192,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtCantidad
             // 
@@ -275,7 +278,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 462);
+            this.ClientSize = new System.Drawing.Size(995, 462);
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.txtValor);
@@ -296,7 +299,9 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmNominaIndividual";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNominaIndividual";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNominaIndividual)).EndInit();
             this.ResumeLayout(false);
