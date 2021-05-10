@@ -285,12 +285,13 @@ namespace CapaVistaHRM.Sergio.Procesos
                     DatosPeticion.Add(fs);
                     if(cn.procDatosInsertar("peticioncapacitacion", DatosPeticion))
                     {
-                        MessageBox.Show("funciona");
+                        //MessageBox.Show("funciona");
                     }
                     else
                     {
-                        MessageBox.Show("no funciona");
+                        //MessageBox.Show("no funciona");
                     }
+                    MessageBox.Show("Datos Guardados con éxito");
                     
                 }
 
@@ -309,7 +310,7 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtTitulo.Text=="" || txtDescripcion.Text==""||txtEmpleado.Text==""||txtCourse.Text==""||txtEstado.Text=="")
+            if (txtTitulo.Text=="" || txtDescripcion.Text==""||txtCourse.Text==""||txtEstado.Text=="")
             {
                 MessageBox.Show("Llene todos los campos para poder ingresar elementos");
             }
@@ -397,8 +398,7 @@ namespace CapaVistaHRM.Sergio.Procesos
         {
             txtTitulo.Text = "";
             txtDescripcion.Text = "";
-            cmbEmpleado.SelectedIndex = 0;
-            cmbCompetencias.SelectedIndex = 0;
+            cmbEmpleado.SelectedIndex = 0;            
             cmbCourse.SelectedIndex = 0;
             rdActivo.Checked = false;
             rdInactivo.Checked = false;

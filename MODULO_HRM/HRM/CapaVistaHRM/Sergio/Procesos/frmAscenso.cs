@@ -25,14 +25,15 @@ namespace CapaVistaHRM.Sergio.Procesos
             string apellido = "txtApellido";
             string prevPuesto = "txtPrevPuesto";
             string prevDepartamento = "txtPrevDepartamento";
-            llenarComboseInfoAscenso(nombre,apellido, prevPuesto, prevDepartamento);
+            string empleado = txtIdEmpleado.Text.ToString();
+            llenarComboseInfoAscenso(nombre,apellido, prevPuesto, prevDepartamento,empleado);
            
         }
 
         //ASCENSOS
-        void llenarComboseInfoAscenso(string campo1, string campo2, string campo3, string campo4)
+        void llenarComboseInfoAscenso(string campo1, string campo2, string campo3, string campo4, string empleado)
         {
-            string[] items = cn.funcItemsAscensos(campo1, campo1, campo1);
+            string[] items = cn.funcItemsAscensos(campo1, campo1, campo1, empleado);
             
             string datosAsc ="";
             for (int i = 0; i < items.Length; i++)
@@ -46,13 +47,14 @@ namespace CapaVistaHRM.Sergio.Procesos
                 }
 
             }
-            MessageBox.Show("Items:" +datosAsc);
+            //MessageBox.Show("Items:" +datosAsc);
             Char delimiter = '-';
             String[] substrings = datosAsc.Split(delimiter);
-            txtNombre.Text =substrings[0];
-            txtApellido.Text = substrings[1];
-            txtPrevPuesto.Text = substrings[2];
-            txtPrevDepartamento.Text = substrings[3];
+            txtRecluta.Text = substrings[0];
+            txtNombre.Text =substrings[1];
+            txtApellido.Text = substrings[2];
+            txtPrevPuesto.Text = substrings[3];
+            txtPrevDepartamento.Text = substrings[4];
         }
 
         private void frmAscenso_Load(object sender, EventArgs e)
@@ -106,7 +108,22 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //if (cn.procDatosInsertar("peticioncapacitacion", DatosPeticion)) { }
+            cn.procDatosInsertarAscensos(txtRecluta.Text.ToString(), txtNextPuesto.Text.ToString(), txtNextDepartamento.Text.ToString());
+            MessageBox.Show("Actualización de puesto realizada con éxito");
+            procLimpiar();
+        }
+
+        public void procLimpiar()
+        {
+            txtRecluta.Text = "";
+            txtIdEmpleado.Text = "";
+            cmbNuevoDepartamento.SelectedIndex=0;
+            cmbNuevoPuesto.SelectedIndex=0;
+            txtPrevDepartamento.Text = "";
+            txtPrevPuesto.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            
         }
     }
 }

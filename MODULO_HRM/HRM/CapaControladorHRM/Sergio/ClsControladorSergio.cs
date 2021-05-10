@@ -27,9 +27,9 @@ namespace CapaControladorHRM.Sergio
         }
 
         //Obtener datos ascenso
-         public string[] funcItemsAscensos(string Tabla, string Campo, string CourseId)
+         public string[] funcItemsAscensos(string Tabla, string Campo, string CourseId, string empleado)
         {
-            string[] Items = Sn.funcObtenerDatosAscenso(Tabla, Campo, CourseId);
+            string[] Items = Sn.funcObtenerDatosAscenso(Tabla, Campo, CourseId, empleado);
             return Items;
         }
 
@@ -105,6 +105,11 @@ namespace CapaControladorHRM.Sergio
             {
                 return false;
             }
+        }
+
+        public void procDatosInsertarAscensos(string recluta, string puesto, string departamento)
+        {
+            Sn.procInsertarAscensos(recluta, puesto, departamento);
         }
     }
 }
