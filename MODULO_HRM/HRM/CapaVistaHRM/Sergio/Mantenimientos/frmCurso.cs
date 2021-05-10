@@ -7,20 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaControladorHRM.Sergio;
-using CapaVistaHRM.Sergio.Procesos;
 
 namespace CapaVistaHRM.Sergio.Mantenimientos
 {
     public partial class frmCurso : Form
     {
-        ClsControladorSergio Cn = new ClsControladorSergio();
         string UsuarioAplicacion;
         static Form FormularioPadre;
         public frmCurso(string usuario, Form formularioPadre)
         {
             InitializeComponent();
-            llenarCombos();
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
@@ -65,78 +61,21 @@ namespace CapaVistaHRM.Sergio.Mantenimientos
 
         private void rdActivo_CheckedChanged(object sender, EventArgs e)
         {
-           
-        }
-
-        private void rdInactivo_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txtEstado_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        void llenarCombos()
-        {
-            cmbCompetencia.Items.Clear();
-
-            cmbCompetencia.Items.Add("Seleccione...");
-            llenarComboBox("competencia", "nombreCompetencia", cmbCompetencia); //tabla, campo, combo
-            cmbCompetencia.SelectedIndex = 0;
-        }
-        void llenarComboBox(string tabla, string campo1, ComboBox ComboBox)
-        {
-            string[] items = Cn.funcItems(tabla, campo1);
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (items[i] != null)
-                {
-                    if (items[i] != "")
-                    {
-                        ComboBox.Items.Add(items[i]);
-                    }
-                }
-
-            }
-            var dt2 = Cn.enviarCombo(tabla, campo1);
-            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            foreach (DataRow row in dt2.Rows)
-            {
-
-                coleccion.Add(Convert.ToString(row[campo1]));
-            }
-            ComboBox.AutoCompleteCustomSource = coleccion;
-            ComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            ComboBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        }
-
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            txtCompetencia.Text = cmbCompetencia.SelectedIndex.ToString();
-        }
-
-        private void frmCurso_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdActivo_CheckedChanged_1(object sender, EventArgs e)
-        {
             if (rdActivo.Checked == true)
             {
                 txtEstado.Text = "1";
             }
         }
 
-        private void txtEstado_TextChanged_1(object sender, EventArgs e)
+        private void rdInactivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdInactivo.Checked == true)
+            {
+                txtEstado.Text = "0";
+            }
+        }
+
+        private void txtEstado_TextChanged(object sender, EventArgs e)
         {
             if (txtEstado.Text == "")
             {
@@ -146,14 +85,6 @@ namespace CapaVistaHRM.Sergio.Mantenimientos
             if (txtEstado.Text == "1")
             {
                 rdActivo.Checked = true;
-            }
-        }
-
-        private void rdInactivo_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (rdInactivo.Checked == true)
-            {
-                txtEstado.Text = "0";
             }
         }
     }
