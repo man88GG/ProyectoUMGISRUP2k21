@@ -173,5 +173,10 @@ namespace CapaVistaHRM.Jose.Procesos
         {
             dgvPercepciones.Rows.Clear();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaJose/AyudaNomina.chm","PreparacionNomina.html");
+        }
     }
 }

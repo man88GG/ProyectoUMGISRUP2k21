@@ -34,6 +34,12 @@ namespace CapaVistaHRM.Jose.Procesos
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvNominaIndividual = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbNomina = new System.Windows.Forms.ComboBox();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.cmbPercepciones = new System.Windows.Forms.ComboBox();
@@ -47,18 +53,14 @@ namespace CapaVistaHRM.Jose.Procesos
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblValor = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAyuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNominaIndividual)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(347, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(152, 20);
@@ -68,6 +70,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // lblNomina
             // 
             this.lblNomina.AutoSize = true;
+            this.lblNomina.ForeColor = System.Drawing.Color.White;
             this.lblNomina.Location = new System.Drawing.Point(38, 60);
             this.lblNomina.Name = "lblNomina";
             this.lblNomina.Size = new System.Drawing.Size(70, 20);
@@ -77,6 +80,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(38, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
@@ -86,6 +90,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(38, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(199, 20);
@@ -105,126 +110,13 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvNominaIndividual.Location = new System.Drawing.Point(42, 190);
+            this.dgvNominaIndividual.Location = new System.Drawing.Point(42, 185);
             this.dgvNominaIndividual.Name = "dgvNominaIndividual";
             this.dgvNominaIndividual.ReadOnly = true;
             this.dgvNominaIndividual.RowHeadersWidth = 51;
             this.dgvNominaIndividual.RowTemplate.Height = 24;
             this.dgvNominaIndividual.Size = new System.Drawing.Size(933, 260);
             this.dgvNominaIndividual.TabIndex = 4;
-            // 
-            // cmbNomina
-            // 
-            this.cmbNomina.FormattingEnabled = true;
-            this.cmbNomina.Location = new System.Drawing.Point(167, 52);
-            this.cmbNomina.Name = "cmbNomina";
-            this.cmbNomina.Size = new System.Drawing.Size(349, 28);
-            this.cmbNomina.TabIndex = 5;
-            this.cmbNomina.SelectedIndexChanged += new System.EventHandler(this.cmbNomina_SelectedIndexChanged);
-            // 
-            // cmbEmpleado
-            // 
-            this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(167, 94);
-            this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(349, 28);
-            this.cmbEmpleado.TabIndex = 6;
-            this.cmbEmpleado.SelectedIndexChanged += new System.EventHandler(this.cmbEmpleado_SelectedIndexChanged);
-            // 
-            // cmbPercepciones
-            // 
-            this.cmbPercepciones.FormattingEnabled = true;
-            this.cmbPercepciones.Location = new System.Drawing.Point(243, 138);
-            this.cmbPercepciones.Name = "cmbPercepciones";
-            this.cmbPercepciones.Size = new System.Drawing.Size(273, 28);
-            this.cmbPercepciones.TabIndex = 7;
-            this.cmbPercepciones.SelectedIndexChanged += new System.EventHandler(this.cmbPercepciones_SelectedIndexChanged);
-            // 
-            // txtCodigoNomina
-            // 
-            this.txtCodigoNomina.Location = new System.Drawing.Point(522, 53);
-            this.txtCodigoNomina.Name = "txtCodigoNomina";
-            this.txtCodigoNomina.Size = new System.Drawing.Size(46, 27);
-            this.txtCodigoNomina.TabIndex = 8;
-            this.txtCodigoNomina.Visible = false;
-            // 
-            // txtCodigoEmpleado
-            // 
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(522, 94);
-            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(46, 27);
-            this.txtCodigoEmpleado.TabIndex = 9;
-            this.txtCodigoEmpleado.Visible = false;
-            // 
-            // txtCodigoPercepciones
-            // 
-            this.txtCodigoPercepciones.Location = new System.Drawing.Point(522, 134);
-            this.txtCodigoPercepciones.Name = "txtCodigoPercepciones";
-            this.txtCodigoPercepciones.Size = new System.Drawing.Size(46, 27);
-            this.txtCodigoPercepciones.TabIndex = 10;
-            this.txtCodigoPercepciones.Visible = false;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(834, 48);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 28);
-            this.btnAgregar.TabIndex = 11;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(834, 89);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(135, 28);
-            this.btnQuitar.TabIndex = 12;
-            this.btnQuitar.Text = "Quitar";
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(834, 129);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(135, 28);
-            this.btnGuardar.TabIndex = 13;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(674, 53);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(126, 27);
-            this.txtCantidad.TabIndex = 14;
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(674, 95);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(126, 27);
-            this.txtValor.TabIndex = 15;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(588, 56);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(80, 20);
-            this.lblCantidad.TabIndex = 16;
-            this.lblCantidad.Text = "Cantidad";
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(588, 101);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(52, 20);
-            this.lblValor.TabIndex = 17;
-            this.lblValor.Text = "Valor";
             // 
             // Column1
             // 
@@ -264,7 +156,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 131;
+            this.Column5.Width = 208;
             // 
             // Column6
             // 
@@ -274,11 +166,143 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Column6.ReadOnly = true;
             this.Column6.Width = 81;
             // 
+            // cmbNomina
+            // 
+            this.cmbNomina.FormattingEnabled = true;
+            this.cmbNomina.Location = new System.Drawing.Point(167, 52);
+            this.cmbNomina.Name = "cmbNomina";
+            this.cmbNomina.Size = new System.Drawing.Size(349, 28);
+            this.cmbNomina.TabIndex = 5;
+            this.cmbNomina.SelectedIndexChanged += new System.EventHandler(this.cmbNomina_SelectedIndexChanged);
+            // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(167, 94);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(349, 28);
+            this.cmbEmpleado.TabIndex = 6;
+            this.cmbEmpleado.SelectedIndexChanged += new System.EventHandler(this.cmbEmpleado_SelectedIndexChanged);
+            // 
+            // cmbPercepciones
+            // 
+            this.cmbPercepciones.FormattingEnabled = true;
+            this.cmbPercepciones.Location = new System.Drawing.Point(243, 138);
+            this.cmbPercepciones.Name = "cmbPercepciones";
+            this.cmbPercepciones.Size = new System.Drawing.Size(273, 28);
+            this.cmbPercepciones.TabIndex = 7;
+            this.cmbPercepciones.SelectedIndexChanged += new System.EventHandler(this.cmbPercepciones_SelectedIndexChanged);
+            // 
+            // txtCodigoNomina
+            // 
+            this.txtCodigoNomina.Location = new System.Drawing.Point(12, 12);
+            this.txtCodigoNomina.Name = "txtCodigoNomina";
+            this.txtCodigoNomina.Size = new System.Drawing.Size(46, 27);
+            this.txtCodigoNomina.TabIndex = 8;
+            this.txtCodigoNomina.Visible = false;
+            // 
+            // txtCodigoEmpleado
+            // 
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(64, 12);
+            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(46, 27);
+            this.txtCodigoEmpleado.TabIndex = 9;
+            this.txtCodigoEmpleado.Visible = false;
+            // 
+            // txtCodigoPercepciones
+            // 
+            this.txtCodigoPercepciones.Location = new System.Drawing.Point(116, 12);
+            this.txtCodigoPercepciones.Name = "txtCodigoPercepciones";
+            this.txtCodigoPercepciones.Size = new System.Drawing.Size(46, 27);
+            this.txtCodigoPercepciones.TabIndex = 10;
+            this.txtCodigoPercepciones.Visible = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Location = new System.Drawing.Point(548, 138);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(116, 28);
+            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.ForeColor = System.Drawing.Color.Black;
+            this.btnQuitar.Location = new System.Drawing.Point(681, 138);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(116, 28);
+            this.btnQuitar.TabIndex = 12;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Location = new System.Drawing.Point(818, 137);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 28);
+            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(617, 57);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(126, 27);
+            this.txtCantidad.TabIndex = 14;
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(617, 99);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(126, 27);
+            this.txtValor.TabIndex = 15;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.ForeColor = System.Drawing.Color.White;
+            this.lblCantidad.Location = new System.Drawing.Point(531, 60);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(80, 20);
+            this.lblCantidad.TabIndex = 16;
+            this.lblCantidad.Text = "Cantidad";
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.ForeColor = System.Drawing.Color.White;
+            this.lblValor.Location = new System.Drawing.Point(544, 105);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(52, 20);
+            this.lblValor.TabIndex = 17;
+            this.lblValor.Text = "Valor";
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackgroundImage = global::CapaVistaHRM.Properties.Resources.informacion;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAyuda.ForeColor = System.Drawing.Color.Black;
+            this.btnAyuda.Location = new System.Drawing.Point(914, 12);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(61, 52);
+            this.btnAyuda.TabIndex = 18;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // frmNominaIndividual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 462);
+            this.BackColor = System.Drawing.Color.Purple;
+            this.ClientSize = new System.Drawing.Size(995, 460);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.txtValor);
@@ -298,11 +322,12 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Controls.Add(this.lblNomina);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmNominaIndividual";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNominaIndividual";
+            this.Text = "Nomina Individual";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNominaIndividual)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -335,5 +360,6 @@ namespace CapaVistaHRM.Jose.Procesos
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
