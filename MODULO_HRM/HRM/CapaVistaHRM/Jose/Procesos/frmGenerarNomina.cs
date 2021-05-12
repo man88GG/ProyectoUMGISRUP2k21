@@ -15,10 +15,12 @@ namespace CapaVistaHRM.Jose.Procesos
 
         ClsControladorJose Cn = new ClsControladorJose();
         List<string> PercepcionesDeducciones = new List<string>();
-        public frmGenerarNomina(List<string> Percepciones)
+        Form MDI;
+        public frmGenerarNomina(List<string> Percepciones,Form FormularioPadre)
         {
             InitializeComponent();
             PercepcionesDeducciones = Percepciones;
+            MDI = FormularioPadre;
             llenarCombos();
             CodigoMaximo("encabezadonomina","idEncabezadoNomina",txtCodigo);  
         }
@@ -239,6 +241,19 @@ namespace CapaVistaHRM.Jose.Procesos
                 MessageBox.Show("La fecha final no puede ser menor a la inicial.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dtFinal.Value = dtInicio.Value;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPreparacionDeNomina frm = new frmPreparacionDeNomina(MDI);
+            frm.MdiParent = MDI;
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this,"AyudaJose/AyudaNomina.chm","Generacion de nomina.html");
         }
     }
 }

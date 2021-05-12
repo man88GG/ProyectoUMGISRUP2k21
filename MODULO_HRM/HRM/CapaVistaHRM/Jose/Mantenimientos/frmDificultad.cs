@@ -90,8 +90,8 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             navegador1.DatosActualizar = dgvDatos;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "AyudaJose/AyudaMantenimientosJose.chm";
-            navegador1.ruta = "Ayuda-Formulario-Dificultad.html";
+            navegador1.ayudaRuta = "AyudaJose/AyudaNomina.chm";
+            navegador1.ruta = "Dificultad.html";
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

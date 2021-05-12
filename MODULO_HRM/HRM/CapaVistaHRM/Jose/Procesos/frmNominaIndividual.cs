@@ -170,7 +170,7 @@ namespace CapaVistaHRM.Jose.Procesos
                     }
                     else
                     {
-                        Total = (Int32.Parse(txtCantidad.Text) * Int32.Parse(txtValor.Text));
+                        Total = ((float.Parse(txtCantidad.Text)) * (float.Parse(txtValor.Text)));
                         fila.Cells[0].Value = txtCodigoNomina.Text;
                         fila.Cells[1].Value = txtCodigoEmpleado.Text;
                         fila.Cells[2].Value = cmbEmpleado.SelectedItem.ToString();
@@ -242,6 +242,11 @@ namespace CapaVistaHRM.Jose.Procesos
                 }
 
             }
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaJose/AyudaNomina.chm","NominaIndividual.html");
         }
     }
 }

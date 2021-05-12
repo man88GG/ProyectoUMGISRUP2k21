@@ -49,6 +49,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTitulo.Location = new System.Drawing.Point(143, 24);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
@@ -59,6 +60,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // lblPercepcionDeduccion
             // 
             this.lblPercepcionDeduccion.AutoSize = true;
+            this.lblPercepcionDeduccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPercepcionDeduccion.Location = new System.Drawing.Point(13, 62);
             this.lblPercepcionDeduccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPercepcionDeduccion.Name = "lblPercepcionDeduccion";
@@ -166,12 +168,15 @@ namespace CapaVistaHRM.Jose.Procesos
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(467, 13);
+            this.btnAyuda.BackgroundImage = global::CapaVistaHRM.Properties.Resources.informacion;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAyuda.Location = new System.Drawing.Point(499, 13);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(93, 53);
+            this.btnAyuda.Size = new System.Drawing.Size(61, 52);
             this.btnAyuda.TabIndex = 9;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnActualizar
             // 
@@ -188,6 +193,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(581, 446);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAyuda);
@@ -202,10 +208,10 @@ namespace CapaVistaHRM.Jose.Procesos
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "frmPreparacionDeNomina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPreparacionDeNomina";
+            this.Text = "Preparacion de nomina";
             this.Load += new System.EventHandler(this.frmPreparacionDeNomina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPercepciones)).EndInit();
             this.ResumeLayout(false);

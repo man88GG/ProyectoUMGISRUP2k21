@@ -597,7 +597,7 @@ namespace CapaVistaHRM.MDI
                 return;
             }
 
-            frmFormulario = new frmPreparacionDeNomina();
+            frmFormulario = new frmPreparacionDeNomina(this);
             frmFormulario.MdiParent = this;
             frmFormulario.Show();
         }
