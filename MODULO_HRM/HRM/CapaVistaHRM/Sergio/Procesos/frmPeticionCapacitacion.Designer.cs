@@ -177,6 +177,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -185,8 +187,9 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(410, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(410, 29);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(655, 217);
             this.dataGridView1.TabIndex = 26;
@@ -195,31 +198,37 @@
             // 
             this.Column1.HeaderText = "Codigo";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Titulo";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Descripcion";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Empleado";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Curso";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Estado";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // cmbOpciones
             // 
@@ -250,9 +259,14 @@
             // 
             // dgvPeticiones
             // 
+            this.dgvPeticiones.AllowUserToAddRows = false;
+            this.dgvPeticiones.AllowUserToDeleteRows = false;
+            this.dgvPeticiones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPeticiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeticiones.Location = new System.Drawing.Point(410, 325);
+            this.dgvPeticiones.Location = new System.Drawing.Point(410, 296);
             this.dgvPeticiones.Name = "dgvPeticiones";
+            this.dgvPeticiones.ReadOnly = true;
+            this.dgvPeticiones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeticiones.Size = new System.Drawing.Size(655, 226);
             this.dgvPeticiones.TabIndex = 29;
             this.dgvPeticiones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeticiones_CellContentClick);
@@ -294,6 +308,7 @@
             this.cmbCompetencias.Name = "cmbCompetencias";
             this.cmbCompetencias.Size = new System.Drawing.Size(247, 21);
             this.cmbCompetencias.TabIndex = 33;
+            this.cmbCompetencias.Visible = false;
             this.cmbCompetencias.SelectedIndexChanged += new System.EventHandler(this.cmbCompetencias_SelectedIndexChanged);
             // 
             // txtCompetencia
@@ -302,6 +317,7 @@
             this.txtCompetencia.Name = "txtCompetencia";
             this.txtCompetencia.Size = new System.Drawing.Size(48, 20);
             this.txtCompetencia.TabIndex = 34;
+            this.txtCompetencia.Visible = false;
             this.txtCompetencia.TextChanged += new System.EventHandler(this.txtCompetencia_TextChanged);
             // 
             // rdInactivo
@@ -339,6 +355,7 @@
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(247, 21);
             this.cmbCourse.TabIndex = 37;
+            this.cmbCourse.Visible = false;
             this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
             // 
             // txtCourse
@@ -347,6 +364,7 @@
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(48, 20);
             this.txtCourse.TabIndex = 38;
+            this.txtCourse.Visible = false;
             this.txtCourse.TextChanged += new System.EventHandler(this.txtCourse_TextChanged);
             // 
             // txtEstado
@@ -359,8 +377,8 @@
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(794, 590);
+            this.btnSave.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(874, 559);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(191, 61);
             this.btnSave.TabIndex = 40;
@@ -370,10 +388,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(538, 591);
+            this.btnAdd.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(352, 570);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(211, 60);
+            this.btnAdd.Size = new System.Drawing.Size(145, 44);
             this.btnAdd.TabIndex = 41;
             this.btnAdd.Text = "Agregar peticion";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -400,7 +418,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(635, 282);
+            this.label8.Location = new System.Drawing.Point(653, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 17);
             this.label8.TabIndex = 44;
@@ -411,7 +429,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(635, 9);
+            this.label9.Location = new System.Drawing.Point(653, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(180, 17);
             this.label9.TabIndex = 45;
@@ -419,11 +437,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1122, 75);
+            this.button1.Location = new System.Drawing.Point(1094, 79);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(98, 55);
             this.button1.TabIndex = 46;
-            this.button1.Text = "button1";
+            this.button1.Text = "Eliminar registro";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
