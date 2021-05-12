@@ -24,7 +24,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             InitializeComponent();
             funcLlenarTipoEvaluacion();
             cmbTipoEntrevista.DropDownStyle = ComboBoxStyle.DropDownList;
-            EstadoNoEntrevistados = 2;
+            EstadoNoEntrevistados = 1;
         }
 
         //Declaración de variables Entidad Reclutamiento

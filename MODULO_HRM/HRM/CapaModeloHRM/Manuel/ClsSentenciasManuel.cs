@@ -807,18 +807,18 @@ namespace CapaModeloHRM.Manuel
             {
                 
                 int IdEvaluacion;
-                string CorrelativoReclu = "SELECT IFNULL(MAX(IDEVALUACIÓN),0) +1 FROM EVALUACION ";
+                string CorrelativoReclu = "SELECT IFNULL(MAX(idEvaluacion),0) +1 FROM EVALUACION ";
                 OdbcCommand QueryIdReclu = new OdbcCommand(CorrelativoReclu, Con.conexion());
                 IdEvaluacion = Convert.ToInt32(QueryIdReclu.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = QueryIdReclu.ExecuteReader();
 
 
                 //Sentencia para insertar datos a entidad Reclutamiento
-                string SentenciaRecluta = "INSERT INTO EVALUACION  (IDEVALUACION, IDRECLUTA, IDTIPOEVALUACION, PUNTEOEVALUACION, " +
-                    "RESULTADOEVALUACION, COMENTARIOS) VALUES " + "('" + IdEvaluacion + "','" + IdRecluta + "','" + TipoEvaluacion + "','" + Punteo + "','" + OpcionRecluta + "','"
+                string SentenciaRecluta = "INSERT INTO EVALUACION  (idEvaluacion, idRecluta, idtipoEvaluacion, PunteoEvaluacion	, " +
+                    "ResultadoEvaluacion, Comentarios) VALUES " + "('" + IdEvaluacion + "','" + IdRecluta + "','" + TipoEvaluacion + "','" + Punteo + "','" + OpcionRecluta + "','"
                     + Comentarios + "')";
 
-                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO='" + Resultado + "' WHERE IDRECLUTA='" + IdRecluta + "'";
+                string sentencia = "UPDATE RECLUTAMIENTO SET estado ='" + Resultado + "' WHERE idRecluta='" + IdRecluta + "'";
 
 
                 OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.conexion());

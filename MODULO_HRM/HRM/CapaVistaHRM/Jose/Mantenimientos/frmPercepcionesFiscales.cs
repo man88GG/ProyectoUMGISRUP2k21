@@ -39,6 +39,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
 
         void llenarse(string tabla, string campo1, ComboBox ComboBox)
         {
+
             string[] items = Cn.funcItems(tabla, campo1);
             for (int i = 0; i < items.Length; i++)
             {
@@ -55,7 +56,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
             foreach (DataRow row in dt2.Rows)
             {
-
                 coleccion.Add(Convert.ToString(row[campo1]));
             }
             ComboBox.AutoCompleteCustomSource = coleccion;
@@ -120,23 +120,6 @@ namespace CapaVistaHRM.Jose.Mantenimientos
         }
 
 
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validar.funcSoloLetras(e);
-            validar.ValidadCantidad(e, txtNombre, 48);
-        }
-
-        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            validar.ValidadCantidad(e, txtDescripcion, 248);
-        }
 
 
         private void rdPositivo_CheckedChanged(object sender, EventArgs e)
@@ -310,7 +293,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
                         MessageBox.Show("Falta almenos uno de los parametros seleccionado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     case 11:
-                        if (txtFormula.Text == "")
+                        if (txtFormula.Text == "" && cmbOperacion.SelectedItem.ToString() != "(")
                         {
                             MessageBox.Show("No puede agregar un signo como primer parametro en la formula.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
@@ -372,7 +355,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             navegador1.ruta = "AYUDA-FORMULARIO-PERCEPCIONES.html";
         }
 
-        private void txtFormula_TextChanged_1(object sender, EventArgs e)
+        private void txtFormula_TextChanged(object sender, EventArgs e)
         {
             if (txtFormula.Text.Length == 0)
             {
@@ -382,6 +365,37 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             else
             {
                 rdFormula.Enabled = false;
+            }
+        }
+
+        private void txtEstado_TextChanged(object sender, EventArgs e)
+        {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
+            if (txtEstado.Text == "")
+            {
+                rdActivo.Checked = false;
+                rdInactivo.Checked = false;
+            }
+            if (txtEstado.Text == "1")
+            {
+                rdActivo.Checked = true;
+            }
+        }
+
+        private void txtSigno_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSigno.Text == "")
+            {
+                rdPositivo.Checked = false;
+                rdNegativo.Checked = false;
+            }
+            if (txtSigno.Text == "+")
+            {
+                rdPositivo.Checked = true;
+            }
+            if (txtSigno.Text == "-")
+            {
+                rdNegativo.Checked = true;
             }
         }
 
@@ -398,35 +412,36 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             }
         }
 
-        private void txtSigno_TextChanged(object sender, EventArgs e)
+        private void rdGeneral_CheckedChanged(object sender, EventArgs e)
         {
-            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
-            if (txtSigno.Text == "")
+            if (rdGeneral.Checked == true)
             {
-                rdPositivo.Checked = false;
-                rdNegativo.Checked = false;
-            }
-            if (txtSigno.Text == "+")
-            {
-                rdPositivo.Checked = true;
-            }
-            if (txtSigno.Text == "-")
-            {
-                rdNegativo.Checked = true;
+                txtTipo.Text = "1";
             }
         }
 
-        private void txtEstado_TextChanged(object sender, EventArgs e)
+        private void rdIndividual_CheckedChanged(object sender, EventArgs e)
         {
-            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
-            if (txtEstado.Text == "")
+            if (rdIndividual.Checked == true)
             {
-                rdActivo.Checked = false;
-                rdInactivo.Checked = false;
+                txtTipo.Text = "2";
             }
-            if (txtEstado.Text == "1")
+        }
+
+        private void txtTipo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTipo.Text == "")
             {
-                rdActivo.Checked = true;
+                rdGeneral.Checked = false;
+                rdIndividual.Checked = false;
+            }
+            if (txtTipo.Text == "1")
+            {
+                rdGeneral.Checked = true;
+            }
+            if (txtTipo.Text == "2")
+            {
+                rdIndividual.Checked = true;
             }
         }
     }
