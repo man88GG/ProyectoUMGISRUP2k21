@@ -24,16 +24,16 @@ namespace CapaVistaHRM.Manuel.Procesos
 
         
 
-        //estado de banco talento
+        //estados de Banco de Talento
 
-        int Candidatos = 2;
-        int SegundaOpcion = 4;
+        int PrimeraOpcion = 2;
+        int SegundaOpcion = 3;
         int Recomendados = 5;
         ClsControladorManuel Cont_R = new ClsControladorManuel();
         public void funcMostrarTabla()
         {
 
-            DataTable dt = Cont_R.funcTablaBancoTalento(Candidatos, SegundaOpcion, Recomendados);
+            DataTable dt = Cont_R.funcTablaBancoTalento(PrimeraOpcion, SegundaOpcion, Recomendados);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
 
@@ -201,7 +201,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtIdRecluta_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtIdRecluta.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoId(Candidatos, SegundaOpcion, Recomendados, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoId(PrimeraOpcion, SegundaOpcion, Recomendados, Parametro);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -209,7 +209,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerNombre_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerNombre.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(Candidatos, SegundaOpcion, Recomendados, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(PrimeraOpcion, SegundaOpcion, Recomendados, Parametro);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -217,7 +217,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerApellido_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerApellido.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(Candidatos, SegundaOpcion, Recomendados, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(PrimeraOpcion, SegundaOpcion, Recomendados, Parametro);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -225,7 +225,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPuesto_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPuesto.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(Candidatos, SegundaOpcion, Recomendados, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(PrimeraOpcion, SegundaOpcion, Recomendados, Parametro);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -233,7 +233,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtDepartamento_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtDepartamento.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(Candidatos, SegundaOpcion, Recomendados, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(PrimeraOpcion, SegundaOpcion, Recomendados, Parametro);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -241,7 +241,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtProfesion_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtProfesion.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(Candidatos, SegundaOpcion, Recomendados, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(PrimeraOpcion, SegundaOpcion, Recomendados, Parametro);
             dgvMostrarBancoTalento.DataSource = dt;
             funcNombresEncabezados();
         }

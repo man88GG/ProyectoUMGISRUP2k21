@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace CapaVistaHRM.Manuel.Mantenimientos
 {
-    public partial class frmTipoEvaluacion : Form
+    public partial class frmTipoInduccion : Form
     {
         string UsuarioAplicacion;
         static Form FormularioPadre;
 
-        public frmTipoEvaluacion(string usuario, Form formularioPadre)
+        public frmTipoInduccion(string usuario, Form formularioPadre)
         {
             InitializeComponent();
 
@@ -52,7 +52,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             //el numero de aplicacion se debe cambiar por el numero asignado en la base de datos 
             navegador1.aplicacion = 312;
             //banco se debe cambiar por la tabla a la que se quiere hacer el mantenimiento
-            navegador1.tbl = "tipoevaluacion";
+            navegador1.tbl = "tipoinduccion";
             //estado_banco se debe cambiar por el estado de la tabla a la que se desea hacer mantenimiento
             navegador1.campoEstado = "Estado";
             navegador1.MDIformulario = FormularioPadre;
@@ -79,13 +79,11 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             navegador1.control = lista;
             navegador1.formulario = this;
             //el dataGridView1 se debe cambiar por el que se tiene en el formulario
-            navegador1.DatosActualizar = dgvTipoEvaluacion;
+            navegador1.DatosActualizar = dgvTipoInduccion;
             navegador1.procActualizarData();
             navegador1.procCargar();
-
             navegador1.ayudaRuta = "AyudaMantenimientosMan/AyudaMantenimiento2.chm";
-            navegador1.ruta = "Ayuda_Mantenimiento Tipo Evaluacion.html";
-
+            navegador1.ruta = "Ayuda_Mantenimiento Tipo Induccion.html";
         }
 
   
