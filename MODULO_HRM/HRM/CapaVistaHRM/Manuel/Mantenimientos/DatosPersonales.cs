@@ -31,7 +31,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
 
             cmbEstadoCivil.DropDownStyle = ComboBoxStyle.DropDownList;
-            
+            ParamBusqueda = 0;
 
         }
 
@@ -39,7 +39,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, PrimerAp, Email, IdEmp,IdRec, EstadoCivil,EstadoCivil2,Foto, CuentaBanc;
-        int Genero, Telefono, TipoLicencia, Puesto, Departamento,Horario,Dpi,NumIgss;
+        int Genero, Telefono, TipoLicencia, Puesto, Departamento,Horario,Dpi,NumIgss, ParamBusqueda;
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
         }
 
         int Estado = 1;
+        int Estado2 = 0;
 
         string TipoEntidad;
         private void Rbtn_Empleado_CheckedChanged(object sender, EventArgs e)
@@ -67,8 +68,11 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
                 lblIngreseIdEmpleado.Visible = true;
                 lblIngreseIdEmpleado.Text = "Ingrese el ID del Empleado ";
                 txtId.Enabled = true;
+                btnEmpleados.Text = "Ver Lista Empleados";
+                btnEmpleados.Visible = true;
                 btnBuscar.Enabled = true;
                 TipoEntidad = "Empleado";
+                lblFoto.Visible = true;
                 lblCuentaBanc.Visible = true;
                 txtCuentaBanc.Visible = true;
             }
@@ -87,9 +91,21 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            //Se llama al formulario que contiene todos una tabla de todos los empleados
-            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
-            MostrarEmp.ShowDialog();
+  
+            if (Rbtn_Empleado.Checked == true)
+            {
+                //Se llama al formulario que contiene todos una tabla de todos los empleados
+                frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado(ParamBusqueda);
+                MostrarEmp.ShowDialog();
+            }
+
+            if (Rbtn_Recluta.Checked == true)
+            {
+                //Se llama al formulario que contiene todos una tabla de todos los empleados
+                frmMostrarReclutas MostrarReclu = new frmMostrarReclutas(ParamBusqueda);
+                MostrarReclu.ShowDialog();
+            }
+    
         }
 
         //metodo para llenar el combo departamento
@@ -130,8 +146,11 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
                 lblIngreseIdEmpleado.Visible = true;
                 lblIngreseIdEmpleado.Text = "Ingrese el ID del Recluta ";
                 txtId.Enabled = true;
+                btnEmpleados.Text = "Ver Lista Reclutas";
+                btnEmpleados.Visible = true;
                 btnBuscar.Enabled = true;
                 TipoEntidad = "Recluta";
+                lblFoto.Visible = false;
                 lblCuentaBanc.Visible = false;
                 txtCuentaBanc.Visible = false;
             }
@@ -148,7 +167,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
                     //RECLUTAS
                     funcDesbloqueo();
-
+                    lblFoto.Visible = false;
                     IdRec = txtId.Text;
                     //Inicio para Busqueda
                     OdbcDataReader Lector = Cont_R.funcBuscarRecluta(txtId.Text);
@@ -241,10 +260,10 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
 
                     //EMPLEADOS
                     funcDesbloqueo();
-
+                    lblFoto.Visible = true;
                     IdEmp = txtId.Text;
                     //Inicio para Busqueda
-                    OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtId.Text, Estado);
+                    OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtId.Text, Estado, Estado2);
                     if (Lector.HasRows == true)
                     {
                         while (Lector.Read())
@@ -301,9 +320,10 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
                             cmbDepartamento.Text = Lector.GetString(12);
                             txtCuentaBanc.Text = Lector.GetString(13);
                             IdRec = Lector.GetString(14);
+                            
                             try
                             {
-
+                                Foto = Lector.GetString(15);
                                 WebRequest request = WebRequest.Create(Foto);
                                 using (var response = request.GetResponse())
                                 {
@@ -320,9 +340,6 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
                                 MessageBox.Show("La imagen no se ha logrado cargar correctamente");
                                 pbxFoto.Visible = false;
                             }//fin try catch
-
-
-
 
 
                         }
@@ -384,6 +401,8 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             txtCuentaBanc.Text = "";
             cmbEstadoCivil.Text = "";
             cmbTipoLicencia.Text = "";
+            lblFoto.Visible = false;
+            btnEmpleados.Visible = false;
             pbxFoto.Visible = false;
 
         }
@@ -483,9 +502,6 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
                         CuentaBanc = txtCuentaBanc.Text;
 
                         IdRec = txtId.Text;
-                        //EstadoRecluta = 0;
-
-
 
                         //envío de datos hacia capa Controlador
 

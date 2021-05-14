@@ -14,7 +14,6 @@ namespace CapaModeloHRM.Manuel
 
         ClsConexion Con = new ClsConexion();
 
-
         //Muestra datos en combo Puesto
         public DataTable funcCmbHPuesto()
         {
@@ -124,7 +123,7 @@ namespace CapaModeloHRM.Manuel
             }
         }//fin 
 
-        //Muestra datos en combo Horario
+        //Muestra datos en combo Entrevista
         public DataTable funcItemsEntrevista()
         {
             DataTable Datos = new DataTable();
@@ -150,6 +149,34 @@ namespace CapaModeloHRM.Manuel
                 return Datos;
             }
         }//fin 
+
+        //Muestra datos en combo Induccion
+        public DataTable funcItemsInduccion()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                string CargaPuestos = "SELECT * FROM TIPOINDUCCION";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
 
         //Muestra datos en combo Horario
         public DataTable funcItemsEvaluacion()
@@ -215,7 +242,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND RE.IDRECLUTA = '" + IdRecluta + "'";
+                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, FA.NOMBREFORMACIONACADEMICA, RE.PROFESIONACTUAL FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND RE.IDRECLUTA = '" + IdRecluta + "'";
 
 
                 OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.conexion());
@@ -235,12 +262,12 @@ namespace CapaModeloHRM.Manuel
 
 
         //consulta para buscar en la entidad empleados
-        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado, int Estado)
+        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado, int Estado,int Estado2)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, E.CUENTABANCARIA, E.IDRECLUTA FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, EMPLEADO AS E WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND E.IDRECLUTA = RE.IDRECLUTA AND E.IDEMPLEADO = '" + IdEmpleado + "' AND E.ESTADO = '" + Estado + "'";
+                string sentencia = "SELECT RE.NOMBRE, RE.APELLIDO, RE.DPI, RE.FECHANACIMIENTO, RE.GENERO, RE.ESTADOCIVIL, RE.CORREO, RE.TELEFONO, RE.NUMEROIGSS, LC.TIPOLICENCIA, P.NOMBREPUESTO, HR.TIPOHORARIO, DE.NOMBREDEPARTAMENTO, E.CUENTABANCARIA, E.IDRECLUTA, E.fotografiaPerfil FROM RECLUTAMIENTO AS RE, LICENCIACONDUCIR AS LC, PUESTO AS P, TIPOHORARIO AS HR,DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, EMPLEADO AS E WHERE RE.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND RE.IDLICENCIA = LC.IDLICENCIA AND RE.IDPUESTO = P.IDPUESTO AND RE.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND RE.IDHORARIO = HR.IDTIPOHORARIO AND E.IDRECLUTA = RE.IDRECLUTA AND E.IDEMPLEADO = '" + IdEmpleado + "' AND (E.ESTADO = '" + Estado + "'|| E.ESTADO = '" + Estado2 + "')";
 
 
                 OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.conexion());
@@ -283,6 +310,35 @@ namespace CapaModeloHRM.Manuel
             }
 
         }
+
+        //Muestra datos en combo Horario
+        public DataTable funcCmbContrato()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                string CargaPuestos = "SELECT * FROM TIPOCONTRATO";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
+
 
         //consulta para buscar y obtener el valor Id de los combobox
         public OdbcDataReader funcBusquedaCombosEmp(string IdEmpleado)
@@ -411,6 +467,45 @@ namespace CapaModeloHRM.Manuel
             }
         }
 
+        //Consulta para ingresar una Entrevista
+        public void funcInsertarInduccion(string IdEmpleado, int TipoInduccion, string FechaInduccion, int EstadoInd, int EstadoEmp)
+        {
+            try
+            {
+
+                int IdInduccion;
+                string CorrelativoReclu = "SELECT IFNULL(MAX(idInduccion),0) +1 FROM induccion";
+                OdbcCommand QueryIdReclu = new OdbcCommand(CorrelativoReclu, Con.conexion());
+                IdInduccion = Convert.ToInt32(QueryIdReclu.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = QueryIdReclu.ExecuteReader();
+
+
+                //Sentencia para insertar datos a entidad Reclutamiento
+                string SentenciaRecluta = "INSERT INTO induccion (idInduccion, idEmpleado, idtipoInduccion, " +
+                    "FechaInduccion, Estado) VALUES " + "('" + IdInduccion + "','" + IdEmpleado + "','" + TipoInduccion + "','" + FechaInduccion + "','"
+                    + EstadoInd + "')";
+
+                string sentencia = "UPDATE empleado SET estado ='" + EstadoEmp + "' WHERE idEmpleado ='" + IdEmpleado + "'";
+
+
+                OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.conexion());
+                Query_IngresoRec.ExecuteNonQuery();
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         //Consulta para ingresar datos en la entidad reclutamiento
         public void funcInsertarRecluta(string PrimerNom, string PrimerAp, string Dpi, string NombreProf, string FechaNac,
@@ -459,7 +554,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -484,7 +579,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.IDRECLUTA LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.IDRECLUTA LIKE ('" + Parametro + "%') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -509,7 +604,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.NOMBRE LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.NOMBRE LIKE ('" + Parametro + "%') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -534,7 +629,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.APELLIDO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND R.APELLIDO LIKE ('" + Parametro + "%') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -559,7 +654,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND P.NOMBREPUESTO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND P.NOMBREPUESTO LIKE ('" + Parametro + "%') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -584,7 +679,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND DE.NOMBREDEPARTAMENTO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND DE.NOMBREDEPARTAMENTO LIKE ('" + Parametro + "%') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -609,7 +704,7 @@ namespace CapaModeloHRM.Manuel
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND H.TIPOHORARIO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT R.IDRECLUTA,R.NOMBRE, R.APELLIDO, P.NOMBREPUESTO, DE.NOMBREDEPARTAMENTO,H.TIPOHORARIO, R.CORREO, R.TELEFONO, LC.TIPOLICENCIA, R.PROFESIONACTUAL, FA.NOMBREFORMACIONACADEMICA FROM RECLUTAMIENTO AS R, FORMACIONACADEMICA AS FA, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, TIPOHORARIO AS H WHERE R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND (R.ESTADO='" + PrOpcion + "' OR R.ESTADO='" + SgOpcion + "' OR R.ESTADO='" + Recomendados + "') AND H.TIPOHORARIO LIKE ('" + Parametro + "%') ORDER BY R.ESTADO DESC ";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.conexion());
 
@@ -839,6 +934,76 @@ namespace CapaModeloHRM.Manuel
             }
         }
 
+        //consulta para ingresar datos en la entidad empleado
+        //Consulta para Contratar un Recluta
+        public void funcContratar(string IdRecluta, int CuentaBanc, int TipoContrato, string LinkFoto, string FechaCont, int EstadoEmp, int EstadoRec)
+        {
+            try
+            {
+                int IdEmpleado;
+                string CorrelativoEmpleado = "SELECT IFNULL(MAX(IDEMPLEADO),0) +1 FROM EMPLEADO";
+
+                OdbcCommand QueryIdEmpleado = new OdbcCommand(CorrelativoEmpleado, Con.conexion());
+                IdEmpleado = Convert.ToInt32(QueryIdEmpleado.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = QueryIdEmpleado.ExecuteReader();
+
+
+                //Sentencia para insertar datos a entidad Reclutamiento
+                string SentenciaEmpleado = "INSERT INTO EMPLEADO(IDEMPLEADO, IDRECLUTA,CUENTABANCARIA, IDTIPOCONTRATO," +
+                    " FOTOGRAFIAPERFIL, FECHACONTRATACION, ESTADO) VALUES " + "('" + IdEmpleado + "','" + IdRecluta + "','" + CuentaBanc + "','"
+                    + TipoContrato + "','" + LinkFoto + "','" + FechaCont + "','" + EstadoEmp + "')";
+
+                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO= '" + EstadoRec + "'WHERE IDRECLUTA='" + IdRecluta + "'";
+
+                OdbcCommand Query_IngresoEmp = new OdbcCommand(SentenciaEmpleado, Con.conexion());
+                Query_IngresoEmp.ExecuteNonQuery();
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.conexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        //Muestra datos en combo Recomendado
+        public DataTable funcCmbEmpleado()
+        {
+            DataTable Datos = new DataTable();
+            try
+            {
+                
+                string CargaPuestos = "SELECT concat(R.NOMBRE,' ',R.APELLIDO) AS DATOS FROM EMPLEADO AS E, RECLUTAMIENTO AS R, LICENCIACONDUCIR AS LC, PUESTO AS P, DEPARTAMENTOEMPRESA AS DE, FORMACIONACADEMICA AS FA, TIPOHORARIO AS H , TIPOCONTRATO AS TP WHERE E.IDRECLUTA = R.IDRECLUTA AND E.IDTIPOCONTRATO = TP.IDTIPOCONTRATO AND R.IDFORMACIONACADEMICA = FA.IDFORMACIONACADEMICA AND R.IDLICENCIA = LC.IDLICENCIA AND R.IDPUESTO = P.IDPUESTO AND R.IDDEPATAMENTOEMPRESA = DE.IDDEPARTAMENTOEMPRESA AND R.IDHORARIO = H.IDTIPOHORARIO AND R.ESTADO='" + 6 + "' AND E.ESTADO='"+1+"'";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+
+                Con.desconexion(Con.conexion());
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+            }
+        }//fin 
+
+
+    
 
     }
 }

@@ -14,7 +14,6 @@ namespace CapaControladorHRM.Manuel
 
         ClsSentenciasManuel sn = new ClsSentenciasManuel();
 
-
         //Paso de datos comboPuesto
         public DataTable funcItemsPuesto()
         {
@@ -56,6 +55,13 @@ namespace CapaControladorHRM.Manuel
             return Items;
         }
 
+        //Paso de datos Tipo Entrevista
+        public DataTable funcItemsInduccion()
+        {
+            DataTable Items = sn.funcItemsInduccion();
+            return Items;
+        }
+
 
         //Paso de datos Formacion Academica
         public DataTable funcItemsNivelEstudio()
@@ -64,7 +70,12 @@ namespace CapaControladorHRM.Manuel
             return Items;
         }
 
-
+        //Paso de datos Tipo Contrato
+        public DataTable funcCmbContrato()
+        {
+            DataTable Items = sn.funcCmbContrato();
+            return Items;
+        }
 
         //consulta de busqueda por Id 
         public OdbcDataReader funcBuscarRecluta(string IdRecluta)
@@ -74,9 +85,9 @@ namespace CapaControladorHRM.Manuel
         }
 
         //Paso de datos para consulta buscar en la entidad empleados
-        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado, int Estado)
+        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado, int Estado,int Estado2)
         {
-            OdbcDataReader Lector = sn.funcBuscarEmpleado(IdEmpleado, Estado);
+            OdbcDataReader Lector = sn.funcBuscarEmpleado(IdEmpleado, Estado, Estado2);
             return Lector;
         }
 
@@ -126,6 +137,14 @@ namespace CapaControladorHRM.Manuel
         {
 
             sn.funcInsertarEntrevista(IdRecluta, TipoEntrevista, Punteo, Resultado, Comentarios, OpcionRecluta);
+
+        }
+
+        //Paso de datos para consulta modificar en la entidad Empleado
+        public void funcInsertarInduccion(string IdEmpleado, int TipoInduccion, string FechaInduccion, int EstadoInd, int EstadoEmp)
+        {
+
+            sn.funcInsertarInduccion(IdEmpleado, TipoInduccion, FechaInduccion, EstadoInd, EstadoEmp);
 
         }
 
@@ -267,6 +286,19 @@ namespace CapaControladorHRM.Manuel
 
             sn.funcInsertarEvaluacion(IdRecluta, TipoEvaluacion, Punteo, Resultado, Comentarios, OpcionRecluta);
 
+        }
+
+        //Paso de datos para consulta ingresar en la entidad empleado
+        public void funcContratar(string IdRecluta, int CuentaBanc, int TipoContrato, string LinkFoto, string FechaCont, int EstadoEmp, int EstadoRec)
+        {
+            sn.funcContratar(IdRecluta, CuentaBanc, TipoContrato, LinkFoto, FechaCont, EstadoEmp, EstadoRec);
+        }
+
+
+        public DataTable funcCmbEmpleado()
+        {
+            DataTable Items = sn.funcCmbEmpleado();
+            return Items;
         }
 
 

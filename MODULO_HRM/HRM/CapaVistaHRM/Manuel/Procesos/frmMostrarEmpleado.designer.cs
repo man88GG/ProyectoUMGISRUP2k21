@@ -152,7 +152,7 @@
             // 
             this.btnMostrarTodo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarTodo.Location = new System.Drawing.Point(876, 11);
-            this.btnMostrarTodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarTodo.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarTodo.Name = "btnMostrarTodo";
             this.btnMostrarTodo.Size = new System.Drawing.Size(184, 62);
             this.btnMostrarTodo.TabIndex = 11;
@@ -190,7 +190,7 @@
             this.rbtnFiltradoDepto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFiltradoDepto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rbtnFiltradoDepto.Location = new System.Drawing.Point(849, 50);
-            this.rbtnFiltradoDepto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnFiltradoDepto.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFiltradoDepto.Name = "rbtnFiltradoDepto";
             this.rbtnFiltradoDepto.Size = new System.Drawing.Size(173, 24);
             this.rbtnFiltradoDepto.TabIndex = 14;
@@ -205,7 +205,7 @@
             this.rbtnFiltradoPuesto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFiltradoPuesto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rbtnFiltradoPuesto.Location = new System.Drawing.Point(657, 50);
-            this.rbtnFiltradoPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnFiltradoPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFiltradoPuesto.Name = "rbtnFiltradoPuesto";
             this.rbtnFiltradoPuesto.Size = new System.Drawing.Size(114, 24);
             this.rbtnFiltradoPuesto.TabIndex = 13;
@@ -220,7 +220,7 @@
             this.rbtnFiltradoApellidos.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFiltradoApellidos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rbtnFiltradoApellidos.Location = new System.Drawing.Point(447, 50);
-            this.rbtnFiltradoApellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnFiltradoApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFiltradoApellidos.Name = "rbtnFiltradoApellidos";
             this.rbtnFiltradoApellidos.Size = new System.Drawing.Size(136, 24);
             this.rbtnFiltradoApellidos.TabIndex = 12;
@@ -235,7 +235,7 @@
             this.rbtnFiltradoNombres.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFiltradoNombres.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rbtnFiltradoNombres.Location = new System.Drawing.Point(210, 50);
-            this.rbtnFiltradoNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnFiltradoNombres.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFiltradoNombres.Name = "rbtnFiltradoNombres";
             this.rbtnFiltradoNombres.Size = new System.Drawing.Size(133, 24);
             this.rbtnFiltradoNombres.TabIndex = 11;
@@ -250,7 +250,7 @@
             this.rbtnFiltradoId.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFiltradoId.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rbtnFiltradoId.Location = new System.Drawing.Point(51, 50);
-            this.rbtnFiltradoId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnFiltradoId.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnFiltradoId.Name = "rbtnFiltradoId";
             this.rbtnFiltradoId.Size = new System.Drawing.Size(76, 24);
             this.rbtnFiltradoId.TabIndex = 10;

@@ -25,35 +25,17 @@ namespace CapaVistaHRM.Manuel.Procesos
             funcLlenarTipoEntrevista();
             cmbTipoEntrevista.DropDownStyle = ComboBoxStyle.DropDownList;
             EstadoNoEntrevistados = 0;
+
         }
 
         //Declaración de variables Entidad Reclutamiento
         string IdRecluta,Comentarios,OpcionRecluta;
-        int Resultado,TipoEntrevista,Punteo,EstadoNoEntrevistados;
+        int Resultado,TipoEntrevista,Punteo,EstadoNoEntrevistados,PunteoE;
 
-        
+       
 
 
-        //Se agrega el codigo a la variable resultado de reprobado
-        private void rbtnReprobado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbtnReprobado.Checked == true)
-            {
-                //estado de no escogido
-                Resultado = 4;
-                pnlOpciones.Enabled = false;
-                rbtnPrimeraOp.Checked = false;
-                rbtnSegOpcion.Checked = false;
-            }
-        }
-        //Se agrega el codigo a la variable resultado de aprobado
-        private void rbtnAprobado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbtnAprobado.Checked == true)
-            {
-                pnlOpciones.Enabled = true;
-            }
-        }
+    
 
         //funcion para llenar el combo
         public void funcLlenarTipoEntrevista()
@@ -112,11 +94,17 @@ namespace CapaVistaHRM.Manuel.Procesos
             clsValidacion.funcNumeros(e);
         }
 
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaMantenimientosMan/AyudasProcesos.chm", "Ayuda_Entrevista.html");
+        }
+
         private void frmEntrevista_Load(object sender, EventArgs e)
         {
             
             txtIdBancoTalento.MaxLength = 8;
             txtPunteo.MaxLength = 3;
+            txtPunteo.Text = "0";
         }
 
         private void btnReclutas_Click(object sender, EventArgs e)
@@ -126,42 +114,63 @@ namespace CapaVistaHRM.Manuel.Procesos
             MostrarReclu.ShowDialog();
         }
 
-        private void rbtnPrimeraOp_CheckedChanged(object sender, EventArgs e)
+        private void txtPunteo_TextChanged(object sender, EventArgs e)
         {
-            if (rbtnPrimeraOp.Checked == true)
+
+            try
             {
-                //prioridad máxima luego de recomendados, estado de ya evaluado
-                Resultado = 1;
-                OpcionRecluta = "Primera Opcion";
+                PunteoE = Convert.ToInt32(txtPunteo.Text);
+                if (PunteoE >= 0 && PunteoE < 50)
+                {
+                    txtResultado.Text = "";
+                    OpcionRecluta = "Reprobado";
+                    txtResultado.Text = "Reprobado";
+                    Resultado = 1;
+                }
+                else if (PunteoE > 50 && PunteoE < 80)
+                {
+                    txtResultado.Text = "";
+                    OpcionRecluta = "Segunda Opción";
+                    txtResultado.Text = "Segunda Opción";
+                    Resultado = 1;
+                }
+                else if (PunteoE >= 80 && PunteoE <= 100)
+                {
+                    txtResultado.Text = "";
+                    OpcionRecluta = "Primera Opción";
+                    txtResultado.Text = "Primera Opción";
+                    Resultado = 1;
+
+                }
+                else if (PunteoE < 0 || PunteoE > 100)
+                {
+                    txtResultado.Text = "";
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No ha ingresado un valor válido en el Punteo ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtResultado.Text = "";
+            }
+
         }
 
-        private void rbtnSegOpcion_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbtnSegOpcion.Checked == true)
-            {
-                //segunda prioridad, estado de ya evaluado
-                Resultado = 1;
-                OpcionRecluta = "Segunda Opcion";
-            }
-        }
-
+   
         private void btnIngresoEntrevista_Click(object sender, EventArgs e)
         {
             //Mensaje de Validación
             if (txtIdBancoTalento.Text == "" ||  txtPunteo.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-                //Mensaje de validación de radiobuttons
-                if (rbtnAprobado.Checked == false && rbtnReprobado.Checked == false) { MessageBox.Show("ADVERTENCIA: No ha seleccionado un Tipo de Resultado", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                //Mensaje de validación del Punteo
+                if (PunteoE < 0 || PunteoE > 100 || txtPunteo.Text == "") { MessageBox.Show("ADVERTENCIA: Ha ingresado un punteo que se sale del Rango de 0 a 100", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                 else
                 {
                     //segunda verificación de datos de cajas de texto vacias
                     if (rtxtComentarios.Text == "") { MessageBox.Show("ADVERTENCIA: No ha ingresado sus Comentarios sobre el Recluta Entrevistado", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                     else
                     {
-                        if (rbtnAprobado.Checked==true &&(rbtnPrimeraOp.Checked==false && rbtnSegOpcion.Checked==false )) { MessageBox.Show("ADVERTENCIA: No ha seleccionado un Tipo de Opción", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-                        else { 
+                      
                         //Mensaje de Pregunta
                             if (MessageBox.Show("¿Desea agregar un nuevo Resultado de Entrevista ?", "Entrevista", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
                             else
@@ -184,7 +193,7 @@ namespace CapaVistaHRM.Manuel.Procesos
 
                             }//fin elseif Pregunta
 
-                        }//fin else if rbtn aprobado con opcion
+                        
 
                     }//fin elseif txt
 
@@ -203,12 +212,9 @@ namespace CapaVistaHRM.Manuel.Procesos
             cmbDepartamentoTrabajo.Text = "";
             cmbPuestoTrabajo.Text = "";
             cmbTipoEntrevista.Text = "";
-            txtPunteo.Text = "";
-            rbtnAprobado.Checked = false;
-            rbtnReprobado.Checked = false;
+            txtPunteo.Text = "0";
+            txtResultado.Text = "";
             rtxtComentarios.Text = "";
-            rbtnPrimeraOp.Checked = false;
-            rbtnSegOpcion.Checked = false;
             cmbHorario.Text = "";
 
         }
