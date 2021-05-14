@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvaluacion));
             this.tbcEntrevista = new System.Windows.Forms.TabControl();
             this.tbpDatosRecluta = new System.Windows.Forms.TabPage();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.gbxDatosP2 = new System.Windows.Forms.GroupBox();
             this.lblHorario = new System.Windows.Forms.Label();
             this.cmbDepartamentoTrabajo = new System.Windows.Forms.ComboBox();
@@ -69,7 +70,6 @@
             this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
             this.lblResultadoEvaluacion = new System.Windows.Forms.Label();
             this.lblTipoEvaluacion = new System.Windows.Forms.Label();
-            this.btnAyuda = new System.Windows.Forms.Button();
             this.tbcEntrevista.SuspendLayout();
             this.tbpDatosRecluta.SuspendLayout();
             this.gbxDatosP2.SuspendLayout();
@@ -108,6 +108,17 @@
             this.tbpDatosRecluta.Size = new System.Drawing.Size(791, 622);
             this.tbpDatosRecluta.TabIndex = 0;
             this.tbpDatosRecluta.Text = "Datos Recluta";
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(711, 8);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(72, 72);
+            this.btnAyuda.TabIndex = 129;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // gbxDatosP2
             // 
@@ -525,17 +536,6 @@
             this.lblTipoEvaluacion.Size = new System.Drawing.Size(135, 20);
             this.lblTipoEvaluacion.TabIndex = 6;
             this.lblTipoEvaluacion.Text = "Tipo Evaluacion";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(716, 2);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(72, 72);
-            this.btnAyuda.TabIndex = 129;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // frmEvaluacion
             // 

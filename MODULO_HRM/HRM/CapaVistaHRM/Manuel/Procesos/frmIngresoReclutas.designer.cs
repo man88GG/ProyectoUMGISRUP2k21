@@ -314,7 +314,7 @@
             // btnAyuda
             // 
             this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(879, 2);
+            this.btnAyuda.Location = new System.Drawing.Point(874, 7);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(72, 72);

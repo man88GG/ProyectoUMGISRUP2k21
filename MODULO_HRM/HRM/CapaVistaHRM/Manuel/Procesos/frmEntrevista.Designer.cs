@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEntrevista));
             this.tbcEntrevista = new System.Windows.Forms.TabControl();
             this.tbpDatosRecluta = new System.Windows.Forms.TabPage();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.gbxDatosP1 = new System.Windows.Forms.GroupBox();
             this.txtPrimerApellido = new System.Windows.Forms.TextBox();
             this.txtPrimerNombre = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@
             this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
             this.lblResultadoEntrevista = new System.Windows.Forms.Label();
             this.lblTipoEntrevista = new System.Windows.Forms.Label();
-            this.btnAyuda = new System.Windows.Forms.Button();
             this.tbcEntrevista.SuspendLayout();
             this.tbpDatosRecluta.SuspendLayout();
             this.gbxDatosP1.SuspendLayout();
@@ -100,6 +100,17 @@
             this.tbpDatosRecluta.Size = new System.Drawing.Size(758, 398);
             this.tbpDatosRecluta.TabIndex = 0;
             this.tbpDatosRecluta.Text = "Datos Recluta";
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(676, 16);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(72, 72);
+            this.btnAyuda.TabIndex = 132;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // gbxDatosP1
             // 
@@ -450,17 +461,6 @@
             this.lblTipoEntrevista.Size = new System.Drawing.Size(127, 20);
             this.lblTipoEntrevista.TabIndex = 6;
             this.lblTipoEntrevista.Text = "Tipo Entrevista";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(683, 5);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(72, 72);
-            this.btnAyuda.TabIndex = 132;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // frmEntrevista
             // 
