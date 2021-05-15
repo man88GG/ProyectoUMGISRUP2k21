@@ -19,6 +19,13 @@ namespace CapaVistaHRM.Manuel.Procesos
         {
             InitializeComponent();
             funcMostrarTabla(EstadoR);
+            if (EstadoR == 0)
+            {
+                lblReclutas.Text = "Reclutas Sin Entrevistar";
+            }else
+            if(EstadoR == 1)   {
+                lblReclutas.Text = "Reclutas Sin Evaluar";
+            }
         }
 
 
@@ -27,7 +34,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         //int Estado = 0;
         //int NoEntrevistado = 0;
         //int NoRecomendado = 0;
-        int prueba;
+        int Estado;
         ClsControladorManuel Cont_R = new ClsControladorManuel();
         public void funcMostrarTabla(int EstadoR)
         {
@@ -36,7 +43,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             DataTable dt = Cont_R.funcTablaBancoTalento(EstadoR, EstadoR, EstadoR);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
-            prueba = EstadoR;
+            Estado = EstadoR;
 
         }
 
@@ -193,7 +200,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtIdEmpleado_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtIdRecluta.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoId(prueba, prueba, prueba, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoId(Estado, Estado, Estado, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
@@ -202,7 +209,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerNombre_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerNombre.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(prueba, prueba, prueba, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoNombre(Estado, Estado, Estado, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
 
@@ -211,7 +218,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPrimerApellido_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerApellido.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(prueba, prueba, prueba, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoApellido(Estado, Estado, Estado, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -219,7 +226,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtPuesto_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPuesto.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(prueba, prueba, prueba, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoPuesto(Estado, Estado, Estado, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -227,7 +234,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtDepartamento_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtDepartamento.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(prueba, prueba, prueba, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoDepartamento(Estado, Estado, Estado, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -235,7 +242,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void txtProfesion_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtProfesion.Text;
-            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(prueba, prueba, prueba, Parametro);
+            DataTable dt = Cont_R.funcTablaBancoTalentoHorario(Estado, Estado, Estado, Parametro);
             dgvMostrarReclutas.DataSource = dt;
             funcNombresEncabezados();
         }
@@ -243,6 +250,7 @@ namespace CapaVistaHRM.Manuel.Procesos
         private void frmMostrarReclutas_Load(object sender, EventArgs e)
         {
             txtIdRecluta.MaxLength = 8;
+            
         }
         //Se muestran nuevamente todos los datos de la entidad Empleado
         private void btnMostrarTodo_Click(object sender, EventArgs e)
@@ -254,7 +262,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             //Se llama a la funcion funcBloqueoTxt
             funcBloqueoTxt();
             //Se llama a la funcion funcMostrarTabla
-            funcMostrarTabla(prueba);
+            funcMostrarTabla(Estado);
         }
 
       

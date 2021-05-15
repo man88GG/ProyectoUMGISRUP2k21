@@ -149,6 +149,18 @@
     <Compile Include="Manuel\Mantenimientos\frmTipoEvaluacion.designer.cs">
       <DependentUpon>frmTipoEvaluacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manuel\Mantenimientos\frmTipoInduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuel\Mantenimientos\frmTipoInduccion.designer.cs">
+      <DependentUpon>frmTipoInduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuel\Procesos\frmContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuel\Procesos\frmContratacion.designer.cs">
+      <DependentUpon>frmContratacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manuel\Procesos\frmEntrevista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,12 @@
     </Compile>
     <Compile Include="Manuel\Procesos\frmEvaluacion.designer.cs">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuel\Procesos\frmInduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuel\Procesos\frmInduccion.designer.cs">
+      <DependentUpon>frmInduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Manuel\Procesos\frmIngresoReclutas.cs">
       <SubType>Form</SubType>
@@ -292,11 +310,20 @@
     <EmbeddedResource Include="Manuel\Mantenimientos\frmTipoEvaluacion.resx">
       <DependentUpon>frmTipoEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Mantenimientos\frmTipoInduccion.resx">
+      <DependentUpon>frmTipoInduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Procesos\frmContratacion.resx">
+      <DependentUpon>frmContratacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Procesos\frmEntrevista.resx">
       <DependentUpon>frmEntrevista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Procesos\frmEvaluacion.resx">
       <DependentUpon>frmEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Procesos\frmInduccion.resx">
+      <DependentUpon>frmInduccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manuel\Procesos\frmIngresoReclutas.resx">
       <DependentUpon>frmIngresoReclutas.cs</DependentUpon>

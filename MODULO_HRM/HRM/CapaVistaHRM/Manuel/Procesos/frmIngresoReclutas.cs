@@ -41,9 +41,33 @@ namespace CapaVistaHRM.Manuel.Procesos
             funcItemsNivelEstudio();
         }
 
+        //funcion para llenar el combo
+        public void funcCmbEmpleado()
+        {
+            DataTable Datos = Cont_R.funcCmbEmpleado();
+            cmbEncargado.DataSource = Datos;
+            cmbEncargado.DisplayMember = "DATOS";
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Datos.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["DATOS"]));
+
+            }
+            cmbEncargado.AutoCompleteCustomSource = coleccion;
+            cmbEncargado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbEncargado.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+        }
+
+
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, PrimerAp, FechaNac, Email, NombreProf, EstadoCivil,Dpi, FechaReclu,EstadoCivil2;
         int NivelEstudio, Genero, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta,Horario, EstadoNoEntrevistados;
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaMantenimientosMan/AyudasProcesos.chm", "Ayuda_Ingreso_Reclutas.html");
+        }
 
         private void rbtnNo_CheckedChanged(object sender, EventArgs e)
         {
@@ -51,6 +75,8 @@ namespace CapaVistaHRM.Manuel.Procesos
             {
                 //estado 0 para los que deben pasar el proceso de entrevista y evaluación
                 EstadoRecluta = 0;
+                cmbEncargado.Enabled = false;
+                cmbEncargado.Text = "";
             }
         }
 
@@ -60,15 +86,10 @@ namespace CapaVistaHRM.Manuel.Procesos
             {
                 //estado 5 para recomendados, no deben pasar el proceso de entrevista y evaluación
                 EstadoRecluta = 5;
+                cmbEncargado.Enabled = true;
             }
         }
 
-        private void btnReclutas_Click(object sender, EventArgs e)
-        {
-            //Se llama al formulario que contiene todos una tabla de todos los empleados
-            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas(EstadoNoEntrevistados);
-            MostrarReclu.ShowDialog();
-        }
 
        
       
@@ -174,9 +195,7 @@ namespace CapaVistaHRM.Manuel.Procesos
                             Dpi = txtDpi.Text;
                             NombreProf = txtProfesion.Text;
                             FechaNac = dtpFechaNacimiento.Value.Date.ToShortDateString();
-
                             EstadoCivil = cmbEstadoCivil.SelectedItem.ToString();
-
 
                             if (EstadoCivil == "Soltero")
                             {
@@ -232,7 +251,8 @@ namespace CapaVistaHRM.Manuel.Procesos
             txtDpi.MaxLength = 13;
             txtTelefono.MaxLength = 8;
             txtNumeroIgss.MaxLength = 8;
-            
+            funcCmbEmpleado();
+
         }
 
         private void funcLetra(object sender, KeyPressEventArgs e)
@@ -267,6 +287,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             rbtnMasculino.Checked = false;
             rbtnSi.Checked = false;
             rbtnNo.Checked = false;
+            cmbEncargado.Enabled = false;
 
         }
      

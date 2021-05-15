@@ -18,23 +18,25 @@ namespace CapaVistaHRM.Manuel.Procesos
 {
     public partial class frmMostrarEmpleado : Form
     {
-        public frmMostrarEmpleado()
+        public frmMostrarEmpleado(int EstadoE)
         {
             InitializeComponent();
-            funcMostrarTabla();
+            funcMostrarTabla(EstadoE);
         }
 
 
-        int Estado = 1;
+        int Estado;
         ClsControladorManuel Cont_R = new ClsControladorManuel();
         //función para mostrar los datos de la BD en el datagrid
-        public void funcMostrarTabla()
+        public void funcMostrarTabla(int EstadoE)
         {
 
 
-            DataTable dt = Cont_R.funcTablaEmpleado(Estado);
+            DataTable dt = Cont_R.funcTablaEmpleado(EstadoE);
             dgvMostrarEmpleados.DataSource = dt;
+            Estado = EstadoE;
             funcNombresEncabezados();
+            
 
         }
         //función para cambiarle el nombre a las columnas del datagrid para el filtrado de datos
@@ -228,7 +230,7 @@ namespace CapaVistaHRM.Manuel.Procesos
             //Se llama a la funcion funcBloqueoTxt
             funcBloqueoTxt();
             //Se llama a la funcion funcMostrarTabla
-            funcMostrarTabla();
+            funcMostrarTabla(Estado);
         }
         //se coloca un máximo de dígitos para el textbox del id
         private void frmMostrarEmpleado_Load(object sender, EventArgs e)

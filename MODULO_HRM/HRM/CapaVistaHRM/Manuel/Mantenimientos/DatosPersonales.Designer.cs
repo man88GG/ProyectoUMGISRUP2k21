@@ -57,7 +57,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFoto = new System.Windows.Forms.Label();
             this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.txtCuentaBanc = new System.Windows.Forms.TextBox();
             this.lblCuentaBanc = new System.Windows.Forms.Label();
@@ -351,7 +351,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.tbpDatosPersonales.Controls.Add(this.txtGenero);
             this.tbpDatosPersonales.Controls.Add(this.dtpFechaNacimiento);
             this.tbpDatosPersonales.Controls.Add(this.lblFechaNacimiento);
-            this.tbpDatosPersonales.Controls.Add(this.label1);
+            this.tbpDatosPersonales.Controls.Add(this.lblFoto);
             this.tbpDatosPersonales.Controls.Add(this.pbxFoto);
             this.tbpDatosPersonales.Controls.Add(this.txtCuentaBanc);
             this.tbpDatosPersonales.Controls.Add(this.lblCuentaBanc);
@@ -410,16 +410,16 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.lblFechaNacimiento.TabIndex = 46;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
-            // label1
+            // lblFoto
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(857, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Fotografía";
+            this.lblFoto.AutoSize = true;
+            this.lblFoto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFoto.Location = new System.Drawing.Point(857, 36);
+            this.lblFoto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblFoto.Name = "lblFoto";
+            this.lblFoto.Size = new System.Drawing.Size(88, 20);
+            this.lblFoto.TabIndex = 44;
+            this.lblFoto.Text = "Fotografía";
             // 
             // pbxFoto
             // 
@@ -549,6 +549,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.btnEmpleados.TabIndex = 34;
             this.btnEmpleados.Text = "Ver Lista Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Visible = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnModificar
@@ -692,7 +693,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Button btnAyuda;
     }
