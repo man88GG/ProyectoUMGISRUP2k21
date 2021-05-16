@@ -63,6 +63,7 @@ namespace CapaVistaHRM.MDI
             this.evaluaciónReclutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capacitacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peticiónDeCapacitaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ascensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +82,7 @@ namespace CapaVistaHRM.MDI
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ascensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capacitaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -345,7 +346,8 @@ namespace CapaVistaHRM.MDI
             // capacitacionToolStripMenuItem
             // 
             this.capacitacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.peticiónDeCapacitaciónToolStripMenuItem});
+            this.peticiónDeCapacitaciónToolStripMenuItem,
+            this.capacitaciónToolStripMenuItem});
             this.capacitacionToolStripMenuItem.Name = "capacitacionToolStripMenuItem";
             this.capacitacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.capacitacionToolStripMenuItem.Text = "Capacitacion";
@@ -356,6 +358,13 @@ namespace CapaVistaHRM.MDI
             this.peticiónDeCapacitaciónToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.peticiónDeCapacitaciónToolStripMenuItem.Text = "Petición de capacitación";
             this.peticiónDeCapacitaciónToolStripMenuItem.Click += new System.EventHandler(this.peticiónDeCapacitaciónToolStripMenuItem_Click);
+            // 
+            // ascensosToolStripMenuItem
+            // 
+            this.ascensosToolStripMenuItem.Name = "ascensosToolStripMenuItem";
+            this.ascensosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ascensosToolStripMenuItem.Text = "Ascensos";
+            this.ascensosToolStripMenuItem.Click += new System.EventHandler(this.ascensosToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
@@ -495,12 +504,12 @@ namespace CapaVistaHRM.MDI
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ascensosToolStripMenuItem
+            // capacitaciónToolStripMenuItem
             // 
-            this.ascensosToolStripMenuItem.Name = "ascensosToolStripMenuItem";
-            this.ascensosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ascensosToolStripMenuItem.Text = "Ascensos";
-            this.ascensosToolStripMenuItem.Click += new System.EventHandler(this.ascensosToolStripMenuItem_Click);
+            this.capacitaciónToolStripMenuItem.Name = "capacitaciónToolStripMenuItem";
+            this.capacitaciónToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.capacitaciónToolStripMenuItem.Text = "Capacitación";
+            this.capacitaciónToolStripMenuItem.Click += new System.EventHandler(this.capacitaciónToolStripMenuItem_Click);
             // 
             // frmMDI
             // 
@@ -579,5 +588,6 @@ namespace CapaVistaHRM.MDI
         private System.Windows.Forms.ToolStripMenuItem peticiónDeCapacitaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nominaIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ascensosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem capacitaciónToolStripMenuItem;
     }
 }

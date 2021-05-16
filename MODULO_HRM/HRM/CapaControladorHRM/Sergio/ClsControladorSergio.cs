@@ -33,9 +33,9 @@ namespace CapaControladorHRM.Sergio
             return Items;
         }
 
-        public string[] funcItemsCourseAll(string Tabla, string Campo, string CourseId)
+        public string[] funcItemsCourseAll(string Tabla, string Campo)
         {
-            string[] Items = Sn.funcLlenarCmbCourseAll(Tabla, Campo, CourseId);
+            string[] Items = Sn.funcLlenarCmbCourseAll(Tabla, Campo);
             return Items;
         }
 
@@ -44,7 +44,18 @@ namespace CapaControladorHRM.Sergio
             string[] Items = Sn.funcLlenarCmbComplejo(Tabla1, Tabla2, Campo1, Campo2, Campo3);
             return Items;
         }
-        
+
+        public string[] funcItems2Capacitador(string Tabla1, string Tabla2, string Campo1, string Campo2, string Campo3)
+        {
+            string[] Items = Sn.funcLlenarCmbComplejoCapacitador(Tabla1, Tabla2, Campo1, Campo2, Campo3);
+            return Items;
+        }
+
+        public string[] funcItems2CapacitadorAll(string Tabla1, string Tabla2, string Campo1, string Campo2, string Campo3)
+        {
+            string[] Items = Sn.funcLlenarCmbComplejoCapacitadorAll(Tabla1, Tabla2, Campo1, Campo2, Campo3);
+            return Items;
+        } 
         public DataTable enviarCombo(string tabla, string campo1)
         {
             var dt1 = Sn.obtenerCombo(tabla, campo1);
@@ -74,6 +85,14 @@ namespace CapaControladorHRM.Sergio
         public DataTable llenarTblDepartamentos(string tabla, string department)
         {
             OdbcDataAdapter dt = Sn.llenarTblDepartametos(tabla, department);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public DataTable llenarTblEmpleados(string tabla)
+        {
+            OdbcDataAdapter dt = Sn.llenarTblEmpleados(tabla);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
