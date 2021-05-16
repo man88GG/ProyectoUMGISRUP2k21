@@ -138,7 +138,7 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         void llenarComboBoxCourseAll(string tabla, string campo1, string campo2, ComboBox ComboBox, string CourseId)
         {
-            string[] items = cn.funcItemsCourseAll(tabla, campo1, CourseId);
+            string[] items = cn.funcItemsCourseAll(tabla, campo1);
             for (int i = 0; i < items.Length; i++)
             {
                 if (items[i] != null)
@@ -291,7 +291,7 @@ namespace CapaVistaHRM.Sergio.Procesos
                     {
                         //MessageBox.Show("no funciona");
                     }
-                    MessageBox.Show("Datos Guardados con éxito");
+                    //MessageBox.Show("Datos Guardados con éxito");
                     
                 }
 
@@ -316,6 +316,9 @@ namespace CapaVistaHRM.Sergio.Procesos
             }
             else
             {
+                btnEmpleados.Visible = false;
+                dgvEmpleados.Visible = false;
+                lblTitle.Text = "asignación de capacitación";
                 if (cmbOpciones.SelectedIndex == 1)
                 {
                     string code = txtCodigo.Text.ToString();
@@ -416,7 +419,7 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void cmbOpciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             if (cmbOpciones.SelectedIndex == 1)
             {
                 txtRangoInicio.Text = "";
@@ -428,8 +431,11 @@ namespace CapaVistaHRM.Sergio.Procesos
                 cmbEmpleado.Items.Add("Seleccione...");
                 llenarComboBox2("reclutamiento", "empleado", "idRecluta", "nombre", "apellido", cmbEmpleado); //tabla, campo, combo|||| TABLAS(RECLUTAMIENTO, EMPLEADO),CAMPOS (R.nombre,R.apellido,R.idRecluta)
                 cmbEmpleado.SelectedIndex = 0;
+                btnEmpleados.Visible = false;
+                dgvEmpleados.Visible = false;
 
-            }else if (cmbOpciones.SelectedIndex == 3)
+            }
+            else if (cmbOpciones.SelectedIndex == 3)
             {
                 txtRangoInicio.Text = "";
                 txtRangoFinal.Text = "";
@@ -440,12 +446,21 @@ namespace CapaVistaHRM.Sergio.Procesos
                 cmbEmpleado.Items.Add("Seleccione...");
                 llenarComboBox("departamentoempresa", "nombreDepartamento", cmbEmpleado); //tabla, campo, combo|||| TABLAS(RECLUTAMIENTO, EMPLEADO),CAMPOS (R.nombre,R.apellido,R.idRecluta)
                 cmbEmpleado.SelectedIndex = 0;
+                btnEmpleados.Visible = false;
+                dgvEmpleados.Visible = false;
 
-            }else if (cmbOpciones.SelectedIndex==2)
+            }
+            else if (cmbOpciones.SelectedIndex == 2)
             {
                 txtRangoInicio.Visible = true;
                 txtRangoFinal.Visible = true;
                 cmbEmpleado.Visible = false;
+                btnEmpleados.Visible = true;
+                dgvEmpleados.Visible = true;
+            } else if (cmbOpciones.SelectedIndex ==0)
+            {
+                btnEmpleados.Visible = false;
+                dgvEmpleados.Visible = false;
             }
         }
 
@@ -496,6 +511,19 @@ namespace CapaVistaHRM.Sergio.Procesos
             }
             catch (Exception Exc) { }
 
+
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            string tabla = "EMPLEADO";
+            DataTable dt = cn.llenarTblEmpleados(tabla);
+            dgvEmpleados.DataSource = dt;
+            lblTitle.Text = "EMPLEADOS";
+        }
+
+        private void txtEmpleado_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

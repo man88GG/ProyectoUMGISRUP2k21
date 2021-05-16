@@ -63,7 +63,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 145);
+            this.textBox1.Location = new System.Drawing.Point(154, 123);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(74, 20);
             this.textBox1.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 187);
+            this.textBox2.Location = new System.Drawing.Point(149, 158);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 20);
             this.textBox2.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 242);
+            this.textBox3.Location = new System.Drawing.Point(149, 210);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 20);
             this.textBox3.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(323, 297);
+            this.txtGender.Location = new System.Drawing.Point(312, 240);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(56, 20);
             this.txtGender.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(160, 346);
+            this.textBox5.Location = new System.Drawing.Point(149, 274);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 20);
             this.textBox5.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(160, 395);
+            this.textBox6.Location = new System.Drawing.Point(149, 310);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(200, 20);
             this.textBox6.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 453);
+            this.dateTimePicker1.Location = new System.Drawing.Point(179, 354);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(225, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(323, 507);
+            this.txtEstado.Location = new System.Drawing.Point(312, 386);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(76, 20);
             this.txtEstado.TabIndex = 8;
@@ -133,7 +133,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(45, 507);
+            this.label8.Location = new System.Drawing.Point(52, 386);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 44;
@@ -144,7 +144,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(45, 456);
+            this.label7.Location = new System.Drawing.Point(52, 354);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 17);
             this.label7.TabIndex = 43;
@@ -155,7 +155,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(45, 395);
+            this.label6.Location = new System.Drawing.Point(52, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 42;
@@ -166,7 +166,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(45, 346);
+            this.label5.Location = new System.Drawing.Point(52, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 41;
@@ -177,7 +177,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(45, 297);
+            this.label9.Location = new System.Drawing.Point(52, 239);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 17);
             this.label9.TabIndex = 40;
@@ -188,7 +188,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(45, 242);
+            this.label10.Location = new System.Drawing.Point(52, 210);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(30, 17);
             this.label10.TabIndex = 39;
@@ -199,7 +199,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(45, 187);
+            this.label11.Location = new System.Drawing.Point(52, 158);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 34);
             this.label11.TabIndex = 38;
@@ -210,7 +210,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(45, 145);
+            this.label12.Location = new System.Drawing.Point(52, 120);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 17);
             this.label12.TabIndex = 37;
@@ -219,9 +219,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(485, 145);
+            this.dataGridView1.Location = new System.Drawing.Point(429, 123);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(517, 409);
+            this.dataGridView1.Size = new System.Drawing.Size(640, 266);
             this.dataGridView1.TabIndex = 45;
             // 
             // comboBox1
@@ -230,7 +230,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Fémenino",
             "Másculino"});
-            this.comboBox1.Location = new System.Drawing.Point(160, 297);
+            this.comboBox1.Location = new System.Drawing.Point(149, 239);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 21);
             this.comboBox1.TabIndex = 46;
@@ -241,7 +241,7 @@
             this.rdInactivo.AutoSize = true;
             this.rdInactivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdInactivo.ForeColor = System.Drawing.Color.White;
-            this.rdInactivo.Location = new System.Drawing.Point(232, 504);
+            this.rdInactivo.Location = new System.Drawing.Point(221, 383);
             this.rdInactivo.Name = "rdInactivo";
             this.rdInactivo.Size = new System.Drawing.Size(85, 23);
             this.rdInactivo.TabIndex = 48;
@@ -255,7 +255,7 @@
             this.rdActivo.AutoSize = true;
             this.rdActivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdActivo.ForeColor = System.Drawing.Color.White;
-            this.rdActivo.Location = new System.Drawing.Point(155, 504);
+            this.rdActivo.Location = new System.Drawing.Point(144, 383);
             this.rdActivo.Name = "rdActivo";
             this.rdActivo.Size = new System.Drawing.Size(73, 23);
             this.rdActivo.TabIndex = 47;
@@ -269,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1119, 673);
+            this.ClientSize = new System.Drawing.Size(1119, 449);
             this.Controls.Add(this.rdInactivo);
             this.Controls.Add(this.rdActivo);
             this.Controls.Add(this.comboBox1);
