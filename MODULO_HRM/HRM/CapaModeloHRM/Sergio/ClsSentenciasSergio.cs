@@ -52,7 +52,7 @@ namespace CapaModeloHRM.Sergio
             return Campos;
         }
 
-        public string[] funcLlenarCmbCourseAll(string Tabla, string Campo, string CourseId)
+        public string[] funcLlenarCmbCourseAll(string Tabla, string Campo)
         {
             string[] Campos = new string[100];
             int I = 0;
@@ -84,6 +84,44 @@ namespace CapaModeloHRM.Sergio
                 while (Reader.Read())
                 {
                     Campos[I] = Reader.GetValue(0).ToString() + " - "+ Reader.GetValue(1).ToString() + " " + Reader.GetValue(2).ToString();
+                    I++;
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla1 + "\n -" + Campo1); }
+            return Campos;
+        }
+
+        public string[] funcLlenarCmbComplejoCapacitador(string Tabla1, string Tabla2, string Campo1, string Campo2, string Campo3)
+        {
+            string[] Campos = new string[100];
+            int I = 0;
+            string Sql = "select E.idEmpleado, R.nombre, R.apellido FROM EMPLEADO E, RECLUTAMIENTO R, DEPARTAMENTOEMPRESA D, PUESTO P WHERE R.idRecluta = E.idRecluta and D.idDepartamentoEmpresa = R.idDepatamentoEmpresa and R.idPUesto = P.idPuesto and R.idPuesto = 6 order by E.idEmpleado; ";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[I] = Reader.GetValue(0).ToString() + " - " + Reader.GetValue(1).ToString() + " " + Reader.GetValue(2).ToString();
+                    I++;
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla1 + "\n -" + Campo1); }
+            return Campos;
+        }
+
+        public string[] funcLlenarCmbComplejoCapacitadorAll(string Tabla1, string Tabla2, string Campo1, string Campo2, string Campo3)
+        {
+            string[] Campos = new string[100];
+            int I = 0;
+            string Sql = "select * from capacitadorexterno ";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[I] = Reader.GetValue(0).ToString() + " - " + Reader.GetValue(1).ToString() + " " + Reader.GetValue(2).ToString();
                     I++;
                 }
             }
@@ -134,6 +172,13 @@ namespace CapaModeloHRM.Sergio
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
             string sql = "SELECT E.idEmpleado FROM EMPLEADO E, RECLUTAMIENTO R, DEPARTAMENTOEMPRESA D WHERE E.idRecluta = R.idRecluta AND R.idDepatamentoEmpresa = D.idDepartamentoEmpresa and R.idDepatamentoEmpresa = "+department+" and E.estado = 1 ;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, Con.conexion());
+            return dataTable;
+        }
+        public OdbcDataAdapter llenarTblEmpleados(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "select E.idEmpleado, R.nombre, R.apellido, R.correo, D.nombreDepartamento FROM EMPLEADO E, RECLUTAMIENTO R, DEPARTAMENTOEMPRESA D WHERE R.idRecluta = E.idRecluta and D.idDepartamentoEmpresa = R.idDepatamentoEmpresa order by E.idEmpleado; ";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, Con.conexion());
             return dataTable;
         }

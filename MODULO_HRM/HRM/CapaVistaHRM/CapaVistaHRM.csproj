@@ -335,6 +335,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sergio\Mantenimientos\frmCapacitadorExterno.resx">
+      <DependentUpon>frmCapacitadorExterno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sergio\Mantenimientos\frmPuesto.resx">
       <DependentUpon>frmPuesto.cs</DependentUpon>
     </EmbeddedResource>
