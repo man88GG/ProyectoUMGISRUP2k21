@@ -22,13 +22,21 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre = "txtNombre";
-            string apellido = "txtApellido";
-            string prevPuesto = "txtPrevPuesto";
-            string prevDepartamento = "txtPrevDepartamento";
-            string empleado = txtIdEmpleado.Text.ToString();
-            llenarComboseInfoAscenso(nombre,apellido, prevPuesto, prevDepartamento,empleado);
-           
+            if (txtIdEmpleado.Text=="")
+            {
+
+            }
+            else
+            {
+                string nombre = "txtNombre";
+                string apellido = "txtApellido";
+                string prevPuesto = "txtPrevPuesto";
+                string prevDepartamento = "txtPrevDepartamento";
+                string empleado = txtIdEmpleado.Text.ToString();
+                llenarComboseInfoAscenso(nombre, apellido, prevPuesto, prevDepartamento, empleado);
+
+            }
+
         }
 
         //ASCENSOS

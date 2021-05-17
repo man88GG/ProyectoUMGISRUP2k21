@@ -113,7 +113,7 @@
             this.lblFechaInicio.AutoSize = true;
             this.lblFechaInicio.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
-            this.lblFechaInicio.Location = new System.Drawing.Point(250, 259);
+            this.lblFechaInicio.Location = new System.Drawing.Point(311, 256);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(15, 17);
             this.lblFechaInicio.TabIndex = 28;
@@ -124,7 +124,7 @@
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaFin.ForeColor = System.Drawing.Color.White;
-            this.lblFechaFin.Location = new System.Drawing.Point(280, 299);
+            this.lblFechaFin.Location = new System.Drawing.Point(307, 296);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(15, 17);
             this.lblFechaFin.TabIndex = 29;
@@ -146,7 +146,7 @@
             this.rdInactivo.AutoSize = true;
             this.rdInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdInactivo.ForeColor = System.Drawing.Color.White;
-            this.rdInactivo.Location = new System.Drawing.Point(189, 441);
+            this.rdInactivo.Location = new System.Drawing.Point(192, 441);
             this.rdInactivo.Name = "rdInactivo";
             this.rdInactivo.Size = new System.Drawing.Size(76, 21);
             this.rdInactivo.TabIndex = 38;
@@ -160,7 +160,7 @@
             this.rdActivo.AutoSize = true;
             this.rdActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdActivo.ForeColor = System.Drawing.Color.White;
-            this.rdActivo.Location = new System.Drawing.Point(116, 441);
+            this.rdActivo.Location = new System.Drawing.Point(119, 441);
             this.rdActivo.Name = "rdActivo";
             this.rdActivo.Size = new System.Drawing.Size(67, 21);
             this.rdActivo.TabIndex = 37;
@@ -199,7 +199,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(91, 26);
+            this.txtCodigo.Location = new System.Drawing.Point(119, 26);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 41;
@@ -230,7 +230,7 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(91, 61);
+            this.txtTitulo.Location = new System.Drawing.Point(119, 61);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(268, 20);
             this.txtTitulo.TabIndex = 52;
@@ -248,7 +248,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(110, 97);
+            this.txtDescripcion.Location = new System.Drawing.Point(119, 97);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(249, 60);
@@ -291,16 +291,16 @@
             // dtpFin
             // 
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFin.Location = new System.Drawing.Point(173, 296);
+            this.dtpFin.Location = new System.Drawing.Point(200, 293);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(82, 20);
+            this.dtpFin.Size = new System.Drawing.Size(94, 20);
             this.dtpFin.TabIndex = 61;
             this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
             // 
             // dtpInicio
             // 
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInicio.Location = new System.Drawing.Point(139, 259);
+            this.dtpInicio.Location = new System.Drawing.Point(200, 256);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(94, 20);
             this.dtpInicio.TabIndex = 62;
@@ -309,7 +309,7 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(79, 343);
+            this.cmbCourse.Location = new System.Drawing.Point(119, 339);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(168, 21);
             this.cmbCourse.TabIndex = 63;
@@ -349,7 +349,7 @@
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(259, 343);
+            this.txtCourse.Location = new System.Drawing.Point(299, 339);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(74, 20);
             this.txtCourse.TabIndex = 69;
@@ -358,7 +358,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(296, 441);
+            this.txtEstado.Location = new System.Drawing.Point(299, 441);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 20);
             this.txtEstado.TabIndex = 70;
@@ -367,7 +367,7 @@
             // 
             // txtCapacitador
             // 
-            this.txtCapacitador.Location = new System.Drawing.Point(297, 210);
+            this.txtCapacitador.Location = new System.Drawing.Point(306, 211);
             this.txtCapacitador.Name = "txtCapacitador";
             this.txtCapacitador.Size = new System.Drawing.Size(62, 20);
             this.txtCapacitador.TabIndex = 71;
@@ -376,7 +376,7 @@
             // 
             // txtDificultad
             // 
-            this.txtDificultad.Location = new System.Drawing.Point(228, 389);
+            this.txtDificultad.Location = new System.Drawing.Point(254, 386);
             this.txtDificultad.Name = "txtDificultad";
             this.txtDificultad.Size = new System.Drawing.Size(70, 20);
             this.txtDificultad.TabIndex = 72;
@@ -390,7 +390,7 @@
             "Fácil",
             "Medio",
             "Difícil"});
-            this.cmbDificultad.Location = new System.Drawing.Point(101, 389);
+            this.cmbDificultad.Location = new System.Drawing.Point(119, 385);
             this.cmbDificultad.Name = "cmbDificultad";
             this.cmbDificultad.Size = new System.Drawing.Size(121, 21);
             this.cmbDificultad.TabIndex = 73;

@@ -92,6 +92,7 @@
             this.txtCompetencia.Size = new System.Drawing.Size(80, 20);
             this.txtCompetencia.TabIndex = 4;
             this.txtCompetencia.Tag = "idCompetencia";
+            this.txtCompetencia.Visible = false;
             // 
             // txtEstado
             // 
@@ -100,6 +101,7 @@
             this.txtEstado.Size = new System.Drawing.Size(100, 20);
             this.txtEstado.TabIndex = 5;
             this.txtEstado.Tag = "estado";
+            this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged_1);
             // 
             // cmbCompetencia
@@ -229,6 +231,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.navegador1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.MaximizeBox = false;
             this.Name = "frmCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Curso";

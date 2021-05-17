@@ -64,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(700, 321);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
             this.Name = "frmVerEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerEmpleado";
