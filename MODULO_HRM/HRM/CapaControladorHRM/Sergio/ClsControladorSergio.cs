@@ -82,6 +82,14 @@ namespace CapaControladorHRM.Sergio
             return table;
         }
 
+        public DataTable llenarTblEmpleado(string tabla)
+        {
+            OdbcDataAdapter dt = Sn.llenarTblEmpleado(tabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
         public DataTable llenarTblDepartamentos(string tabla, string department)
         {
             OdbcDataAdapter dt = Sn.llenarTblDepartametos(tabla, department);

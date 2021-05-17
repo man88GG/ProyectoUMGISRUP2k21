@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControladorHRM.Sergio;
+using CapaVistaHRM.Sergio.Mantenimientos;
 
 namespace CapaVistaHRM.Sergio.Procesos
 {
@@ -124,6 +125,13 @@ namespace CapaVistaHRM.Sergio.Procesos
             txtNombre.Text = "";
             txtApellido.Text = "";
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmVerEmpleado frm = new frmVerEmpleado();
+            frm.Show();
+
         }
     }
 }

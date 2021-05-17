@@ -67,8 +67,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeticiones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
@@ -462,6 +462,17 @@
             this.btnEmpleados.Visible = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(4, 240);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(1011, 13);
+            this.label10.TabIndex = 49;
+            this.label10.Text = resources.GetString("label10.Text");
+            // 
             // dgvEmpleados
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
@@ -476,22 +487,11 @@
             this.dgvEmpleados.TabIndex = 48;
             this.dgvEmpleados.Visible = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(4, 240);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1011, 13);
-            this.label10.TabIndex = 49;
-            this.label10.Text = resources.GetString("label10.Text");
-            // 
             // frmPeticionCapacitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1028, 625);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvEmpleados);
@@ -580,7 +580,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEmpleados;
-        private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
     }
 }

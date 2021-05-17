@@ -80,7 +80,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(26, 143);
+            this.label3.Location = new System.Drawing.Point(26, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 25;
@@ -91,7 +91,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(26, 230);
+            this.label4.Location = new System.Drawing.Point(26, 259);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 26;
@@ -102,7 +102,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(26, 270);
+            this.label5.Location = new System.Drawing.Point(26, 299);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 17);
             this.label5.TabIndex = 27;
@@ -112,8 +112,8 @@
             // 
             this.lblFechaInicio.AutoSize = true;
             this.lblFechaInicio.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaInicio.Location = new System.Drawing.Point(250, 230);
+            this.lblFechaInicio.ForeColor = System.Drawing.Color.White;
+            this.lblFechaInicio.Location = new System.Drawing.Point(250, 259);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(15, 17);
             this.lblFechaInicio.TabIndex = 28;
@@ -123,8 +123,8 @@
             // 
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFin.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaFin.Location = new System.Drawing.Point(280, 270);
+            this.lblFechaFin.ForeColor = System.Drawing.Color.White;
+            this.lblFechaFin.Location = new System.Drawing.Point(280, 299);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(15, 17);
             this.lblFechaFin.TabIndex = 29;
@@ -135,7 +135,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(23, 412);
+            this.label8.Location = new System.Drawing.Point(23, 441);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 30;
@@ -146,7 +146,7 @@
             this.rdInactivo.AutoSize = true;
             this.rdInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdInactivo.ForeColor = System.Drawing.Color.White;
-            this.rdInactivo.Location = new System.Drawing.Point(189, 412);
+            this.rdInactivo.Location = new System.Drawing.Point(189, 441);
             this.rdInactivo.Name = "rdInactivo";
             this.rdInactivo.Size = new System.Drawing.Size(76, 21);
             this.rdInactivo.TabIndex = 38;
@@ -160,7 +160,7 @@
             this.rdActivo.AutoSize = true;
             this.rdActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdActivo.ForeColor = System.Drawing.Color.White;
-            this.rdActivo.Location = new System.Drawing.Point(116, 412);
+            this.rdActivo.Location = new System.Drawing.Point(116, 441);
             this.rdActivo.Name = "rdActivo";
             this.rdActivo.Size = new System.Drawing.Size(67, 21);
             this.rdActivo.TabIndex = 37;
@@ -174,7 +174,7 @@
             this.rdbExterno.AutoSize = true;
             this.rdbExterno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbExterno.ForeColor = System.Drawing.Color.White;
-            this.rdbExterno.Location = new System.Drawing.Point(200, 143);
+            this.rdbExterno.Location = new System.Drawing.Point(200, 172);
             this.rdbExterno.Name = "rdbExterno";
             this.rdbExterno.Size = new System.Drawing.Size(77, 21);
             this.rdbExterno.TabIndex = 40;
@@ -188,7 +188,7 @@
             this.rdbInterno.AutoSize = true;
             this.rdbInterno.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbInterno.ForeColor = System.Drawing.Color.White;
-            this.rdbInterno.Location = new System.Drawing.Point(119, 143);
+            this.rdbInterno.Location = new System.Drawing.Point(119, 172);
             this.rdbInterno.Name = "rdbInterno";
             this.rdbInterno.Size = new System.Drawing.Size(72, 21);
             this.rdbInterno.TabIndex = 39;
@@ -206,9 +206,14 @@
             // 
             // dgvEncabezado
             // 
+            this.dgvEncabezado.AllowUserToAddRows = false;
+            this.dgvEncabezado.AllowUserToDeleteRows = false;
+            this.dgvEncabezado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEncabezado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEncabezado.Location = new System.Drawing.Point(412, 97);
+            this.dgvEncabezado.Location = new System.Drawing.Point(414, 55);
             this.dgvEncabezado.Name = "dgvEncabezado";
+            this.dgvEncabezado.ReadOnly = true;
+            this.dgvEncabezado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEncabezado.Size = new System.Drawing.Size(642, 172);
             this.dgvEncabezado.TabIndex = 50;
             // 
@@ -227,7 +232,7 @@
             // 
             this.txtTitulo.Location = new System.Drawing.Point(91, 61);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(188, 20);
+            this.txtTitulo.Size = new System.Drawing.Size(268, 20);
             this.txtTitulo.TabIndex = 52;
             // 
             // label10
@@ -246,15 +251,16 @@
             this.txtDescripcion.Location = new System.Drawing.Point(110, 97);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(188, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(249, 60);
             this.txtDescripcion.TabIndex = 54;
             // 
             // txtExterno
             // 
-            this.txtExterno.Location = new System.Drawing.Point(284, 145);
+            this.txtExterno.Location = new System.Drawing.Point(284, 174);
             this.txtExterno.Name = "txtExterno";
             this.txtExterno.Size = new System.Drawing.Size(75, 20);
             this.txtExterno.TabIndex = 55;
+            this.txtExterno.Visible = false;
             this.txtExterno.TextChanged += new System.EventHandler(this.txtExterno_TextChanged);
             // 
             // label11
@@ -262,7 +268,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(26, 181);
+            this.label11.Location = new System.Drawing.Point(26, 210);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 17);
             this.label11.TabIndex = 56;
@@ -276,7 +282,7 @@
             // cmbCapacitador
             // 
             this.cmbCapacitador.FormattingEnabled = true;
-            this.cmbCapacitador.Location = new System.Drawing.Point(119, 181);
+            this.cmbCapacitador.Location = new System.Drawing.Point(119, 210);
             this.cmbCapacitador.Name = "cmbCapacitador";
             this.cmbCapacitador.Size = new System.Drawing.Size(171, 21);
             this.cmbCapacitador.TabIndex = 58;
@@ -285,7 +291,7 @@
             // dtpFin
             // 
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFin.Location = new System.Drawing.Point(173, 267);
+            this.dtpFin.Location = new System.Drawing.Point(173, 296);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(82, 20);
             this.dtpFin.TabIndex = 61;
@@ -294,7 +300,7 @@
             // dtpInicio
             // 
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInicio.Location = new System.Drawing.Point(139, 230);
+            this.dtpInicio.Location = new System.Drawing.Point(139, 259);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(94, 20);
             this.dtpInicio.TabIndex = 62;
@@ -303,7 +309,7 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(79, 314);
+            this.cmbCourse.Location = new System.Drawing.Point(79, 343);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(168, 21);
             this.cmbCourse.TabIndex = 63;
@@ -314,7 +320,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(26, 314);
+            this.label6.Location = new System.Drawing.Point(26, 343);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 17);
             this.label6.TabIndex = 64;
@@ -325,7 +331,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 360);
+            this.label7.Location = new System.Drawing.Point(26, 389);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
             this.label7.TabIndex = 67;
@@ -333,7 +339,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(508, 393);
+            this.btnInsertar.Location = new System.Drawing.Point(139, 498);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(80, 40);
             this.btnInsertar.TabIndex = 68;
@@ -343,34 +349,38 @@
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(259, 314);
+            this.txtCourse.Location = new System.Drawing.Point(259, 343);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(74, 20);
             this.txtCourse.TabIndex = 69;
+            this.txtCourse.Visible = false;
             this.txtCourse.TextChanged += new System.EventHandler(this.txtCourse_TextChanged);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(296, 412);
+            this.txtEstado.Location = new System.Drawing.Point(296, 441);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 20);
             this.txtEstado.TabIndex = 70;
+            this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtActivo_TextChanged);
             // 
             // txtCapacitador
             // 
-            this.txtCapacitador.Location = new System.Drawing.Point(297, 181);
+            this.txtCapacitador.Location = new System.Drawing.Point(297, 210);
             this.txtCapacitador.Name = "txtCapacitador";
             this.txtCapacitador.Size = new System.Drawing.Size(62, 20);
             this.txtCapacitador.TabIndex = 71;
+            this.txtCapacitador.Visible = false;
             this.txtCapacitador.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtDificultad
             // 
-            this.txtDificultad.Location = new System.Drawing.Point(228, 360);
+            this.txtDificultad.Location = new System.Drawing.Point(228, 389);
             this.txtDificultad.Name = "txtDificultad";
             this.txtDificultad.Size = new System.Drawing.Size(70, 20);
             this.txtDificultad.TabIndex = 72;
+            this.txtDificultad.Visible = false;
             // 
             // cmbDificultad
             // 
@@ -380,7 +390,7 @@
             "Fácil",
             "Medio",
             "Difícil"});
-            this.cmbDificultad.Location = new System.Drawing.Point(101, 360);
+            this.cmbDificultad.Location = new System.Drawing.Point(101, 389);
             this.cmbDificultad.Name = "cmbDificultad";
             this.cmbDificultad.Size = new System.Drawing.Size(121, 21);
             this.cmbDificultad.TabIndex = 73;
@@ -390,7 +400,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1091, 568);
             this.Controls.Add(this.cmbDificultad);
             this.Controls.Add(this.txtDificultad);
@@ -423,7 +433,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmCapacitacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCapacitacion";
             this.Load += new System.EventHandler(this.frmCapacitacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncabezado)).EndInit();

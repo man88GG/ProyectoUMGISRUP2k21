@@ -168,6 +168,14 @@ namespace CapaModeloHRM.Sergio
             return dataTable;
         }
 
+        public OdbcDataAdapter llenarTblEmpleado(string tabla)// metodo  que obtinene el contenio de una tabla
+        {
+            //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "select E.idEmpleado, R.nombre, R.apellido, R.correo, D.nombreDepartamento,P.idPuesto, P.nombrePuesto FROM EMPLEADO E, RECLUTAMIENTO R, DEPARTAMENTOEMPRESA D, PUESTO P WHERE R.idRecluta = E.idRecluta and D.idDepartamentoEmpresa = R.idDepatamentoEmpresa and R.idPUesto = P.idPuesto order by E.idEmpleado; ";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, Con.conexion());
+            return dataTable;
+        }
+
         public OdbcDataAdapter llenarTblDepartametos(string tabla, string department)// metodo  que obtinene el contenio de una tabla
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
