@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControladorHRM.Sergio;
 using System.Text.RegularExpressions;
+using CapaVistaHRM.Sergio.Mantenimientos;
 
 namespace CapaVistaHRM.Sergio.Procesos
 {
@@ -456,7 +457,7 @@ namespace CapaVistaHRM.Sergio.Procesos
                 txtRangoFinal.Visible = true;
                 cmbEmpleado.Visible = false;
                 btnEmpleados.Visible = true;
-                dgvEmpleados.Visible = true;
+                
             } else if (cmbOpciones.SelectedIndex ==0)
             {
                 btnEmpleados.Visible = false;
@@ -516,10 +517,8 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            string tabla = "EMPLEADO";
-            DataTable dt = cn.llenarTblEmpleados(tabla);
-            dgvEmpleados.DataSource = dt;
-            lblTitle.Text = "EMPLEADOS";
+            frmVerEmpleado frm = new frmVerEmpleado();
+            frm.Show();
         }
 
         private void txtEmpleado_TextChanged(object sender, EventArgs e)

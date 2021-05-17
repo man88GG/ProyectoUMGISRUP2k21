@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControladorHRM.Sergio;
+using CapaVistaHRM.Sergio.Mantenimientos;
 
 namespace CapaVistaHRM.Sergio.Procesos
 {
@@ -21,13 +22,21 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre = "txtNombre";
-            string apellido = "txtApellido";
-            string prevPuesto = "txtPrevPuesto";
-            string prevDepartamento = "txtPrevDepartamento";
-            string empleado = txtIdEmpleado.Text.ToString();
-            llenarComboseInfoAscenso(nombre,apellido, prevPuesto, prevDepartamento,empleado);
-           
+            if (txtIdEmpleado.Text=="")
+            {
+
+            }
+            else
+            {
+                string nombre = "txtNombre";
+                string apellido = "txtApellido";
+                string prevPuesto = "txtPrevPuesto";
+                string prevDepartamento = "txtPrevDepartamento";
+                string empleado = txtIdEmpleado.Text.ToString();
+                llenarComboseInfoAscenso(nombre, apellido, prevPuesto, prevDepartamento, empleado);
+
+            }
+
         }
 
         //ASCENSOS
@@ -124,6 +133,13 @@ namespace CapaVistaHRM.Sergio.Procesos
             txtNombre.Text = "";
             txtApellido.Text = "";
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmVerEmpleado frm = new frmVerEmpleado();
+            frm.Show();
+
         }
     }
 }

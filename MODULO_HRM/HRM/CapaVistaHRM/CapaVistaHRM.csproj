@@ -239,11 +239,11 @@
     <Compile Include="Sergio\Mantenimientos\frmPuesto.Designer.cs">
       <DependentUpon>frmPuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sergio\Procesos\Form1.cs">
+    <Compile Include="Sergio\Mantenimientos\frmVerEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sergio\Procesos\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Sergio\Mantenimientos\frmVerEmpleado.Designer.cs">
+      <DependentUpon>frmVerEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Sergio\Procesos\frmAscenso.cs">
       <SubType>Form</SubType>
@@ -338,8 +338,17 @@
     <EmbeddedResource Include="Sergio\Mantenimientos\frmCapacitadorExterno.resx">
       <DependentUpon>frmCapacitadorExterno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sergio\Mantenimientos\frmCompetencias.resx">
+      <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sergio\Mantenimientos\frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sergio\Mantenimientos\frmPuesto.resx">
       <DependentUpon>frmPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sergio\Mantenimientos\frmVerEmpleado.resx">
+      <DependentUpon>frmVerEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sergio\Procesos\frmAscenso.resx">
       <DependentUpon>frmAscenso.cs</DependentUpon>

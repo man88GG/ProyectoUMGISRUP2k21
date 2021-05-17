@@ -49,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtRecluta = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -261,12 +262,23 @@
             this.txtRecluta.TabIndex = 32;
             this.txtRecluta.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(651, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Ver empleados";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmAscenso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(801, 448);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRecluta);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
@@ -278,7 +290,9 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtIdEmpleado);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmAscenso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAscenso";
             this.Load += new System.EventHandler(this.frmAscenso_Load);
             this.groupBox1.ResumeLayout(false);
@@ -313,5 +327,6 @@
         private System.Windows.Forms.TextBox txtPrevPuesto;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtRecluta;
+        private System.Windows.Forms.Button button1;
     }
 }
