@@ -14,6 +14,7 @@ namespace CapaVistaHRM.Jose.Procesos
     public partial class frmNominaIndividual : Form
     {
         ClsControladorJose Cn = new ClsControladorJose();
+        ClsValidaciones Validar = new ClsValidaciones();
         public frmNominaIndividual()
         {
             InitializeComponent();
@@ -247,6 +248,16 @@ namespace CapaVistaHRM.Jose.Procesos
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "AyudaJose/AyudaNomina.chm","NominaIndividual.html");
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.funcSoloNumeros(e);
+        }
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.funcSoloNumerosDecimales(e);
         }
     }
 }

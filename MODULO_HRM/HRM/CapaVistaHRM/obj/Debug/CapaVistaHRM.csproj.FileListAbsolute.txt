@@ -705,6 +705,13 @@ C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmInduccion.resources
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Properties.Resources.resources
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCapacitadorExterno.resources
+<<<<<<< HEAD
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCompetencias.resources
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCurso.resources
 C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmVerEmpleado.resources
+=======
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Mantenimientos.frmTipoInduccion.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmContratacion.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmInduccion.resources
+D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCapacitadorExterno.resources
+>>>>>>> ee3dabd3cd0f9612f6fed385ad85ca4ac669d2fa

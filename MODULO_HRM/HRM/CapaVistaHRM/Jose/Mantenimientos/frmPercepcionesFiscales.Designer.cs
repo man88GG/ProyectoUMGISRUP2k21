@@ -553,6 +553,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtNombre.Size = new System.Drawing.Size(397, 27);
             this.txtNombre.TabIndex = 95;
             this.txtNombre.Tag = "tipoPercepcionDeduccion";
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtDescripcion
             // 
@@ -587,6 +588,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             this.txtCantidad.TabIndex = 98;
             this.txtCantidad.Tag = "valor";
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtSigno
             // 
