@@ -444,5 +444,17 @@ namespace CapaVistaHRM.Jose.Mantenimientos
                 rdIndividual.Checked = true;
             }
         }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            validar.funcSoloNumerosDecimales(e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.funcSoloLetras(e);
+            validar.ValidadCantidad(e, txtNombre, 48);
+        }
     }
 }

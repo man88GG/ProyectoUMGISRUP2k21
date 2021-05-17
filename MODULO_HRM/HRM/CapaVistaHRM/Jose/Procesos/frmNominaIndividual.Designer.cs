@@ -256,6 +256,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(126, 27);
             this.txtCantidad.TabIndex = 14;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtValor
             // 
@@ -263,6 +264,7 @@ namespace CapaVistaHRM.Jose.Procesos
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(126, 27);
             this.txtValor.TabIndex = 15;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // lblCantidad
             // 
