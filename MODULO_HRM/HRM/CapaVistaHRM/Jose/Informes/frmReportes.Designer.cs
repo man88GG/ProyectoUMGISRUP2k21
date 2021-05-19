@@ -33,8 +33,8 @@ namespace CapaVistaHRM.Jose.Informes
             this.lblTitulo = new System.Windows.Forms.Label();
             this.rdGeneral = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdEmpleado = new System.Windows.Forms.RadioButton();
             this.rdFechas = new System.Windows.Forms.RadioButton();
+            this.rdEmpleado = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.cmbNomina = new System.Windows.Forms.ComboBox();
@@ -99,19 +99,6 @@ namespace CapaVistaHRM.Jose.Informes
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // rdEmpleado
-            // 
-            this.rdEmpleado.AutoSize = true;
-            this.rdEmpleado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rdEmpleado.Location = new System.Drawing.Point(151, 26);
-            this.rdEmpleado.Name = "rdEmpleado";
-            this.rdEmpleado.Size = new System.Drawing.Size(141, 24);
-            this.rdEmpleado.TabIndex = 3;
-            this.rdEmpleado.TabStop = true;
-            this.rdEmpleado.Text = "Por Empleado";
-            this.rdEmpleado.UseVisualStyleBackColor = true;
-            this.rdEmpleado.CheckedChanged += new System.EventHandler(this.rdEmpleado_CheckedChanged);
-            // 
             // rdFechas
             // 
             this.rdFechas.AutoSize = true;
@@ -124,6 +111,19 @@ namespace CapaVistaHRM.Jose.Informes
             this.rdFechas.Text = "Por Fechas";
             this.rdFechas.UseVisualStyleBackColor = true;
             this.rdFechas.CheckedChanged += new System.EventHandler(this.rdFechas_CheckedChanged);
+            // 
+            // rdEmpleado
+            // 
+            this.rdEmpleado.AutoSize = true;
+            this.rdEmpleado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rdEmpleado.Location = new System.Drawing.Point(151, 26);
+            this.rdEmpleado.Name = "rdEmpleado";
+            this.rdEmpleado.Size = new System.Drawing.Size(141, 24);
+            this.rdEmpleado.TabIndex = 3;
+            this.rdEmpleado.TabStop = true;
+            this.rdEmpleado.Text = "Por Empleado";
+            this.rdEmpleado.UseVisualStyleBackColor = true;
+            this.rdEmpleado.CheckedChanged += new System.EventHandler(this.rdEmpleado_CheckedChanged);
             // 
             // btnBuscar
             // 
@@ -255,7 +255,8 @@ namespace CapaVistaHRM.Jose.Informes
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvDatos);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reportes";

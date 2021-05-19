@@ -69,6 +69,7 @@ namespace CapaVistaHRM.MDI
             this.ascensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambioDeContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +87,6 @@ namespace CapaVistaHRM.MDI
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bitacoraToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -405,9 +405,16 @@ namespace CapaVistaHRM.MDI
             // nominaToolStripMenuItem2
             // 
             this.nominaToolStripMenuItem2.Name = "nominaToolStripMenuItem2";
-            this.nominaToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.nominaToolStripMenuItem2.Size = new System.Drawing.Size(156, 26);
             this.nominaToolStripMenuItem2.Text = "Nomina";
             this.nominaToolStripMenuItem2.Click += new System.EventHandler(this.nominaToolStripMenuItem2_Click);
+            // 
+            // bitacoraToolStripMenuItem1
+            // 
+            this.bitacoraToolStripMenuItem1.Name = "bitacoraToolStripMenuItem1";
+            this.bitacoraToolStripMenuItem1.Size = new System.Drawing.Size(156, 26);
+            this.bitacoraToolStripMenuItem1.Text = "Bitacora";
+            this.bitacoraToolStripMenuItem1.Click += new System.EventHandler(this.bitacoraToolStripMenuItem1_Click);
             // 
             // herramientasToolStripMenuItem
             // 
@@ -541,17 +548,12 @@ namespace CapaVistaHRM.MDI
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // bitacoraToolStripMenuItem1
-            // 
-            this.bitacoraToolStripMenuItem1.Name = "bitacoraToolStripMenuItem1";
-            this.bitacoraToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.bitacoraToolStripMenuItem1.Text = "Bitacora";
-            this.bitacoraToolStripMenuItem1.Click += new System.EventHandler(this.bitacoraToolStripMenuItem1_Click);
-            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CapaVistaHRM.Properties.Resources.fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1267, 562);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
