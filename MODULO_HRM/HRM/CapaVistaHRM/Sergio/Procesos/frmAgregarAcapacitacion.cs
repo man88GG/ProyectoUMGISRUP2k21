@@ -22,7 +22,10 @@ namespace CapaVistaHRM.Sergio.Procesos
             actualizardatagriew();
             CodigoMaximo("DETALLECAPACITACION", "idEncabezadoCapacitacion", txtCodigo);
             cmbOpciones.SelectedIndex = 0;
+            cmbCapacitacion.Items.Clear();
+            cmbCapacitacion.Items.Add("Seleccione...");
             llenarComboBox("ENCABEZADOCAPACITACION", "tituloCapacitacion",cmbCapacitacion ); //tabla, campo, combo|||| TABLAS(RECLUTAMIENTO, EMPLEADO),CAMPOS (R.nombre,R.apellido,R.idRecluta)
+            
         }
 
         private void cmbOpciones_SelectedIndexChanged(object sender, EventArgs e)
@@ -315,7 +318,10 @@ namespace CapaVistaHRM.Sergio.Procesos
 
         private void cmbCapacitacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCapacitacion.Text = cmbCapacitacion.SelectedIndex.ToString();
+           
+                txtCapacitacion.Text = cmbCapacitacion.SelectedIndex.ToString();
+           
+           
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
