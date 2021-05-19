@@ -28,7 +28,28 @@ namespace CapaModeloHRM.Jose
             return Codigo + 1;
         }
 
-       
+        public string[] funcLlenarComboEspecifico(string Tabla1, string Campo1, int Id, string nombreID)
+        {
+            string campoTabla = Campo1;
+            string nombreTabla = Tabla1;
+            int Codigo = Id;
+            string nombreCodigo = nombreID;
+            string[] Campos = new string[100];
+            int I = 0;
+            string Sql = "SELECT " + campoTabla + " FROM " + nombreTabla + "  WHERE  " + nombreCodigo + " = " + Codigo + "    ; ";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[I] = Reader.GetValue(0).ToString();
+                    I++;
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla1 + "\n -" + Campo1); }
+            return Campos;
+        }
 
         public string[] funcLlenarCmb(string Tabla, string Campo)
         {
@@ -77,6 +98,10 @@ namespace CapaModeloHRM.Jose
 
         public bool procInsertarDatos(string tabla, List<string> lista)
         {
+            OdbcConnection con = Con.conexion();
+            OdbcCommand comando = con.CreateCommand();
+            OdbcTransaction transaccion;
+            transaccion = con.BeginTransaction();
             string sql = " INSERT INTO " + tabla + " VALUES (";
             string consulta = sql;
             int contador = lista.Count();
@@ -141,93 +166,21 @@ namespace CapaModeloHRM.Jose
             }
             try
             {
+               
+        
+                comando.Transaction = transaccion;
                 OdbcCommand comm = new OdbcCommand(sql, Con.conexion());
                 OdbcDataReader mostrarC = comm.ExecuteReader();
                 Console.WriteLine("Los Datos se guardaron correctamente");
+                transaccion.Commit();
+                Console.WriteLine("Transaccion exitosa!!!!");
                 return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message.ToString() + " \nNo existe la tabla o los campos indicados \n -" + tabla + "\n -" + ex + " " + sql);
-                return false;
-            }
-        }
-
-        public bool procModificarPorMedioDeSql(string sql)
-        {
-            string Consulta = sql;
-            try
-            {
-                OdbcCommand comm = new OdbcCommand(Consulta, Con.conexion());
-                OdbcDataReader mostrarC = comm.ExecuteReader();
-                Console.WriteLine("Los Datos se modificaron correctamente");
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message.ToString() + " \nNo se puede modificar revise: \n -" + Consulta + "\n -");
-                return false;
-            }
-        }
-        public bool procModificar(string tabla, List<string> campos, List<string> datos)
-        {
-            int contador = datos.Count();
-            string sqlInicio = "UPDATE " + tabla + " SET  ";
-            string consulta = sqlInicio;
-            int i = 1;
-            while (i < contador)
-            {
-                if (i != (contador - 1))
-                {
-                    string campo = campos.ElementAt(i);
-                    sqlInicio += " " + campo + " = ";
-                    consulta += " " + campo + " = ";
-                    string dato = datos.ElementAt(i);
-                    sqlInicio += " '" + dato + "', ";
-                    consulta += " " + dato + ", ";
-                }
-                else
-                {
-                    string campo = campos.ElementAt(i);
-                    sqlInicio += " " + campo + " = ";
-                    consulta += " " + campo + " = ";
-                    string dato = datos.ElementAt(i);
-                    sqlInicio += " '" + dato + "' ";
-                    consulta += " " + dato + " ";
-                }
-                i++;
-            }
-            sqlInicio += " WHERE " + campos.ElementAt(0) + " = " + datos.ElementAt(0) + "; ";
-            consulta += " WHERE " + campos.ElementAt(0) + " = " + datos.ElementAt(0) + "; ";
-
-            try
-            {
-                OdbcCommand comm = new OdbcCommand(sqlInicio, Con.conexion());
-                OdbcDataReader mostrarC = comm.ExecuteReader();
-                Console.WriteLine("Los Datos se guardaron correctamente");
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message.ToString() + " \nNo existe la tabla o los campos indicados \n -" + tabla + "\n -");
-                return false;
-            }
-        }
-
-        public bool procEliminar(string tabla, string campo, string idTabla, string id)
-        {
-            string sql = "UPDATE " + tabla + " SET " + campo + "= 0 WHERE " + idTabla + "= " + id + " ";
-
-            try
-            {
-                OdbcCommand command = new OdbcCommand(sql, Con.conexion());
-                OdbcDataReader odbcDataReader = command.ExecuteReader();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message.ToString() + " \nError en Eliminar registro, revise los parametros \n -" + tabla + "\n -" + campo);
+                transaccion.Rollback();
+                Console.WriteLine("Fallida!!!!");
                 return false;
             }
         }
@@ -266,35 +219,11 @@ namespace CapaModeloHRM.Jose
             adaptador.Fill(dt);
             return dt;
         }
-
-        public string[] modificarPercepcion(string Tabla, int Campo)
-        {
-            string[] Campos = new string[100];
-            string Sql = "SELECT *  FROM " + Tabla + " WHERE estado = 1 and idTipoPercepcionDeduccion = " + Campo + " ;";
-            try
-            {
-                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
-                OdbcDataReader Reader = Command.ExecuteReader();
-                while (Reader.Read())
-                {
-                    Campos[0] = Reader.GetValue(0).ToString();
-                    Campos[1] = Reader.GetValue(1).ToString();
-                    Campos[2] = Reader.GetValue(2).ToString();
-                    Campos[3] = Reader.GetValue(3).ToString();
-                    Campos[4] = Reader.GetValue(4).ToString();
-                    Campos[5] = Reader.GetValue(5).ToString();
-                    Campos[6] = Reader.GetValue(6).ToString();
-                }
-            }
-            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla + "\n -" + Campo); }
-            return Campos;
-        }
-
         public string[] obtenerEmpleadoSalario()
         {
             string[] Campos = new string[300];
             int PosP = 0;
-            string Sql = "SELECT E.idEmpleado,R.nombre,R.apellido,P.salario from empleado E, puesto P , reclutamiento R where E.idEmpleado = R.idRecluta and R.idPuesto =P.idPuesto; ";
+            string Sql = "SELECT E.idEmpleado,R.nombre,R.apellido,P.salario from empleado E, puesto P , reclutamiento R where E.idEmpleado = R.idRecluta and R.idPuesto =P.idPuesto and E.estado = 1; ";
             try
             {
                 OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());

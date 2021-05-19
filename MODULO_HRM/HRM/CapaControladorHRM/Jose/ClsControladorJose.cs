@@ -13,7 +13,11 @@ namespace CapaControladorHRM.Jose
     public class ClsControladorJose
     {
         ClsSentenciasJose Sn = new ClsSentenciasJose();
-
+        public string[] funcItemsComboBox(string Tabla1, string Campo1, int Id, string nombreID)
+        {
+            string[] Items = Sn.funcLlenarComboEspecifico(Tabla1, Campo1, Id, nombreID);
+            return Items;
+        }
         public int funcCodigoMaximo(string Tabla, string Campo)
         {
             int CodigoNuevo = Sn.funcObtenerCodigo(Tabla, Campo);
@@ -47,44 +51,9 @@ namespace CapaControladorHRM.Jose
             return Items;
         }
 
-        public string[] funModicicarPercepcion(string Tabla, int Campo)
-        {
-            string[] Items = Sn.modificarPercepcion(Tabla, Campo);
-            return Items;
-        }
-        public string[] items(string tabla, string campo1)
-        {
-            string[] Items = Sn.funcLlenarCmb(tabla, campo1);
-            return Items;
-        }
- 
         public bool procDatosInsertar(string tabla, List<string> lista)
         {
             if (Sn.procInsertarDatos(tabla, lista))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public bool procDatosModificar(string tabla, List<string> campos, List<string> datos)
-        {
-            if (Sn.procModificar(tabla, campos, datos))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-        }
-        public bool funcEliminar(string tabla, string campo, string idTabla, string id)
-        {
-
-            if (Sn.procEliminar(tabla, campo, idTabla, id))
             {
                 return true;
             }

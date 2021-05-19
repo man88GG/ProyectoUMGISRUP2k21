@@ -48,7 +48,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
             this.navegador1.Location = new System.Drawing.Point(13, 13);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1412, 129);
             this.navegador1.TabIndex = 0;
@@ -187,7 +187,7 @@ namespace CapaVistaHRM.Jose.Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1430, 503);
             this.Controls.Add(this.rdInactivo);
             this.Controls.Add(this.rdActivo);

@@ -17,6 +17,7 @@ using CapaVistaHRM.Emilio.Mantenimientos;
 using CapaVistaHRM.Jose.Procesos;
 using CapaVistaHRM.Manuel.Procesos;
 using CapaVistaHRM.Sergio.Procesos;
+using CapaVistaHRM.Jose.Informes;
 
 namespace CapaVistaHRM.MDI
 {
@@ -885,6 +886,56 @@ namespace CapaVistaHRM.MDI
                 }
 
                 frmFormulario = new frmInduccion();
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al mantenimiento de Tipo de Cursos", 306);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void nominaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("306", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al mantenimiento de Tipo de Cursos", 306);
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmReportes);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new frmReportes();
+                frmFormulario.MdiParent = this;
+                frmFormulario.Show();
+            }
+            else
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Trato de ingresar al mantenimiento de Tipo de Cursos", 306);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void bitacoraToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("306", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                bit.insert("Ingreso al mantenimiento de Tipo de Cursos", 306);
+                Form frmFormulario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Bitacoria);
+                if (frmFormulario != null)
+                {
+                    frmFormulario.BringToFront();
+                    return;
+                }
+
+                frmFormulario = new Bitacoria();
                 frmFormulario.MdiParent = this;
                 frmFormulario.Show();
             }
