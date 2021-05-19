@@ -302,7 +302,7 @@ namespace CapaVistaHRM.Jose.Procesos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(995, 460);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.lblValor);
