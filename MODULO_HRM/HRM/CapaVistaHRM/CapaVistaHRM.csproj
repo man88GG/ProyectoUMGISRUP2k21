@@ -353,6 +353,15 @@
     <EmbeddedResource Include="Manuel\Procesos\frmIngresoReclutas.resx">
       <DependentUpon>frmIngresoReclutas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Procesos\frmMostrarBancoTalento.resx">
+      <DependentUpon>frmMostrarBancoTalento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Procesos\frmMostrarEmpleado.resx">
+      <DependentUpon>frmMostrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manuel\Procesos\frmMostrarReclutas.resx">
+      <DependentUpon>frmMostrarReclutas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDI\frmMDI.resx">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </EmbeddedResource>
