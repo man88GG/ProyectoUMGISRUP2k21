@@ -71,6 +71,18 @@
     <Compile Include="Emilio\Procesos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jose\Informes\Bitacoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Informes\Bitacoria.Designer.cs">
+      <DependentUpon>Bitacoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jose\Informes\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jose\Informes\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Jose\Mantenimientos\frmContratos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,7 @@
     <Compile Include="Jose\Mantenimientos\frmTipoMoneda.Designer.cs">
       <DependentUpon>frmTipoMoneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jose\Procesos\DGVPrinter.cs" />
     <Compile Include="Jose\Procesos\frmGenerarNomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Emilio\Mantenimientos\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Informes\Bitacoria.resx">
+      <DependentUpon>Bitacoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jose\Informes\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jose\Mantenimientos\frmContratos.resx">
       <DependentUpon>frmContratos.cs</DependentUpon>
