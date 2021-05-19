@@ -492,7 +492,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(1028, 625);
+            this.ClientSize = new System.Drawing.Size(968, 625);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.btnEmpleados);

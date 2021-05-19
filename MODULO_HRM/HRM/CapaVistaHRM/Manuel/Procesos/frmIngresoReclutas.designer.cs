@@ -106,10 +106,10 @@
             this.tbpDatosPersonales.Controls.Add(this.DatosP3);
             this.tbpDatosPersonales.Controls.Add(this.gbxSexo);
             this.tbpDatosPersonales.Controls.Add(this.gbxFormacionAcademica);
-            this.tbpDatosPersonales.Location = new System.Drawing.Point(4, 29);
+            this.tbpDatosPersonales.Location = new System.Drawing.Point(4, 26);
             this.tbpDatosPersonales.Margin = new System.Windows.Forms.Padding(5);
             this.tbpDatosPersonales.Name = "tbpDatosPersonales";
-            this.tbpDatosPersonales.Size = new System.Drawing.Size(954, 466);
+            this.tbpDatosPersonales.Size = new System.Drawing.Size(954, 469);
             this.tbpDatosPersonales.TabIndex = 3;
             this.tbpDatosPersonales.Text = "Datos Personales";
             // 
@@ -134,7 +134,7 @@
             this.lblTipoLicencia.Location = new System.Drawing.Point(8, 89);
             this.lblTipoLicencia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTipoLicencia.Name = "lblTipoLicencia";
-            this.lblTipoLicencia.Size = new System.Drawing.Size(192, 20);
+            this.lblTipoLicencia.Size = new System.Drawing.Size(158, 17);
             this.lblTipoLicencia.TabIndex = 22;
             this.lblTipoLicencia.Text = "Tipo Licencia Conducir";
             // 
@@ -143,7 +143,7 @@
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(12, 170);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(5);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(344, 27);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(344, 23);
             this.dtpFechaNacimiento.TabIndex = 29;
             // 
             // lblFechaNacimiento
@@ -154,7 +154,7 @@
             this.lblFechaNacimiento.Location = new System.Drawing.Point(8, 134);
             this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(174, 20);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(143, 17);
             this.lblFechaNacimiento.TabIndex = 28;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
@@ -169,7 +169,7 @@
             this.cmbEstadoCivil.Location = new System.Drawing.Point(210, 26);
             this.cmbEstadoCivil.Margin = new System.Windows.Forms.Padding(5);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(146, 28);
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(146, 25);
             this.cmbEstadoCivil.TabIndex = 5;
             // 
             // lblEstadoCivil
@@ -179,7 +179,7 @@
             this.lblEstadoCivil.Location = new System.Drawing.Point(8, 29);
             this.lblEstadoCivil.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(103, 20);
+            this.lblEstadoCivil.Size = new System.Drawing.Size(86, 17);
             this.lblEstadoCivil.TabIndex = 3;
             this.lblEstadoCivil.Text = "Estado Civil";
             // 
@@ -190,7 +190,7 @@
             this.cmbTipoLicencia.Location = new System.Drawing.Point(210, 86);
             this.cmbTipoLicencia.Margin = new System.Windows.Forms.Padding(5);
             this.cmbTipoLicencia.Name = "cmbTipoLicencia";
-            this.cmbTipoLicencia.Size = new System.Drawing.Size(146, 28);
+            this.cmbTipoLicencia.Size = new System.Drawing.Size(146, 25);
             this.cmbTipoLicencia.TabIndex = 23;
             // 
             // gbxSexo
@@ -216,7 +216,7 @@
             this.rbtnFemenino.Location = new System.Drawing.Point(189, 34);
             this.rbtnFemenino.Margin = new System.Windows.Forms.Padding(5);
             this.rbtnFemenino.Name = "rbtnFemenino";
-            this.rbtnFemenino.Size = new System.Drawing.Size(109, 24);
+            this.rbtnFemenino.Size = new System.Drawing.Size(90, 21);
             this.rbtnFemenino.TabIndex = 1;
             this.rbtnFemenino.TabStop = true;
             this.rbtnFemenino.Text = "Femenino";
@@ -231,7 +231,7 @@
             this.rbtnMasculino.Location = new System.Drawing.Point(20, 34);
             this.rbtnMasculino.Margin = new System.Windows.Forms.Padding(5);
             this.rbtnMasculino.Name = "rbtnMasculino";
-            this.rbtnMasculino.Size = new System.Drawing.Size(111, 24);
+            this.rbtnMasculino.Size = new System.Drawing.Size(90, 21);
             this.rbtnMasculino.TabIndex = 0;
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "Masculino";
@@ -260,7 +260,7 @@
             this.txtProfesion.Location = new System.Drawing.Point(195, 135);
             this.txtProfesion.Margin = new System.Windows.Forms.Padding(5);
             this.txtProfesion.Name = "txtProfesion";
-            this.txtProfesion.Size = new System.Drawing.Size(302, 27);
+            this.txtProfesion.Size = new System.Drawing.Size(302, 23);
             this.txtProfesion.TabIndex = 7;
             this.txtProfesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -271,7 +271,7 @@
             this.cmbNivelEstudios.Location = new System.Drawing.Point(195, 66);
             this.cmbNivelEstudios.Margin = new System.Windows.Forms.Padding(5);
             this.cmbNivelEstudios.Name = "cmbNivelEstudios";
-            this.cmbNivelEstudios.Size = new System.Drawing.Size(302, 28);
+            this.cmbNivelEstudios.Size = new System.Drawing.Size(302, 25);
             this.cmbNivelEstudios.TabIndex = 7;
             // 
             // lblProfesion
@@ -281,7 +281,7 @@
             this.lblProfesion.Location = new System.Drawing.Point(12, 138);
             this.lblProfesion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblProfesion.Name = "lblProfesion";
-            this.lblProfesion.Size = new System.Drawing.Size(84, 20);
+            this.lblProfesion.Size = new System.Drawing.Size(68, 17);
             this.lblProfesion.TabIndex = 1;
             this.lblProfesion.Text = "Profesión";
             // 
@@ -292,22 +292,22 @@
             this.lblNivelEstudios.Location = new System.Drawing.Point(12, 66);
             this.lblNivelEstudios.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNivelEstudios.Name = "lblNivelEstudios";
-            this.lblNivelEstudios.Size = new System.Drawing.Size(145, 20);
+            this.lblNivelEstudios.Size = new System.Drawing.Size(121, 17);
             this.lblNivelEstudios.TabIndex = 0;
             this.lblNivelEstudios.Text = "Nivel de Estudios";
             // 
             // tbpDatosGenerales
             // 
-            this.tbpDatosGenerales.BackColor = System.Drawing.Color.Purple;
+            this.tbpDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpDatosGenerales.Controls.Add(this.btnAyuda);
             this.tbpDatosGenerales.Controls.Add(this.gbxDatosP1);
             this.tbpDatosGenerales.Controls.Add(this.gbxDatosP2);
             this.tbpDatosGenerales.Controls.Add(this.gbxRecomendacion);
-            this.tbpDatosGenerales.Location = new System.Drawing.Point(4, 29);
+            this.tbpDatosGenerales.Location = new System.Drawing.Point(4, 26);
             this.tbpDatosGenerales.Margin = new System.Windows.Forms.Padding(5);
             this.tbpDatosGenerales.Name = "tbpDatosGenerales";
             this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(5);
-            this.tbpDatosGenerales.Size = new System.Drawing.Size(954, 466);
+            this.tbpDatosGenerales.Size = new System.Drawing.Size(954, 469);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
             // 
@@ -351,7 +351,7 @@
             this.lblFechaRecluta.Location = new System.Drawing.Point(8, 316);
             this.lblFechaRecluta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFechaRecluta.Name = "lblFechaRecluta";
-            this.lblFechaRecluta.Size = new System.Drawing.Size(197, 20);
+            this.lblFechaRecluta.Size = new System.Drawing.Size(161, 17);
             this.lblFechaRecluta.TabIndex = 30;
             this.lblFechaRecluta.Text = "Fecha de Reclutamiento";
             // 
@@ -361,7 +361,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(177, 124);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(262, 27);
+            this.txtTelefono.Size = new System.Drawing.Size(262, 23);
             this.txtTelefono.TabIndex = 3;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -370,7 +370,7 @@
             this.dtpFechaRecluta.Location = new System.Drawing.Point(215, 314);
             this.dtpFechaRecluta.Margin = new System.Windows.Forms.Padding(5);
             this.dtpFechaRecluta.Name = "dtpFechaRecluta";
-            this.dtpFechaRecluta.Size = new System.Drawing.Size(336, 27);
+            this.dtpFechaRecluta.Size = new System.Drawing.Size(336, 23);
             this.dtpFechaRecluta.TabIndex = 29;
             // 
             // lblApellidos
@@ -381,7 +381,7 @@
             this.lblApellidos.Location = new System.Drawing.Point(8, 80);
             this.lblApellidos.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(80, 20);
+            this.lblApellidos.Size = new System.Drawing.Size(68, 17);
             this.lblApellidos.TabIndex = 3;
             this.lblApellidos.Text = "Apellido ";
             // 
@@ -393,7 +393,7 @@
             this.lblNombres.Location = new System.Drawing.Point(8, 29);
             this.lblNombres.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(81, 20);
+            this.lblNombres.Size = new System.Drawing.Size(67, 17);
             this.lblNombres.TabIndex = 1;
             this.lblNombres.Text = "Nombres";
             // 
@@ -404,7 +404,7 @@
             this.lblCorreoElectronico.Location = new System.Drawing.Point(8, 178);
             this.lblCorreoElectronico.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(161, 20);
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(132, 17);
             this.lblCorreoElectronico.TabIndex = 28;
             this.lblCorreoElectronico.Text = "Correo Electrónico";
             // 
@@ -414,7 +414,7 @@
             this.txtPrimerNombre.Location = new System.Drawing.Point(177, 22);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(358, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(358, 23);
             this.txtPrimerNombre.TabIndex = 1;
             this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -424,7 +424,7 @@
             this.txtCorreoElectronico.Location = new System.Drawing.Point(177, 171);
             this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(5);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(358, 27);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(358, 23);
             this.txtCorreoElectronico.TabIndex = 4;
             // 
             // lblNumeroIgss
@@ -435,7 +435,7 @@
             this.lblNumeroIgss.Location = new System.Drawing.Point(8, 270);
             this.lblNumeroIgss.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNumeroIgss.Name = "lblNumeroIgss";
-            this.lblNumeroIgss.Size = new System.Drawing.Size(137, 20);
+            this.lblNumeroIgss.Size = new System.Drawing.Size(114, 17);
             this.lblNumeroIgss.TabIndex = 11;
             this.lblNumeroIgss.Text = "Número del Igss";
             // 
@@ -446,7 +446,7 @@
             this.lblTelefono.Location = new System.Drawing.Point(8, 131);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(79, 20);
+            this.lblTelefono.Size = new System.Drawing.Size(64, 17);
             this.lblTelefono.TabIndex = 26;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -456,7 +456,7 @@
             this.txtPrimerApellido.Location = new System.Drawing.Point(177, 73);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(358, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(358, 23);
             this.txtPrimerApellido.TabIndex = 2;
             this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -466,7 +466,7 @@
             this.txtNumeroIgss.Location = new System.Drawing.Point(177, 267);
             this.txtNumeroIgss.Margin = new System.Windows.Forms.Padding(5);
             this.txtNumeroIgss.Name = "txtNumeroIgss";
-            this.txtNumeroIgss.Size = new System.Drawing.Size(262, 27);
+            this.txtNumeroIgss.Size = new System.Drawing.Size(262, 23);
             this.txtNumeroIgss.TabIndex = 6;
             this.txtNumeroIgss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -476,7 +476,7 @@
             this.txtDpi.Location = new System.Drawing.Point(177, 218);
             this.txtDpi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDpi.Name = "txtDpi";
-            this.txtDpi.Size = new System.Drawing.Size(262, 27);
+            this.txtDpi.Size = new System.Drawing.Size(262, 23);
             this.txtDpi.TabIndex = 5;
             this.txtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -488,7 +488,7 @@
             this.lblDpi.Location = new System.Drawing.Point(8, 225);
             this.lblDpi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDpi.Name = "lblDpi";
-            this.lblDpi.Size = new System.Drawing.Size(36, 20);
+            this.lblDpi.Size = new System.Drawing.Size(30, 17);
             this.lblDpi.TabIndex = 22;
             this.lblDpi.Text = "DPI";
             // 
@@ -513,7 +513,7 @@
             this.cmbHorario.Location = new System.Drawing.Point(12, 208);
             this.cmbHorario.Margin = new System.Windows.Forms.Padding(5);
             this.cmbHorario.Name = "cmbHorario";
-            this.cmbHorario.Size = new System.Drawing.Size(287, 28);
+            this.cmbHorario.Size = new System.Drawing.Size(287, 25);
             this.cmbHorario.TabIndex = 22;
             // 
             // cmbDepartamentoTrabajo
@@ -523,7 +523,7 @@
             this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(12, 123);
             this.cmbDepartamentoTrabajo.Margin = new System.Windows.Forms.Padding(5);
             this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
-            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(287, 28);
+            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(287, 25);
             this.cmbDepartamentoTrabajo.TabIndex = 9;
             // 
             // lblHorario
@@ -534,7 +534,7 @@
             this.lblHorario.Location = new System.Drawing.Point(8, 174);
             this.lblHorario.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHorario.Name = "lblHorario";
-            this.lblHorario.Size = new System.Drawing.Size(157, 20);
+            this.lblHorario.Size = new System.Drawing.Size(131, 17);
             this.lblHorario.TabIndex = 20;
             this.lblHorario.Text = "Horario que Aplica";
             // 
@@ -546,7 +546,7 @@
             this.lblDepartamentoTrabajo.Location = new System.Drawing.Point(8, 89);
             this.lblDepartamentoTrabajo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDepartamentoTrabajo.Name = "lblDepartamentoTrabajo";
-            this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(209, 20);
+            this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(173, 17);
             this.lblDepartamentoTrabajo.TabIndex = 18;
             this.lblDepartamentoTrabajo.Text = "Departamento que Aplica";
             // 
@@ -558,7 +558,7 @@
             this.lblPuesto.Location = new System.Drawing.Point(8, 22);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(150, 20);
+            this.lblPuesto.Size = new System.Drawing.Size(124, 17);
             this.lblPuesto.TabIndex = 19;
             this.lblPuesto.Text = "Puesto que Aplica";
             // 
@@ -569,7 +569,7 @@
             this.cmbPuesto.Location = new System.Drawing.Point(12, 47);
             this.cmbPuesto.Margin = new System.Windows.Forms.Padding(5);
             this.cmbPuesto.Name = "cmbPuesto";
-            this.cmbPuesto.Size = new System.Drawing.Size(287, 28);
+            this.cmbPuesto.Size = new System.Drawing.Size(287, 25);
             this.cmbPuesto.TabIndex = 14;
             // 
             // gbxRecomendacion
@@ -594,7 +594,7 @@
             this.lblPregunta.Location = new System.Drawing.Point(8, 23);
             this.lblPregunta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPregunta.Name = "lblPregunta";
-            this.lblPregunta.Size = new System.Drawing.Size(380, 20);
+            this.lblPregunta.Size = new System.Drawing.Size(310, 17);
             this.lblPregunta.TabIndex = 25;
             this.lblPregunta.Text = "El Recluta cuenta con Recomendación Interna ?";
             // 
@@ -604,7 +604,7 @@
             this.cmbEncargado.FormattingEnabled = true;
             this.cmbEncargado.Location = new System.Drawing.Point(380, 63);
             this.cmbEncargado.Name = "cmbEncargado";
-            this.cmbEncargado.Size = new System.Drawing.Size(353, 28);
+            this.cmbEncargado.Size = new System.Drawing.Size(353, 25);
             this.cmbEncargado.TabIndex = 48;
             this.cmbEncargado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -614,7 +614,7 @@
             this.lblEncargadoRecom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblEncargadoRecom.Location = new System.Drawing.Point(8, 66);
             this.lblEncargadoRecom.Name = "lblEncargadoRecom";
-            this.lblEncargadoRecom.Size = new System.Drawing.Size(314, 20);
+            this.lblEncargadoRecom.Size = new System.Drawing.Size(258, 17);
             this.lblEncargadoRecom.TabIndex = 25;
             this.lblEncargadoRecom.Text = "Empleado que hizo la Recomendación:";
             // 
@@ -626,7 +626,7 @@
             this.rbtnNo.Location = new System.Drawing.Point(524, 21);
             this.rbtnNo.Margin = new System.Windows.Forms.Padding(5);
             this.rbtnNo.Name = "rbtnNo";
-            this.rbtnNo.Size = new System.Drawing.Size(52, 24);
+            this.rbtnNo.Size = new System.Drawing.Size(44, 21);
             this.rbtnNo.TabIndex = 24;
             this.rbtnNo.TabStop = true;
             this.rbtnNo.Text = "No";
@@ -641,7 +641,7 @@
             this.rbtnSi.Location = new System.Drawing.Point(424, 23);
             this.rbtnSi.Margin = new System.Windows.Forms.Padding(5);
             this.rbtnSi.Name = "rbtnSi";
-            this.rbtnSi.Size = new System.Drawing.Size(44, 24);
+            this.rbtnSi.Size = new System.Drawing.Size(37, 21);
             this.rbtnSi.TabIndex = 23;
             this.rbtnSi.TabStop = true;
             this.rbtnSi.Text = "Si";
@@ -663,9 +663,9 @@
             // 
             // frmIngresoReclutas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(962, 571);
             this.Controls.Add(this.tbcIngresoRecluta);
             this.Controls.Add(this.btnIngreso);

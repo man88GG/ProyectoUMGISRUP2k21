@@ -47,10 +47,9 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
-            this.navegador1.Location = new System.Drawing.Point(-2, 13);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Location = new System.Drawing.Point(-2, 11);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1412, 129);
+            this.navegador1.Size = new System.Drawing.Size(1059, 105);
             this.navegador1.TabIndex = 23;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
@@ -59,10 +58,9 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.rbtnInactivo.AutoSize = true;
             this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnInactivo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnInactivo.Location = new System.Drawing.Point(269, 438);
-            this.rbtnInactivo.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnInactivo.Location = new System.Drawing.Point(202, 356);
             this.rbtnInactivo.Name = "rbtnInactivo";
-            this.rbtnInactivo.Size = new System.Drawing.Size(92, 24);
+            this.rbtnInactivo.Size = new System.Drawing.Size(76, 21);
             this.rbtnInactivo.TabIndex = 34;
             this.rbtnInactivo.TabStop = true;
             this.rbtnInactivo.Text = "Inactivo";
@@ -74,10 +72,9 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.rbtnActivo.AutoSize = true;
             this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnActivo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnActivo.Location = new System.Drawing.Point(145, 438);
-            this.rbtnActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnActivo.Location = new System.Drawing.Point(109, 356);
             this.rbtnActivo.Name = "rbtnActivo";
-            this.rbtnActivo.Size = new System.Drawing.Size(80, 24);
+            this.rbtnActivo.Size = new System.Drawing.Size(67, 21);
             this.rbtnActivo.TabIndex = 33;
             this.rbtnActivo.TabStop = true;
             this.rbtnActivo.Text = "Activo";
@@ -89,10 +86,9 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEstado.Location = new System.Drawing.Point(35, 438);
-            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstado.Location = new System.Drawing.Point(26, 356);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(62, 20);
+            this.lblEstado.Size = new System.Drawing.Size(51, 17);
             this.lblEstado.TabIndex = 38;
             this.lblEstado.Text = "Estado";
             // 
@@ -101,10 +97,9 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNombre.Location = new System.Drawing.Point(35, 207);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(26, 168);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(73, 20);
+            this.lblNombre.Size = new System.Drawing.Size(61, 17);
             this.lblNombre.TabIndex = 33;
             this.lblNombre.Text = "Nombre";
             // 
@@ -112,11 +107,10 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             // 
             this.dgvTipoEvaluacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTipoEvaluacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoEvaluacion.Location = new System.Drawing.Point(546, 133);
-            this.dgvTipoEvaluacion.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvTipoEvaluacion.Location = new System.Drawing.Point(410, 108);
             this.dgvTipoEvaluacion.Name = "dgvTipoEvaluacion";
             this.dgvTipoEvaluacion.RowHeadersWidth = 51;
-            this.dgvTipoEvaluacion.Size = new System.Drawing.Size(864, 345);
+            this.dgvTipoEvaluacion.Size = new System.Drawing.Size(648, 280);
             this.dgvTipoEvaluacion.TabIndex = 28;
             // 
             // lblDescripcion
@@ -124,43 +118,48 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(35, 261);
+            this.lblDescripcion.Location = new System.Drawing.Point(26, 212);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(104, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(85, 17);
             this.lblDescripcion.TabIndex = 43;
             this.lblDescripcion.Text = "Descripcion";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(195, 158);
+            this.txtCodigo.Location = new System.Drawing.Point(146, 128);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(166, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(126, 20);
             this.txtCodigo.TabIndex = 44;
             this.txtCodigo.Tag = "IdTipoEvaluacion";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(195, 207);
+            this.txtNombre.Location = new System.Drawing.Point(146, 168);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(166, 22);
+            this.txtNombre.Size = new System.Drawing.Size(126, 20);
             this.txtNombre.TabIndex = 45;
             this.txtNombre.Tag = "TipoEvaluacion";
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetras);
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(195, 261);
+            this.txtDescripcion.Location = new System.Drawing.Point(146, 212);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(335, 154);
+            this.txtDescripcion.Size = new System.Drawing.Size(252, 126);
             this.txtDescripcion.TabIndex = 46;
             this.txtDescripcion.Tag = "Descripcion";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(475, 440);
+            this.txtEstado.Location = new System.Drawing.Point(356, 358);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(55, 22);
+            this.txtEstado.Size = new System.Drawing.Size(42, 20);
             this.txtEstado.TabIndex = 47;
             this.txtEstado.Tag = "Estado";
             this.txtEstado.Visible = false;
@@ -171,18 +170,19 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCodigo.Location = new System.Drawing.Point(35, 160);
+            this.lblCodigo.Location = new System.Drawing.Point(26, 130);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(67, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(57, 17);
             this.lblCodigo.TabIndex = 48;
             this.lblCodigo.Text = "Código";
             // 
             // frmTipoEvaluacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1423, 491);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.ClientSize = new System.Drawing.Size(1067, 399);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDescripcion);
@@ -195,6 +195,7 @@ namespace CapaVistaHRM.Manuel.Mantenimientos
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvTipoEvaluacion);
             this.Controls.Add(this.navegador1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTipoEvaluacion";
             this.Text = "frmMantenimientoTipoEvaluacion";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoEvaluacion)).EndInit();
