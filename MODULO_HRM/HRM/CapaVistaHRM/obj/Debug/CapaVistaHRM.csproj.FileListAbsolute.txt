@@ -715,3 +715,5 @@ D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Manuel.Procesos.frmInduccion.resources
 D:\Escritorio\ForkHRM\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Mantenimientos.frmCapacitadorExterno.resources
 >>>>>>> ee3dabd3cd0f9612f6fed385ad85ca4ac669d2fa
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Procesos.frmAgregarAcapacitacion.resources
+C:\Users\yavhe\Documents\GitHub\ProyectoUMGISRUP2k21\MODULO_HRM\HRM\CapaVistaHRM\obj\Debug\CapaVistaHRM.Sergio.Procesos.frmCalificacion.resources

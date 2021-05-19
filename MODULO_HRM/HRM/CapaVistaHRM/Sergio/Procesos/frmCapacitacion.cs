@@ -84,11 +84,32 @@ namespace CapaVistaHRM.Sergio.Procesos
         private void dtpInicio_ValueChanged(object sender, EventArgs e)
         {
             lblFechaInicio.Text = dtpInicio.Value.ToString();
+            if (dtpInicio.Value < DateTime.Today)
+            {
+                MessageBox.Show("La fecha inicial no puede ser menor a la de hoy.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpInicio.Value = DateTime.Today;
+            }
+            else if (dtpInicio.Value > dtpFin.Value)
+            {
+                MessageBox.Show("La fecha Mayor a la final.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpInicio.Value = dtpFin.Value;
+            }
         }
 
         private void dtpFin_ValueChanged(object sender, EventArgs e)
         {
             lblFechaFin.Text = dtpFin.Value.ToString();
+            if (dtpFin.Value < DateTime.Today)
+            {
+                MessageBox.Show("La fecha final no puede ser menor a la de hoy.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpFin.Value = DateTime.Today;
+            }
+            else
+            if (dtpFin.Value < dtpInicio.Value)
+            {
+                MessageBox.Show("La fecha final no puede ser menor a la inicial.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpFin.Value = dtpInicio.Value;
+            }
         }
 
         private void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
@@ -267,7 +288,7 @@ namespace CapaVistaHRM.Sergio.Procesos
              estado = txtEstado.Text.ToString();
             if (codeEncabezado=="" || tituloEncabezado == "" || descripcionEncabezado == "" || externo == "" || idcapacitador == "" || fechainicio == "" || fechafin == "" || idcurso == "" || dificultad == "" || estado == "")
             {
-
+                MessageBox.Show("Hay campos vacios");
             }
             else
             {
@@ -284,23 +305,33 @@ namespace CapaVistaHRM.Sergio.Procesos
                 
                 if (cn.procDatosInsertar("ENCABEZADOCAPACITACION", DatosPeticion))
                 {
-                    //MessageBox.Show("funciona");
+                   // MessageBox.Show("funciona");
                 }
                 else
                 {
-                    //MessageBox.Show("no funciona");
+                   // MessageBox.Show("no funciona");
                 }
-                //MessageBox.Show("Datos Guardados con éxito");
-
+               
             }
 
+            MessageBox.Show("Datos Guardados con éxito");
 
-            //limpiarCampos();
+            limpiarCampos();
             
             actualizardatagriew();
             CodigoMaximo("ENCABEZADOCAPACITACION", "idEncabezadoCapacitacion", txtCodigo);
         }
 
+        public void limpiarCampos()
+        {
+            txtCodigo.Text = "";
+            txtTitulo.Text = "";
+            txtDescripcion.Text = "";
+            cmbCapacitador.SelectedIndex = 0;
+            cmbCourse.SelectedIndex = 0;
+            cmbDificultad.SelectedIndex = 0;
+
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
            

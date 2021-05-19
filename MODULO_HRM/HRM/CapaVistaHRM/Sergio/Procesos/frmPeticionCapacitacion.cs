@@ -510,7 +510,9 @@ namespace CapaVistaHRM.Sergio.Procesos
                 }
 
             }
-            catch (Exception Exc) { }
+            catch (Exception Exc) {
+                MessageBox.Show("error en: "+Exc);
+            }
 
 
         }
@@ -524,6 +526,12 @@ namespace CapaVistaHRM.Sergio.Procesos
         private void txtEmpleado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmAgregarAcapacitacion frm = new frmAgregarAcapacitacion();
+            frm.Show();
         }
     }
 }

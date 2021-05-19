@@ -215,6 +215,8 @@ namespace CapaModeloHRM.Sergio
             return Codigo + 1;
         }
 
+
+        
         ///// Ascensos
         public string[] funcObtenerDatosAscenso(string Tabla, string Campo, string CourseId, string empleado)
         {
@@ -231,6 +233,24 @@ namespace CapaModeloHRM.Sergio
                 }
             }
             catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -" + Tabla + "\n -" + Campo); }
+            return Campos;
+        }
+
+        public string[] funcObtenerDatosINFO(string codigo, string s)
+        {
+            string[] Campos = new string[100];
+            int I = 0;
+            string Sql = "SELECT R.nombre, R.apellido FROM EMPLEADO E, RECLUTAMIENTO R WHERE E.idRecluta = R.idRecluta and E.idEmpleado=" + codigo + ";";
+            try
+            {
+                OdbcCommand Command = new OdbcCommand(Sql, Con.conexion());
+                OdbcDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    Campos[I] = Reader.GetValue(0).ToString() + " " + Reader.GetValue(1).ToString();
+                }
+            }
+            catch (Exception Ex) { Console.WriteLine(Ex.Message.ToString() + " \nError en asignarCombo, revise los parametros \n -"); }
             return Campos;
         }
 
@@ -328,7 +348,7 @@ namespace CapaModeloHRM.Sergio
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message.ToString() + " \nNo existe la tabla o los campos indicados \n -" + tabla + "\n -" + ex + " " + sql);
+                Console.WriteLine(ex.Message.ToString() + " \nNo existe la tabla o los campos indicados \n -" + tabla + "\n -" + ex + " " + consulta);
                 return false;
             }
         }

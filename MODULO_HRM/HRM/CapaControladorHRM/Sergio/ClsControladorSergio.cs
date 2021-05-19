@@ -121,6 +121,11 @@ namespace CapaControladorHRM.Sergio
             return CodigoNuevo;
         }
 
+        public string[] funcCodigoFULL(string codigo, string Campo)
+        {
+            string[] CodigoNuevo = Sn.funcObtenerDatosINFO(codigo, Campo);
+            return CodigoNuevo;
+        }
 
 
         public bool procDatosInsertar(string tabla, List<string> lista)

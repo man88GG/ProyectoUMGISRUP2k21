@@ -245,6 +245,12 @@
     <Compile Include="Sergio\Mantenimientos\frmVerEmpleado.Designer.cs">
       <DependentUpon>frmVerEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sergio\Procesos\frmAgregarAcapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sergio\Procesos\frmAgregarAcapacitacion.Designer.cs">
+      <DependentUpon>frmAgregarAcapacitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sergio\Procesos\frmAscenso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sergio\Mantenimientos\frmVerEmpleado.resx">
       <DependentUpon>frmVerEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sergio\Procesos\frmAgregarAcapacitacion.resx">
+      <DependentUpon>frmAgregarAcapacitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sergio\Procesos\frmAscenso.resx">
       <DependentUpon>frmAscenso.cs</DependentUpon>

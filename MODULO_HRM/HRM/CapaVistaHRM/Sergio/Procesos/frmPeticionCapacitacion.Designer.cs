@@ -69,6 +69,7 @@
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeticiones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
@@ -487,12 +488,23 @@
             this.dgvEmpleados.TabIndex = 48;
             this.dgvEmpleados.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(868, 339);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmPeticionCapacitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1028, 625);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.btnEmpleados);
@@ -582,5 +594,6 @@
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvEmpleados;
+        private System.Windows.Forms.Button button2;
     }
 }
